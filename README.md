@@ -12,7 +12,7 @@ iSiteWatch React application
 
 ### Clone the repository
 
-Make sure you are checked out on the [myretail-app](https://github.com/karthi1987/iSiteWatch-React.git) branch before running the following!
+Make sure you are checked out on the [iSiteWatch-React](https://github.com/karthi1987/iSiteWatch-React.git) branch before running the following!
 
 Run `npm -v` and `node -v` to check to see if you're using the correct versions.  
 Use nvm to download correct versions if necessary.
@@ -31,7 +31,7 @@ This may require having admin access. You may have to run these commands as sudo
 
 Once webpack and gulp are setup globally. Open terminal:
 
-`cd Your cloned path to the myretail-app project`
+`cd Your cloned path to the iSiteWatch-React project`
 
 `npm install`
 
@@ -39,7 +39,7 @@ It will install all the dependencies, Once install is finished.
 
 ### Settings
 
-Find `server.config.js` in root directory `myretail-app/`.
+Find `server.config.js` in root directory `iSiteWatch-React/`.
 
 In `server.config.js`, `LOCAL_PATH` by default will be localhost and `PORT` will be 8080. Change these according to your local development needs.
 
@@ -75,9 +75,3 @@ It will generate `app.js` and `app.min.js` files.
 ### To Test the component.
 
 Run the command in terminal `npm run build-test` and `npm run test`, It will test all the test suites and generate the report, reports are visible at the terminal.
-
-### Acknowledgements
-
-I'm grateful to the author of slick-carousel project which i have utilized for the product image carousel:
-
-* [@akiran](https://github.com/akiran/react-slick)
