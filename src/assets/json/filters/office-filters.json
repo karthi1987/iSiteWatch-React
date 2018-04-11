@@ -1,0 +1,44 @@
+{
+  "data": {
+    "filters": [
+    {
+      "label": "All",
+      "id": "ALL"
+    }, {
+      "id": "27780",
+      "label": "CSSC-ALLENTOWN"
+    }, {
+      "id": "10376",
+      "label": "CSSC-CLARKSBURG"
+    }, {
+      "id": "10332",
+      "label": "CSSC-HAMILTON EAST"
+    }, {
+      "id": "10840",
+      "label": "CSSC-HAMILTON NORTH"
+    }, {
+      "id": "10333",
+      "label": "CSSC-HAMILTON WEST"
+    }, {
+      "id": "27781",
+      "label": "CSSC-LANCASTER"
+    }, {
+      "id": "29920",
+      "label": "CSSC-MIDATLANTIC CENTRALIZED CSR SUPPORT"
+    }, {
+      "id": "10297",
+      "label": "CSSC-PHILADELPHIA"
+    }, {
+      "id": "10962",
+      "label": "CSSC-PITTSBURGH"
+    }, {
+      "id": "28300",
+      "label": "CSSC-SILVER SPRING"
+    }, {
+      "id": "10338",
+      "label": "CSSC-UNIONTOWN"
+    }]
+  },
+  "errorMessage": null,
+  "success": true
+}

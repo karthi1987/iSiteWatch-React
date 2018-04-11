@@ -1,0 +1,20 @@
+$listPrefix: 'list' !default;
+$listExtraSpace: 1rem !default;
+
+.#{$listPrefix}-no-bullets {
+	padding-left: 0;
+	list-style-type: none;
+}
+
+.#{$listPrefix}-inline {
+	@extend .#{$listPrefix}-no-bullets;
+
+	li {
+		display: inline-block;
+	}
+}
+
+.#{$listPrefix}-extra-space li {
+	margin-bottom: $listExtraSpace;
+}
+

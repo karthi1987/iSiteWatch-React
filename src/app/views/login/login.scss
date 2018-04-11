@@ -1,0 +1,80 @@
+@import '../../../framework/scss/partials/buttons';
+
+.login {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top:100px; 
+
+  h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+  }
+
+  .loginForm {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-flow: column wrap;
+    width: 60%;
+    margin-top:50px;
+
+    .form-group {
+      margin-top: 2%;
+      padding: 0;
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      text-align: left;
+      label {
+        display: inline-flex;
+        width: 42%;
+        justify-content: flex-start;
+        self-aligned: flex-start;
+      }
+    }
+
+      .dropdown-container,
+      input,
+      .loginButton {
+        flex-grow: 1;
+        margin-right: 1rem;
+        min-height:50px;
+        max-height:50px;
+        font-size: 0.875rem;
+      }
+
+      input {
+        border-top: 1px solid;
+        border-right: 1px solid;
+        border-bottom: 1px solid;
+        border-left: 1px solid;
+        padding-left: 10px;
+        width: 40%;
+      }
+
+      .dropdown-container {
+        min-width: 200px;
+        padding-top: 13px;
+      }
+
+      .loginButton {
+        padding-top: 14px;
+      }
+
+      .multiselect-wrapper {
+        width:100%;
+      }
+  }
+}
+
+.login-error-message{
+  margin-top: 20px;
+  color: #CD040B;
+  font-weight: 700;
+  width: 60%;
+}

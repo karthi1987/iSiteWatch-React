@@ -1,0 +1,69 @@
+{
+   "success": true,
+   "errorMessage": null,
+   "data":{
+      "lastUpdated":"07/21/2017 10:34:18 AM",
+      "criteria":{
+         "date":"2005",
+         "sortOn":"ASC",
+         "dateCode":"M",
+         "report":"161",
+         "drillLevel":3,
+         "sortBy":"col3"
+      },
+      "metrics":[
+         {
+            "achievement":119.1,
+            "valueType":"cur",
+            "milestoneId":"100103",
+            "description":"2016 BASE-RIC BUSINESS GENERAL REVENUE",
+            "rank":43,
+            "outOfRank":43,
+            "id":143,
+            "attainment":"297830",
+            "rankTitle":"Office Rank",
+            "value":297830.0,
+            "objective":"250067"
+         },
+         {
+            "achievement":86.67,
+            "valueType":"unit",
+            "milestoneId":"4534",
+            "description":"TO WRLS",
+            "rank":1,
+            "outOfRank":1,
+            "id":125,
+            "attainment":"26",
+            "rankTitle":"Office Rank",
+            "value":26.0,
+            "objective":"30"
+         },
+         {
+            "achievement":90.0,
+            "valueType":"unit",
+            "milestoneId":"4531",
+            "description":"TO VOICE LINK",
+            "rank":1,
+            "outOfRank":1,
+            "id":124,
+            "attainment":"27",
+            "rankTitle":"Office Rank",
+            "value":27.0,
+            "objective":"30"
+         },
+         {
+            "achievement":72.5,
+            "valueType":"unit",
+            "milestoneId":"4528",
+            "description":"TO VAS STRZ",
+            "rank":1,
+            "outOfRank":1,
+            "id":123,
+            "attainment":"29",
+            "rankTitle":"Office Rank",
+            "value":29.0,
+            "objective":"40"
+         }
+      ]
+   }
+}

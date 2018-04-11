@@ -1,0 +1,69 @@
+{
+   "success": true,
+   "errorMessage": null,
+   "data":{
+      "lastUpdated":"07/21/2017 10:34:18 AM",
+      "criteria":{
+         "date":"05/23/2016",
+         "sortOn":"ASC",
+         "dateCode":"D",
+         "report":"",
+         "drillLevel":3,
+         "sortBy":"rep"
+      },
+      "metrics":[
+         {
+            "achievement":300.0,
+            "valueType":"pct",
+            "milestoneId":"4532",
+            "description":"TO WRLS",
+            "rank":1,
+            "outOfRank":1,
+            "id":125,
+            "attainment":"7",
+            "rankTitle":"Office Rank",
+            "value":7.0,
+            "objective":"5"
+         },
+         {
+            "achievement":10.0,
+            "valueType": "unit",
+            "milestoneId":"4529",
+            "description":"TO VOICE LINK",
+            "rank":1,
+            "outOfRank":1,
+            "id":124,
+            "attainment":false,
+            "rankTitle":"Office Rank",
+            "value":1.0,
+            "objective":false
+         },
+         {
+            "achievement":125.0,
+            "valueType":"unit",
+            "milestoneId":"4526",
+            "description":"TO VAS STRZ",
+            "rank":1,
+            "outOfRank":1,
+            "id":123,
+            "attainment":"5",
+            "rankTitle":"Office Rank",
+            "value":5.0,
+            "objective":"20"
+         },
+         {
+            "achievement":82.5,
+            "valueType":"unit",
+            "milestoneId":"4523",
+            "description":"TO VAS SEC",
+            "rank":1,
+            "outOfRank":1,
+            "id":122,
+            "attainment":"3",
+            "rankTitle":"Office Rank",
+            "value":3.0,
+            "objective":"40"
+         }
+      ]
+   }
+}

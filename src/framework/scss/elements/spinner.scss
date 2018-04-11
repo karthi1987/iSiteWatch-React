@@ -1,0 +1,45 @@
+@import '../partials/core-variables';
+@import '../partials/mixins';
+
+$pageNavCompactHeight: remCalc(60px) !default;
+
+$spinnerBackgroundColor: rgba(white, 0.75) !default;
+$spinnerZIndex: 10 !default;
+$spinnerSize: remCalc(200px) !default;
+$spinnerWidth: $spinnerSize !default;
+$spinnerHeight: $spinnerSize !default;
+$spinnerImage: '../../assets/images/loader.svg' !default;
+
+// Caclulated
+$spinnerPositionTop: -1 * ($pageBodyPadding + $pageNavCompactHeight) !default;
+$spinnerPositionLeft: -1 * $pageBodyPadding !default;
+$spinnerPositionRight: -1 * $pageBodyPadding !default;
+$spinnerPositionMediumTop: -1 * $pageBodyPadding !default;
+$spinnerPositionMediumRight: -1.5 * $pageBodyPadding !default;
+
+
+.spinner {
+	position: absolute;
+	top: $spinnerPositionTop;
+	right: $spinnerPositionRight;
+	left: $spinnerPositionLeft;
+
+	@include mediaBreakpointUp(md) {
+		top: $spinnerPositionMediumTop;
+		right: $spinnerPositionMediumRight;
+	}
+
+	background-color: $spinnerBackgroundColor;
+	z-index: $spinnerZIndex;
+
+	.spinner-image {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		width: $spinnerWidth;
+		height: $spinnerHeight;
+		background-size: cover;
+		background-image: url($spinnerImage);
+	}
+}

@@ -1,0 +1,178 @@
+/*
+	This is a mixin which allows an element to have a fixed aspect ratio, but allows the element to NOT have to be floated/etc - the element can stay inside the normal document flow.  It's based on a common workaround which inserts an invisible padding "before" meta-element which gives it the desired size (and is floated), and then a subsequent 'clearfix' "after" element which makes sure that the bottom of this container stretches far enough to include the entirety of the floated element.
+
+	To use this, you'll need to have at least 3 nested divs; they don't need any special classes, but they do need to be the first elements inside their parents.  You apply the mixin to the topmost div, you leave the second div empty, and you put all of your content inside the third div.
+
+	Expected usage:
+
+	<div class="my-container">  <-- mixin applied here, on this topmost div
+		<div>
+			<div class="interior">
+				<-- content goes in this div
+			</div>
+		</div>
+	</div>
+
+	Then in your scss file:
+	.my-container {
+		@include aspect-ratio(4.0,3.0,100%);
+
+		.interior {
+			//whatever you want
+		}
+	}
+*/
+@mixin breakpoint($point) {
+    @if $point == desktop {
+        @media (max-width: 1600px) { @content ; }
+    }
+    @else if $point == laptop {
+        @media (max-width: 1280px) { @content ; }
+    }
+    @else if $point == largetablet{
+        @media (max-width: 991px) { @content ; }
+    }
+    @else if $point == tablet {
+        @media (max-width: 767px) { @content ; }
+    }
+    @else if $point == phablet {
+        @media (max-width: 480px)  { @content ; }
+    }
+    @else if $point == mobileonly {
+        @media (max-width: 385px)  { @content ; }
+    }
+	//@else if $point == highres {
+	//	@media (min-resolution: 192dpi) { @content ; }
+	//}
+}
+
+@mixin aspect-ratio($width, $height, $coreWidth) {
+	overflow: hidden;
+	width: $coreWidth;
+	position: relative;
+
+	& > :first-child {
+		&:before {
+			float: left;
+			content: "";
+			padding-bottom: ($height / $width) * $coreWidth;
+		}
+
+		& > :first-child {
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+		}
+	}
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+@mixin aspect-ratio-padded($width, $height, $coreWidth, $extra-padding) {
+	overflow: hidden;
+	width: $coreWidth;
+	position: relative;
+
+	& > :first-child {
+		&:before {
+			float: left;
+			content: "";
+			padding-bottom: calc((#{$height} / #{$width}) * (#{$coreWidth}) + #{$extra-padding});
+		}
+
+		& > :first-child {
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+		}
+	}
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+/**
+ * This is heavily borrowed from how Twitter Bootstrap 4 handles breakpoints.
+ *
+ * https://github.com/twbs/bootstrap/blob/807a837afe1c5ee2ac5f962658a5741673c04231/scss/mixins/_breakpoints.scss
+ */
+
+/**
+ * Finds the next breakpoint up or returns null.
+ * @param	 {string} $name								Current breakpoint
+ * @param	 {list} [$breakpointNames]					All breakpoints. Defaults to $appBreakpoints names.
+ * @return {string|null}								Returns name of next breakpoint or null.
+ */
+@function breakpointNext($name, $breakpoints: $appBreakpoints, $breakpointNames: map-keys($breakpoints)) {
+	$n: index($breakpointNames, $name); // Get the index of the current breakpoint. 1 indexed.
+	@return if(
+									$n < length($breakpointNames), // Check if last breakpoint.
+									nth($breakpointNames, $n + 1), // Return the next breakpoint.
+									null // Return if last breakpoint.
+	);
+}
+
+// Minimum breakpoint width. Null for the smallest (first) breakpoint.
+//
+//		>> breakpointMin(sm, (xs: 0, sm: 34rem, md: 45rem))
+//		34rem
+@function breakpointMin($name, $breakpoints: $appBreakpoints) {
+	$min: map-get($breakpoints, $name);
+	@return if($min != 0, $min, null);
+}
+
+// Maximum breakpoint width. Null for the largest (last) breakpoint.
+// The maximum value is calculated as the minimum of the next one less 0.1.
+//
+//		>> breakpointMax(sm, (xs: 0, sm: 34rem, md: 45rem))
+//		44.9rem
+@function breakpointMax($name, $breakpoints: $appBreakpoints) {
+	$next: breakpointNext($name, $breakpoints);
+	@return if($next, breakpointMin($next, $breakpoints) - 0.1, null);
+}
+
+// Media of at least the minimum breakpoint width. No query for the smallest breakpoint.
+// Makes the @content apply to the given breakpoint and wider.
+@mixin mediaBreakpointUp($name, $breakpoints: $appBreakpoints) {
+	$min: breakpointMin($name, $breakpoints);
+	@if $min {
+		@media (min-width: $min) {
+			@content;
+		}
+	} @else {
+		@content;
+	}
+}
+
+// Media of at most the maximum breakpoint width. No query for the largest breakpoint.
+// Makes the @content apply to the given breakpoint and narrower.
+@mixin mediaBreakpointDown($name, $breakpoints: $appBreakpoints) {
+	$max: breakpointMax($name, $breakpoints);
+	@if $max {
+		@media (max-width: $max) {
+			@content;
+		}
+	} @else {
+		@content;
+	}
+}
+
+// Media between the breakpoint's minimum and maximum widths.
+// No minimum for the smallest breakpoint, and no maximum for the largest one.
+// Makes the @content apply only to the given breakpoint, not viewports any wider or narrower.
+@mixin mediaBreakpointOnly($name, $breakpoints: $appBreakpoints) {
+	@include mediaBreakpointUp($name, $breakpoints) {
+		@include mediaBreakpointDown($name, $breakpoints) {
+			@content;
+		}
+	}
+}

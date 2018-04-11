@@ -1,0 +1,110 @@
+@import '../../../framework/scss/partials/variables';
+@import '../../../framework/scss/partials/mixins';
+
+/* _Ticker component styles */
+.ticker {
+	position: relative;
+}
+
+.sticker {
+	background: #ccc;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	font-size: 1.14rem;
+	font-weight: 600;
+
+	width: 6rem;
+	height: 3rem;
+
+	position: absolute;
+	left: 0;
+	z-index: 1;
+}
+
+.ticker-module-container {
+  width: 100%;
+  z-index: 99;
+  margin-bottom: 2rem;
+  .ticker-module {
+    padding: 0 3.125rem;
+	padding-right: 10.75rem;
+  }
+}
+
+.ticker-container {
+	background: #fff;
+	height: 3rem;
+	overflow: hidden;
+}
+.ticker-btn-pause {
+	background: #ccc;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	width: 3rem;
+	height: 3rem;
+
+	position: absolute;
+	right: 0;
+	&:hover {
+		cursor: pointer;
+	}
+
+	.pause, .play {
+		align-items: center;
+		justify-content: center;
+
+		background: #888;
+		border-radius: 100%;
+		display: flex;
+
+		width: 2rem;
+		height: 2rem;
+	}
+	.pause {
+		.rectangle {
+			background: white;
+			border-radius: 10%;
+			height: .6rem;
+			margin: .09rem;
+			width: .15rem;
+		}
+	}
+	.play {
+		.triangle {
+			width: 0;
+			height: 0;
+			border-top: remCalc(5px) solid transparent;
+			border-left: remCalc(10px) solid #fff;
+			border-bottom: remCalc(5px) solid transparent;
+			margin-left: remCalc(3px);
+			margin-top: remCalc(1px);
+		}
+	}
+}
+.ticker-contents-container2,
+.ticker-contents-container {
+	position: absolute;
+	left: 100%;
+}
+.ticker-contents {
+	display: inline;
+	margin: .75rem 0;
+	position: absolute;
+}
+.ticker-content {
+	display: inline;
+	white-space: nowrap;
+	.separator {
+		margin: 0 1rem;
+	}
+	.alert {
+		color: #CD040B;
+	}
+	.alert-bold {
+		font-weight: bold;
+	}
+}

@@ -1,0 +1,62 @@
+{
+	"success": true,
+	"errorMessage": null,
+	"data": {
+	"waittime" : {
+		"average": "02:10:56",
+		"leadershipBoard":true,
+		"maximum":"03:06:98",
+		"queue":"2",
+		"show": true
+    },
+	"transactiontime" : {
+		"show": true,
+		"transactionTime":"130:22",
+		"locationLevelString":"(Territory):"
+	},
+    "nav": [
+    	{
+    		"label": "Home",
+    		"webTrackId": "",
+    		"icon": "vz-home",
+    		"counter": 0,
+            "route": "/home"
+    	},
+    	{
+    		"label": "Leaderboard",
+    		"webTrackId": 4612,
+    		"icon": "vz-finance",
+    		"counter": 0,
+            "route": "/scorecard"
+    	},
+    	{
+    		"label": "Ranking Report",
+    		"webTrackId": 4613,
+    		"icon": "vz-state-loacl-government",
+    		"counter": 0,
+            "route": "/leaderboard"
+    	},
+    	{
+    		"label": "Quick Hits",
+    		"webTrackId": 4614,
+    		"icon": "vz-featured",
+    		"counter": 5,
+            "route": "/quickhits"
+    	},
+    	{
+    		"label": "Videos",
+    		"webTrackId": 4616,
+    		"icon": "vz-movies",
+    		"counter": 6,
+            "route": "/videos"
+    	},
+    	{
+    		"label": "Agenda",
+    		"webTrackId": 4617,
+    		"icon": "vz-clipboard",
+    		"counter": 2,
+            "route": "/agenda"
+    	}
+    ]
+  }
+}

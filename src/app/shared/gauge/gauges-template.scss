@@ -1,0 +1,20 @@
+.gauges-template {
+	display: flex;
+	height: 100%;
+	width: 100%;
+
+	.error-message-box {
+		max-height: 5em;
+	}
+		
+	.gauge-template {
+		align-items: center;
+		display: flex;
+		flex: 1 1 auto;
+		flex-direction: column;
+		justify-content: center;
+	}
+	.shadow {
+		display: none;
+	}
+}

@@ -1,0 +1,43 @@
+@import 'partials/mixins';
+@import 'partials/core-variables';
+
+
+.sr-only {
+	position: absolute !important;
+	font-size: 0 !important;
+	text-indent: -9999px !important;
+}
+
+@mixin visibilityClasses($size, $active) {
+
+	@if $active {
+
+		.hidden-#{$size} {
+			display: none !important;
+		}
+		.visible-#{$size}-block {
+			display: block !important;
+		}
+		.visible-#{$size}-inline {
+			display: inline !important;
+		}
+		.visible-#{$size}-inline-block {
+			display: inline-block !important;
+		}
+
+	} @else {
+		.visible-#{$size}-block, .visible-#{$size}-inline, .visible-#{$size}-inline-block {
+			display: none !important;
+		}
+	}
+
+}
+
+@each $breakpoint in map-keys($appBreakpoints) {
+
+	@include visibilityClasses($breakpoint, false);
+
+	@include mediaBreakpointOnly($breakpoint) {
+		@include visibilityClasses($breakpoint, true);
+	}
+}

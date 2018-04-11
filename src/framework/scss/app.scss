@@ -1,0 +1,57 @@
+@import 'partials/variables';
+
+@import '../bi/vz-typeface/vz-typeface.css';
+@import '../bi/vz-icons/dist/VerizonIcons.css';
+
+@import 'reboot';
+@import 'typography';
+@import 'lists';
+
+@import 'visibility';
+@import 'grid';
+
+@import 'pages';
+@import 'transitions';
+@import 'panels';
+
+@import 'partials/body';
+@import 'partials/forms';
+@import 'partials/mixins';
+
+//@import 'elements/spinner';
+
+@import 'navigation';
+
+body {
+	margin: 0;
+	background-color: #f6f6f6;
+}
+
+#app-root {
+
+	.app-wrapper {
+		height: 100%;
+		min-width: 1450px;
+		@include aspect-ratio(16.0, 9.0, 100%);
+	}
+
+	// This is used by pickadate, which is currently an overlay at a top-level location.
+	// There's probably a TODO on this to move the date picker into an individual page.
+	.hidden {
+		display: none;
+	}
+
+	.picker {
+		select {
+			-webkit-appearance: menulist;
+			-moz-appearance: menulist;
+			appearance: menulist;
+			//height: 3em;
+			padding-top: 0px;
+			padding-bottom: 0px;
+			padding-left: 0px;
+			padding-right: 0px;
+		}
+	}
+}
+	

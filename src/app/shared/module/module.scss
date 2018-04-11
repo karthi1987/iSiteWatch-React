@@ -1,0 +1,114 @@
+@import '../../../framework/scss/partials/variables';
+@import '../../../framework/scss/partials/mixins';
+
+.home-module-header{
+  // font-family: "VerizonNeueDisplay", Arial, Helvetica sans-serif;
+  // font-family: "Neue Haas Grotesk", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-size: remCalc(18px);
+  font-weight: bold;
+  /*margin-bottom: remCalc(12px);*/
+  color: black;
+
+  &:hover{
+    cursor: default;
+  }
+}
+
+.module-header-title {
+    font-family: "Neue Haas Grotesk", "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+
+.home-module-link{
+  // font-family: "VerizonNeueDisplay", Arial, Helvetica sans-serif;
+  font-size: remCalc(18px);
+  font-weight: bold;
+  /*margin-bottom: remCalc(12px);*/
+  color: black;
+
+  &:hover{
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+
+    .home-module-header-arrow,
+    .home-module-subheader-arrow{
+      fill: #a80309;
+    }
+  }
+
+  &:active {
+    .home-module-header-arrow,
+    .home-module-subheader-arrow{
+      fill: #740206;
+    }
+  }
+}
+
+.home-module-header-arrow{
+  fill: #333333;
+  height: 14px;
+  width: 20px;
+  float: right;
+  padding-left: remCalc(6px);
+  margin-top: remCalc(4px);
+}
+
+.home-module-subheader-arrow{
+  fill: #cd040b;
+  height: 14px;
+  width: 20px;
+  float: right;
+  /*padding-left: 6px;*/
+  /*margin-top: 2px;*/
+}
+
+
+.home-module-container.module-subheader .icon-right-arrow{
+  fill: #d0151b;
+}
+
+.top-module{
+  background-color: white;
+  /*padding: 18px;*/
+  height: remCalc(385px);
+  /*margin-top: 12px;*/
+}
+
+.module-header-description{
+  display: inline-block;
+  float: right;
+  font-size: remCalc(11px);
+  font-weight: 400;
+  line-height: remCalc(17px);
+  /*margin-right: 10px;*/
+  // font-family: "VerizonNeueText", Arial, Helvetica sans-serif;
+}
+
+.home-module.module-promo{
+  padding: 0;
+}
+
+.module-promo-image-and-link,
+.module-promo-image{
+  display:block;
+  width:100%;
+}
+
+.module-promo-image-and-link,
+.module-promo-image{
+  height: remCalc(250px);
+  background-position:center;
+}
+
+.top-module .module-promo-image-and-link,
+.top-module .module-promo-image{
+  height: remCalc(385px);
+}
+
+.module-no-results{
+  font-family: "VerizonNeueDisplay", Arial, Helvetica sans-serif;
+  font-size: remCalc(16px);
+  font-weight: bold;
+  color: #d0151b;
+  /*padding: remCalc(20px) 0 remCalc(12px);*/
+}

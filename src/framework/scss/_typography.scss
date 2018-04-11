@@ -1,0 +1,54 @@
+@import "partials/core-variables";
+
+$typographyPrefix: 'text' !default;
+$typographyHeadingOneFontSize: 2rem !default;
+$typographyHeadingTwoFontSize: 1.5rem !default;
+$typographyHeadingThreeFontSize: 1.15rem !default;
+$typographySmallFontSize: remCalc(12px) !default;
+$typographyColorBlack: black !default;
+$typographyColorRed: red !default;
+$typographyColorBlue: navy !default;
+$typographyColorGreen: darkgreen !default;
+$typographyFontSizeStart: 10 !default;
+$typographyFontSizeEnd: 40 !default;
+$typographyLineHeightStart: 1 !default;
+$typographyLineHeightEnd: 3 !default;
+$typographyColorList: (black: $typographyColorBlack, red: $typographyColorRed, blue: $typographyColorBlue, green: $typographyColorGreen) !default;
+
+@each $target, $size in (h1: $typographyHeadingOneFontSize, h2: $typographyHeadingTwoFontSize, h3: $typographyHeadingThreeFontSize, small: $typographySmallFontSize) {
+	#{$target}, .#{$typographyPrefix}-#{$target} {
+		font-size: $size;
+	}
+}
+
+@each $alignment in (left, center, justify) {
+	.#{$typographyPrefix}-#{$alignment} {
+		text-align: $alignment;
+	}
+}
+
+@each $color, $code in $typographyColorList {
+	.#{$typographyPrefix}-#{$color} {
+		color: $code;
+	}
+}
+
+.#{$typographyPrefix}-italic {
+	font-style: italic;
+}
+
+.#{$typographyPrefix}-bold {
+	font-weight: $typographyFontWeightBold;
+}
+
+@for $size from $typographyFontSizeStart through $typographyFontSizeEnd {
+	.#{$typographyPrefix}-font-size-#{$size} {
+		font-size: remCalc($size * 1px);
+	}
+}
+
+@for $height from $typographyLineHeightStart through $typographyLineHeightEnd {
+	.#{$typographyPrefix}-line-height-#{$height} {
+		line-height: $height;
+	}
+}

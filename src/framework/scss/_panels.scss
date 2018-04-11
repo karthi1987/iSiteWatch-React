@@ -1,0 +1,71 @@
+@import 'partials/core-variables';
+
+$gridGutter: 1.5rem !default;
+$panelPadding: $pagePadding !default;
+$panelDefaultColor: white !default;
+$panelErrorFontColor: #000;
+$panelErrorBackgroundColor: #ffcfd1;
+$panelInfoFontColor: #000;
+$panelInfoBackgroundColor: #bcd9ff;
+
+.panel {
+	padding: $pagePadding 1.5rem;
+	background-color: $panelDefaultColor;
+	margin-bottom: 1rem;
+	clear: fix;
+
+	&.panel-page {
+		padding: $gridGutter;
+		//margin: $pageBodyPadding;
+	}
+
+	&.panel-error {
+		color: $panelErrorFontColor;
+		background-color: $panelErrorBackgroundColor;
+		//background-color: #ffcfd1;
+		display: flex;
+		align-content: center;
+		align-items: center;
+
+		margin: 0.5rem;
+	}
+
+	&.panel-info {
+		color: $panelInfoFontColor;
+		background-color: $panelInfoBackgroundColor;
+		display: flex;
+		align-content: center;
+		align-items: center;
+
+		margin: 0.5rem;
+	}
+
+	.panel-icon {
+		font-size: 2rem;
+		float: left;
+		display: block;
+		min-width: 2.5rem; //safari fix
+	}
+
+	.panel-message {
+		margin-left: remCalc(8px);
+		line-height: 1;
+		margin-bottom: 0;
+		font-weight: 700;
+		font-size: remCalc(14px);
+	}
+
+	//&.vertical {
+	//	text-align: center;
+	//	.panel-icon {
+	//		//float: none;
+	//	}
+	////background-color: transparent;
+	//	margin-bottom: 0px;
+	//
+	//.panel-message {
+	//	margin-left: 0px;
+	//	}
+	//}
+
+}

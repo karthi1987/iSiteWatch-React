@@ -1,0 +1,57 @@
+@import './partials/mixins.scss';
+@import './partials/core-variables.scss';
+@import './partials/variables.scss';
+
+$pageNavCompactHeight: remCalc(60px) !default; // The spinner also depends on this to operate.
+$pageNavWidth: remCalc(120px) !default;
+$pageNavPadding: $pagePadding !default;
+$pageNavBackground: white !default;
+$pageNavTextColor: #333 !default;
+$pageNavActiveBackground: white;
+$pageNavActiveTextColor: #333 !default;
+$pageNavIconSize: remCalc(40px) !default;
+$pageNavFontSize: 1rem !default;
+$pageNavFontWeight: 400 !default;
+$pageNavCounterBackground: $pageNavActiveTextColor !default;
+$pageNavCounterTextColor: $pageNavActiveBackground;
+$pageNavActiveCounterBackground: $pageNavActiveTextColor !default;
+$pageNavActiveCounterTextColor:	 $pageNavActiveBackground;
+$pageNavCounterFontSize: $pageNavFontSize !default;
+$pageNavTransition: all 250ms ease-in-out-sine !default;
+
+$pageNavCompactHeaderTitleColor: $pageNavTextColor !default;
+
+$pageNavCompactMenuButtonColor: $pageNavTextColor !default;
+$pageNavCompactMenuButtonExpandedColor: $pageNavCompactMenuButtonColor !default;
+$pageNavCompactMenuButtonLocation: right !default;
+$pageNavCompactMenuButtonLabel: true !default;
+$pageNavCompactMenuButtonFontSize: $pageNavFontSize !default;
+$pageNavCompactMenuButtonFontWeight: $pageNavFontWeight !default;
+$pageNavCompactMenuButtonTransform: uppercase !default;
+
+$pageNavCompactFullBackground: $pageNavBackground !default;
+$pageNavCompactFullTextColor: $pageNavTextColor !default;
+$pageNavCompactActiveBackground: $pageNavActiveBackground;
+$pageNavCompactActiveTextColor: $pageNavActiveTextColor !default;
+$pageNavCompactCounterBackground: $pageNavCompactActiveTextColor !default;
+$pageNavCompactCounterTextColor: $pageNavCompactActiveBackground !default;
+$pageNavCompactActiveCounterBackground: $pageNavCompactActiveTextColor !default;
+$pageNavCompactActiveCounterTextColor:	$pageNavCompactActiveBackground!default;
+$pageNavCompactCounterFontSize: $pageNavCompactFontSize !default;
+$pageNavCompactDividerColor: lightgrey !default;
+$pageNavCompactDivider: remCalc(1px) $pageNavCompactDividerColor solid !default;
+$pageNavCompactIconSize: $pageNavIconSize !default;
+$pageNavCompactFontSize: $pageNavFontSize !default;
+$pageNavCompactFontWeight: 400 !default;
+
+$pageNavLocation: 'right' !default;
+$pageNavCompactExpandFrom: 'right' !default;
+
+$pageNavZIndex: 15;
+
+// Calculated Vars
+$pageNavArrowSize: $pagePadding / 1.1 !default;
+$pageNavCompactLineHeight: $pageNavCompactHeight - ( $pagePadding * 2 ) !default;
+$pageNavCompactHeaderTitleSize: $pageNavCompactLineHeight / 2 !default;
+$pageNavCompactMenuIconSize: $pageNavCompactLineHeight / 2 !default;
+$pageNavMenuBarHeight: $pageNavCompactMenuIconSize / 5 !default;

@@ -1,0 +1,32 @@
+{
+  "success": true,
+  "errorMessage": null,
+  "data": {
+    "filters": [
+      {
+        "label": "ALL",
+        "id": "ALL"
+      },
+      {
+        "label": "Channel 1",
+        "id": "channel1"
+      },
+      {
+        "label": "Channel 2",
+        "id": "channel2"
+      },
+      {
+        "label": "Channel 3",
+        "id": "channel3"
+      },
+      {
+        "label": "Channel 4",
+        "id": "channel4"
+      },
+      {
+        "label": "Channel 5",
+        "id": "channel5"
+      }
+    ]
+  }
+}

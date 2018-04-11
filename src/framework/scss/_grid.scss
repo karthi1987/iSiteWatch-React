@@ -1,0 +1,63 @@
+@import 'partials/core-variables';
+@import 'partials/mixins';
+
+$gridNumberOfColumns: 12 !default;
+$gridColumnPrefix: 'col' !default;
+$gridGutter: 1.5rem !default; // Panels depends on this variable
+$gridRowClass: 'row' !default;
+$gridRowSpace: remCalc(36px) !default;
+
+.row {
+	margin-left:	($gridGutter / -2);
+	margin-right: ($gridGutter / -2);
+	clear: fix;
+}
+
+.row-center {
+	display: flex;
+	align-items: center;
+}
+
+.row-space {
+	margin-top: $gridRowSpace;
+}
+
+.row-double-space {
+	margin-top: $gridRowSpace * 2;
+}
+
+%gridColumn {
+	position: relative;
+	min-height: 1px;
+	padding-left: $gridGutter / 2;
+	padding-right: $gridGutter / 2;
+	float: left;
+}
+
+@each $breakpoint in map-keys($appBreakpoints) {
+	@for $i from 1 through $gridNumberOfColumns {
+		.#{$gridColumnPrefix}-#{$breakpoint}-#{$i} {
+			@extend %gridColumn;
+		}
+	}
+	@include mediaBreakpointUp($breakpoint) {
+		@for $i from 1 through $gridNumberOfColumns {
+			.#{$gridColumnPrefix}-#{$breakpoint}-#{$i} {
+				width: percentage($i / $gridNumberOfColumns);
+			}
+			.#{$gridColumnPrefix}-#{$breakpoint}-push-#{$i} {
+				left: percentage($i / $gridNumberOfColumns);
+			}
+			.#{$gridColumnPrefix}-#{$breakpoint}-pull-#{$i} {
+				right: percentage($i / $gridNumberOfColumns);
+			}
+			.#{$gridColumnPrefix}-#{$breakpoint}-offset-#{$i} {
+				margin-left: percentage($i / $gridNumberOfColumns);
+			}
+		}
+		.#{$gridColumnPrefix}-#{$breakpoint}-no-padding {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+}

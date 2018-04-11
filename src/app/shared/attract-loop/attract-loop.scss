@@ -1,0 +1,302 @@
+@import '../../../framework/scss/partials/variables';
+@import '../../../framework/scss/partials/mixins';
+
+
+/*@mixin aspect-ratio($width, $height, $coreWidth) {
+	overflow: hidden;
+	width: $coreWidth;
+
+	&:before {
+		float: left;
+		content: "";
+		padding-bottom: ($height / $width) * $coreWidth;
+	}
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}*/
+
+.attract-loop {
+	z-index: 5000;
+	position: fixed 0 0 0 0;
+	display: block;
+
+		.initial-page, .metrics, .transaction-time, .agenda, .nps {
+			height: 100vh;
+			font-family: "Neue Haas Grotesk", "Helvetica Neue", Arial, Helvetica, sans-serif;
+			font-weight: bolder;
+			position: relative;
+
+			.header {
+					position: absolute;
+					top: 3rem;
+					left: 4.2rem;
+					font-size: 1.5rem;;
+					color: #777;
+			}
+
+			.body{
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+					justify-content: center;
+					height: 100%;
+
+					.data{
+							display: flex;
+							flex-direction: column;
+							justify-content: center;
+							align-items: center;
+							line-height: 4.5rem;
+
+							.value {
+								text-align: center;
+							}
+
+							.label {
+									color: #777;
+									width: 95%;
+									text-align: center;
+							}
+					}
+					.graphic {
+							align-items: center;
+							justify-content: center;
+							display: flex;
+
+							.image {
+									background-size: contain;
+									background-repeat: no-repeat;
+									background-position-x: center;
+									background-position-y: center;
+											width: 20rem;
+											height: 20rem;
+									border-radius: 50%;
+						}
+					}
+			}
+
+			.timestamp {
+				position: absolute;
+				right: 4rem;
+				bottom: 1.5rem;
+				font-size: .9rem;
+			}
+
+		}
+
+		.initial-page {
+			/*background: url();*/
+			background-repeat: no-repeat;
+			background-size: 100%;
+			background-position: center;
+			background-color: white;
+		}
+
+		.metrics {
+			background-color: #E4E5E3;
+
+
+			.body {
+				.data {
+					display: flex;
+					flex-direction: row;
+					justify-content: center;
+					align-items: center;
+					height: 10%;
+			flex: 1 1 70%;
+			max-width: 65%;
+			min-width: 30%;
+
+					.metric-group {
+						width: 100%;
+					}
+
+					.metric-row {
+						width: 100%;
+						display: flex;
+						flex-direction: row;
+						justify-content: center;
+						align-items: center;
+						padding: 5% 0 5%;
+						flex-shrink: 0;
+					}
+
+					.metric {
+						width: 50%;
+						display: flex;
+						flex-direction: column;
+						justify-content: center;
+						align-items: center;
+						margin: 0 auto auto;
+						flex: 1 0 50%;
+			//padding: 0 2em 0 2em;
+
+						.value {
+							font-size: 5rem;
+						}
+						.label {
+							font-size: 2.0rem;
+							line-height: 2.0rem;
+						}
+					}
+				}
+				.graphic {
+						flex: 1 1 30%;
+				}
+			}
+		}
+
+		.transaction-time, .nps {
+			background-color: white;
+
+			.body {
+				.data {
+					min-width: 30%;
+
+					.value {
+						font-size: 6rem;
+						line-height: 6rem;
+					}
+					.label {
+						font-size: 2rem;
+						line-height: 2rem;
+						width: 100%;
+					}
+				}
+			}
+
+			.graphic {
+					min-width: 30%;
+			}
+		}
+
+		.nps {
+			.body {
+				.data {
+					min-width: 30%;
+					.value {
+						font-size: 6rem;
+					}
+					.label {
+						font-size: 2.5rem;
+						line-height: 2.5rem;
+					}
+				}
+			}
+
+			.graphic {
+					min-width: 30%;
+			}
+		}
+
+		.agenda {
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: 75% 0;
+			background-color: #E4E5E3;
+
+			.body {
+				height: 100%;
+				margin: 0 5%;
+
+				.data {
+					display: flex;
+					flex-direction: row;
+					justify-content: initial;
+					align-items: initial;
+					/*position: relative;*/
+					width: 85%;
+					height: 100%;
+
+					.details {
+
+						height: 80vh;
+						margin-top: 20vh;
+						@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+							margin-top: 20vh;
+						}
+
+
+						width: 35%;
+						display: flex;
+						flex-direction: column;
+						justify-content: initial;
+						align-items: initial;
+
+						.agenda-label {
+							color: black;
+							font-size: 3rem;
+						}
+
+						.description {
+							font-size: 1.5rem;
+							line-height: 1.5rem;
+							color: #CD040B;
+							padding-top: 1.5rem;
+						}
+
+						.timeFrame {
+								color: #777;
+								line-height: 2.0rem;
+								padding-top: 0.5rem;
+								font-size: 2.0rem;
+						}
+					}
+
+					.summary {
+						display: flex;
+						flex-direction: column;
+						justify-content: center;
+						align-items: initial;
+
+						height: 100%;
+						width: 65%;
+						padding: 0 5% 0;
+						line-height: 2.5rem;
+						font-size: 1.5rem;
+						letter-spacing: .05rem;
+
+
+						//create two spacer elements that will buttress the actual content - what we want is we want content that's not *directly* centered, but it centered with a bias towards the top.   However, once it gets bigger and needs to take over the page, it will asymptotically approach being fully centered.  We do this by setting the spacers to be allowed to shrink, and setting the core content to not being allowed to - that way it will "eat into" the space taken up by the spacers, but only when necessary.
+						.spacer-top {
+							flex: 0 1 30%;
+						}
+						.content {
+							flex: 0 0 auto;
+						}
+						.spacer-bot {
+							flex: 0 1 60%;
+						}
+
+
+						ul {
+							margin-top: 0;
+							margin-bottom: 0;
+						}
+					}
+				}
+
+				.agenda-graphic {
+							height: 100%;
+							width: 15%;
+
+							.image {
+									background-size: contain;
+									background-repeat: no-repeat;
+									background-position-x: center;
+									background-position-y: center;
+									width: 100%;
+									height: 100%;
+						}
+					}
+
+			}
+		}
+
+		.nps {
+			background-color: white;
+		}
+}

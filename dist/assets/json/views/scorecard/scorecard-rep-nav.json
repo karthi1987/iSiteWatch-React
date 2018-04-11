@@ -1,0 +1,26 @@
+{
+   "success": true,
+   "errorMessage": null,
+   "data":{
+      "location":[
+         {
+            "id":"PAX",
+            "label":"Rep"
+         },
+         {
+            "id":"OFFICE",
+            "label":"Store"
+         }
+      ],
+      "region":[
+         {
+            "id":"2580683",
+            "label":"Territory"
+         },
+         {
+            "id":"2581574",
+            "label":"District"
+         }
+      ]
+   }
+}

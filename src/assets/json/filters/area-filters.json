@@ -1,0 +1,33 @@
+{
+  "success": true,
+  "errorMessage": null,
+  "data": {
+    "filters": [
+      {
+        "label": "All",
+        "id": "ALL"
+      },
+      {
+        "label": "Area 1",
+        "id": "Area1"
+      },
+      {
+        "label": "Area 2",
+        "id": "Area2"
+      },
+      {
+        "label": "Area 3",
+        "id": "Area3"
+      },
+      {
+        "label": "Area 4",
+        "id": "Area4"
+      },
+      {
+        "label": "Area 5",
+        "id": "Area5"
+      }
+    ],
+    "key": "office"
+  }
+}

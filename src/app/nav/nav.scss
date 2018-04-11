@@ -1,0 +1,276 @@
+@import '../../framework/scss/partials/mixins.scss';
+@import '../../framework/scss/partials/core-variables.scss';
+@import '../../framework/scss/navigation.scss';
+
+// var declarations
+$transactionTimeLabelFontSize: 0.65rem;
+$transactionTimeValueFontSize: 0.9rem;
+$transactionTimeLabelFontWeight: 400;
+$transactionTimeValueFontWeight: 700;
+
+
+body {
+
+	padding-top: 0;
+}
+
+nav.nav {
+	height: 100%;
+	font-family: "VerizonNeueText", Arial, Helvetica sans-serif;
+}
+
+.page-navigation {
+	// position: fixed 0 0 auto 0;
+	height: $pageNavCompactHeight;
+	// height: 100%;
+	background-color: $pageNavBackground;
+	color: $pageNavTextColor;
+	z-index: $pageNavZIndex;
+
+
+		& {
+			// position: fixed 0 0 0 auto;
+			position: absolute;
+			right: 0;
+			top: 0;
+			// height: auto;
+			height: 98%;
+			width: $pageNavWidth;
+		}
+
+
+
+	.full-nav {
+		position: fixed;
+		top: $pageNavCompactHeight;
+		bottom: 0;
+
+		@if $pageNavCompactExpandFrom == 'left' {
+			right: 100%;
+			left: -100%;
+		} @else {
+			right: -100%;
+			left: 100%;
+		}
+
+		overflow: visible;
+		background-color: $pageNavBackground;
+		box-sizing: border-box;
+		background-color: $pageNavCompactFullBackground;
+		color: $pageNavCompactFullTextColor;
+		transition: $pageNavTransition;
+
+
+		& {
+			position: absolute 0;
+			// overflow: auto;
+		}
+
+		.item, .item:last-child {
+			border-top: none;
+			border-bottom: none;
+		}
+		.item {
+			text-decoration: none;
+			display: block;
+			clear: fix;
+			box-sizing: border-box;
+			padding: $pageNavPadding;
+			transition: $pageNavTransition;
+
+			// color: $pageNavTextColor;
+			color: $pageNavTextColor;
+			background-color: $pageNavBackground;
+			position: relative;
+			border-top: none;
+			border-bottom: none;
+			vertical-align: middle;
+			line-height: 1;
+			// height: remCalc(100px);
+			height: 16.66%;
+
+			&:before {
+				display: block;
+				content: '';
+				position: absolute;
+				border: $pageNavArrowSize solid transparent;
+				border-right-color: $pageNavBackground;
+				top: 50%;
+				left: calc(#{$pageNavArrowSize} * -2 + 1px);
+				transform: translateY(-50%) translateX(50%) scaleX(0);
+				transition: $pageNavTransition;
+			}
+
+			&.active {
+				color: $pageNavActiveTextColor;
+				background-color: $pageNavActiveBackground;
+				border-left: remCalc(7px) solid $red;
+
+				// &:before {
+				// 	border-right-color: $pageNavActiveBackground;
+				// 	transform: translateY(-50%) translateX(0) scaleX(1);
+				// }
+
+				.counter {
+					border-color: $pageNavActiveBackground;
+					color: white;
+					background-color: $red;
+				}
+
+			}
+
+			.container {
+				display: flex;
+				flex-flow: column nowrap;
+				justify-content: center;
+				align-items: center;
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+			}
+
+			.icon, .label {
+				display: block;
+				text-align: center;
+				padding-right: 0;
+			}
+
+			.icon {
+				display: inline-block;
+				vertical-align: middle;
+				// font-size: $pageNavCompactIconSize;
+				// font-size: remCalc(50px);
+				font-size: 2.5rem;
+
+				i {
+					// line-height: $pageNavCompactLineHeight;
+					line-height: 3rem;
+				}
+			}
+
+			.label {
+				display: inline-block;
+				font-size: $pageNavFontSize;
+				font-weight: $pageNavFontWeight;
+			}
+
+			.counter {
+				display: inline-block;
+				font-size: $pageNavCompactCounterFontSize;
+				line-height: 1.5em;
+				padding-left: 0.5em;
+				padding-right: 0.5em;
+				border-radius: 1em;
+				position: absolute;
+				color: white;
+				background-color: $red;
+				font-size: $pageNavCounterFontSize;
+				top: 2rem;
+				right: 1.75rem;
+				border: remCalc(2px) solid $pageNavBackground;
+				transition: $pageNavTransition;
+			}
+
+		}
+		.wait-time {
+			height: 9rem;
+			background: #000;
+			color: #FFF;
+			cursor: default;
+			.waittime-max {
+				height: 7rem;
+				display: block;
+				border-bottom: 0.01rem solid #CCC;
+				padding: 0;
+				margin: 0;
+				width: 5.5rem;
+				text-align: center;
+				.icon {
+					font-size: 2rem;
+					i {
+						line-height: 2.4rem;
+					}
+				}
+				.label {
+					display: block;
+					line-height: 0.8em;
+					font-size: 1.25rem;
+					font-weight:  $transactionTimeLabelFontWeight;
+					.avgTimeValue {
+						font-weight: $transactionTimeValueFontWeight;
+					}
+				}
+			}
+			.waittime-avg {
+				display: block;
+				margin: 0.5rem 0 0.5rem 0;
+				height: 4.7rem;
+				width: 5.5rem;
+				text-align: center;
+				.label {
+					display: block;
+					line-height: 1.2em;
+					font-size: $transactionTimeLabelFontSize;
+					font-weight: $transactionTimeLabelFontWeight;
+					text-align: center;
+					.maxTimeValue {
+						font-size: $transactionTimeValueFontSize;
+						font-weight: $transactionTimeValueFontWeight;
+					}
+					.queueTimeValue {
+						font-size: $transactionTimeValueFontSize;
+						font-weight: $transactionTimeValueFontWeight;
+						display: block;
+					}
+				}
+			}
+			.waittime-break {
+				display: block;
+				font-size: $transactionTimeLabelFontSize;
+				label {
+					line-height: 0.9rem;
+					font-weight: $transactionTimeLabelFontWeight;
+				}
+			}
+		}
+		.item-modified {
+			height: 11.66%;
+		}
+		.black {
+			background: #000;
+		}
+		.green {
+			background: #008000;
+		}
+		.gold {
+			background: #FFD700;
+		}
+		.red {
+			background: #ff0000;
+		}
+		.transaction-time {
+			background: #000;
+			color: white;
+			display: block;
+			line-height: 0.8em;
+			display: flex;
+			flex-flow: column nowrap;
+			padding: 0.5rem 1.25rem;
+
+			.label {
+				margin: 0.125rem 0 0.125rem 0;
+				width: 5.5rem;
+				font-size: $transactionTimeLabelFontSize;
+				font-weight: $transactionTimeLabelFontWeight;
+				.transTimeValue {
+					font-size: $transactionTimeValueFontSize;
+					font-weight: $transactionTimeValueFontWeight;
+					line-height: 0.5rem;
+				}
+			}
+
+		}
+	}
+}

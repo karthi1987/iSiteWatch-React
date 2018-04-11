@@ -1,0 +1,45 @@
+@import './variables';
+
+$buttonForwardCartetIcon: '\f108' !default; // This needs to be updated when the vz-icons project is updated.
+
+.button {
+	cursor: pointer;
+	display: inline-block;
+	border: none;
+	background-color: transparent;
+	font-size: remCalc(16px);
+	padding: remCalc(16px) remCalc(20px);
+	font-weight: $typographyFontWeightBold;
+	text-align: left;
+
+	&:after {
+		content: $buttonForwardCartetIcon;
+		font-family: VerizonIcons;
+		display: inline-block;
+		vertical-align: middle;
+		padding-left: remCalc(16px);
+		float: right;
+	}
+
+	&.button-primary {
+		background-color: $red;
+		color: $white;
+
+		&:after {
+			color: $white;
+		}
+	}
+
+	&.button-secondary {
+		color: $black;
+
+		&:after {
+			color: $red;
+		}
+	}
+
+	&.button-expand {
+		width: 100%;
+	}
+
+}

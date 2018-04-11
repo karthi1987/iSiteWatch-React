@@ -1,0 +1,211 @@
+$gaugeWidth:              30 !default; // Make sure to add the strokeWidth property to the gauge if changing.
+$gaugePlaceholderColor:   #e4e5e3 !default;
+
+$gauge0Color:           #72b495 !default;
+$gauge0OverColor:       #52826c !default;
+
+$gauge1Color:         #e0bc57 !default;
+$gauge1OverColor:     #ad9144 !default;
+
+$gauge2Color:          #f9b294 !default;
+$gauge2OverColor:      #c78e75 !default;
+
+$gauge3Color:        #abe0f9 !default;
+$gauge3OverColor:    #89b3c7 !default;
+
+$gauge4Color:        #959595 !default;
+$gauge4OverColor:    #616161 !default;
+
+$gaugePrimaryColor:       $gauge0Color !default;
+$gaugePrimaryOverColor:   $gauge0OverColor !default;
+
+$gaugeSecondaryColor:     $gauge1Color !default;
+$gaugeSecondaryOverColor: $gauge1OverColor !default;
+
+@mixin gauge-color-scheme ($name, $primaryColor, $secondaryColor){
+
+  .gauge.#{$name} {
+    .arc {
+      stroke: $primaryColor;
+
+      &.over {
+        stroke: $secondaryColor;
+      }
+    }
+
+    .value {
+      fill: $primaryColor;
+      font-weight:900;
+      font-size: 42px;
+      font-family: "VerizonNeueDisplay", Arial, Helvetica sans-serif;
+    }
+
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      .value {
+         font-size:40px;
+         font-weight:700;
+       }
+    }
+
+    .pct-format, .cur-format{
+      font-family: "VerizonNeueDisplay", Arial, Helvetica sans-serif;
+      font-weight: 900;
+      font-size: 28px;
+      fill:$primaryColor;
+    }
+    .gauge-tails .gauge-circle{
+      background-color:$primaryColor;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .#{$name}-rank-footer {
+      color:$primaryColor;
+  }
+}
+
+.gauge {
+  display: inline-block;
+  transform: translate(0px);
+  //max-width: remCalc(250px);
+
+  div.title {
+    text-align: center;
+  }
+
+  figure {
+
+    .gauge-graphic {
+      transform: translate(0px);
+      text {
+        text-anchor: middle;
+      }
+
+      .arc {
+        fill: none;
+        stroke-width: $gaugeWidth;
+
+        &.over {
+          stroke-width: ($gaugeWidth / 2);
+        }
+
+        &.placeholder {
+          stroke: $gaugePlaceholderColor;
+        }
+
+      }
+
+    }
+
+    .shadow {
+
+      ellipse {
+        fill: grey;
+      }
+
+    }
+
+  }
+
+}
+
+.figure-scale.scale-small{
+  transform: scale(0.5);
+}
+
+.figure-scale{
+  transition: all .4s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+  height:100%;
+}
+
+.gauge-flip.flip-opacity{
+  opacity:0;
+}
+
+.gauge-flip{
+  transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+  opacity:1;
+}
+
+.gauge-opacity.no-opacity{
+    opacity:0;
+}
+
+.gauge-opacity{
+  transform: translate(0px);
+  height: 100%;
+  transition: opacity .4s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+  opacity:1;
+  width: 100%;
+}
+
+.gauge-front {
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+.gauge-heads, .gauge-tails{
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    perspective: 10000px;
+    position:absolute;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d
+}
+
+.gauge-heads{
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+}
+
+.gauge-tails{
+    transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
+    z-index:2;
+}
+
+.gauge-flipper{
+    perspective: 10000px;
+    .gauge-tails{
+        transform: rotateY(180deg);
+        transition: transform 1s ease-in-out;
+        -webkit-transform: rotateY(180deg);
+        -webkit-transition: transform 1s ease-in-out;
+    }
+    .gauge-heads{
+        transform: rotateY(0deg);
+        transition: transform 1s ease-in-out;
+        -webkit-transform: rotateY(0deg);
+        -webkit-transition: transform 1s ease-in-out;
+    }
+}
+
+.gauge-flipper.animate{
+    .gauge-tails{
+        transform: rotateY(0deg);
+        -webkit-transform: rotateY(0deg);
+
+    }
+    .gauge-heads{
+        transform: rotateY(180deg);
+        -webkit-transform: rotateY(180deg);
+    }
+}
+
+@include gauge-color-scheme('gauge-0', $gauge0Color, $gauge0OverColor);
+@include gauge-color-scheme('gauge-1', $gauge1Color, $gauge1OverColor);
+@include gauge-color-scheme('gauge-2', $gauge2Color, $gauge2OverColor);
+@include gauge-color-scheme('gauge-3', $gauge3Color, $gauge3OverColor);
+@include gauge-color-scheme('gauge-4', $gauge4Color, $gauge4OverColor);
+@include gauge-color-scheme('gauge-5', $gauge0Color, $gauge0OverColor);
+@include gauge-color-scheme('gauge-6', $gauge1Color, $gauge1OverColor);
+@include gauge-color-scheme('gauge-7', $gauge2Color, $gauge2OverColor);
+@include gauge-color-scheme('gauge-8', $gauge3Color, $gauge3OverColor);
+@include gauge-color-scheme('gauge-9', $gauge4Color, $gauge4OverColor);
+@include gauge-color-scheme('primary', $gaugePrimaryColor, $gaugePrimaryOverColor);
+@include gauge-color-scheme('secondary', $gaugeSecondaryColor, $gaugeSecondaryOverColor);
+// API Training Shop Blog About
+// © 2016 GitHub, Inc. Help Support

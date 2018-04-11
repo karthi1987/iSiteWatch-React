@@ -1,0 +1,39 @@
+@import '../../../../../framework/scss/partials/variables';
+@import '../../../../../framework/scss/partials/mixins';
+
+.Home_cell--quickhitsmodule {
+
+    display: flex;
+    // @include aspect-ratio(2.0, 1.32, 100%);
+    width: 100%;
+    height: 50%;
+
+  .slick-prev {
+    left: 5px;
+  }
+
+  .slick-next {
+    right: 5px;
+  }
+
+  .Home_cellContent,
+  .Home_cellContent > div,
+  .quickhits-collection,
+  .slick-slider,
+  .slick-list,
+  .slick-track,
+  .slick-slide {
+    height: 100%;
+  }
+
+  .quickhits-container {
+    background-size: 100% auto;
+    //background-clip: border-box;
+    background-repeat: no-repeat;
+    background-position: center;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+

@@ -1,0 +1,67 @@
+@import '../../../../../framework/scss/partials/variables';
+@import '../../../../../framework/scss/partials/mixins';
+
+$image_path: "./images/";
+$homeGutter: remCalc(30px);
+
+.Home_cell--videomodule {
+	background: white;
+	width: 100%;
+	height: 100%;
+	// @include aspect-ratio(2.0, 1.0, 100%);
+
+	position: relative;
+
+
+
+	.video-module {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		/*background-size: cover;
+		background-position: center;
+		display: flex;
+		align-items: center;
+		justify-content: center;*/
+
+		.slick-slider,
+		.slick-list,
+		.slick-track,
+		.slick-slide {
+		height: 100%;
+		}
+		
+		.video-cell {
+			height: 100%;
+			width: 100%;
+			background-size: cover;
+			background-position: center;
+			
+			& > a {
+				height: 100%;
+				width: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+		
+				.video-player-icon {
+
+					background-image: url('../../../videos/video-player/images/play-icon-large.png');
+
+					height: 3.25rem;
+					width: 3.25rem;
+					background-size: cover;
+
+					opacity: 0.8;
+					transition: opacity 0.25s linear;
+					&.active {
+						opacity: 0.0;
+					}
+					&.loading {
+						background-image: none;
+					}
+				}
+			}
+		}
+	}
+}

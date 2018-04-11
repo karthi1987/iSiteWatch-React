@@ -1,0 +1,34 @@
+{
+  "success": true,
+  "errorMessage": null,
+  "data": {
+   "interval": 15000,
+    "quickhits": [
+      {
+        "id":"1001",
+        "image":"Promo_1.jpg",
+        "webTrackId": 235234
+      },
+      {
+        "id":"1002",
+        "image":"Promo_2.jpg",
+        "webTrackId": 235234
+      },
+      {
+        "id":"1003",
+        "image":"Promo_3.jpg",
+        "webTrackId": 235234
+      },
+      {
+        "id":"1004",
+        "image":"Promo_4.jpg",
+        "webTrackId": 235234
+      },
+      {
+        "id":"1005",
+        "image":"Promo_5.jpg",
+        "webTrackId": 235234
+      }
+    ]
+  }
+}

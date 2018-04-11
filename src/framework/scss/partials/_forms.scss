@@ -1,0 +1,189 @@
+$formArrowIcon: '\f106';
+
+.form {
+
+	input {
+		background-color: transparent;
+		border: none;
+	}
+
+	label.form-required:after {
+		content: '*';
+		color: $red;
+	}
+
+	.select-wrapper {
+		display: inline-block;
+		position: relative;
+
+		&.select-expand {
+			display: block;
+			width: 100%;
+		}
+
+		select {
+			-webkit-appearance: none;
+			background-color: transparent;
+			border-radius: 0;
+			border: none;
+			cursor: pointer;
+			font-family: $typographyBodyFontStack;
+			font-size: remCalc(12px);
+			font-weight: $typographyFontWeightBold;
+			line-height: remCalc(24px);
+			min-width: remCalc(150px);
+			overflow: hidden;
+			padding-right: remCalc(20px);
+			text-overflow: ellipsis;
+			vertical-align: middle;
+			white-space: nowrap;
+			width: 100%;
+		}
+
+		.select-arrow:before {
+			color: $red;
+			content: $formArrowIcon;
+			display: block;
+			font-family: VerizonIcons;
+			font-size: remCalc(10px);
+			pointer-events:none;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			vertical-align: middle;
+		}
+	}
+
+	.form-input-group {
+		margin-bottom: remCalc(36px);
+
+		label, input, .form-label {
+			box-sizing: border-box;
+			display: block;
+			font-weight: $typographyFontWeightBold;
+			width: 100%;
+		}
+
+		label, .form-label {
+			font-size: remCalc(16px);
+		}
+
+		input[type="text"], input[type="password"], input[type="tel"] {
+			font-size: remCalc(14px);
+			padding-top: remCalc( (33px - 14px) / 2 );
+			padding-bottom: remCalc( (33px - 14px) / 2 );
+		}
+
+		.form-input-text {
+			font-weight: $typographyFontWeightBold;
+			font-size: remCalc(14px);
+			padding-top: remCalc( (33px - 14px) / 2 );
+			padding-bottom: remCalc( (33px - 14px) / 2 );
+			margin-bottom: 0;
+		}
+
+		.form-error, .form-link {
+			display: block;
+			font-size: remCalc(10px);
+			margin-bottom: 0;
+			text-align: right;
+			font-weight: $typographyFontWeightBold;
+		}
+
+		.form-error {
+			color: $red;
+		}
+
+		.form-error-icon {
+			color: $red;
+			float: right;
+			margin-top: remCalc(-27px);
+			pointer-events: none;
+		}
+	}
+
+	&.form-style-primary {
+
+		.select-wrapper {
+
+			select {
+				background-color: $white;
+				border: 1px solid $lightGrey;
+				padding-left: remCalc(10px);
+				padding-right: remCalc(30px);
+				padding-top: remCalc( (33px - 14px) / 2 );
+				padding-bottom: remCalc( (33px - 14px) / 2 );
+			}
+
+			.select-arrow:before {
+				right: remCalc(10px);
+			}
+		}
+
+		.form-input-group {
+
+			input[type="text"], input[type="password"], input[type="tel"] {
+				border: 1px solid $lightGrey;
+				background-color: $white;
+				padding-right: remCalc(10px);
+				padding-left: remCalc(10px);
+
+				&:focus {
+					background-color: $bgGrey1;
+				}
+			}
+
+			.form-input-text {
+				padding-right: remCalc(10px);
+				padding-left: remCalc(10px);
+			}
+
+			.form-error-icon {
+				margin-right: remCalc(10px);
+			}
+
+			&.form-input-invalid {
+
+				input[type="text"], input[type="password"], input[type="tel"] {
+					border-color: $red;
+				}
+
+			}
+		}
+
+	}
+
+	&.form-style-secondary {
+
+		.select-wrapper {
+
+			select {
+				border-bottom: 1px solid $lightGrey;
+				padding-right: remCalc(20px);
+				
+			}
+
+			.select-arrow:before {
+				right: 0;
+			}
+		}
+
+		.form-input-group {
+
+			input[type="text"], input[type="password"], input[type="tel"] {
+				border-bottom: 1px solid $lightGrey;
+			}
+
+			&.form-input-invalid {
+
+				input[type="text"], input[type="password"], input[type="tel"] {
+					border-bottom-color: $red;
+					color: $red;
+				}
+
+			}
+		}
+
+	}
+
+}

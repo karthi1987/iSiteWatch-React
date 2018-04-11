@@ -1,0 +1,44 @@
+@import 'partials/variables';
+@import 'partials/buttons';
+
+.AddToHome {
+
+	&_overlay {
+		background: rgba(black, 0.5);
+		position: absolute 0 0 0 0;
+		z-index: 1000;
+	}
+
+	&_content {
+		position: absolute;
+		left: 0;
+		right: 0;
+		z-index: 1001;
+
+		background: $white;
+
+		padding: $pagePadding;
+
+		&--alignTop {
+			top: 0;
+		}
+
+		&--alignBottom {
+			bottom: 0;
+		}
+
+		&--alignCenter {
+			top: 50%;
+			transform: translateY(-50%);
+		}
+
+	}
+
+	&_instructionList li {
+		padding-bottom: .5rem;
+
+		&:last-child {
+			padding-bottom: 0;
+		}
+	}
+}

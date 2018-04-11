@@ -1,0 +1,49 @@
+{
+   "success": true,
+   "errorMessage": null,
+   "data":{
+      "dateNav":[
+         {
+            "id":"2009",
+            "label":"September 2016"
+         },
+         {
+            "id":"2008",
+            "label":"August 2016"
+         },
+         {
+            "id":"2006",
+            "label":"June 2016"
+         },
+         {
+            "id":"2005",
+            "label":"May 2016"
+         },
+         {
+            "id":"2004",
+            "label":"April 2016"
+         },
+         {
+            "id":"2003",
+            "label":"March 2016"
+         }
+      ],
+      "admin":false,
+      "hierarchyLevel": 5,
+      "maxHierarchyLevel": 4,
+      "rankNav":[
+         {
+            "id":"OFFICE",
+            "label":"Office"
+         },
+         {
+            "id":"REGION",
+            "label":"Region"
+         },
+         {
+            "id":"CHANNEL",
+            "label":"Channel"
+         }
+      ]
+   }
+}

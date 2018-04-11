@@ -1,0 +1,38 @@
+{
+  "success": true,
+  "errorMessage": null,
+  "data": {
+  	"location": "Bridgewater Mall",
+	"open": false,
+	"waitTime": 15000,
+	"displayTime": 1000,
+	"lastUpdate": "2016-05-23 01:56:35 PM",
+	"slides": [
+        {
+            "type": "static",
+            "name": "staticPage",
+            "display": true,
+            "content": {
+                "img": "/smartboard/assets/images/attract-loop/1514924288371_tunc1.png"
+            }
+        },
+        {
+            "type": "static",
+            "name": "staticPage",
+            "display": true,
+            "content": {
+                "img": "/smartboard/assets/images/attract-loop/1514924288479_tunc2.png"
+            }
+        },
+        {
+            "type": "static",
+            "name": "staticPage",
+            "display": true,
+            "content": {
+                "img": "/smartboard/assets/images/attract-loop/1514924288530_tunc3.png"
+            }
+        }
+
+	]
+   }
+}

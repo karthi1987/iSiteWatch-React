@@ -1,0 +1,22 @@
+{
+    "data":{
+        "authFailureMessage":null,
+        "authenticated":true,
+        "hierarchy":{
+            "ids":{
+                "area":null,
+                "channel":"2016",
+                "district":true,
+                "office":null,
+                "region":10973
+            }
+        },
+        "staticToken":100,
+        "tokenA":"GMm1BbW6XiT8zInvKZz4XYLWimxBvogLp+2d0sitGzob\/zW5jJ+mD93QvXTa3iisk8viPEumGXsbWkCLZBe0zU4rrPT+KcuWmGKmxTx1Vh75uhOuaTVqR\/xGsF0mZufN\/+GQlCsldt4IfVnX35NkKrJQuIfR9eY4kqK9pYt+5ZUVNxGwDLnICYVW4PKaXCVVsq+jH2tu38UX6Dmo0unBnYK1NnXFAgK1ZD86eaqGeGNEebQ8kdVZ607Asj6VFHICaqFyHQs0\/C0=",
+        "tokenB":"GMm1BbW6XiT8zInvKZz4XYLWimxBvogLp+2d0sitGzob\/zW5jJ+mD93QvXTa3iisk8viPEumGXsbWkCLZBe0zU4rrPT+KcuWmGKmxTx1Vh4jZA9aR5D+OpJDLqWZ4VehwPoqXVPZa3R617oCzJ8HHi1tJPs5J8DL0THxl+byx+wcQFn96mc1EnjuhlBgpjIqXudxZUJ3+5hyg2i03iNUuLMG2I+mI6wqg4PUgxJdgJvT0wA9ViRAX0NtI3fm4H3RGkTuDxpX3OGSxTaKUIpOj8hHBOT7Y\/gqguLRgQogo5Rqk\/VRlrrwFp22\/LLrbuu9EZtHBAxVIESG68OvmjX7pd3DJJaXRLSb3XAkNZpZj8M6p6Tg5IAAIZF26DZ5vq3F1b1jj3RdNzeZa\/MsTZqzBN6oicy6eArJ0E7+gZZaHVYuRfaRj7tncNHWS4DWZ5Z4oh\/pBg5CRpgGQglIvUZ9s6yIdP51LdyGZSrxV6IcvD+I6PeIK3IivzhWxlgpMY67fe3gil+o3WvViZ4E09t800KGT9KcEX3DbaUwoIzEjnfFNiN7IX88I\/J5fFn8cVfsT7yUoGXT7v8=",
+        "tokenRefreshEnd":3600000,
+        "tokenRefreshStart":2700000
+    },
+    "errorMessage":null,
+    "success":true
+}

@@ -1,0 +1,24 @@
+@import '../partials/core-variables';
+@import '../partials/mixins';
+
+.panel-header {
+	padding: 1.0em;
+
+	.icon-link {
+		float: right;
+	}
+
+	
+	h1, h2, h3, h4, h5, h6 {
+		margin-bottom: 0;
+	}
+	
+	h2 {
+		font-size: remCalc(20px);
+
+
+		font-weight: 700;
+		text-align: left;
+		line-height: 1.0;
+	}
+}

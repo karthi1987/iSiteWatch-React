@@ -1,0 +1,28 @@
+{
+  "success": true,
+  "errorMessage": null,
+  "data": {
+    "filters": {
+      "locationTypes": [
+        {
+          "label": "Channel",
+          "value": "channel",
+          "selected": true,
+          "milestoneId": 1000
+        },
+        {
+          "label": "Region",
+          "value": "region",
+          "selected": false,
+          "milestoneId": 1001
+        },
+        {
+          "label": "Office",
+          "value": "office",
+          "selected": false,
+          "milestoneId": 1002
+        }
+      ]
+    }
+  }
+}

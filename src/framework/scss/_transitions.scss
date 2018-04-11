@@ -1,0 +1,147 @@
+@import './navigation.scss';
+
+/*
+ __     __         _       _     _
+ \ \   / /_ _ _ __(_) __ _| |__ | | ___  ___
+  \ \ / / _` | '__| |/ _` | '_ \| |/ _ \/ __|
+   \ V / (_| | |  | | (_| | |_) | |  __/\__ \
+    \_/ \__,_|_|  |_|\__,_|_.__/|_|\___||___/
+
+ */
+
+// Common
+$transitionEnterTimingFunction: ease-out-sine !default;
+$transitionAppearTimingFunction: ease-out-sine !default;
+$transitionLeaveTimingFunction: ease-in-sine !default;
+
+// Cross Fade
+$transitionCrossFadeDuration: 0.5s !default;
+
+$transitionCrossFadeAppearDuration: $transitionCrossFadeDuration !default;
+$transitionCrossFadeAppearTimingFunction: $transitionAppearTimingFunction !default;
+
+$transitionCrossFadeEnterDuration: $transitionCrossFadeDuration !default;
+$transitionCrossFadeEnterTimingFunction: $transitionEnterTimingFunction !default;
+$transitionCrossFadeEnterDelay: 0 !default;
+
+$transitionCrossFadeLeaveDuration: $transitionCrossFadeDuration !default;
+$transitionCrossFadeLeaveTimingFunction: $transitionLeaveTimingFunction !default;
+
+// Fold
+$transitionFoldDuration: 0.5s !default;
+
+$transitionFoldAppearDuration: $transitionFoldDuration !default;
+$transitionFoldAppearTimingFunction: $transitionAppearTimingFunction !default;
+
+$transitionFoldEnterDuration: $transitionFoldDuration !default;
+$transitionFoldEnterTimingFunction: $transitionEnterTimingFunction !default;
+$transitionFoldEnterDelay: $transitionFoldDuration / 2 !default;
+
+$transitionFoldLeaveDuration: $transitionFoldDuration !default;
+$transitionFoldLeaveTimingFunction: $transitionLeaveTimingFunction !default;
+
+
+.smartboard-app {
+	perspective: calc(100vh - #{$pageNavMenuBarHeight});
+
+	@include mediaBreakpointUp(md) {
+		perspective: 100vh;
+	}
+}
+
+
+/*
+   ____                     _____         _
+  / ___|_ __ ___  ___ ___  |  ___|_ _  __| | ___
+ | |   | '__/ _ \/ __/ __| | |_ / _` |/ _` |/ _ \
+ | |___| | | (_) \__ \__ \ |  _| (_| | (_| |  __/
+  \____|_|  \___/|___/___/ |_|  \__,_|\__,_|\___|
+
+ */
+ .cross-fade-transition-appear {
+	 position: absolute;
+	 opacity: 0;
+
+	 &.cross-fade-transition-appear-active{
+		 opacity: 1;
+		 transition-property: opacity;
+		 transition-duration: $transitionCrossFadeAppearDuration;
+		 transition-timing-function: $transitionCrossFadeAppearTimingFunction;
+	 }
+ }
+
+.cross-fade-transition-enter {
+	position: absolute;
+	opacity: 0;
+
+	&.cross-fade-transition-enter-active{
+		opacity: 1;
+		transition-property: opacity;
+		transition-duration: $transitionCrossFadeEnterDuration;
+		transition-timing-function: $transitionCrossFadeEnterTimingFunction;
+		transition-delay: $transitionCrossFadeEnterDelay;
+	}
+}
+
+.cross-fade-transition-leave {
+	position: absolute;
+	opacity: 1;
+
+	&.cross-fade-transition-leave-active{
+		opacity: 0;
+		transition-property: opacity, transform;
+		transition-duration: $transitionCrossFadeLeaveDuration;
+		transition-timing-function: $transitionCrossFadeLeaveTimingFunction;
+	}
+}
+
+/*
+  _____     _     _
+ |  ___|__ | | __| |
+ | |_ / _ \| |/ _` |
+ |  _| (_) | | (_| |
+ |_|  \___/|_|\__,_|
+
+ */
+.fold-transition-appear {
+	position: absolute;
+	opacity: 0;
+
+	&.fold-transition-appear-active{
+		opacity: 1;
+		transition-property: opacity;
+		transition-duration: $transitionFoldAppearDuration;
+		transition-timing-function: $transitionFoldAppearTimingFunction;
+	}
+}
+
+.fold-transition-enter {
+	position: absolute;
+	opacity: 0;
+	transform: translateX(100%);
+	z-index: 2;
+
+	&.fold-transition-enter-active {
+		opacity: 1;
+		transform: translateX(0);
+		transition-property: opacity, transform;
+		transition-duration: $transitionFoldEnterDuration;
+		transition-timing-function: $transitionFoldEnterTimingFunction;
+		transition-delay: $transitionFoldEnterDelay;
+	}
+}
+
+.fold-transition-leave {
+	position: absolute;
+	transform-origin: 100% -50%;
+	opacity: 1;
+	transform: translateX(0) rotateY(0);
+
+	&.fold-transition-leave-active{
+		opacity: 0;
+		transform: translateX(-100%) rotateY(-90deg);
+		transition-property: opacity, transform;
+		transition-duration: $transitionFoldLeaveDuration;
+		transition-timing-function: $transitionFoldLeaveTimingFunction;
+	}
+}

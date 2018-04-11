@@ -1,0 +1,16 @@
+{
+   "success": true,
+   "errorMessage": null,
+   "data":{
+      "selectNavOptions":[
+         {
+            "label":"Region",
+            "id":"REGION"
+         },
+         {
+            "label":"Channel",
+            "id":"CHANNEL"
+         }
+      ]
+   }
+}

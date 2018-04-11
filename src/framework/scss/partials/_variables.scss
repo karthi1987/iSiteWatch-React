@@ -1,0 +1,91 @@
+// Import Global Variables
+@import 'core-variables';
+
+// Colors
+$red: #CD040B;
+$black: #000;
+$white: #FFF;
+
+$bgGrey: #F6F6F6;
+$bgGrey1: #E4E5E3;
+
+$charcoal: #333333;
+$grey: #4B4B4B;
+$lightGrey: #959595;
+$lighterGrey: #CCCCCC;
+$lightestGrey: #EAEAEB;
+
+$buttonHoverRed: #A80309;
+$bottonPressedRed: #990308;
+$textLinkActive: #0066CC;
+$textLinkHover: #00478E;
+
+$teal: #82CEAC;
+$sky: #ABE0F9;
+$gold: #FDB362;
+$salmon: #F9B295;
+
+$green: #E9F8E9;
+$blue: #E8F6FE;
+$yellow: #FEFFE4;
+$orange: #FEF0E8;
+
+$expertzScoreDefultColor: #e1e2e0;
+$expertzScoreSilver: #cccccc;
+$expertzScoreGold: #c49f39;
+$expertzScorePlatinum: #959595;
+
+// App
+$appBreakpoints: (
+	sm: 0,
+	md: 600px,
+	lg: 950px
+);
+$appBackgroundColor: $bgGrey1;
+
+// Typography
+$typographyFontWeightNormal: 500;
+$typographyBodyFontStack: 'Neue Haas Grotesk', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+$typographyHeadingFontStack: $typographyBodyFontStack;
+$typographyColorBlack: $black;
+$typographyColorRed: $red;
+$typographyColorList: (black: $typographyColorBlack, red: $typographyColorRed, lighter-grey: $lighterGrey);
+
+$typographyHeaderFontSize: 1.25rem;
+
+// Links
+$linksNormalColor: $textLinkActive;
+$linksHoverColor: $textLinkHover;
+
+// Navigation
+$pageNavPadding: $pagePadding remCalc(20px);
+$pageNavBackground: $white;
+$pageNavTextColor: #333;
+$pageNavActiveBackground: $red;
+$pageNavActiveTextColor: $red;
+
+$pageNavIconSize: remCalc(30px);
+$pageNavFontSize: remCalc(12px);
+$pageNavFontWeight: 700;
+
+$pageNavCompactHeaderTitleColor: $black;
+$pageNavCompactFullTextColor: $black;
+
+$pageNavCompactMenuButtonColor: $black;
+$pageNavCompactMenuIconSize: remCalc(18px);
+$pageNavCompactMenuButtonTransform: none;
+$pageNavCompactMenuButtonLabel: false;
+$pageNavCompactMenuButtonLocation: left;
+$pageNavCompactExpandFrom: 'left';
+
+$pageNavCompactIconSize: remCalc(24px);
+$pageNavCompactFontSize: remCalc(14px);
+$pageNavCompactFontWeight: 700;
+$pageNavCompactDividerColor: $bgGrey1;
+
+
+// Panels
+$panelErrorFontColor: $red;
+$panelErrorBackgroundColor: transparent;
+$panelInfoFontColor: $black;
+$panelInfoBackgroundColor: $sky;

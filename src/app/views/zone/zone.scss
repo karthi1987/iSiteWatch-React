@@ -1,0 +1,91 @@
+.zone-page {
+	display: flex;
+	flex-flow: column wrap;
+	width: 100%;
+	.zone-hero-image-date-thumbnails {
+		display: flex;
+		flex-flow: row nowrap;
+		width: 100%;
+		justify-content: flex-start;
+		align-items: flex-start;
+	}
+	.hero-container {
+		display: flex;
+		flex-flow: row nowrap;
+		width: 70%;
+	}
+	.date-container {
+		display: flex;
+		flex-flow: row wrap;
+		width: 30%;
+		.thumbnail-parent-wrapper {
+			display: flex;
+			flex-wrap: wrap;
+		}
+	}
+	.metric {
+		display: flex;
+		flex-grow: 1;
+		flex-flow: column nowrap;
+		cursor: pointer;
+	}
+}
+
+.horizontal-line {
+	width: 100%;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	border: 0;
+	border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.react-datepicker__input-container {
+	input {
+		font-size: 1.1em;
+		font-weight: 700;
+	}
+}
+
+.image-gallery {
+	width: 95%;
+	transition: all 1s ease;
+	.image-gallery-content {
+	    position: relative;
+	    line-height: 0;
+	    top: 0;
+		.image-gallery-slide-wrapper {
+		    position: relative;
+		}
+	}
+	.image-gallery-slides {
+	    line-height: 0;
+	    overflow: hidden;
+	    position: relative;
+	    white-space: nowrap;
+		.image-gallery-slide {
+		    background: #fff;
+		    left: 0;
+		    top: 0;
+		    width: 100%;
+		    .image-gallery-description {
+			    background: rgba(0,0,0,.4);
+			    bottom: 70px;
+			    color: #fff;
+			    left: 0;
+			    line-height: 1;
+			    padding: 10px 20px;
+			    position: absolute;
+			    white-space: normal;
+		    }
+		    img {
+		    	width: 100%;
+		    }
+		    .image-gallery-image {
+				line-height: 0;
+				overflow: hidden;
+				position: relative;
+				white-space: nowrap;
+		    }
+		}
+	}
+}

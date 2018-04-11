@@ -1,0 +1,33 @@
+{
+  "success": true,
+  "errorMessage": null,
+  "data": {
+    "filters": [
+      {
+        "label": "All",
+        "id": "ALL"
+      },
+      {
+        "label": "Region 1",
+        "id": "region1"
+      },
+      {
+        "label": "Region 2",
+        "id": "region2"
+      },
+      {
+        "label": "Region 3",
+        "id": "region3"
+      },
+      {
+        "label": "Region 4",
+        "id": "region4"
+      },
+      {
+        "label": "Region 5",
+        "id": "region5"
+      }
+    ],
+    "key": "area"
+  }
+}

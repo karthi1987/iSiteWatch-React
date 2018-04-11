@@ -1,0 +1,21 @@
+{
+  "success": true,
+  "errorMessage": null,
+  "data": {
+    "authenticated": true,
+    "tokenA": "h773h3bs9kk5Y",
+    "tokenB": "kj32j4324kj23l4j",
+    "tokenRefreshStart": 60000,
+    "tokenRefreshEnd": 3600000,
+    "staticToken": 100,
+    "hierarchy":{
+      "board": "N",
+      "ids": {
+        "pax": "cstage",
+        "channel": null,
+        "region": null,
+        "office": null
+      }
+    }
+  }
+}

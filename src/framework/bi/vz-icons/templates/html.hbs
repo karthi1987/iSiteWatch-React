@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{{fontName}}</title>
+	<style>
+		body {
+			font-family: sans-serif;
+			margin: 0;
+			padding: 10px 60px;
+		}
+
+    .preview__grid {
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flex;
+      display: -o-flex;
+      display: flex;
+
+      -webkit-flex-wrap: wrap;
+      -moz-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      -o-flex-wrap: wrap;
+      flex-wrap: wrap;
+    }
+
+		.preview {
+			line-height: 2em;
+      margin: 2em;
+
+      position: relative;
+		}
+
+		.preview__icon {
+			display: block;
+			text-align: center;
+      font-size: 4em;
+		}
+
+    .preview__title {
+      display: none;
+      position: absolute;
+      background: rgba(0,0,0,0.75);
+      padding: 3px;
+      border-radius: 3px;
+      color: white;
+      white-space: nowrap;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .preview__title:before {
+      content: '';
+      display: block;
+      position: absolute;
+      border: 5px solid transparent;
+      border-bottom-color: rgba(0,0,0,0.75);
+      top: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .preview:hover .preview__title {
+      display: block;
+    }
+
+		{{{styles}}}
+	</style>
+</head>
+<body>
+	<h1>{{fontName}}</h1>
+
+  <div class="preview__grid">
+  	{{#each names}}
+  	<div class="preview">
+  		<span class="preview__icon">
+  			<span class="{{../baseClass}} {{../classPrefix}}{{this}}"></span>
+  		</span>
+  		<span class="preview__title">.{{../classPrefix}}{{this}}</span>
+  	</div>
+  	{{/each}}
+  </div>
+</body>
+</html>

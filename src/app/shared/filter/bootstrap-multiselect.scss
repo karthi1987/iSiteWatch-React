@@ -1,0 +1,240 @@
+@import '../../../framework/scss/partials/variables';
+@import '../../../framework/scss/partials/mixins';
+
+$buttonDownwardCaretIcon: '\f107' !default; // This needs to be updated when the vz-icons project is updated.
+$checkmarkIcon: '\f106' !default; // this also needs to be changed when vz-icons is updated.
+
+$menu_width: 14rem;
+$menu_height: 2.5rem;
+
+$icon_font_size: remCalc(12px);
+$text_font_size: remCalc(14px);
+
+.multiselect-wrapper {
+	display: inline-block;
+	min-width: $menu_width;
+	position: relative;
+	vertical-align: middle;
+	line-height: $menu_height;
+	font-size: $icon_font_size;
+	font-weight: 700;
+	cursor: pointer;
+	width: 100%;
+
+	&:last-of-type{
+		margin-bottom: 1rem;
+	}
+
+	//@include mediaBreakpointUp(md) {
+		margin-right: 1rem;
+		width: auto;
+
+		&:last-of-type{
+			margin-bottom: 0;
+		}
+	//}
+
+	select {
+		display: none;
+	}
+
+	.multiselect-container {
+		position: absolute;
+		left: 0;
+		right: auto;  //grow the width to fit any contents
+		min-width: $menu_width;
+		z-index: 2;
+		background: $white;
+		padding: 0;
+		margin: 0;
+		list-style-type: none;
+		box-shadow: 3px 10px 25px rgba(0,0,0,0.2);
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+
+		top: 0; //bootstrap-ms always opens down
+
+		&.dropdown-menu {
+			list-style-type: none;
+			border-radius: 0px;
+
+			.active {
+				a {
+					background-color: transparent;
+				}
+			}
+		}
+
+
+
+		.input-group {
+			margin: 5px
+		}
+		li {
+			padding: 0;
+				&:hover {
+				    background-color: #f5f5f5;
+				}
+
+			&.disabled {
+				a label {
+					color: #CCC;
+				}
+			}
+
+			&.active {
+				a {
+					order: 1;
+					background-color: transparent;
+					position: relative; //used to make the :before element be relative to this
+					line-height: $menu_height;
+					height: $menu_height;
+					display: inline-block;
+
+					&:before {
+						content: $checkmarkIcon;
+						font-family: VerizonIcons;
+						color: $red;
+						position: absolute;
+						vertical-align: middle;
+						font-size: $icon_font_size;
+						left: 1rem;
+						// line-height: $menu_height;
+					}
+				}
+			}
+
+			a.multiselect-all label {
+				font-weight: 700;
+			}
+
+			&.multiselect-group label {
+				margin: 0;
+				padding: 3px 20px;
+				height: 100%;
+				font-weight: 700;
+			}
+
+			&.multiselect-group-clickable label {
+				cursor: pointer
+			}
+
+			a {
+
+				padding: 0;
+
+				label {
+					margin: 0;
+					height: 100%;
+					width: 100%;
+					cursor: pointer;
+
+					font-family: Arial;
+					font-size: $text_font_size;
+					color: #333;
+					font-weight: 700;
+
+	  				padding-left: 3rem;
+  				    padding-right: 1.5rem;
+					text-align: left;
+
+					&.radio,
+					&.checkbox {
+						margin: 0;
+					}
+					input[type=checkbox] {
+						margin-bottom: 5px;
+					}
+
+					input[type=checkbox], input[type=radio] {
+						opacity: 0;
+					}
+				}
+			}
+		}
+	}
+	.btn-group {
+		&.open > .dropdown-menu {
+		  display: block;
+		}
+
+		.dropdown-menu {
+			border: 1px solid rgba(0,0,0,.15);
+			font-size: $text_font_size;
+			text-align: left;
+			display: none;
+			float: left;
+		}
+	}
+
+	.btn-group button .caret {
+		display: none;
+
+		&::after {
+			content: "";
+		}
+	}
+
+	.btn-group button {
+		min-width: $menu_width;
+		height: $menu_height;
+		font-size: $text_font_size;
+		font-weight: bold;
+		text-align: left;
+		border: none;
+		border-bottom: 1px solid $lighterGrey;
+	    background-color: white;
+
+		display: flex;
+		align-items: center;
+		flex-flow: row nowrap;
+		justify-content: space-between;
+		// padding-right: 2em;
+		width: 100%;
+
+		//@include mediaBreakpointUp(md) {
+			padding-right: 2rem;
+		//}
+
+		span.multiselect-selected-text {
+			width: 100%;
+			float: left;
+
+		    max-height: $menu_height;
+		    overflow: hidden;
+		    word-wrap: break-word;
+		}
+
+		&:after {
+			color: $red;
+			content: $buttonDownwardCaretIcon;
+			font-family: VerizonIcons;
+			// font-size: $icon_font_size;
+			font-size: 12px;
+			line-height: $menu_height;
+			display: inline-block;
+
+			float: right;
+			width: 20%;
+			text-align: right;
+			position: absolute;
+			right: 0px;
+		}
+	}
+}
+
+
+
+.form-inline .multiselect-container {
+	label.checkbox,
+	label.radio {
+	   //padding: 3px 20px 3px 40px
+	   padding-left: 3rem;
+	}
+	li a label.checkbox input[type=checkbox],
+	li a label.radio input[type=radio] {
+		margin-left: -30px;
+		margin-right: 4px;
+	}
+}

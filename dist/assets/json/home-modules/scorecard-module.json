@@ -1,0 +1,83 @@
+{
+    "data":{
+        "areaId":null,
+        "channelId":"2016",
+        "dateCodes":[
+            "D",
+            "Q",
+            "M"
+        ],
+        "districtId":null,
+        "lastUpdated":"07/21/2017 10:34:18 AM",
+        "locationName":"Retail",
+        "officeId":null,
+        "regionId":null,
+        "scorecard":[
+            {
+                "href":false,
+                "keyText":[
+
+                ],
+                "metrics":[
+                    {
+                        "achievement":100.0,
+                        "attainment":null,
+                        "description":"ARD",
+                        "id":530,
+                        "milestoneId":null,
+                        "objective":null,
+                        "outOfRank":null,
+                        "rank":null,
+                        "rankTitle":null,
+                        "value":97.94,
+                        "valueType":"cur"
+                    },
+                    {
+                        "achievement":100.0,
+                        "attainment":null,
+                        "description":"Renewals (PEAK)",
+                        "id":402,
+                        "milestoneId":null,
+                        "objective":null,
+                        "outOfRank":null,
+                        "rank":null,
+                        "rankTitle":null,
+                        "value":1411.0,
+                        "valueType":"unit"
+                    },
+                    {
+                        "achievement":100.0,
+                        "attainment":null,
+                        "description":"Unaccessorized Devices",
+                        "id":503,
+                        "milestoneId":null,
+                        "objective":null,
+                        "outOfRank":null,
+                        "rank":null,
+                        "rankTitle":null,
+                        "value":25.7,
+                        "valueType":"pct"
+                    },
+                    {
+                        "achievement":100.0,
+                        "attainment":null,
+                        "description":"Smartphone Gross Adds",
+                        "id":502,
+                        "milestoneId":null,
+                        "objective":null,
+                        "outOfRank":null,
+                        "rank":null,
+                        "rankTitle":null,
+                        "value":6588.0,
+                        "valueType":"unit"
+                    }
+                ],
+                "sheet":false,
+                "tabText":"Key Priorities"
+            }
+
+        ]
+    },
+    "errorMessage": null,
+    "success": true
+}

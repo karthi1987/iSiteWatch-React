@@ -1,0 +1,63 @@
+@import '../../framework/scss/partials/variables';
+@import '../../framework/scss/partials/mixins';
+
+.header-container{
+  display: flex;
+  align-items : baseline;
+  padding: 1.0em 3.125rem 0;
+  height: 12%;
+  padding-right: 10.5rem; // padding to deal with nav
+}
+
+.header-container .logo-block{
+  padding-right: 1.25em;
+  font-family: "Neue Haas Grotesk", "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+.header-container .logo-block .company-logo img{
+  margin-top: -2.25rem;
+  width: auto;
+  height: 2.75rem;
+}
+.header-container .logo-block .project-name h2{
+  font-size: remCalc(45px);
+  color: $red;
+  height: 2.75rem;
+  .stageTitle {
+    color: #333333;
+    margin-left:10px;
+  }
+}
+
+.header-container .logo-block .company-logo,
+.header-container .logo-block .project-name{
+  display: inline-block;
+  height: 2.75rem;
+  width: 43%;
+}
+
+.header-container .logo-block{
+    flex: 0 0 42%;
+}
+.header-container .filter-block {
+   flex: 0 0 40%;
+   padding-left: 1rem;
+}
+
+.header-container .current-time-block{
+  flex: 0 0 58%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header-container .current-time-block h2{
+  font-weight: normal;
+  font-size: 1.14rem;
+  text-align: right;
+  line-height: 110%;
+  top: -1.15rem;
+  position: relative;
+}
+
+.header-container .current-time-block .time-of-day {
+    font-size: 65%;
+}

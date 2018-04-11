@@ -1,0 +1,35 @@
+@import '../../../framework/scss/partials/variables';
+@import '../../../framework/scss/partials/mixins';
+
+// Tab module
+.tab-container {
+    border-bottom: 1px solid #d2d3d4;
+    display: inline-block;
+    font-size: .75rem;
+    height: 1.75rem;
+    margin: 0;
+    padding: 0;
+    a {
+        color: #222;
+    }
+    li {
+        display: inline-block;
+        float: left;
+        height: 1.75rem;
+    }
+}
+.tab {
+    font-size: .75rem;
+    font-weight: 700;
+    margin-right: 1rem;
+    border-bottom: 3px solid transparent;
+    &:last-child {
+        margin: 0;
+    }
+    &:hover {
+        cursor: pointer;
+    }
+    &.active {
+        border-bottom: 3px solid $red;
+    }
+}

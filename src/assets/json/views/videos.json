@@ -1,0 +1,133 @@
+{
+	"success": true,
+   	"errorMessage": null,
+	"data": {
+		"interval": 30000,
+		"categories": [
+			{
+				"id": "all categories",
+				"label": "All categories"
+			},
+			{
+				"id": 11,
+				"label": "cold colors",
+				"children": [
+					{
+						"id": 21,
+						"label": "blue",
+						"children": [
+							{
+								"id": 31,
+								"label": "sky blue"
+							},
+							{
+								"id": 32,
+								"label": "light blue"
+							}
+						]
+					},
+					{
+						"id": 22,
+						"label": "purple"
+					}
+				]
+			},
+			{
+				"id": 12,
+				"label": "warm colors",
+				"children": [
+					{
+						"id": 23,
+						"label": "red",
+						"children": [
+							{
+								"id": 33,
+								"label": "burgandy"
+							}
+						]
+					},
+					{
+						"id": 24,
+						"label": "pink"
+					}
+				]
+			},
+			{
+				"id": 12,
+				"label": "hot colors"
+			}
+		],
+		"videos": [
+			 {
+				"id": 1,
+				"dtlImage": "",
+				"isNew": true,
+				"selected": true,
+				"tnImage": "video2big.jpg",
+				"videoUrl": "https://wwwpprd.vzwsmartboard.com/smartboard/cm3dam/mp4videos/SB_HQ_Q117_UptoSpeed013117.mp4",
+				"title": "Multi-Device<br>Security and Backup<br>Bundle Ad",
+				"dateAdded": 1404604800000,
+				"duration": "00:03:25",
+				"category": "pink",
+				"webTrackId": 252,
+				"archiveOrCurrent": "C"
+			},
+			{
+				"id": 2,
+				"dtlImage": "",
+				"isNew": true,
+				"selected": true,
+				"tnImage": "video1big.jpg",
+				"videoUrl": "QuantumTVLearn.mp4",
+				"title": "FiOS Quantum<br>TV Ad",
+				"duration": "00:03:12",
+				"dateAdded": 1404604800000,
+				"category": "pink",
+				"webTrackId": 252,
+				"archiveOrCurrent": "C"
+			},
+			{
+				"id": 3,
+				"dtlImage": "",
+				"isNew": true,
+				"featured": true,
+				"selected": false,
+				"tnImage": "video3big.jpg",
+				"videoUrl": "overarching.mp4",
+				"title": "FiOS Quantum<br>Overarching Video",
+				"duration": "00:00:59",
+				"dateAdded": 1404604800000,
+				"category": "sky blue",
+				"webTrackId": 252,
+				"archiveOrCurrent": "A"
+			},
+			{
+				"id": 4,
+				"dtlImage": "",
+				"isNew": false,
+				"selected": false,
+				"tnImage": "video6big.jpg",
+				"videoUrl": "installation.mp4",
+				"title": "FiOS Installation",
+				"duration": "00:01:30",
+				"dateAdded": 1404604800000,
+				"category": "warm colors",
+				"webTrackId": 252,
+				"archiveOrCurrent": "A"
+			},
+			{
+				"id": 5,
+				"dtlImage": "",
+				"isNew": true,
+				"selected": false,
+				"tnImage": "video7big.jpg",
+				"videoUrl": "SpeedMatch_Video_30.mp4",
+				"title": "SpeedMatch",
+				"duration": "00:01:15",
+				"dateAdded": 1404604800000,
+				"webTrackId": 252,
+				"archiveOrCurrent": "C"
+			}
+		]
+	}
+}

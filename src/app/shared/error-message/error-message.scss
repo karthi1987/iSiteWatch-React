@@ -1,0 +1,39 @@
+.error-message-box{
+	display: flex;
+
+	padding: 1.5rem;
+	background-color: #ffcfd1;
+	margin-bottom: 1rem;
+    //max-width: 35rem;
+
+	margin-left: 3.125rem;
+  
+  	.message {
+  		margin-left: remCalc(8px);
+		line-height: 1;
+		margin-bottom: 0;
+		font-weight: 700;
+		font-size: remCalc(14px);
+  	}
+    
+    i {
+		padding-right: 1em;
+		font-size: 2em;
+    	//color: #ed1c24;
+    }
+}
+
+.Home_cell .error-message-box{
+	margin: 1rem;
+}
+
+.Home_cell--scorecardmodule .error-message-box,
+.Home_cell--leaderboardmodule .error-message-box
+{
+	margin: 0px;
+}
+
+.Home_cell--leaderboardmodule .error-message-box
+{
+	margin-top: calc(1rem - 0.5625rem);
+}

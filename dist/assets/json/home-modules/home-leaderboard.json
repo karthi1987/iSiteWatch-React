@@ -1,0 +1,40 @@
+{
+    "success": true,
+    "errorMessage": null,
+    "data":{
+        "endDate": "06/23/2016",
+        "metricName": "Gross Adds",
+        "leaderboards":[
+            {
+                "firstName": "Leigh",
+                "lastName": "Lachman",
+                "avatar": false,
+                "points": 289,
+                "place": 1,
+                "maxPoints": 289,
+                "ownerPaxId": 23452,
+                "valueType": "cur"
+            },
+            {
+                "firstName": "Daniel",
+                "lastName": "Peters",
+                "avatar": false,
+                "points": 236,
+                "place": 2,
+                "maxPoints": 289,
+                "ownerPaxId": 69049,
+                "valueType": "pct"
+            },
+            {
+                "firstName": "Rich",
+                "lastName": "Denninger",
+                "avatar": "/verizon/img/Rich.jpg",
+                "points": 200,
+                "place": "TIE",
+                "maxPoints": 289,
+                "ownerPaxId": 23452,
+                "valueType": "unit"
+            }
+        ]
+    }
+}

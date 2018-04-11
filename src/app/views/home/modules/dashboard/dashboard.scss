@@ -1,0 +1,117 @@
+.card {
+	width: 100%;
+	height: 200px;
+}
+
+.horizontal-line {
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.page-dashboard {
+	width: 100%;
+	display: flex;
+	flex-flow: column wrap;
+	padding: 2%;
+	h2 {
+		color: #868e96;
+		font-size: 2.2em;
+		font-weight: 700;
+	}
+	.projects {
+		display: flex;
+	}
+	.locations {
+		display: flex;
+		padding-top: 2%;
+		.outer-locations {
+			display: flex;
+			width: 100%;
+		}
+	}
+}
+
+.box {
+	position: relative;
+	border-radius: 3px;
+	background: #ffffff;
+	border-top: 3px solid #d2d6de;
+	margin-bottom: 20px;
+	width: 100%;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+	.box-primary {
+		border-top-color: #3c8dbc;
+	}
+}
+
+.box-widget {
+	border: none;
+}
+
+.widget-user .widget-user-header {
+    height: 200px;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+    cursor: pointer;
+}
+
+.box-header {
+	color: #444;
+	display: block;
+	padding: 10px;
+	position: relative;
+}
+
+.box-header > .box-tools {
+	position: absolute;
+	right: 10px;
+	top: 5px;
+}
+
+.box-footer {
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 3px;
+	border-bottom-left-radius: 3px;
+	border-top: 1px solid #f4f4f4;
+	padding: 10px;
+	background-color: #ffffff;
+}
+
+.box-title {
+	display: inline-block;
+	font-size: 18px;
+	margin: 0;
+	line-height: 1;
+}
+
+.btn-box-tool {
+	padding: 5px;
+	font-size: 12px;
+	background: transparent;
+	color: #97a0b3;
+}
+
+.dropdown-container {
+	width: 50%;
+	.dropdown-selected {
+		font-size: 1.2em;
+	}
+	.dropdown-list {
+		font-size: 1.2em;
+	}
+}
+
+.dropdown-selected-active .dropdown-selected-active-label {
+	font-size: 1.2em;
+}
+
+.page-memo {
+	h3 {
+		font-weight: 500;
+		margin: 0;
+	}
+}

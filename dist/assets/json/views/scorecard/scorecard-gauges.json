@@ -1,0 +1,96 @@
+{
+   "success": true,
+   "errorMessage": null,
+   "data":{
+      "lastUpdated":"07/21/2017 10:34:18 AM",
+      "criteria":{
+         "date":"09/24/2016",
+         "sortOn":"ASC",
+         "dateCode":"D",
+         "report":"null",
+         "drillLevel":3,
+         "rank":"OFFICE",
+         "sortBy":"rep"
+      },
+      "metrics":[
+         {
+            "achievement":-8.3,
+            "valueType":"unit",
+            "milestoneId":"100761",
+            "description":"NET REVENUE",
+            "rank":3,
+            "outOfRank":38,
+            "id":361,
+            "attainment":"-1500",
+            "rankTitle":"Office Rank",
+            "value":1.23,
+            "objective":"18080"
+         },
+         {
+            "achievement":100.0,
+            "valueType":"unit",
+            "milestoneId":"100744",
+            "description":"AVERAGE HANDLE TIME",
+            "rank":0,
+            "outOfRank":38,
+            "id":341,
+            "attainment":"0",
+            "rankTitle":"Office Rank",
+            "value":1.2345,
+            "objective":"0"
+         },
+         {
+            "achievement":100.0,
+            "valueType":"unit",
+            "milestoneId":"100748",
+            "description":"AFTER CALL SURVEY",
+            "rank":0,
+            "outOfRank":38,
+            "id":342,
+            "attainment":"0",
+            "rankTitle":"Office Rank",
+            "value":1.00,
+            "objective":"0"
+         },
+         {
+            "achievement":-8.3,
+            "valueType":"unit",
+            "milestoneId":"100761",
+            "description":"NET REVENUE",
+            "rank":3,
+            "outOfRank":38,
+            "id":361,
+            "attainment":"-1500",
+            "rankTitle":"Office Rank",
+            "value":1.2,
+            "objective":"18080"
+         },
+         {
+            "achievement":100.0,
+            "valueType":"pct",
+            "milestoneId":"100744",
+            "description":"AVERAGE HANDLE TIME",
+            "rank":0,
+            "outOfRank":38,
+            "id":341,
+            "attainment":"0",
+            "rankTitle":"Office Rank",
+            "value":0.0,
+            "objective":"0"
+         },
+         {
+            "achievement":100.0,
+            "valueType":"pct",
+            "milestoneId":"100748",
+            "description":"AFTER CALL SURVEY",
+            "rank":0,
+            "outOfRank":38,
+            "id":342,
+            "attainment":"0",
+            "rankTitle":"Office Rank",
+            "value":0.0,
+            "objective":"0"
+         }
+      ]
+   }
+}

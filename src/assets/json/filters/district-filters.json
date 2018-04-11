@@ -1,0 +1,33 @@
+{
+  "success": true,
+  "errorMessage": null,
+  "data": {
+    "filters": [
+      {
+        "label": "All",
+        "id": "ALL"
+      },
+      {
+        "label": "District 1",
+        "id": "District1"
+      },
+      {
+        "label": "District 2",
+        "id": "District2"
+      },
+      {
+        "label": "District 3",
+        "id": "District3"
+      },
+      {
+        "label": "District 4",
+        "id": "District4"
+      },
+      {
+        "label": "District 5",
+        "id": "District5"
+      }
+    ],
+    "key": "area"
+  }
+}

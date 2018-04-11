@@ -1,0 +1,49 @@
+@import 'partials/variables';
+
+@import 'partials/mixins';
+
+@import '../bi/vz-typeface/vz-typeface.css';
+@import '../bi/vz-icons/dist/VerizonIcons.css';
+
+@import 'reboot';
+@import 'typography';
+
+@import 'visibility';
+@import 'grid';
+@import 'panels';
+
+@import 'partials/forms';
+@import 'partials/buttons';
+
+body {
+	padding: 0 $pagePadding;
+}
+
+.type-red {
+	color: $red;
+}
+
+.container {
+	max-width: remCalc(1000px);
+	margin: remCalc(54px) auto 0;
+}
+
+.page-header {
+	margin-bottom: remCalc(16px);
+
+	img {
+		width: remCalc(144px);
+		height: remCalc(32px);
+		vertical-align: baseline;
+		margin-right: remCalc(60px);
+
+
+	}
+
+	h1 {
+		color: $red;
+		font-family: $typographyHeadingFontStack;
+		font-size: remCalc(27px);
+		line-height: remCalc(63px);
+	}
+}

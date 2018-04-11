@@ -1,0 +1,28 @@
+body.loading {
+	background: #F6F6F6;
+	font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+
+	div.center {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		text-align: center;
+	}
+
+	div.spinner {
+		display: inline-block;
+		width: 200px;
+		height: 200px;
+		background-image: url(../../assets/images/loader.svg);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center center;
+	}
+
+	p {
+		color: #4B4B4B;
+		font-size: 1.5rem;
+		text-align: center;
+	}
+}
