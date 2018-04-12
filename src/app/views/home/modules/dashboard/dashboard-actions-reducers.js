@@ -1,6 +1,8 @@
 import Ajax, * as ajax from 'utils/ajax';
 import FEEDS from 'endpoints/endpoints';
 import { LogServerResponse } from 'app/app-store';
+import { browserHistory } from 'react-router';
+
 import { ERRORs } from 'app/app-lang';
 //import extend from 'lodash/object/extend';
 
@@ -60,7 +62,12 @@ export function getDashboardProjectsData( info ) {
             success: ( results, textStatus, jqXHR ) => {
 
                if( !results.data ) {
-                    dispatch( setErrorMessage( results.status && results.status.message ) );
+                    if( results.status && ( results.status.message === 'INVALID_CREDENTIALS' || results.status.message === 'INVALID_USER' ) ) {
+                        dispatch( setErrorMessage( results.status.message ) );
+                    }
+                    if( results.errorMessage && results.errorMessage === 'TOKEN_EXPIRED' ) {
+                         browserHistory.push( APP_PATH + '/login' );
+                    }
                 } else {
                     dispatch( {
                         type: TYPEs.LOAD_DASHBOARD_PROJECTS_MODULE_DATA,
@@ -102,7 +109,6 @@ export function getDashboardLocationsData( info ) {
             success: ( results, textStatus, jqXHR ) => {
 
                if( !results.data ) {
-                    debugger;
                     dispatch( setErrorMessage( results.status && results.status.message ) );
                 } else {
                     dispatch( {
@@ -116,7 +122,6 @@ export function getDashboardLocationsData( info ) {
                 }
             },
             fail: ( error ) => {
-
                 dispatch( ajax.loadingError( type, error.errorThrown ) );
             }
         } );

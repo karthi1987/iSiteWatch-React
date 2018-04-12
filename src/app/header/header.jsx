@@ -29,6 +29,7 @@ export default class Header extends React.Component {
         };
 
         this.userLogout = this.userLogout.bind( this );
+        this.redirectTo = this.redirectTo.bind( this );
     }
 
     updateTimeStamp() {
@@ -40,6 +41,11 @@ export default class Header extends React.Component {
                 timeOfDay: timestamp.timeOfDay
             }
         } );
+    }
+
+    redirectTo( event ) {
+        event.preventDefault();
+        window.location.assign( window.location.origin + APP_PATH + '/home');
     }
 
     userLogout( event ) {
@@ -65,6 +71,9 @@ export default class Header extends React.Component {
         const {
             state: {
                 timestamp: { date, timeOfDay, time }
+            },
+            props: {
+                userLogin
             }
         } = this;
 
@@ -72,19 +81,30 @@ export default class Header extends React.Component {
             <div className="header-container">
                 <div className="logo-block">
                     <div className="project-name">
-                        <h2><span>{ HEADER.BRAND_NAME_ONE }</span><span className="stageTitle"></span></h2>
+                        <h2>
+                            <a href="#" onClick={ this.redirectTo }>
+                                <span>{ HEADER.BRAND_NAME_ONE }</span><span className="stageTitle"></span>
+                            </a>
+                        </h2>
                     </div>
                 </div>
-
                  <div className="current-time-block">
-                    <a href="#" onClick={ this.userLogout }> Logout </a>
+                    <div>
+                        {
+                            this.props.userLogin
+                            &&
+                            <p>{ this.props.userLogin }&nbsp; </p>
+                         }
+                    </div>
+                    <div>
+                        <a href="customer-support">Customer Support | </a>
+                        <a href="#" onClick={ this.userLogout }> &nbsp; Logout </a>
+                    </div>
                 </div>
-
                 <div className="current-time-block">
                     <h2>{ date } <br/>
                     <span className="timestamp"><strong>{ time } <span className="time-of-day">{ timeOfDay }</span></strong></span></h2>
                 </div>
-
             </div>
         );
     }

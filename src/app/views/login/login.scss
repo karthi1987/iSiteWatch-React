@@ -1,16 +1,26 @@
 @import '../../../framework/scss/partials/buttons';
 
+.login-row {
+  width: 100%;
+  height: 100%;
+  padding: 1.2%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .login {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top:100px; 
+  flex-direction: column;
+  align-items: center;
 
   h1 {
-    display: flex;
+    /*display: flex;
     justify-content: center;
     align-items: center;
-    width: 60%;
+    width: 60%;*/
   }
 
   .loginForm {
@@ -18,8 +28,8 @@
     justify-content: space-between;
     align-items: flex-start;
     flex-flow: column wrap;
-    width: 60%;
-    margin-top:50px;
+    width: 100%;
+    margin-top:5%;
 
     .form-group {
       margin-top: 2%;
@@ -32,7 +42,7 @@
       text-align: left;
       label {
         display: inline-flex;
-        width: 42%;
+        width: 82%;
         justify-content: flex-start;
         self-aligned: flex-start;
       }
@@ -54,7 +64,7 @@
         border-bottom: 1px solid;
         border-left: 1px solid;
         padding-left: 10px;
-        width: 40%;
+        width: 80%;
       }
 
       .dropdown-container {
@@ -64,6 +74,7 @@
 
       .loginButton {
         padding-top: 14px;
+        margin-top: 5%;
       }
 
       .multiselect-wrapper {
@@ -77,4 +88,24 @@
   color: #CD040B;
   font-weight: 700;
   width: 60%;
+}
+
+.form-errors {
+
+  width: 100%;
+  padding: 2% 0 0 7%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  color: #CD040B;
+  font-weight: 700;
+
+  .error-helpers {
+    display: flex;
+    flex-flow: column wrap;
+    font-size: 0.8em;
+    font-weight: 500;
+  }
+
 }

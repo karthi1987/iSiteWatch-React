@@ -7,10 +7,26 @@ import { connect } from 'react-redux';
 import { getDashboardProjectsData, getDashboardLocationsData } from './dashboard-actions-reducers.js';
 
 import { _selectBox } from 'app/shared/dropdown/selectbox';
+import { _dropdown } from 'app/shared/dropdown/dropdown';
+
+import Icon from 'app/shared/icons/icons';
+
 
 //scss
 import './dashboard.scss';
 
+const ProjectDeleteModify = [
+    {
+        'label': 'Delete',
+        'id': 'delete',
+        'value': 'Delete'
+    },
+    {
+        'label': 'Modify',
+        'id': 'modify',
+        'value': 'Modify'
+    }
+]
 /*
  *  1. Dashboard
  */
@@ -21,6 +37,7 @@ class DashboardModule extends React.Component {
         super( props );
 
         this.onProjectSelection = this.onProjectSelection.bind( this );
+        this.onProjectActions = this.onProjectActions.bind( this );
         this.onDashboardTileClick = this.onDashboardTileClick.bind( this );
     }
 
@@ -31,6 +48,10 @@ class DashboardModule extends React.Component {
 
     onProjectSelection( event, id, name, city ) {
         //debugger;
+    }
+
+    onProjectActions( event, id, name ) {
+
     }
 
     onDashboardTileClick( info ) {
@@ -62,6 +83,18 @@ class DashboardModule extends React.Component {
                             _state={ data.projects }
                             _callback={ this.onProjectSelection }
                         />
+                        <div className="projects-user-actions">
+                            <button className="button-create button button-primary">
+                            Create &nbsp;
+                            </button>
+                            <div className="delete-modify-project">
+                                <_dropdown
+                                    _label={ ProjectDeleteModify[ 0 ].label }
+                                    _state={ ProjectDeleteModify }
+                                    _callback={ this.onProjectActions }
+                                />
+                            </div>
+                        </div>
                     </div>
                     <div className="horizontal-line"></div>
                     <div className="page-memo">

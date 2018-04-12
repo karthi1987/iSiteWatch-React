@@ -15,9 +15,9 @@ var paths = {
     },
 
     images: {
-        src: './src/app/assets/images',
-        files: './src/app/assets/images/*',
-        dest: './dist/img/'
+        src: './src/assets/images',
+        files: './src/assets/images/*',
+        dest: './dist/assets/images/'
     },
 
     static: {

@@ -1,4 +1,4 @@
-webpackJsonp([10,12],{
+webpackJsonp([10,13],{
 
 /***/ 16:
 /***/ function(module, exports, __webpack_require__) {
@@ -104,7 +104,10 @@ webpackJsonp([10,12],{
 	                case 'instant-win-management':Vector = _react2.default.createElement(InstantWinManagement, null);break;
 	                case 'download':Vector = _react2.default.createElement(Download, null);break;
 	                case 'print':Vector = _react2.default.createElement(Print, null);break;
-	                case 'big-arrow':Vector = _react2.default.createElement(BigArrow, null);break;}
+	                case 'big-arrow':Vector = _react2.default.createElement(BigArrow, null);break;
+	                case 'mail':Vector = _react2.default.createElement(Mail, null);break;
+	                case 'customer-support':Vector = _react2.default.createElement(CustomerSupport, null);break;
+	                case 'calling':Vector = _react2.default.createElement(Calling, null);break;}
 
 
 	            return Vector;
@@ -600,30 +603,62 @@ webpackJsonp([10,12],{
 	        _react2.default.createElement('svg', { width: '100%', height: '100%', viewBox: '0 0 39 61' },
 	            _react2.default.createElement('path', { d: 'M37.27,27.66c0.739,0.691 1.147,1.667 1.12,2.679c0,1.008 -0.403,1.975 -1.12,2.684l-26.78,26.474c-0.687,0.727 -1.644,1.14 -2.645,1.14c-1,0 -1.958,-0.413 -2.645,-1.14l-4.05,-3.954c-0.736,-0.697 -1.152,-1.668 -1.15,-2.681c-0.006,-1.003 0.412,-1.964 1.15,-2.642l20.22,-20.04l-20.22,-19.724c-0.734,-0.691 -1.15,-1.656 -1.15,-2.663c0,-1.008 0.416,-1.973 1.15,-2.663l4.05,-3.946c0.695,-0.726 1.646,-1.151 2.65,-1.183c0.995,-0.018 1.952,0.381 2.64,1.1l26.78,26.559Z' })));};
 
+
+
+	var Mail = function Mail() {return (
+	        _react2.default.createElement('g', null,
+	            _react2.default.createElement('path', { d: 'M-170.2,227.5c-0.8-0.4-1.2,0-2.3,0.3l-43.4,15.6c-0.6,0.2-2.1,0.6-3,0.6c-1,0-1.9-0.2-2.8-0.5l-43.7-15.7 c-1.1-0.3-1.6-0.6-2.3-0.3c-0.7,0.4-1.2,1.1-1.2,1.9V264c0,5.5,4.5,10,10,10h80c5.5,0,10-4.5,10-10v-34.6 C-169,228.6-169.5,227.9-170.2,227.5' }),
+
+
+	            _react2.default.createElement('path', { d: 'M-174,208h-45h-45c-2.8,0-5,2.2-5,5v4.2c0,3.6,0.3,3.4,5.7,5.3c0.2,0.1,41,14.8,41,14.8c1.1,0.3,2.3,0.8,3.3,0.8 c1.1,0,2.3-0.5,3.3-0.8c0,0,40.8-14.8,41-14.8c5.4-1.9,5.7-1.7,5.7-5.3V213C-169,210.2-171.2,208-174,208' })));};
+
+
+
+
+
+	var CustomerSupport = function CustomerSupport() {return (
+	        _react2.default.createElement('g', null,
+	            _react2.default.createElement('path', { d: 'M6.3,29h3.7V16.5h0c2.6-8.3,9.8-13.8,19-13.8c9.2,0,16.4,5.5,19,13.9v10.9c-1.1,2.5-3.9,7.1-9.7,9.5 c-0.7-1-1.8-1.6-3.1-1.6c-2.1,0-3.8,1.7-3.8,3.8c0,2.1,1.7,3.8,3.8,3.8c2,0,3.6-1.5,3.8-3.4c6.5-2.5,9.8-7.6,11.3-10.6l1.4,0 c1.8,0,3.2-1.4,3.2-3.2v-6.2c0-1.8-1.4-3.2-3.2-3.2h-0.9C47.9,6.7,39.5,0,28.9,0C18.3,0,9.9,6.7,7.1,16.5H6.3 c-1.8,0-3.2,1.4-3.2,3.2v6.2C3.1,27.6,4.5,29,6.3,29z' }),
+
+
+
+	            _react2.default.createElement('path', { d: 'M35.1,33.5c1,0,1.9,0.2,2.6,0.7c4.6-2.1,6.8-5.8,7.6-7.8v-9.7c-2.6-6.7-9-11.4-16.5-11.4 c-7.4,0-13.8,4.7-16.5,11.3v0.1V29v1.4c2.7,6.6,9,11.3,16.5,11.3c0.4,0,0.7,0,1.1,0c-0.4-0.8-0.6-1.6-0.6-2.5 C29.4,36,32,33.5,35.1,33.5z' }),
+
+
+	            _react2.default.createElement('path', { d: 'M49.9,42.6l-6.1-1.6c-4,3.5-9.1,5.6-14.7,5.6c-5.6,0-10.8-2.1-14.7-5.6l-6.1,1.6c-6.5,1.8-8.6,4.5-8.1,8.1 L1.4,59h55.3l1.3-8.3C58.5,47.1,56.4,44.4,49.9,42.6z' })));};
+
+
+
+
+
+
+	var Calling = function Calling() {return (
+	        _react2.default.createElement('g', null,
+	            _react2.default.createElement('path', { d: 'M-186.8,220.4c6.1,0,11-5.1,11-11.3s-4.9-11.3-11-11.3s-11,5.1-11,11.3C-197.8,215.4-192.9,220.4-186.8,220.4' }),
+	            _react2.default.createElement('path', { d: 'M-174,220.9l-3.8-1c-2.5,2.2-5.6,3.5-9.1,3.5s-6.6-1.3-9.1-3.5l-3.8,1c-4,1.1-5.3,2.8-5,5l3,19.1c0.4,3,2.2,5,5,5h9.9l0,0 h9.8c2.8,0,4.6-2,5-5l3-19.1C-168.6,223.8-169.9,222.2-174,220.9' }),
+
+	            _react2.default.createElement('path', { d: 'M-221.2,260.5c6.1,0,11-5.1,11-11.3s-4.9-11.3-11-11.3s-11,5.1-11,11.3C-232.2,255.4-227.2,260.5-221.2,260.5' }),
+	            _react2.default.createElement('path', { d: 'M-208.3,261l-3.8-1c-2.4,2.2-5.6,3.5-9.1,3.5s-6.6-1.3-9.1-3.5l-3.8,1c-4,1.1-5.3,2.8-5,5l3,19.1c0.4,3,2.2,5,5,5h9.9l0,0 h9.8c2.8,0,4.6-2,5-5l3-19.1C-203,263.8-204.3,262.2-208.3,261' }),
+
+	            _react2.default.createElement('path', { d: 'M-251,218.6c6.1,0,11-5.1,11-11.3s-4.9-11.3-11-11.3s-11,5.1-11,11.3C-262,213.6-257.1,218.6-251,218.6' }),
+	            _react2.default.createElement('path', { d: 'M-238.1,219.1l-3.8-1c-2.4,2.2-5.6,3.5-9.1,3.5s-6.6-1.3-9.1-3.5l-3.8,1c-4,1.1-5.3,2.8-5,5l3,19.1c0.4,3,2.2,5,5,5h9.9 l0,0h9.9c2.8,0,4.6-2,5-5l3-19.1C-232.8,221.9-234.1,220.2-238.1,219.1' }),
+
+	            _react2.default.createElement('g', null,
+	                _react2.default.createElement('path', { d: 'M-242.8,275c-2.3-1.6-4.6-3.9-6.7-7l7-3.1l-19.5-14l-2.4,23.9l7.1-3.2c2.9,4.5,6.2,8,9.7,10.4c0.7,0.5,1.6,0.7,2.4,0.7 c1.3,0,2.7-0.7,3.5-1.8C-240.3,279-240.8,276.2-242.8,275z' }),
+
+	                _react2.default.createElement('path', { d: 'M-200.5,208l-18-16l-1.6,7.7c-4.3,0-8.5,0.6-13.6,1.4c-2.3,0.4-3.9,2.6-3.5,4.9c0.3,2.1,2.1,3.6,4.2,3.6 c0.2,0,0.4,0,0.5-0.1c4.2-0.6,7.5-1.1,10.7-1.2l-1.5,7.3L-200.5,208z' }),
+
+	                _react2.default.createElement('path', { d: 'M-178.9,253.2c-2.2-0.9-4.7,0.1-5.6,2.3c-1.5,3.6-3.3,7.1-5.5,10.3l-5.2-5.5l-6.8,23l23.3-5.6l-5.3-5.6 c3-4.1,5.5-8.5,7.4-13.3C-175.7,256.7-176.7,254.1-178.9,253.2z' }))));};
+
 /***/ },
 
-/***/ 47:
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(5)();
-	// imports
-
-
-	// module
-	exports.push([module.id, ".dropdown-container {\n  border-bottom: 1px solid #ccc;\n  cursor: pointer;\n  font-size: .75rem;\n  height: 1.75rem;\n  position: relative;\n  z-index: 100; }\n  .dropdown-container .icon-check {\n    fill: #cd040b;\n    height: 18px;\n    margin-left: 15px;\n    margin-right: 10px;\n    width: 18px; }\n  .dropdown-container span {\n    font-weight: bold; }\n\n.dropdown-list {\n  background: white;\n  -webkit-box-shadow: 0 12px 18px rgba(0, 0, 0, 0.2);\n          box-shadow: 0 12px 18px rgba(0, 0, 0, 0.2);\n  display: block;\n  position: absolute;\n  top: 0;\n  min-width: 100%; }\n  .dropdown-list ul {\n    margin: 0;\n    max-height: 41rem;\n    overflow-x: hidden;\n    overflow-y: auto;\n    padding: 0; }\n    .dropdown-list ul li span {\n      color: #666;\n      display: block;\n      padding: 10px 15px 10px 43px;\n      white-space: nowrap; }\n    .dropdown-list ul li li span {\n      padding-left: 79px; }\n    .dropdown-list ul li li li span {\n      padding-left: 99px; }\n    .dropdown-list ul span:hover {\n      background-color: #f5f5f5; }\n\n.dropdown-selected-active-label {\n  white-space: nowrap; }\n\n.dropdown-selected-active {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: flex; }\n  .dropdown-selected-active .dropdown-selected-active-label {\n    -webkit-box-flex: 1;\n    -webkit-flex: 1;\n            flex: 1;\n    max-width: 100%;\n    overflow: hidden;\n    text-overflow: ellipsis; }\n  .dropdown-selected-active .icon {\n    -webkit-flex-basis: auto;\n            flex-basis: auto; }\n\n.dropdown-selected {\n  border-bottom: 1px solid #e6e6e6;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: flex;\n  padding: 10px 0; }\n  .dropdown-selected:hover {\n    background-color: #ffffff; }\n  .dropdown-selected .icon {\n    -webkit-flex-basis: auto;\n            flex-basis: auto; }\n  .dropdown-selected .dropdown-selected-label {\n    -webkit-box-flex: 1;\n    -webkit-flex: 1;\n            flex: 1;\n    padding-right: 15px;\n    white-space: nowrap; }\n\n.icon-down-arrow {\n  height: 0.55rem;\n  width: 0.55rem;\n  position: relative;\n  margin-top: 6px;\n  float: right;\n  fill: #d0151b; }\n", ""]);
-
-	// exports
-
-
-/***/ },
-
-/***/ 51:
+/***/ 59:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(47);
+	var content = __webpack_require__(63);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(6)(content, {});
@@ -644,7 +679,154 @@ webpackJsonp([10,12],{
 
 /***/ },
 
-/***/ 189:
+/***/ 60:
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';Object.defineProperty(exports, "__esModule", { value: true });exports._dropdown = undefined;var _extends = Object.assign || function (target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i];for (var key in source) {if (Object.prototype.hasOwnProperty.call(source, key)) {target[key] = source[key];}}}return target;};var _createClass = function () {function defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}return function (Constructor, protoProps, staticProps) {if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;};}();var _react = __webpack_require__(4);var _react2 = _interopRequireDefault(_react);
+	__webpack_require__(59);
+	var _icons = __webpack_require__(16);var _icons2 = _interopRequireDefault(_icons);
+	var _webTrack = __webpack_require__(33);var _webTrack2 = _interopRequireDefault(_webTrack);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self, call) {if (!self) {throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call && (typeof call === "object" || typeof call === "function") ? call : self;}function _inherits(subClass, superClass) {if (typeof superClass !== "function" && superClass !== null) {throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);}subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;}var
+
+	_dropdown = exports._dropdown = function (_React$Component) {_inherits(_dropdown, _React$Component);
+
+	  function _dropdown(props) {_classCallCheck(this, _dropdown);var _this = _possibleConstructorReturn(this, (_dropdown.__proto__ || Object.getPrototypeOf(_dropdown)).call(this,
+	    props));_initialiseProps.call(_this);
+
+	    _this.state = {
+	      open: false };return _this;
+
+	  }
+
+	  // if( !props._state ) {
+	  //   return false;
+	  // }
+	  _createClass(_dropdown, [{ key: 'render', value: function render()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	    {
+	      var props = this.props;
+	      if (this.props._state) {
+	        return (
+	          _react2.default.createElement('div', { className: 'dropdown-container', onClick: this.openDropdown },
+
+	            _react2.default.createElement('div', { className: 'dropdown-selected-active' },
+	              _react2.default.createElement('span', { className: 'dropdown-selected-active-label' }, this.renderLabel(props)),
+	              _react2.default.createElement(_icons2.default, { name: 'down-arrow', viewBox: '0 0 2040.9 2040.9' })),
+
+
+
+	            this.state.open &&
+
+	            _react2.default.createElement(_dropdownList, _extends({}, this.props, { renderLabel: this.renderLabel, closeDropdown: this.closeDropdown }))));
+
+
+
+
+	      } else {
+	        return _react2.default.createElement('div', null);
+	      }
+
+	    } }]);return _dropdown;}(_react2.default.Component);var _initialiseProps = function _initialiseProps() {var _this3 = this;this.renderLabel = function (props) {if (!props._label) {return props._state[0] && props._state[0].label;}return props._label;};this.openDropdown = function () {_this3.setState({ open: true });};this.closeDropdown = function (event) {_this3.setState({ open: false });};};var
+
+
+
+	_dropdownList = function (_React$Component2) {_inherits(_dropdownList, _React$Component2);function _dropdownList() {var _ref;var _temp, _this2, _ret;_classCallCheck(this, _dropdownList);for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {args[_key] = arguments[_key];}return _ret = (_temp = (_this2 = _possibleConstructorReturn(this, (_ref = _dropdownList.__proto__ || Object.getPrototypeOf(_dropdownList)).call.apply(_ref, [this].concat(args))), _this2), _this2.
+
+
+
+
+
+
+	    renderList = function (props) {
+	      return props._state.map(function (item, index) {
+	        return (
+	          _react2.default.createElement('li', { key: index },
+	            _react2.default.createElement('span', { onClick: function onClick(event) {
+	                  if (item.milestoneId) {
+	                    (0, _webTrack2.default)(item.milestoneId);
+	                  }
+	                  props._callback(event, item.label, item.id || item.value, item.defaultValue || 0);
+	                  _this2.props.closeDropdown(false);
+	                } }, item.label),
+	            _this2.renderSubList(item)));
+
+
+	      });
+	    }, _this2.
+
+	    renderSubList = function (items) {
+	      if (!items.children) {
+	        return false;
+	      }
+	      return (
+	        _react2.default.createElement('ul', null,
+	          _this2.renderSubListItems(items)));
+
+
+	    }, _this2.
+
+	    renderSubListItems = function (items) {
+	      if (!items.children) {
+	        return false;
+	      }
+	      return items.children.map(function (item, index) {
+	        return (
+	          _react2.default.createElement('li', { key: index },
+	            _react2.default.createElement('span', { onClick: function onClick(event) {_this2.props._callback(event, item.label, item.id || item.value);} }, item.label),
+	            _this2.renderSubList(item)));
+
+
+	      });
+	    }, _temp), _possibleConstructorReturn(_this2, _ret);}_createClass(_dropdownList, [{ key: 'componentDidMount', value: function componentDidMount() {document.addEventListener('click', this.props.closeDropdown);} }, { key: 'componentWillUnmount', value: function componentWillUnmount() {document.removeEventListener('click', this.props.closeDropdown);} }, { key: 'render', value: function render()
+
+	    {
+	      var props = this.props;
+	      return (
+	        _react2.default.createElement('div', { className: 'dropdown-list' },
+	          _react2.default.createElement('div', { className: 'dropdown-selected' },
+	            _react2.default.createElement(_icons2.default, { name: 'check' }),
+	            _react2.default.createElement('span', { className: 'dropdown-selected-label' },
+	              this.props.renderLabel(props))),
+
+
+	          _react2.default.createElement('ul', null,
+	            this.renderList(props))));
+
+
+
+	    } }]);return _dropdownList;}(_react2.default.Component);
+
+/***/ },
+
+/***/ 63:
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(5)();
+	// imports
+
+
+	// module
+	exports.push([module.id, ".dropdown-container {\n  border-bottom: 1px solid #ccc;\n  cursor: pointer;\n  font-size: .75rem;\n  height: 1.75rem;\n  position: relative;\n  z-index: 100; }\n  .dropdown-container .icon-check {\n    fill: #cd040b;\n    height: 18px;\n    margin-left: 15px;\n    margin-right: 10px;\n    width: 18px; }\n  .dropdown-container span {\n    font-weight: bold; }\n\n.dropdown-list {\n  background: white;\n  -webkit-box-shadow: 0 12px 18px rgba(0, 0, 0, 0.2);\n          box-shadow: 0 12px 18px rgba(0, 0, 0, 0.2);\n  display: block;\n  position: absolute;\n  top: 0;\n  min-width: 100%; }\n  .dropdown-list ul {\n    margin: 0;\n    max-height: 41rem;\n    overflow-x: hidden;\n    overflow-y: auto;\n    padding: 0; }\n    .dropdown-list ul li span {\n      color: #666;\n      display: block;\n      padding: 10px 15px 10px 43px;\n      white-space: nowrap; }\n    .dropdown-list ul li li span {\n      padding-left: 79px; }\n    .dropdown-list ul li li li span {\n      padding-left: 99px; }\n    .dropdown-list ul span:hover {\n      background-color: #f5f5f5; }\n\n.dropdown-selected-active-label {\n  white-space: nowrap; }\n\n.dropdown-selected-active {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: flex; }\n  .dropdown-selected-active .dropdown-selected-active-label {\n    -webkit-box-flex: 1;\n    -webkit-flex: 1;\n            flex: 1;\n    max-width: 100%;\n    overflow: hidden;\n    text-overflow: ellipsis; }\n  .dropdown-selected-active .icon {\n    -webkit-flex-basis: auto;\n            flex-basis: auto; }\n\n.dropdown-selected {\n  border-bottom: 1px solid #e6e6e6;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: flex;\n  padding: 10px 0; }\n  .dropdown-selected:hover {\n    background-color: #ffffff; }\n  .dropdown-selected .icon {\n    -webkit-flex-basis: auto;\n            flex-basis: auto; }\n  .dropdown-selected .dropdown-selected-label {\n    -webkit-box-flex: 1;\n    -webkit-flex: 1;\n            flex: 1;\n    padding-right: 15px;\n    white-space: nowrap; }\n\n.icon-down-arrow {\n  height: 0.55rem;\n  width: 0.55rem;\n  position: relative;\n  margin-top: 6px;\n  float: right;\n  fill: #d0151b; }\n", ""]);
+
+	// exports
+
+
+/***/ },
+
+/***/ 86:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(5)();
@@ -659,13 +841,13 @@ webpackJsonp([10,12],{
 
 /***/ },
 
-/***/ 226:
+/***/ 92:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(189);
+	var content = __webpack_require__(86);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(6)(content, {});
@@ -690,9 +872,9 @@ webpackJsonp([10,12],{
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';Object.defineProperty(exports, "__esModule", { value: true });exports._selectBox = undefined;var _extends = Object.assign || function (target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i];for (var key in source) {if (Object.prototype.hasOwnProperty.call(source, key)) {target[key] = source[key];}}}return target;};var _createClass = function () {function defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}return function (Constructor, protoProps, staticProps) {if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;};}();var _react = __webpack_require__(4);var _react2 = _interopRequireDefault(_react);
-	__webpack_require__(51);
+	__webpack_require__(59);
 	var _icons = __webpack_require__(16);var _icons2 = _interopRequireDefault(_icons);
-	var _webTrack = __webpack_require__(32);var _webTrack2 = _interopRequireDefault(_webTrack);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self, call) {if (!self) {throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call && (typeof call === "object" || typeof call === "function") ? call : self;}function _inherits(subClass, superClass) {if (typeof superClass !== "function" && superClass !== null) {throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);}subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;}var
+	var _webTrack = __webpack_require__(33);var _webTrack2 = _interopRequireDefault(_webTrack);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self, call) {if (!self) {throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call && (typeof call === "object" || typeof call === "function") ? call : self;}function _inherits(subClass, superClass) {if (typeof superClass !== "function" && superClass !== null) {throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);}subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;}var
 
 	_selectBox = exports._selectBox = function (_React$Component) {_inherits(_selectBox, _React$Component);
 
@@ -815,17 +997,17 @@ webpackJsonp([10,12],{
 
 /***/ },
 
-/***/ 499:
+/***/ 500:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';Object.defineProperty(exports, "__esModule", { value: true });var _createClass = function () {function defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}return function (Constructor, protoProps, staticProps) {if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;};}();var _react = __webpack_require__(4);var _react2 = _interopRequireDefault(_react);
 
-	var _dashboard = __webpack_require__(500);var _dashboard2 = _interopRequireDefault(_dashboard);
+	var _dashboard = __webpack_require__(501);var _dashboard2 = _interopRequireDefault(_dashboard);
 
 
 	var _utils = __webpack_require__(12);
 
-	__webpack_require__(226);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self, call) {if (!self) {throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call && (typeof call === "object" || typeof call === "function") ? call : self;}function _inherits(subClass, superClass) {if (typeof superClass !== "function" && superClass !== null) {throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);}subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;} // module imports
+	__webpack_require__(92);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self, call) {if (!self) {throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call && (typeof call === "object" || typeof call === "function") ? call : self;}function _inherits(subClass, superClass) {if (typeof superClass !== "function" && superClass !== null) {throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);}subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;} // module imports
 	//utils
 	//scss
 	/*******************************************************************************
@@ -878,25 +1060,41 @@ webpackJsonp([10,12],{
 
 /***/ },
 
-/***/ 500:
+/***/ 501:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';Object.defineProperty(exports, "__esModule", { value: true });var _createClass = function () {function defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}return function (Constructor, protoProps, staticProps) {if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;};}();var _react = __webpack_require__(4);var _react2 = _interopRequireDefault(_react);
-	var _reactRouter = __webpack_require__(49);
+	var _reactRouter = __webpack_require__(32);
 
 	var _redux = __webpack_require__(72);
-	var _reactRedux = __webpack_require__(138);
+	var _reactRedux = __webpack_require__(140);
 
 	var _dashboardActionsReducers = __webpack_require__(230);
 
 	var _selectbox = __webpack_require__(483);
+	var _dropdown2 = __webpack_require__(60);
+
+	var _icons = __webpack_require__(16);var _icons2 = _interopRequireDefault(_icons);
 
 
-	__webpack_require__(963);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self, call) {if (!self) {throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call && (typeof call === "object" || typeof call === "function") ? call : self;}function _inherits(subClass, superClass) {if (typeof superClass !== "function" && superClass !== null) {throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);}subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;} //scss
+
+	__webpack_require__(966);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self, call) {if (!self) {throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call && (typeof call === "object" || typeof call === "function") ? call : self;}function _inherits(subClass, superClass) {if (typeof superClass !== "function" && superClass !== null) {throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);}subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;} //scss
+
+	var ProjectDeleteModify = [
+	{
+	    'label': 'Delete',
+	    'id': 'delete',
+	    'value': 'Delete' },
+
+	{
+	    'label': 'Modify',
+	    'id': 'modify',
+	    'value': 'Modify' }];
+
 
 	/*
-	 *  1. Dashboard
-	 */var
+	                           *  1. Dashboard
+	                           */var
 
 	DashboardModule = function (_React$Component) {_inherits(DashboardModule, _React$Component);
 
@@ -904,6 +1102,7 @@ webpackJsonp([10,12],{
 	        props));
 
 	        _this.onProjectSelection = _this.onProjectSelection.bind(_this);
+	        _this.onProjectActions = _this.onProjectActions.bind(_this);
 	        _this.onDashboardTileClick = _this.onDashboardTileClick.bind(_this);return _this;
 	    }_createClass(DashboardModule, [{ key: 'componentWillMount', value: function componentWillMount()
 
@@ -914,6 +1113,10 @@ webpackJsonp([10,12],{
 
 	        event, id, name, city) {
 	            //debugger;
+	        } }, { key: 'onProjectActions', value: function onProjectActions(
+
+	        event, id, name) {
+
 	        } }, { key: 'onDashboardTileClick', value: function onDashboardTileClick(
 
 	        info) {
@@ -943,7 +1146,19 @@ webpackJsonp([10,12],{
 	                            _react2.default.createElement(_selectbox._selectBox, {
 	                                _label: data.projects[0].site_name + ' ' + data.projects[0].site_city,
 	                                _state: data.projects,
-	                                _callback: this.onProjectSelection })),
+	                                _callback: this.onProjectSelection }),
+
+	                            _react2.default.createElement('div', { className: 'projects-user-actions' },
+	                                _react2.default.createElement('button', { className: 'button-create button button-primary' }, 'Create \xA0'),
+
+
+	                                _react2.default.createElement('div', { className: 'delete-modify-project' },
+	                                    _react2.default.createElement(_dropdown2._dropdown, {
+	                                        _label: ProjectDeleteModify[0].label,
+	                                        _state: ProjectDeleteModify,
+	                                        _callback: this.onProjectActions })))),
+
+
 
 
 	                        _react2.default.createElement('div', { className: 'horizontal-line' }),
@@ -1039,7 +1254,7 @@ webpackJsonp([10,12],{
 
 /***/ },
 
-/***/ 732:
+/***/ 734:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(5)();
@@ -1047,20 +1262,20 @@ webpackJsonp([10,12],{
 
 
 	// module
-	exports.push([module.id, ".card {\n  width: 100%;\n  height: 200px; }\n\n.horizontal-line {\n  width: 100%;\n  margin-top: 1rem;\n  margin-bottom: 1rem;\n  border: 0;\n  border-top: 1px solid rgba(0, 0, 0, 0.1); }\n\n.page-dashboard {\n  width: 100%;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-flow: column wrap;\n          flex-flow: column wrap;\n  padding: 2%; }\n  .page-dashboard h2 {\n    color: #868e96;\n    font-size: 2.2em;\n    font-weight: 700; }\n  .page-dashboard .projects {\n    display: -webkit-box;\n    display: -webkit-flex;\n    display: flex; }\n  .page-dashboard .locations {\n    display: -webkit-box;\n    display: -webkit-flex;\n    display: flex;\n    padding-top: 2%; }\n    .page-dashboard .locations .outer-locations {\n      display: -webkit-box;\n      display: -webkit-flex;\n      display: flex;\n      width: 100%; }\n\n.box {\n  position: relative;\n  border-radius: 3px;\n  background: #ffffff;\n  border-top: 3px solid #d2d6de;\n  margin-bottom: 20px;\n  width: 100%;\n  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);\n          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); }\n  .box .box-primary {\n    border-top-color: #3c8dbc; }\n\n.box-widget {\n  border: none; }\n\n.widget-user .widget-user-header {\n  height: 200px;\n  border-top-right-radius: 3px;\n  border-top-left-radius: 3px;\n  cursor: pointer; }\n\n.box-header {\n  color: #444;\n  display: block;\n  padding: 10px;\n  position: relative; }\n\n.box-header > .box-tools {\n  position: absolute;\n  right: 10px;\n  top: 5px; }\n\n.box-footer {\n  border-top-left-radius: 0;\n  border-top-right-radius: 0;\n  border-bottom-right-radius: 3px;\n  border-bottom-left-radius: 3px;\n  border-top: 1px solid #f4f4f4;\n  padding: 10px;\n  background-color: #ffffff; }\n\n.box-title {\n  display: inline-block;\n  font-size: 18px;\n  margin: 0;\n  line-height: 1; }\n\n.btn-box-tool {\n  padding: 5px;\n  font-size: 12px;\n  background: transparent;\n  color: #97a0b3; }\n\n.dropdown-container {\n  width: 50%; }\n  .dropdown-container .dropdown-selected {\n    font-size: 1.2em; }\n  .dropdown-container .dropdown-list {\n    font-size: 1.2em; }\n\n.dropdown-selected-active .dropdown-selected-active-label {\n  font-size: 1.2em; }\n\n.page-memo h3 {\n  font-weight: 500;\n  margin: 0; }\n", ""]);
+	exports.push([module.id, ".card {\n  width: 100%;\n  height: 200px; }\n\n.horizontal-line {\n  width: 100%;\n  margin-top: 1rem;\n  margin-bottom: 1rem;\n  border: 0;\n  border-top: 1px solid rgba(0, 0, 0, 0.1); }\n\n.page-dashboard {\n  width: 100%;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-flow: column wrap;\n          flex-flow: column wrap;\n  padding: 2%; }\n  .page-dashboard h2 {\n    color: #868e96;\n    font-size: 2.2em;\n    font-weight: 700; }\n  .page-dashboard .projects {\n    display: -webkit-box;\n    display: -webkit-flex;\n    display: flex;\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: normal;\n    -webkit-flex-flow: row nowrap;\n            flex-flow: row nowrap;\n    -webkit-box-pack: start;\n    -webkit-justify-content: flex-start;\n            justify-content: flex-start;\n    -webkit-box-align: center;\n    -webkit-align-items: center;\n            align-items: center;\n    width: 100%; }\n    .page-dashboard .projects .projects-user-actions {\n      display: -webkit-box;\n      display: -webkit-flex;\n      display: flex;\n      -webkit-box-orient: horizontal;\n      -webkit-box-direction: normal;\n      -webkit-flex-flow: row nowrap;\n              flex-flow: row nowrap;\n      margin-left: 2%; }\n      .page-dashboard .projects .projects-user-actions .button-create {\n        display: -webkit-box;\n        display: -webkit-flex;\n        display: flex;\n        -webkit-box-flex: 1;\n        -webkit-flex-grow: 1;\n                flex-grow: 1;\n        margin-right: 1rem;\n        min-height: 50px;\n        font-size: 0.875rem;\n        font-weight: 700;\n        background: #CD040B;\n        color: #FFF;\n        cursor: pointer; }\n      .page-dashboard .projects .projects-user-actions .delete-modify-project {\n        display: -webkit-box;\n        display: -webkit-flex;\n        display: flex;\n        width: 150px;\n        -webkit-box-pack: center;\n        -webkit-justify-content: center;\n                justify-content: center;\n        -webkit-box-align: center;\n        -webkit-align-items: center;\n                align-items: center; }\n      .page-dashboard .projects .projects-user-actions .icon-right-arrow {\n        width: 20px;\n        height: 25px;\n        fill: #FFF; }\n  .page-dashboard .locations {\n    display: -webkit-box;\n    display: -webkit-flex;\n    display: flex;\n    padding-top: 2%; }\n    .page-dashboard .locations .outer-locations {\n      display: -webkit-box;\n      display: -webkit-flex;\n      display: flex;\n      width: 100%; }\n\n.box {\n  position: relative;\n  border-radius: 3px;\n  background: #ffffff;\n  border-top: 3px solid #d2d6de;\n  margin-bottom: 20px;\n  width: 100%;\n  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);\n          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); }\n  .box .box-primary {\n    border-top-color: #3c8dbc; }\n\n.box-widget {\n  border: none; }\n\n.widget-user .widget-user-header {\n  height: 200px;\n  border-top-right-radius: 3px;\n  border-top-left-radius: 3px;\n  cursor: pointer; }\n\n.box-header {\n  color: #444;\n  display: block;\n  padding: 10px;\n  position: relative; }\n\n.box-header > .box-tools {\n  position: absolute;\n  right: 10px;\n  top: 5px; }\n\n.box-footer {\n  border-top-left-radius: 0;\n  border-top-right-radius: 0;\n  border-bottom-right-radius: 3px;\n  border-bottom-left-radius: 3px;\n  border-top: 1px solid #f4f4f4;\n  padding: 10px;\n  background-color: #ffffff; }\n\n.box-title {\n  display: inline-block;\n  font-size: 18px;\n  margin: 0;\n  line-height: 1; }\n\n.btn-box-tool {\n  padding: 5px;\n  font-size: 12px;\n  background: transparent;\n  color: #97a0b3; }\n\n.dropdown-container {\n  width: 50%; }\n  .dropdown-container .dropdown-selected {\n    font-size: 1.2em; }\n  .dropdown-container .dropdown-list {\n    font-size: 1.2em; }\n\n.dropdown-selected-active .dropdown-selected-active-label {\n  font-size: 1.2em; }\n\n.page-memo h3 {\n  font-weight: 500;\n  margin: 0; }\n", ""]);
 
 	// exports
 
 
 /***/ },
 
-/***/ 963:
+/***/ 966:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(732);
+	var content = __webpack_require__(734);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(6)(content, {});

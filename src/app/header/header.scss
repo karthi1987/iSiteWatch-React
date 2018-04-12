@@ -28,6 +28,11 @@
   }
 }
 
+.project-name a, .project-name a:hover {
+  display: block;
+  color: $red;
+}
+
 .header-container .logo-block .company-logo,
 .header-container .logo-block .project-name{
   display: inline-block;
@@ -47,6 +52,9 @@
   flex: 0 0 58%;
   display: flex;
   justify-content: flex-end;
+  flex-flow: column wrap;
+  align-self: center;
+  text-align: right;
 }
 
 .header-container .current-time-block h2{

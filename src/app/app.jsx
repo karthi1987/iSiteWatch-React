@@ -314,8 +314,6 @@ const App = connectAndMap(
                 children, app: { session, route }
             } = this.props;
 
-            console.log( this.props.children, "children");
-
             const approvedRoute = (
                 route === APP_PATH + '/login/' ||
                 route === APP_PATH + '/service-notavailable' ||
@@ -358,7 +356,6 @@ const App = connectAndMap(
             } = this.props.app;
 
             const showLoader = (
-                route !== APP_PATH + '/login/' &&
                 route !== APP_PATH + '/home' &&
                 route !== APP_PATH + '/service-notavailable' &&
                 route !== APP_PATH + '/non-authorized' &&
@@ -377,7 +374,7 @@ const App = connectAndMap(
 
         render() {
             const{
-               app: { session }
+               app: { session, user }
             } = this.props;
             return (
                 <div className="app-wrapper">
@@ -386,9 +383,9 @@ const App = connectAndMap(
                             <nav className="nav">
                                 { this.renderNav() }
                                 {
-                                    ( session.active )
+                                    ( session.active && user )
                                     &&
-                                    <Header />
+                                    <Header { ...user } />
                                 }
 
                                 <ReactCSSTransitionGroup
@@ -423,11 +420,7 @@ const AppRouter = props => (
             <Route path="login/backdoor" getComponent={ requireBackdoorLoginComponent } />
             <Route path="logout/" getComponent={ requireLogoutComponent } />
             <Route path="home" getComponent={ requireHomeComponent } />
-
-            {
-                ScoreCardDrillDownReportTab()
-            }
-
+            <Route path="customer-support" getComponent={ requireCustomerSupportComponent } />
             <Route path="scorecard" getComponent={ requireScorecardComponent } onChange={ getRoute }>
                 <Route path="gauges/graph" getComponent={ requireScorecardGaugesComponent } />
                 <Route path="gauges/list" getComponent={ requireScorecardListViewComponent } />
@@ -532,4 +525,11 @@ function requireZoneComponent( location, callback ) {
     require.ensure( [], function ( require ) {
         callback( null, require( './views/zone/zone.jsx' ).default );
     }, 'zone' );
+}
+
+function requireCustomerSupportComponent( location, callback ) {
+    require.ensure( [], function ( require ) {
+        callback( null, require( './views/customer-support/customer-support.jsx' ).default );
+    }, 'CustomerSupport' );
+
 }

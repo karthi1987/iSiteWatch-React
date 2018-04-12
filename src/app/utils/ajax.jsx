@@ -69,6 +69,10 @@ export default function Ajax( opts ) {
     } )
     .fail( function( jqXHR, textStatus, errorThrown ) {
 
+        debugger;
+
+        console.log( 'Im in AJX Failure callback');
+
          //window.location.assign( window.location.origin + APP_PATH );
 
          return false;

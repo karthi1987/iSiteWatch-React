@@ -1,5 +1,6 @@
 import Ajax, * as ajax from 'utils/ajax';
 import { initiateSession } from 'app/app-store';
+import { browserHistory } from 'react-router';
 //import { grabTimestamp } from 'utils/utils';
 import FEEDS from 'endpoints/endpoints';
 import { LOGIN } from 'app/app-lang';
@@ -74,8 +75,14 @@ export function backdoorSession( userLogin, password ) {
                 user_pass: password
             }),
             success: ( results ) => {
+
                 if( !results.data ) {
-                    dispatch( setErrorMessage( results.errorMessage ) );
+                    if( results.status && ( results.status.message === 'INVALID_CREDENTIALS' || results.status.message === 'INVALID_USER' ) ) {
+                        dispatch( setErrorMessage( results.status.message ) );
+                    }
+                    if( results.errorMessage && results.errorMessage === 'TOKEN_EXPIRED' ) {
+                         browserHistory.push( APP_PATH + '/login' );
+                    }
                 } else {
                     initiateSession( results, dispatch );
                     dispatch( ajax.loaded( LOGIN_AUTHENTICATE ) );
