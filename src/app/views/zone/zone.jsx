@@ -52,9 +52,9 @@ class ZoneModule extends React.Component {
     }
 
     componentWillMount() {
-    	this.props.actions.loadZoneData({ 
+    	this.props.actions.loadZoneData({
             session: this.props.app.session,
-            user: this.props.app.user, 
+            user: this.props.app.user,
             startDate: this.state.startDate,
             endDate: this.state.endDate
         });
@@ -63,9 +63,9 @@ class ZoneModule extends React.Component {
     componentWillReceiveProps( nextProps, nextState ) {
     	const thisProps = this.props;
     	const futureProps = nextProps;
-    	if( 
-    		futureProps.zone 
-    		&& futureProps.zone.data 
+    	if(
+    		futureProps.zone
+    		&& futureProps.zone.data
     		&& futureProps.zone.data.oneWeekDay
     		&& futureProps.zone.data.oneWeekDay[ 0 ]
     		&& futureProps.zone.data.oneWeekDay[ 0 ].items
@@ -128,10 +128,10 @@ class ZoneModule extends React.Component {
                                 </div>
                                 <div className="zone-hero-image-date-thumbnails">
                                     <div className="hero-container">
-                                        <ImageGallery items={ this.state.selectedItem.items } />
+                                        <ImageGallery lazyLoad="true" items={ this.state.selectedItem.items } />
                                     </div>
                                     <div className="date-container">
-                                        {   
+                                        {
                                             zone.data
                                             && zone.data.oneWeekDay
                                             && zone.data.oneWeekDay.length > 0
@@ -159,7 +159,7 @@ export default connect(
     (state) => {
       return {
         app: state.app,
-        session: state.app.session, 
+        session: state.app.session,
         dashboard: state.views.home.modules.dashboard || [],
         zone: state.views.zone
       };
@@ -183,7 +183,7 @@ const ThumbnailsDates = ( { oneWeekDay, datePreviewChange } ) => {
             {
                 oneWeekDay
                 && oneWeekDay.map(
-                    ( metric, i ) => 
+                    ( metric, i ) =>
                     <div key={ i } className="metric" onClick={ ( ) => {
                         datePreviewChange( metric );
                     } }>

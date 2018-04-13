@@ -66,7 +66,7 @@ var end = new Date(nextDate);
 while( start < end ) {
    consolidatedWeekDates.push(moment(start).format());
    var newDate = start.setDate(start.getDate() + 1);
-   start = new Date(newDate);  
+   start = new Date(newDate);
 }
 
 const zoneState = {
@@ -169,7 +169,7 @@ export function loadZoneData ( info ) {
         );
 
         Ajax( {
-            url: 'https://wejllcr10k.execute-api.us-east-1.amazonaws.com/BETA/image-history',
+            url: 'https://wejllcr10k.execute-api.us-east-1.amazonaws.com/BETA/thumbs-history',
             type: 'POST',
             data: ZonePayLoad,
             success: ( results ) => {
@@ -234,7 +234,7 @@ export default function quickhits( state = zoneState, action ) {
           var localTime = moment(item['utcFormat']).format('YYYY-MM-DD'); // store localTime
           var proposedDate = localTime + "T00:00:00.000Z"; // convert the localTime to UTC format
            const tD = moment(item['utcFormat']).format('D');
-           const imageGallery = _.filter( galleryResults, function(o) { 
+           const imageGallery = _.filter( galleryResults, function(o) {
              if( proposedDate == o.yyyy_mm_dd ) {
                 let galleyCustomizedImages = [];
                 galleyCustomizedImages = _.map( o.image, function(i, ix){
