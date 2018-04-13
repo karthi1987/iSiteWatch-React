@@ -240,7 +240,7 @@ export default function quickhits( state = zoneState, action ) {
                 galleyCustomizedImages = _.map( o.image, function(i, ix){
                    const cImages = {};
                    cImages['original'] = i['image'];
-                   cImages['thumbnail'] = i['image'];
+                   cImages['thumbnail'] = i['image_thumbnail'];
                    cImages['description'] = 'Time: '+i['hhmm'];
                    galleyCustomizedImages.push( cImages );
                    return cImages;

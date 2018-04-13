@@ -192,7 +192,7 @@ const ThumbnailsDates = ( { oneWeekDay, datePreviewChange } ) => {
                             {
                                 metric.items
                                 && metric.items.length > 0
-                                && <img src={ metric.items[ 0 ].original }  width="200"/>
+                                && <img src={ metric.items[ 0 ].thumbnail }  width="200"/>
                             }
                         </div>
                     </div>

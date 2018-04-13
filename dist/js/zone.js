@@ -239,7 +239,7 @@ webpackJsonp([3,13],{
 
 	                            metric.items &&
 	                            metric.items.length > 0 &&
-	                            _react2.default.createElement('img', { src: metric.items[0].original, width: '200' }))));})));
+	                            _react2.default.createElement('img', { src: metric.items[0].thumbnail, width: '200' }))));})));
 
 
 

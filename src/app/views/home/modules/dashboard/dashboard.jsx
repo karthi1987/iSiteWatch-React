@@ -4,12 +4,14 @@ import { browserHistory } from 'react-router';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
-import { getDashboardProjectsData, getDashboardLocationsData } from './dashboard-actions-reducers.js';
+import { getDashboardProjectsData, getDashboardLocationsData, getDashboardLocationEventsData } from './dashboard-actions-reducers.js';
 
 import { _selectBox } from 'app/shared/dropdown/selectbox';
 import { _dropdown } from 'app/shared/dropdown/dropdown';
 
 import Icon from 'app/shared/icons/icons';
+
+import classnames from 'classnames';
 
 
 //scss
@@ -36,14 +38,30 @@ class DashboardModule extends React.Component {
      constructor( props ) {
         super( props );
 
+        this.eventsTimeOut;
         this.onProjectSelection = this.onProjectSelection.bind( this );
         this.onProjectActions = this.onProjectActions.bind( this );
         this.onDashboardTileClick = this.onDashboardTileClick.bind( this );
+        this.checkIfDashboardLocationsIsAvailable = this.checkIfDashboardLocationsIsAvailable.bind( this );
+    }
+
+    componentDidMount() {
+
+        const self = this;
+        this.eventsTimeOut = setInterval(
+            ( ) => {
+                this.checkIfDashboardLocationsIsAvailable();
+            }, 1000
+        );
     }
 
     componentWillMount() {
         this.props.actions.getDashboardProjectsData( { session: this.props.app.session, user: this.props.app.user } );
         this.props.actions.getDashboardLocationsData( { session: this.props.app.session, user: this.props.app.user } );
+    }
+
+    componentWillUnmount() {
+        clearInterval( this.eventsTimeOut );
     }
 
     onProjectSelection( event, id, name, city ) {
@@ -56,6 +74,33 @@ class DashboardModule extends React.Component {
 
     onDashboardTileClick( info ) {
         browserHistory.push( APP_PATH + '/zone/'+info.location_id );
+    }
+
+    checkIfDashboardLocationsIsAvailable() {
+        const {
+            dashboard
+        } = this.props;
+
+        const self = this;
+        if( dashboard && dashboard.data ) {
+            const dashboardResults = dashboard.data;
+            const dashboardLocations = dashboardResults.locations;
+            if( dashboardLocations && dashboardLocations.length > 0 ) {
+                clearInterval( this.eventsTimeOut );
+                for( var i = 0; i < dashboardLocations.length; i++ ) {
+                    //To do: Make Locations Events call
+                    //console.log( dashboardLocations[ i ].site_id, dashboardLocations[ i ].location_id );
+                    self.props.actions.getDashboardLocationEventsData(
+                        {
+                            session: self.props.app.session,
+                            user: self.props.app.user,
+                            location_id: dashboardLocations[ i ].location_id,
+                            site_id: dashboardLocations[ i ].site_id
+                        }
+                    );
+                }
+            } 
+        }
     }
     render() {
         const {
@@ -129,12 +174,15 @@ export default connect(
       return {
         actions: bindActionCreators({
             getDashboardProjectsData,
-            getDashboardLocationsData
+            getDashboardLocationsData,
+            getDashboardLocationEventsData
         }, dispatch)
     }
 }
 
 )(DashboardModule);
+
+//https://sitesupt-location-data.s3.amazonaws.com/cusr_7777466782239/site_7777963129656/location_7777616676103/image_B827EB2C749D_1522519726.jpg?AWSAccessKeyId=AKIAIKTEN7C2HLGDNXMA&Expires=1523592069&Signature=EfV%2FVlmW%2FjqzaYh6SwF3WMihr4A%3D
 
 
 // Locations template
@@ -166,7 +214,12 @@ const LocationsTemplate = ( props, _callback ) => {
                             <div className="box-header with-border">
                                 <h3 className="box-title">{ item.location_name }</h3>
                                 <div className="box-tools pull-right">
-                                    <span className="badge bg-red" data-toggle="tooltip" title="3 Alerts">2</span>
+                                    {
+                                        item
+                                        && item.events
+                                        && item.events.length > 0 
+                                        && <LocationsEventsComponent { ...item } />
+                                    }
                                     <button className="btn btn-box-tool" data-widget="collapse" type="button">
                                         <i className="fa fa-plus"></i>
                                     </button>
@@ -186,3 +239,35 @@ const LocationsTemplate = ( props, _callback ) => {
         </div>
     );
 };
+
+const LocationsEventsComponent = ( props ) => {
+
+    console.log( props, " props props props props");
+
+    if( !props.events ) {
+        return <div />;
+    }
+
+    return(
+        <div>
+        {
+            props.events
+            && props.events.map(
+                ( event, index ) => 
+                 <span className={ classnames(
+                            'badge',
+                            {
+                                'bg-red': event.event_level == 'alert',
+                                'bg-warning': event.event_level == 'warning',
+                                'bg-light-blue': event.event_level == 'message'
+                            }
+                        ) }
+                      data-toggle="tooltip"
+                    title={ event.event_value && event.event_value.length }>
+                    { event.event_value && event.event_value.length }
+                </span>
+            )
+        }
+        </div>
+    );
+}

@@ -1076,6 +1076,8 @@ webpackJsonp([10,13],{
 
 	var _icons = __webpack_require__(16);var _icons2 = _interopRequireDefault(_icons);
 
+	var _classnames = __webpack_require__(28);var _classnames2 = _interopRequireDefault(_classnames);
+
 
 
 	__webpack_require__(966);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self, call) {if (!self) {throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call && (typeof call === "object" || typeof call === "function") ? call : self;}function _inherits(subClass, superClass) {if (typeof superClass !== "function" && superClass !== null) {throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);}subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;} //scss
@@ -1101,14 +1103,30 @@ webpackJsonp([10,13],{
 	    function DashboardModule(props) {_classCallCheck(this, DashboardModule);var _this = _possibleConstructorReturn(this, (DashboardModule.__proto__ || Object.getPrototypeOf(DashboardModule)).call(this,
 	        props));
 
+	        _this.eventsTimeOut;
 	        _this.onProjectSelection = _this.onProjectSelection.bind(_this);
 	        _this.onProjectActions = _this.onProjectActions.bind(_this);
-	        _this.onDashboardTileClick = _this.onDashboardTileClick.bind(_this);return _this;
-	    }_createClass(DashboardModule, [{ key: 'componentWillMount', value: function componentWillMount()
+	        _this.onDashboardTileClick = _this.onDashboardTileClick.bind(_this);
+	        _this.checkIfDashboardLocationsIsAvailable = _this.checkIfDashboardLocationsIsAvailable.bind(_this);return _this;
+	    }_createClass(DashboardModule, [{ key: 'componentDidMount', value: function componentDidMount()
+
+	        {var _this2 = this;
+
+	            var self = this;
+	            this.eventsTimeOut = setInterval(
+	            function () {
+	                _this2.checkIfDashboardLocationsIsAvailable();
+	            }, 1000);
+
+	        } }, { key: 'componentWillMount', value: function componentWillMount()
 
 	        {
 	            this.props.actions.getDashboardProjectsData({ session: this.props.app.session, user: this.props.app.user });
 	            this.props.actions.getDashboardLocationsData({ session: this.props.app.session, user: this.props.app.user });
+	        } }, { key: 'componentWillUnmount', value: function componentWillUnmount()
+
+	        {
+	            clearInterval(this.eventsTimeOut);
 	        } }, { key: 'onProjectSelection', value: function onProjectSelection(
 
 	        event, id, name, city) {
@@ -1121,6 +1139,33 @@ webpackJsonp([10,13],{
 
 	        info) {
 	            _reactRouter.browserHistory.push(APP_PATH + '/zone/' + info.location_id);
+	        } }, { key: 'checkIfDashboardLocationsIsAvailable', value: function checkIfDashboardLocationsIsAvailable()
+
+	        {var
+
+	            dashboard =
+	            this.props.dashboard;
+
+	            var self = this;
+	            if (dashboard && dashboard.data) {
+	                var dashboardResults = dashboard.data;
+	                var dashboardLocations = dashboardResults.locations;
+	                if (dashboardLocations && dashboardLocations.length > 0) {
+	                    clearInterval(this.eventsTimeOut);
+	                    for (var i = 0; i < dashboardLocations.length; i++) {
+	                        //To do: Make Locations Events call
+	                        //console.log( dashboardLocations[ i ].site_id, dashboardLocations[ i ].location_id );
+	                        self.props.actions.getDashboardLocationEventsData(
+	                        {
+	                            session: self.props.app.session,
+	                            user: self.props.app.user,
+	                            location_id: dashboardLocations[i].location_id,
+	                            site_id: dashboardLocations[i].site_id });
+
+
+	                    }
+	                }
+	            }
 	        } }, { key: 'render', value: function render()
 	        {var _props =
 
@@ -1194,12 +1239,15 @@ webpackJsonp([10,13],{
 	    return {
 	        actions: (0, _redux.bindActionCreators)({
 	            getDashboardProjectsData: _dashboardActionsReducers.getDashboardProjectsData,
-	            getDashboardLocationsData: _dashboardActionsReducers.getDashboardLocationsData },
+	            getDashboardLocationsData: _dashboardActionsReducers.getDashboardLocationsData,
+	            getDashboardLocationEventsData: _dashboardActionsReducers.getDashboardLocationEventsData },
 	        dispatch) };
 
 	})(
 
 	DashboardModule);
+
+	//https://sitesupt-location-data.s3.amazonaws.com/cusr_7777466782239/site_7777963129656/location_7777616676103/image_B827EB2C749D_1522519726.jpg?AWSAccessKeyId=AKIAIKTEN7C2HLGDNXMA&Expires=1523592069&Signature=EfV%2FVlmW%2FjqzaYh6SwF3WMihr4A%3D
 
 
 	// Locations template
@@ -1231,7 +1279,12 @@ webpackJsonp([10,13],{
 	                        _react2.default.createElement('div', { className: 'box-header with-border' },
 	                            _react2.default.createElement('h3', { className: 'box-title' }, item.location_name),
 	                            _react2.default.createElement('div', { className: 'box-tools pull-right' },
-	                                _react2.default.createElement('span', { className: 'badge bg-red', 'data-toggle': 'tooltip', title: '3 Alerts' }, '2'),
+
+	                                item &&
+	                                item.events &&
+	                                item.events.length > 0 &&
+	                                _react2.default.createElement(LocationsEventsComponent, item),
+
 	                                _react2.default.createElement('button', { className: 'btn btn-box-tool', 'data-widget': 'collapse', type: 'button' },
 	                                    _react2.default.createElement('i', { className: 'fa fa-plus' })))),
 
@@ -1248,6 +1301,38 @@ webpackJsonp([10,13],{
 	    return (
 	        _react2.default.createElement('div', { className: 'outer-locations' },
 	            locationsOutput));
+
+
+	};
+
+	var LocationsEventsComponent = function LocationsEventsComponent(props) {
+
+	    console.log(props, " props props props props");
+
+	    if (!props.events) {
+	        return _react2.default.createElement('div', null);
+	    }
+
+	    return (
+	        _react2.default.createElement('div', null,
+
+	            props.events &&
+	            props.events.map(
+	            function (event, index) {return (
+	                    _react2.default.createElement('span', { className: (0, _classnames2.default)(
+	                            'badge',
+	                            {
+	                                'bg-red': event.event_level == 'alert',
+	                                'bg-warning': event.event_level == 'warning',
+	                                'bg-light-blue': event.event_level == 'message' }),
+
+
+	                            'data-toggle': 'tooltip',
+	                            title: event.event_value && event.event_value.length },
+	                        event.event_value && event.event_value.length));})));
+
+
+
 
 
 	};
