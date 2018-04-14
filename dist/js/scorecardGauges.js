@@ -1252,7 +1252,7 @@ webpackJsonp([4,13],{
 
 /***/ },
 
-/***/ 194:
+/***/ 195:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_LOCAL_MODULE_0__;/*** IMPORTS FROM imports-loader ***/
@@ -9946,7 +9946,7 @@ webpackJsonp([4,13],{
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';Object.defineProperty(exports, "__esModule", { value: true });var _createClass = function () {function defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}return function (Constructor, protoProps, staticProps) {if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;};}(); /*globals mina*/
-	var _importsThisWindowFixModule = __webpack_require__(194);var _importsThisWindowFixModule2 = _interopRequireDefault(_importsThisWindowFixModule);
+	var _importsThisWindowFixModule = __webpack_require__(195);var _importsThisWindowFixModule2 = _interopRequireDefault(_importsThisWindowFixModule);
 	var _numeral = __webpack_require__(111);var _numeral2 = _interopRequireDefault(_numeral);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}
 
 	var VALUE_TYPE_CHAR = {

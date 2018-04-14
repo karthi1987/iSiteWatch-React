@@ -4,15 +4,15 @@ import { browserHistory } from 'react-router';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
-import { getDashboardProjectsData, getDashboardLocationsData, getDashboardLocationEventsData } from './dashboard-actions-reducers.js';
+import { getDashboardProjectsData, getDashboardLocationsData, getDashboardLocationEventsData, showToggleItems } from './dashboard-actions-reducers.js';
 
 import { _selectBox } from 'app/shared/dropdown/selectbox';
 import { _dropdown } from 'app/shared/dropdown/dropdown';
 
 import Icon from 'app/shared/icons/icons';
-
 import classnames from 'classnames';
 
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 //scss
 import './dashboard.scss';
@@ -42,6 +42,7 @@ class DashboardModule extends React.Component {
         this.onProjectSelection = this.onProjectSelection.bind( this );
         this.onProjectActions = this.onProjectActions.bind( this );
         this.onDashboardTileClick = this.onDashboardTileClick.bind( this );
+        this.onTileClickToggleItem = this.onTileClickToggleItem.bind( this );
         this.checkIfDashboardLocationsIsAvailable = this.checkIfDashboardLocationsIsAvailable.bind( this );
     }
 
@@ -76,6 +77,10 @@ class DashboardModule extends React.Component {
         browserHistory.push( APP_PATH + '/zone/'+info.location_id );
     }
 
+    onTileClickToggleItem( info ) {
+        this.props.actions.showToggleItems( info );
+    }
+
     checkIfDashboardLocationsIsAvailable() {
         const {
             dashboard
@@ -89,7 +94,6 @@ class DashboardModule extends React.Component {
                 clearInterval( this.eventsTimeOut );
                 for( var i = 0; i < dashboardLocations.length; i++ ) {
                     //To do: Make Locations Events call
-                    //console.log( dashboardLocations[ i ].site_id, dashboardLocations[ i ].location_id );
                     self.props.actions.getDashboardLocationEventsData(
                         {
                             session: self.props.app.session,
@@ -147,7 +151,7 @@ class DashboardModule extends React.Component {
                     </div>
                     <div className="horizontal-line"></div>
                     <div className="locations">
-                        { LocationsTemplate( data, this.onDashboardTileClick ) }
+                        { LocationsTemplate( data, this.onDashboardTileClick, this.onTileClickToggleItem ) }
                     </div>
                 </div>
             );
@@ -175,18 +179,17 @@ export default connect(
         actions: bindActionCreators({
             getDashboardProjectsData,
             getDashboardLocationsData,
-            getDashboardLocationEventsData
+            getDashboardLocationEventsData,
+            showToggleItems
         }, dispatch)
     }
 }
 
 )(DashboardModule);
 
-//https://sitesupt-location-data.s3.amazonaws.com/cusr_7777466782239/site_7777963129656/location_7777616676103/image_B827EB2C749D_1522519726.jpg?AWSAccessKeyId=AKIAIKTEN7C2HLGDNXMA&Expires=1523592069&Signature=EfV%2FVlmW%2FjqzaYh6SwF3WMihr4A%3D
-
 
 // Locations template
-const LocationsTemplate = ( props, _callback ) => {
+const LocationsTemplate = ( props, _callback, _actionCallback ) => {
 
     if( !props.locations ) {
         return false;
@@ -220,12 +223,27 @@ const LocationsTemplate = ( props, _callback ) => {
                                         && item.events.length > 0 
                                         && <LocationsEventsComponent { ...item } />
                                     }
-                                    <button className="btn btn-box-tool" data-widget="collapse" type="button">
-                                        <i className="fa fa-plus"></i>
+                                    <button className="btn btn-box-tool" data-widget="collapse" type="button" onClick={
+                                        ( event ) => {
+                                            _actionCallback( item );
+                                        }
+                                    }>
+                                        <Icon name="plus" />
                                     </button>
                                 </div>
                             </div>
-                            <div className="box-body"></div>
+                            <div className="box-body">
+                                {
+                                    item.show
+                                    &&
+                                    <ReactCSSTransitionGroup
+                                      transitionName="toggle-fade-in"
+                                      transitionEnterTimeout={500}
+                                      transitionLeaveTimeout={300}>
+                                       <LocationToggleContent { ...item }/>
+                                    </ReactCSSTransitionGroup>
+                                 }
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -242,32 +260,97 @@ const LocationsTemplate = ( props, _callback ) => {
 
 const LocationsEventsComponent = ( props ) => {
 
-    console.log( props, " props props props props");
-
     if( !props.events ) {
         return <div />;
     }
 
     return(
-        <div>
+        <div className="box-tools-wrapper">
         {
             props.events
             && props.events.map(
                 ( event, index ) => 
-                 <span className={ classnames(
+                 <span key={ index } className={ classnames(
                             'badge',
                             {
-                                'bg-red': event.event_level == 'alert',
-                                'bg-warning': event.event_level == 'warning',
-                                'bg-light-blue': event.event_level == 'message'
+                                'bg-red': event.event_message == 'alert',
+                                'bg-warning': event.event_message == 'warning',
+                                'bg-light-blue': event.event_message == 'message'
                             }
                         ) }
                       data-toggle="tooltip"
                     title={ event.event_value && event.event_value.length }>
-                    { event.event_value && event.event_value.length }
+                    <strong>{ event.event_value && event.event_value.length }</strong>
                 </span>
             )
         }
+        </div>
+    );
+}
+
+
+/* 
+ * Location Toggle content 
+ *
+ */
+
+const LocationToggleContent = ( props ) => {
+
+    if( !props ) {
+        return <div />;
+    }
+
+    const combinedResults = [];
+    props.events
+    && props.events.length
+    && props.events.length > 0
+    && props.events.map(
+        ( prop, index ) => {
+            prop
+            && prop.event_value
+            && prop.event_value.length > 0
+            && prop.event_value.map(
+                ( item, idx ) => {
+                    combinedResults.push(
+                        <li key={ index +'-'+idx } className="list-group-item clearfix d-block">
+                            <i className="fa fa-industry fa-fw"></i>{ item.sensor_id }
+                                <span className={ classnames(
+                                    'float-right text-muted small',
+                                    {
+                                        'bg-red': item.event_level == 'alert',
+                                        'bg-warning': item.event_level == 'warning',
+                                        'bg-light-blue': item.event_level == 'message'
+                                    }
+                                ) }>
+                                    <em>{ item.event_value }</em>
+                                </span>
+                        </li>
+                    );
+                }
+            );
+        }
+    );
+
+    combinedResults.push(
+        <li key="unique-coordinates" className="list-group-item clearfix d-block">
+            <i className="fa fa-id-card-o fa-fw"></i> GEO Coordinates
+            <span className="float-right text-muted small">
+                <em>{ props.location_location }</em>
+            </span>
+        </li>);
+    combinedResults.push(<li key="unique-updated" className="list-group-item clearfix d-block">
+            <i className="fa fa-object-group fa-fw"></i> Last update
+            <span className="float-right text-muted small">
+                <em>{ props.location_lastupdate }</em>
+            </span>
+        </li>
+    );
+
+    return(
+         <div className="list-group  no-padding">
+            <ul>
+                 { combinedResults }
+            </ul>
         </div>
     );
 }

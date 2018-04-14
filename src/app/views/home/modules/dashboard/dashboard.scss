@@ -99,7 +99,13 @@
 .box-header > .box-tools {
 	position: absolute;
 	right: 10px;
-	top: 5px;
+	top: 0;
+	width: 20%;
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	justify-content: space-between;
+	height: 100%;
 }
 
 .box-footer {
@@ -124,6 +130,13 @@
 	font-size: 12px;
 	background: transparent;
 	color: #97a0b3;
+	border: none;
+	.icon-plus {
+		width: 15px;
+		height: 15px;
+		fill: #333;
+		border-radius: 50%;
+	}
 }
 
 .dropdown-container {
@@ -140,9 +153,97 @@
 	font-size: 1.2em;
 }
 
+.list-group {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+    .list-group-item {
+		position: relative;
+		display: block;
+		padding: .75rem 1.25rem;
+		margin-bottom: -1px;
+		background-color: #fff;
+		border: 1px solid rgba(0,0,0,.125);
+	    text-transform: capitalize;
+    }
+	.list-group-item:first-child {
+	    border-top-left-radius: .25rem;
+	    border-top-right-radius: .25rem;
+	}
+	.list-group-item:last-child {
+	    margin-bottom: 0;
+	    border-bottom-right-radius: .25rem;
+	    border-bottom-left-radius: .25rem;
+	}
+	.float-right {
+		float: right;
+	}
+	.text-muted {
+		color: #6c757d;
+	}
+	ul {
+		margin: 0;
+		padding: 0;
+	}
+}
+
+.bg-warning {
+	background: #ffc107;
+}
+.bg-red {
+	background: #dc3545;
+}
+.bg-message {
+	background: #17a2b8;
+}
+
+.box-tools {
+	.box-tools-wrapper {
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+		text-align: center;
+		flex-grow: 1;
+	}
+	.badge {
+		display: flex;
+		width: 20px;
+		border-radius: 50%;
+		font-size: 0.8em;
+		text-align: center;
+	}
+	strong {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+	}
+} 
+
 .page-memo {
 	h3 {
 		font-weight: 500;
 		margin: 0;
 	}
+}
+
+
+/* Toggle Animation */
+.toggle-fade-in-enter {
+  opacity: 0.01;
+}
+
+.toggle-fade-in-enter.toggle-fade-in-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.toggle-fade-in-leave {
+  opacity: 1;
+}
+
+.toggle-fade-in-leave.toggle-fade-in-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
 }

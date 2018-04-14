@@ -49,7 +49,7 @@ webpackJsonp([3,13],{
 	var _utils = __webpack_require__(12);
 
 	var _redux = __webpack_require__(72);
-	var _reactRedux = __webpack_require__(140);
+	var _reactRedux = __webpack_require__(141);
 
 	var _reactImageGallery = __webpack_require__(839);var _reactImageGallery2 = _interopRequireDefault(_reactImageGallery);
 	var _reactDatepicker = __webpack_require__(837);var _reactDatepicker2 = _interopRequireDefault(_reactDatepicker);
@@ -57,7 +57,7 @@ webpackJsonp([3,13],{
 
 	var _propTypes = __webpack_require__(99);var _propTypes2 = _interopRequireDefault(_propTypes);
 
-	var _zoneActionsReducers = __webpack_require__(161);
+	var _zoneActionsReducers = __webpack_require__(162);
 
 	__webpack_require__(952);
 
@@ -175,7 +175,7 @@ webpackJsonp([3,13],{
 
 	                                        _react2.default.createElement('div', { className: 'zone-hero-image-date-thumbnails' },
 	                                            _react2.default.createElement('div', { className: 'hero-container' },
-	                                                _react2.default.createElement(_reactImageGallery2.default, { items: this.state.selectedItem.items })),
+	                                                _react2.default.createElement(_reactImageGallery2.default, { lazyLoad: 'true', items: this.state.selectedItem.items })),
 
 	                                            _react2.default.createElement('div', { className: 'date-container' },
 

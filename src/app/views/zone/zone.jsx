@@ -128,7 +128,7 @@ class ZoneModule extends React.Component {
                                 </div>
                                 <div className="zone-hero-image-date-thumbnails">
                                     <div className="hero-container">
-                                        <ImageGallery items={ this.state.selectedItem.items } />
+                                        <ImageGallery lazyLoad="true" items={ this.state.selectedItem.items } />
                                     </div>
                                     <div className="date-container">
                                         {   

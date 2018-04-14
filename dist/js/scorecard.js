@@ -1274,7 +1274,7 @@ webpackJsonp([7,13],{
 
 /***/ },
 
-/***/ 160:
+/***/ 161:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';Object.defineProperty(exports, "__esModule", { value: true });exports._tabs = undefined;var _react = __webpack_require__(4);var _react2 = _interopRequireDefault(_react);
@@ -1324,7 +1324,7 @@ webpackJsonp([7,13],{
 
 /***/ },
 
-/***/ 190:
+/***/ 191:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(5)();
@@ -1345,7 +1345,7 @@ webpackJsonp([7,13],{
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(190);
+	var content = __webpack_require__(191);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(6)(content, {});
@@ -1480,7 +1480,7 @@ webpackJsonp([7,13],{
 
 	var _scorecardHelper = __webpack_require__(74);
 
-	var _tabs2 = __webpack_require__(160);
+	var _tabs2 = __webpack_require__(161);
 	var _dropdown2 = __webpack_require__(60);
 	var _icons = __webpack_require__(16);var _icons2 = _interopRequireDefault(_icons);
 

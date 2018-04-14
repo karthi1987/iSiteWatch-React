@@ -122,7 +122,7 @@ webpackJsonp([5,13],{
 	var _errorMessage = __webpack_require__(38);var _errorMessage2 = _interopRequireDefault(_errorMessage);
 
 	var _quickHitsActionsReducers = __webpack_require__(234);
-	var _overlayActionsReducers = __webpack_require__(155);
+	var _overlayActionsReducers = __webpack_require__(156);
 
 	var _endpoints = __webpack_require__(22);var _endpoints2 = _interopRequireDefault(_endpoints);
 

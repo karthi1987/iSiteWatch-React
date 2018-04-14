@@ -1067,7 +1067,7 @@ webpackJsonp([10,13],{
 	var _reactRouter = __webpack_require__(32);
 
 	var _redux = __webpack_require__(72);
-	var _reactRedux = __webpack_require__(140);
+	var _reactRedux = __webpack_require__(141);
 
 	var _dashboardActionsReducers = __webpack_require__(230);
 
@@ -1075,9 +1075,9 @@ webpackJsonp([10,13],{
 	var _dropdown2 = __webpack_require__(60);
 
 	var _icons = __webpack_require__(16);var _icons2 = _interopRequireDefault(_icons);
-
 	var _classnames = __webpack_require__(28);var _classnames2 = _interopRequireDefault(_classnames);
 
+	var _reactAddonsCssTransitionGroup = __webpack_require__(140);var _reactAddonsCssTransitionGroup2 = _interopRequireDefault(_reactAddonsCssTransitionGroup);
 
 
 	__webpack_require__(966);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self, call) {if (!self) {throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call && (typeof call === "object" || typeof call === "function") ? call : self;}function _inherits(subClass, superClass) {if (typeof superClass !== "function" && superClass !== null) {throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);}subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;} //scss
@@ -1107,6 +1107,7 @@ webpackJsonp([10,13],{
 	        _this.onProjectSelection = _this.onProjectSelection.bind(_this);
 	        _this.onProjectActions = _this.onProjectActions.bind(_this);
 	        _this.onDashboardTileClick = _this.onDashboardTileClick.bind(_this);
+	        _this.onTileClickToggleItem = _this.onTileClickToggleItem.bind(_this);
 	        _this.checkIfDashboardLocationsIsAvailable = _this.checkIfDashboardLocationsIsAvailable.bind(_this);return _this;
 	    }_createClass(DashboardModule, [{ key: 'componentDidMount', value: function componentDidMount()
 
@@ -1139,6 +1140,10 @@ webpackJsonp([10,13],{
 
 	        info) {
 	            _reactRouter.browserHistory.push(APP_PATH + '/zone/' + info.location_id);
+	        } }, { key: 'onTileClickToggleItem', value: function onTileClickToggleItem(
+
+	        info) {
+	            this.props.actions.showToggleItems(info);
 	        } }, { key: 'checkIfDashboardLocationsIsAvailable', value: function checkIfDashboardLocationsIsAvailable()
 
 	        {var
@@ -1154,7 +1159,6 @@ webpackJsonp([10,13],{
 	                    clearInterval(this.eventsTimeOut);
 	                    for (var i = 0; i < dashboardLocations.length; i++) {
 	                        //To do: Make Locations Events call
-	                        //console.log( dashboardLocations[ i ].site_id, dashboardLocations[ i ].location_id );
 	                        self.props.actions.getDashboardLocationEventsData(
 	                        {
 	                            session: self.props.app.session,
@@ -1212,7 +1216,7 @@ webpackJsonp([10,13],{
 
 	                        _react2.default.createElement('div', { className: 'horizontal-line' }),
 	                        _react2.default.createElement('div', { className: 'locations' },
-	                            LocationsTemplate(data, this.onDashboardTileClick))));
+	                            LocationsTemplate(data, this.onDashboardTileClick, this.onTileClickToggleItem))));
 
 
 
@@ -1240,18 +1244,17 @@ webpackJsonp([10,13],{
 	        actions: (0, _redux.bindActionCreators)({
 	            getDashboardProjectsData: _dashboardActionsReducers.getDashboardProjectsData,
 	            getDashboardLocationsData: _dashboardActionsReducers.getDashboardLocationsData,
-	            getDashboardLocationEventsData: _dashboardActionsReducers.getDashboardLocationEventsData },
+	            getDashboardLocationEventsData: _dashboardActionsReducers.getDashboardLocationEventsData,
+	            showToggleItems: _dashboardActionsReducers.showToggleItems },
 	        dispatch) };
 
 	})(
 
 	DashboardModule);
 
-	//https://sitesupt-location-data.s3.amazonaws.com/cusr_7777466782239/site_7777963129656/location_7777616676103/image_B827EB2C749D_1522519726.jpg?AWSAccessKeyId=AKIAIKTEN7C2HLGDNXMA&Expires=1523592069&Signature=EfV%2FVlmW%2FjqzaYh6SwF3WMihr4A%3D
-
 
 	// Locations template
-	var LocationsTemplate = function LocationsTemplate(props, _callback) {
+	var LocationsTemplate = function LocationsTemplate(props, _callback, _actionCallback) {
 
 	    if (!props.locations) {
 	        return false;
@@ -1285,12 +1288,27 @@ webpackJsonp([10,13],{
 	                                item.events.length > 0 &&
 	                                _react2.default.createElement(LocationsEventsComponent, item),
 
-	                                _react2.default.createElement('button', { className: 'btn btn-box-tool', 'data-widget': 'collapse', type: 'button' },
-	                                    _react2.default.createElement('i', { className: 'fa fa-plus' })))),
+	                                _react2.default.createElement('button', { className: 'btn btn-box-tool', 'data-widget': 'collapse', type: 'button', onClick:
+	                                        function onClick(event) {
+	                                            _actionCallback(item);
+	                                        } },
+
+	                                    _react2.default.createElement(_icons2.default, { name: 'plus' })))),
 
 
 
-	                        _react2.default.createElement('div', { className: 'box-body' }))))));
+	                        _react2.default.createElement('div', { className: 'box-body' },
+
+	                            item.show &&
+
+	                            _react2.default.createElement(_reactAddonsCssTransitionGroup2.default, {
+	                                    transitionName: 'toggle-fade-in',
+	                                    transitionEnterTimeout: 500,
+	                                    transitionLeaveTimeout: 300 },
+	                                _react2.default.createElement(LocationToggleContent, item))))))));
+
+
+
 
 
 
@@ -1307,31 +1325,96 @@ webpackJsonp([10,13],{
 
 	var LocationsEventsComponent = function LocationsEventsComponent(props) {
 
-	    console.log(props, " props props props props");
-
 	    if (!props.events) {
 	        return _react2.default.createElement('div', null);
 	    }
 
 	    return (
-	        _react2.default.createElement('div', null,
+	        _react2.default.createElement('div', { className: 'box-tools-wrapper' },
 
 	            props.events &&
 	            props.events.map(
 	            function (event, index) {return (
-	                    _react2.default.createElement('span', { className: (0, _classnames2.default)(
+	                    _react2.default.createElement('span', { key: index, className: (0, _classnames2.default)(
 	                            'badge',
 	                            {
-	                                'bg-red': event.event_level == 'alert',
-	                                'bg-warning': event.event_level == 'warning',
-	                                'bg-light-blue': event.event_level == 'message' }),
+	                                'bg-red': event.event_message == 'alert',
+	                                'bg-warning': event.event_message == 'warning',
+	                                'bg-light-blue': event.event_message == 'message' }),
 
 
 	                            'data-toggle': 'tooltip',
 	                            title: event.event_value && event.event_value.length },
-	                        event.event_value && event.event_value.length));})));
+	                        _react2.default.createElement('strong', null, event.event_value && event.event_value.length)));})));
 
 
+
+
+
+	};
+
+
+	/* 
+	    * Location Toggle content 
+	    *
+	    */
+
+	var LocationToggleContent = function LocationToggleContent(props) {
+
+	    if (!props) {
+	        return _react2.default.createElement('div', null);
+	    }
+
+	    var combinedResults = [];
+	    props.events &&
+	    props.events.length &&
+	    props.events.length > 0 &&
+	    props.events.map(
+	    function (prop, index) {
+	        prop &&
+	        prop.event_value &&
+	        prop.event_value.length > 0 &&
+	        prop.event_value.map(
+	        function (item, idx) {
+	            combinedResults.push(
+	            _react2.default.createElement('li', { key: index + '-' + idx, className: 'list-group-item clearfix d-block' },
+	                _react2.default.createElement('i', { className: 'fa fa-industry fa-fw' }), item.sensor_id,
+	                _react2.default.createElement('span', { className: (0, _classnames2.default)(
+	                        'float-right text-muted small',
+	                        {
+	                            'bg-red': item.event_level == 'alert',
+	                            'bg-warning': item.event_level == 'warning',
+	                            'bg-light-blue': item.event_level == 'message' }) },
+
+
+	                    _react2.default.createElement('em', null, item.event_value))));
+
+
+
+	        });
+
+	    });
+
+
+	    combinedResults.push(
+	    _react2.default.createElement('li', { key: 'unique-coordinates', className: 'list-group-item clearfix d-block' },
+	        _react2.default.createElement('i', { className: 'fa fa-id-card-o fa-fw' }), ' GEO Coordinates',
+	        _react2.default.createElement('span', { className: 'float-right text-muted small' },
+	            _react2.default.createElement('em', null, props.location_location))));
+
+
+	    combinedResults.push(_react2.default.createElement('li', { key: 'unique-updated', className: 'list-group-item clearfix d-block' },
+	        _react2.default.createElement('i', { className: 'fa fa-object-group fa-fw' }), ' Last update',
+	        _react2.default.createElement('span', { className: 'float-right text-muted small' },
+	            _react2.default.createElement('em', null, props.location_lastupdate))));
+
+
+
+
+	    return (
+	        _react2.default.createElement('div', { className: 'list-group  no-padding' },
+	            _react2.default.createElement('ul', null,
+	                combinedResults)));
 
 
 
@@ -1347,7 +1430,7 @@ webpackJsonp([10,13],{
 
 
 	// module
-	exports.push([module.id, ".card {\n  width: 100%;\n  height: 200px; }\n\n.horizontal-line {\n  width: 100%;\n  margin-top: 1rem;\n  margin-bottom: 1rem;\n  border: 0;\n  border-top: 1px solid rgba(0, 0, 0, 0.1); }\n\n.page-dashboard {\n  width: 100%;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-flow: column wrap;\n          flex-flow: column wrap;\n  padding: 2%; }\n  .page-dashboard h2 {\n    color: #868e96;\n    font-size: 2.2em;\n    font-weight: 700; }\n  .page-dashboard .projects {\n    display: -webkit-box;\n    display: -webkit-flex;\n    display: flex;\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: normal;\n    -webkit-flex-flow: row nowrap;\n            flex-flow: row nowrap;\n    -webkit-box-pack: start;\n    -webkit-justify-content: flex-start;\n            justify-content: flex-start;\n    -webkit-box-align: center;\n    -webkit-align-items: center;\n            align-items: center;\n    width: 100%; }\n    .page-dashboard .projects .projects-user-actions {\n      display: -webkit-box;\n      display: -webkit-flex;\n      display: flex;\n      -webkit-box-orient: horizontal;\n      -webkit-box-direction: normal;\n      -webkit-flex-flow: row nowrap;\n              flex-flow: row nowrap;\n      margin-left: 2%; }\n      .page-dashboard .projects .projects-user-actions .button-create {\n        display: -webkit-box;\n        display: -webkit-flex;\n        display: flex;\n        -webkit-box-flex: 1;\n        -webkit-flex-grow: 1;\n                flex-grow: 1;\n        margin-right: 1rem;\n        min-height: 50px;\n        font-size: 0.875rem;\n        font-weight: 700;\n        background: #CD040B;\n        color: #FFF;\n        cursor: pointer; }\n      .page-dashboard .projects .projects-user-actions .delete-modify-project {\n        display: -webkit-box;\n        display: -webkit-flex;\n        display: flex;\n        width: 150px;\n        -webkit-box-pack: center;\n        -webkit-justify-content: center;\n                justify-content: center;\n        -webkit-box-align: center;\n        -webkit-align-items: center;\n                align-items: center; }\n      .page-dashboard .projects .projects-user-actions .icon-right-arrow {\n        width: 20px;\n        height: 25px;\n        fill: #FFF; }\n  .page-dashboard .locations {\n    display: -webkit-box;\n    display: -webkit-flex;\n    display: flex;\n    padding-top: 2%; }\n    .page-dashboard .locations .outer-locations {\n      display: -webkit-box;\n      display: -webkit-flex;\n      display: flex;\n      width: 100%; }\n\n.box {\n  position: relative;\n  border-radius: 3px;\n  background: #ffffff;\n  border-top: 3px solid #d2d6de;\n  margin-bottom: 20px;\n  width: 100%;\n  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);\n          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); }\n  .box .box-primary {\n    border-top-color: #3c8dbc; }\n\n.box-widget {\n  border: none; }\n\n.widget-user .widget-user-header {\n  height: 200px;\n  border-top-right-radius: 3px;\n  border-top-left-radius: 3px;\n  cursor: pointer; }\n\n.box-header {\n  color: #444;\n  display: block;\n  padding: 10px;\n  position: relative; }\n\n.box-header > .box-tools {\n  position: absolute;\n  right: 10px;\n  top: 5px; }\n\n.box-footer {\n  border-top-left-radius: 0;\n  border-top-right-radius: 0;\n  border-bottom-right-radius: 3px;\n  border-bottom-left-radius: 3px;\n  border-top: 1px solid #f4f4f4;\n  padding: 10px;\n  background-color: #ffffff; }\n\n.box-title {\n  display: inline-block;\n  font-size: 18px;\n  margin: 0;\n  line-height: 1; }\n\n.btn-box-tool {\n  padding: 5px;\n  font-size: 12px;\n  background: transparent;\n  color: #97a0b3; }\n\n.dropdown-container {\n  width: 50%; }\n  .dropdown-container .dropdown-selected {\n    font-size: 1.2em; }\n  .dropdown-container .dropdown-list {\n    font-size: 1.2em; }\n\n.dropdown-selected-active .dropdown-selected-active-label {\n  font-size: 1.2em; }\n\n.page-memo h3 {\n  font-weight: 500;\n  margin: 0; }\n", ""]);
+	exports.push([module.id, ".card {\n  width: 100%;\n  height: 200px; }\n\n.horizontal-line {\n  width: 100%;\n  margin-top: 1rem;\n  margin-bottom: 1rem;\n  border: 0;\n  border-top: 1px solid rgba(0, 0, 0, 0.1); }\n\n.page-dashboard {\n  width: 100%;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-flow: column wrap;\n          flex-flow: column wrap;\n  padding: 2%; }\n  .page-dashboard h2 {\n    color: #868e96;\n    font-size: 2.2em;\n    font-weight: 700; }\n  .page-dashboard .projects {\n    display: -webkit-box;\n    display: -webkit-flex;\n    display: flex;\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: normal;\n    -webkit-flex-flow: row nowrap;\n            flex-flow: row nowrap;\n    -webkit-box-pack: start;\n    -webkit-justify-content: flex-start;\n            justify-content: flex-start;\n    -webkit-box-align: center;\n    -webkit-align-items: center;\n            align-items: center;\n    width: 100%; }\n    .page-dashboard .projects .projects-user-actions {\n      display: -webkit-box;\n      display: -webkit-flex;\n      display: flex;\n      -webkit-box-orient: horizontal;\n      -webkit-box-direction: normal;\n      -webkit-flex-flow: row nowrap;\n              flex-flow: row nowrap;\n      margin-left: 2%; }\n      .page-dashboard .projects .projects-user-actions .button-create {\n        display: -webkit-box;\n        display: -webkit-flex;\n        display: flex;\n        -webkit-box-flex: 1;\n        -webkit-flex-grow: 1;\n                flex-grow: 1;\n        margin-right: 1rem;\n        min-height: 50px;\n        font-size: 0.875rem;\n        font-weight: 700;\n        background: #CD040B;\n        color: #FFF;\n        cursor: pointer; }\n      .page-dashboard .projects .projects-user-actions .delete-modify-project {\n        display: -webkit-box;\n        display: -webkit-flex;\n        display: flex;\n        width: 150px;\n        -webkit-box-pack: center;\n        -webkit-justify-content: center;\n                justify-content: center;\n        -webkit-box-align: center;\n        -webkit-align-items: center;\n                align-items: center; }\n      .page-dashboard .projects .projects-user-actions .icon-right-arrow {\n        width: 20px;\n        height: 25px;\n        fill: #FFF; }\n  .page-dashboard .locations {\n    display: -webkit-box;\n    display: -webkit-flex;\n    display: flex;\n    padding-top: 2%; }\n    .page-dashboard .locations .outer-locations {\n      display: -webkit-box;\n      display: -webkit-flex;\n      display: flex;\n      width: 100%; }\n\n.box {\n  position: relative;\n  border-radius: 3px;\n  background: #ffffff;\n  border-top: 3px solid #d2d6de;\n  margin-bottom: 20px;\n  width: 100%;\n  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);\n          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); }\n  .box .box-primary {\n    border-top-color: #3c8dbc; }\n\n.box-widget {\n  border: none; }\n\n.widget-user .widget-user-header {\n  height: 200px;\n  border-top-right-radius: 3px;\n  border-top-left-radius: 3px;\n  cursor: pointer; }\n\n.box-header {\n  color: #444;\n  display: block;\n  padding: 10px;\n  position: relative; }\n\n.box-header > .box-tools {\n  position: absolute;\n  right: 10px;\n  top: 0;\n  width: 20%;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n  -webkit-flex-flow: row nowrap;\n          flex-flow: row nowrap;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n          align-items: center;\n  -webkit-box-pack: justify;\n  -webkit-justify-content: space-between;\n          justify-content: space-between;\n  height: 100%; }\n\n.box-footer {\n  border-top-left-radius: 0;\n  border-top-right-radius: 0;\n  border-bottom-right-radius: 3px;\n  border-bottom-left-radius: 3px;\n  border-top: 1px solid #f4f4f4;\n  padding: 10px;\n  background-color: #ffffff; }\n\n.box-title {\n  display: inline-block;\n  font-size: 18px;\n  margin: 0;\n  line-height: 1; }\n\n.btn-box-tool {\n  padding: 5px;\n  font-size: 12px;\n  background: transparent;\n  color: #97a0b3;\n  border: none; }\n  .btn-box-tool .icon-plus {\n    width: 15px;\n    height: 15px;\n    fill: #333;\n    border-radius: 50%; }\n\n.dropdown-container {\n  width: 50%; }\n  .dropdown-container .dropdown-selected {\n    font-size: 1.2em; }\n  .dropdown-container .dropdown-list {\n    font-size: 1.2em; }\n\n.dropdown-selected-active .dropdown-selected-active-label {\n  font-size: 1.2em; }\n\n.list-group {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n          flex-direction: column;\n  padding-left: 0;\n  margin-bottom: 0; }\n  .list-group .list-group-item {\n    position: relative;\n    display: block;\n    padding: .75rem 1.25rem;\n    margin-bottom: -1px;\n    background-color: #fff;\n    border: 1px solid rgba(0, 0, 0, 0.125);\n    text-transform: capitalize; }\n  .list-group .list-group-item:first-child {\n    border-top-left-radius: .25rem;\n    border-top-right-radius: .25rem; }\n  .list-group .list-group-item:last-child {\n    margin-bottom: 0;\n    border-bottom-right-radius: .25rem;\n    border-bottom-left-radius: .25rem; }\n  .list-group .float-right {\n    float: right; }\n  .list-group .text-muted {\n    color: #6c757d; }\n  .list-group ul {\n    margin: 0;\n    padding: 0; }\n\n.bg-warning {\n  background: #ffc107; }\n\n.bg-red {\n  background: #dc3545; }\n\n.bg-message {\n  background: #17a2b8; }\n\n.box-tools .box-tools-wrapper {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: flex;\n  -webkit-box-pack: space-evenly;\n  -webkit-justify-content: space-evenly;\n          justify-content: space-evenly;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n          align-items: center;\n  text-align: center;\n  -webkit-box-flex: 1;\n  -webkit-flex-grow: 1;\n          flex-grow: 1; }\n\n.box-tools .badge {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: flex;\n  width: 20px;\n  border-radius: 50%;\n  font-size: 0.8em;\n  text-align: center; }\n\n.box-tools strong {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: flex;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n          justify-content: center;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n          align-items: center;\n  width: 100%; }\n\n.page-memo h3 {\n  font-weight: 500;\n  margin: 0; }\n\n/* Toggle Animation */\n.toggle-fade-in-enter {\n  opacity: 0.01; }\n\n.toggle-fade-in-enter.toggle-fade-in-enter-active {\n  opacity: 1;\n  -webkit-transition: opacity 500ms ease-in;\n  transition: opacity 500ms ease-in; }\n\n.toggle-fade-in-leave {\n  opacity: 1; }\n\n.toggle-fade-in-leave.toggle-fade-in-leave-active {\n  opacity: 0.01;\n  -webkit-transition: opacity 300ms ease-in;\n  transition: opacity 300ms ease-in; }\n", ""]);
 
 	// exports
 

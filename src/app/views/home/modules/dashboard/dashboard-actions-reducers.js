@@ -39,6 +39,7 @@ export const TYPEs = {
     LOAD_DASHBOARD_LOCATIONS_MODULE_DATA: 'loadDashboardLocationsModuleData',
     DASHBOARD_LOCATION_EVENTS_MODULE_DATA: 'dashboardLocationEventsModuleData',
     LOAD_DASHBOARD_LOCATION_EVENTS_MODULE_DATA: 'loadDashboardLocationEventsModuleData',
+    SHOW_TOGGLE_ITEM: 'enableOrDisableLocations',
     SET_ERROR: 'errorMessage'
 };
 
@@ -188,6 +189,14 @@ export function setErrorMessage ( errorMessage, clearErrorMessage ) {
     };
 }
 
+
+export function showToggleItems( info ) {
+    return {
+        type: TYPEs.SHOW_TOGGLE_ITEM,
+        data: info
+    }
+}
+
 /*******************************************************************************
  *  4. Reducers
  */
@@ -234,11 +243,30 @@ export default ( state = dashboardModuleState, action ) => {
                     locations: locationsData
                 }
             };
+
         case TYPEs.SET_ERROR:
             return {
                 ...state,
                 errorMessage: action.errorMessage
             };
+
+        case TYPEs.SHOW_TOGGLE_ITEM:
+            let locationsToggleData = state.data.locations;
+            for( var i = 0; i < locationsToggleData.length; i++ ) {
+                if( locationsToggleData[ i ].location_id == action.data.location_id ) {
+                    if( locationsToggleData[ i ].show ) {
+                        locationsToggleData[ i ].show = false;
+                    } else {
+                        locationsToggleData[ i ].show = true;
+                    }
+                }
+            }
+            return {
+                ...state,
+                data: {
+                    ...state.data
+                }
+            }
         default:
             return state;
     }

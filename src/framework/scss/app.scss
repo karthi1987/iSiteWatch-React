@@ -31,8 +31,12 @@ body {
 
 	.app-wrapper {
 		height: 100%;
-		min-width: 1450px;
+		width: 100%;
+		/*min-width: 1450px;*/
 		@include aspect-ratio(16.0, 9.0, 100%);
+		overflow-x: hidden;
+		overflow-y: auto;
+
 	}
 
 	// This is used by pickadate, which is currently an overlay at a top-level location.
