@@ -1,17 +1,14 @@
 import React from 'react';
 import { browserHistory } from 'react-router';
-
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-
 import { getDashboardProjectsData, getDashboardLocationsData, getDashboardLocationEventsData, showToggleItems } from './dashboard-actions-reducers.js';
-
 import { _selectBox } from 'app/shared/dropdown/selectbox';
 import { _dropdown } from 'app/shared/dropdown/dropdown';
 
 import Icon from 'app/shared/icons/icons';
 import classnames from 'classnames';
-
+import moment from 'moment';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 //scss
@@ -341,7 +338,7 @@ const LocationToggleContent = ( props ) => {
     combinedResults.push(<li key="unique-updated" className="list-group-item clearfix d-block">
             <i className="fa fa-object-group fa-fw"></i> Last update
             <span className="float-right text-muted small">
-                <em>{ props.location_lastupdate }</em>
+                <em>{ moment(props.location_lastupdate).format('YYYY-MM-DD hh:mm') }</em>
             </span>
         </li>
     );

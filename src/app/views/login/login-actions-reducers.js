@@ -109,6 +109,7 @@ export function clearSession() {
     if ( !PROD ) {
         localStorage.removeItem( 'authenticated' );
         localStorage.removeItem( 'userDetails' );
+        ajax.loaded( LOGIN_AUTHENTICATE );
     }
     return {
         type: CLEAR_SESSION

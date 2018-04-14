@@ -3,13 +3,13 @@ import AppStore, { LogServerResponse } from '../app-store';
 import { ERRORs } from 'app/app-lang';
 import { diagnosticConsoleLog } from 'utils/utils';
 
+import { browserHistory } from 'react-router';
 /*******************************************************************************
  *
  *   1. Ajax default function
  *   2. Ajax actionCreators
  *
  */
-
 /*******************************************************************************
  *  1. Ajax default function
  *
@@ -50,32 +50,33 @@ export default function Ajax( opts ) {
         }
     } )
     .done( function( data, textStatus, jqXHR ) {
-
         if ( typeof opts.success === 'function' ) {
-            const successLog = {
-                url: opts.url,
-                requestData: opts.data,
-                responseData: data,
-                requestTokens: {
-                    tokenA: session.tokenA,
-                    tokenB: session.tokenB
-                }
-            };
-            opts.success( data, successLog );
+
+            if( data && data.errorMessage == "TOKEN_EXPIRED" && data.errorType == "Error" ) {
+                localStorage && localStorage.clear();
+                browserHistory.push( APP_PATH + '/login/' );
+            }
+            else if( data.status && data.status.message === 'TOKEN_EXPIRED' ) {
+               localStorage && localStorage.clear();
+               browserHistory.push( APP_PATH + '/login/' );
+            } else {
+                 const successLog = {
+                    url: opts.url,
+                    requestData: opts.data,
+                    responseData: data,
+                    requestTokens: {
+                        token: session.token,
+                    }
+                };
+                opts.success( data, successLog );
+            }
         } else {
             console.warn( 'Ajax call expected callback function, instead received', opts.success );
         }
-
     } )
     .fail( function( jqXHR, textStatus, errorThrown ) {
 
-        debugger;
-
-        console.log( 'Im in AJX Failure callback');
-
-         //window.location.assign( window.location.origin + APP_PATH );
-
-         return false;
+        return false;
 
         const redirectLocation = jqXHR.getResponseHeader( 'Location' );
         if ( redirectLocation && ( jqXHR.status === 600 || jqXHR.status === 404 ) ) {

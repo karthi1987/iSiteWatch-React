@@ -1,12 +1,11 @@
 //libs and utils
 import React from 'react';
-//utils
-import { grabTimestamp } from 'utils/utils';
+import Icon from 'app/shared/icons/icons';
+
 //scss
 import './header.scss';
 //lang
 import { HEADER } from 'app/app-lang';
-
 import { closeSession } from 'app/app-store';
 
 /*******************************************************************************
@@ -21,25 +20,17 @@ export default class Header extends React.Component {
     constructor( props ) {
         super( props );
         this.state = {
-            timestamp: {
-                date: null,
-                time: null,
-                timeOfDay: null
-            }
+            showProfile: false
         };
 
         this.userLogout = this.userLogout.bind( this );
         this.redirectTo = this.redirectTo.bind( this );
+        this.showUserProfile = this.showUserProfile.bind( this );
     }
 
-    updateTimeStamp() {
-        const timestamp = grabTimestamp();
+    showUserProfile() {
         this.setState( {
-            timestamp: {
-                date: timestamp.date,
-                time: timestamp.time,
-                timeOfDay: timestamp.timeOfDay
-            }
+            showProfile: !this.state.showProfile
         } );
     }
 
@@ -54,23 +45,14 @@ export default class Header extends React.Component {
         //closeSession();
     }
 
-    /*
-     * when header first renders, we add our timestamp and set the interval, 
-     * to update the current-time-block once every 5 minutes. 
-     */
-    componentDidMount() {
-        this.updateTimeStamp();
-        this.timestampInterval = setInterval( this.updateTimeStamp.bind( this ), 30000 );
-    }
-
     componentWillUnmount() {
-        clearInterval( this.timestampInterval );
+        //clearInterval( this.timestampInterval );
     }
 
     render() {
         const {
             state: {
-                timestamp: { date, timeOfDay, time }
+                showProfile
             },
             props: {
                 userLogin
@@ -89,21 +71,28 @@ export default class Header extends React.Component {
                     </div>
                 </div>
                  <div className="current-time-block">
-                    <div>
-                        {
-                            this.props.userLogin
-                            &&
-                            <p>{ this.props.userLogin }&nbsp; </p>
+                    <div className="user-profile">
+                        <div className="user-name">
+                            {
+                                this.props.userLogin
+                                && <p>{ this.props.userLogin }&nbsp; </p>
+                            }
+                        </div>
+                        <div className="user-profile-arrow" onClick={ this.showUserProfile }>
+                            <Icon name="right-arrow" />
+                        </div>
+                         {
+                            showProfile
+                            && <div className="user-profile-details">
+                                 <ul className="list-group  no-padding">
+                                     <li className="list-group-item clearfix d-block"><a href="#" onClick={ this.userLogout }> &nbsp; Logout </a></li>
+                                 </ul>
+                            </div>
                          }
                     </div>
                     <div>
-                        <a href="customer-support">Customer Support | </a>
-                        <a href="#" onClick={ this.userLogout }> &nbsp; Logout </a>
+                        <a href="customer-support">Customer Support</a>
                     </div>
-                </div>
-                <div className="current-time-block">
-                    <h2>{ date } <br/>
-                    <span className="timestamp"><strong>{ time } <span className="time-of-day">{ timeOfDay }</span></strong></span></h2>
                 </div>
             </div>
         );
