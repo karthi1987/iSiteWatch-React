@@ -20,6 +20,7 @@ import PropTypes from 'prop-types'; // ES6
  *  1. Default State
  */
 
+let incrementValue = 1;
 
 const currentDate = moment(new Date());
 const cDate = currentDate.clone();
@@ -133,7 +134,7 @@ const LOAD_ZONEDATA = 'loadZoneViewData';
 const CLEAR_LAUNCHED_QUICKHIT = 'clearLaunchedQuickhit';
 const LAUNCH_QUICKHIT = 'launchQuickhit';
 const ZONE_ERROR_REPORT = 'quickhitsErrorReport';
-const SET_SELECTED_DATE = 'setTheSelectedDate';
+const SET_SELECTED_DATE_BY_CHANGE = 'setTheSelectedDate';
 
 /*******************************************************************************
  *  3. Action Creators
@@ -145,6 +146,15 @@ export function loadZoneData ( info ) {
 
         dispatch( ajax.loading( type ) );
 
+        //To do: Get deviceId from the Location details dashboardInfo
+        let deviceId = "B827EB2C749D";
+        if ( info.dashboardInfo && info.dashboardInfo.length > 0 ) {
+          const filteredLocation = _.filter( info.dashboardInfo, { 'location_id': info.locationId } );
+          if( filteredLocation && filteredLocation.length > 0 ) {
+            deviceId = filteredLocation[ 0 ].device_id;
+          }
+        }
+
         let fromDate = '';
         let toDate  = '';
         if( info.startDate && info.endDate ) {
@@ -153,19 +163,16 @@ export function loadZoneData ( info ) {
         }
 
         const ZonePayLoad = JSON.stringify(
-            {
-               "customer_id": "7777466782239",
-               "device_id": "B827EB2C749D",
-               "from": fromDate,
-               "location_adminstatus": "Up",
-               "location_humidity": 53.31,
-               "location_id": "7777616676103",
-               "location_name": "East Backyard",
-               "site_id": "7777963129656",
-               "to": toDate,
-               "user_login": info.user.userLogin,
-               "user_token": info.session.token
-            }
+          {
+            "customer_id": info.customerId,
+            "site_id": info.user.siteId,
+            "device_id": deviceId,
+            "location_id": info.locationId,
+            "from": fromDate,
+            "to": toDate,
+            "user_login": info.user.userLogin,
+            "user_token": info.session.token
+          }
         );
 
         Ajax( {
@@ -198,10 +205,12 @@ export function loadZoneData ( info ) {
 }
 
 export function setSelectedDate( date ) {
-  return {
-      type: SET_SELECTED_DATE,
-      selectedDate: date
-  };
+   return ( dispatch ) => {
+      dispatch( {
+        type: SET_SELECTED_DATE_BY_CHANGE,
+        selectedDate: date
+      } );
+    };
 }
 
 export function clearLaunchedQuickhit() {
@@ -262,7 +271,7 @@ export default function quickhits( state = zoneState, action ) {
                     ]
                 }
             };
-        case SET_SELECTED_DATE:
+        case SET_SELECTED_DATE_BY_CHANGE:
           const currentStateModel = state.data.oneWeekDay;
           let filteredItem = null;
           if( currentStateModel ) {

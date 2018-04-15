@@ -52,9 +52,20 @@
   flex: 0 0 70%;
   display: flex;
   justify-content: flex-end;
-  flex-flow: column wrap;
+  flex-flow: row wrap;
   align-self: center;
   text-align: right;
+  align-items: center;
+  .customer-support {
+    margin-right: 10px;
+    padding-right: 5px;
+    border-right: 1px solid #ccc;
+  }
+  .user-name {
+    p {
+      margin: 0;
+    }
+  }
 }
 
 .header-container .current-time-block h2{
@@ -92,10 +103,11 @@
   .user-profile-details {
     display: flex;
     position: absolute;
-    top: 45%;
+    top: 80%;
     right: 0;
     width: 100%;
     justify-content: flex-end;
+    z-index: 2;
   }
   .list-group {
     display: flex;

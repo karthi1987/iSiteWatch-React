@@ -1,19 +1,16 @@
 import React from 'react';
 import { connectAndMap } from 'utils/utils';
-
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
 import ImageGallery from 'react-image-gallery';
 import DatePicker from 'react-datepicker';
 import moment from 'moment';
-
 import PropTypes from 'prop-types'; // ES6
+import classnames from 'classnames';
 
 import { loadZoneData, setSelectedDate } from './zone-actions-reducers';
-
 import "node_modules/react-image-gallery/styles/scss/image-gallery.scss";
-
 import 'react-datepicker/dist/react-datepicker.css';
 
 //scss
@@ -29,7 +26,6 @@ const HomeCell = ( props ) => (
         </div>
     </div>
 );
-
 
 /*
  *  1. Zone
@@ -48,15 +44,25 @@ class ZoneModule extends React.Component {
         }
 
         this.handleChange = this.handleChange.bind(this);
+        this.getLocationInfo = this.getLocationInfo.bind(this);
         this.datePreviewChange = this.datePreviewChange.bind(this);
+        this.setLocationsTemplate = this.setLocationsTemplate.bind(this);
     }
 
     componentWillMount() {
+        const {
+            app: { session, user },
+            params: { id },
+            dashboard: { data }
+        } = this.props;
+
     	this.props.actions.loadZoneData({ 
             session: this.props.app.session,
-            user: this.props.app.user, 
+            user: this.props.app.user,
             startDate: this.state.startDate,
-            endDate: this.state.endDate
+            endDate: this.state.endDate,
+            locationId: this.props.params.id,
+            dashboardInfo: data.locations || []
         });
     }
 
@@ -83,11 +89,33 @@ class ZoneModule extends React.Component {
     }
 
     handleChange( selectedDate ) {
-        this.props.setSelectedDate( selectedDate );
+        this.props.actions.setSelectedDate( moment(selectedDate) );
     }
 
     datePreviewChange( item ) {
-        this.props.setSelectedDate( moment(item.label) );
+        this.props.actions.setSelectedDate( moment(item.label) );
+    }
+
+    getLocationInfo() {
+        const {
+            dashboard: { data }
+        } = this.props;
+        let location = [];
+        if ( data && data.locations && data.locations.length > 0 ) {
+          const filteredLocation = _.filter( data.locations, { 'location_id': this.props.params.id } );
+          if( filteredLocation && filteredLocation.length > 0 ) {
+            location = filteredLocation[ 0 ];
+          }
+        }
+        return location;
+    }
+
+    setLocationsTemplate() {
+        const locationInfo = this.getLocationInfo();
+        if( locationInfo ) {
+            return <LocationToggleContent { ...locationInfo }/>;
+        }
+        return <div />;
     }
 
     render() {
@@ -99,6 +127,14 @@ class ZoneModule extends React.Component {
             dashboard: { data },
             zone
         } = this.props;
+
+        let LocationName = 'Zone Name';
+        if ( data && data.locations.length > 0 ) {
+          const filteredLocation = _.filter( data.locations, { 'location_id': this.props.params.id } );
+          if( filteredLocation && filteredLocation.length > 0 ) {
+            LocationName = filteredLocation[ 0 ].location_name;
+          }
+        }
 
         if( !this.state.selectedItem ) {
         	return false;
@@ -112,14 +148,15 @@ class ZoneModule extends React.Component {
                             <HomeCell module="scorecardmodule">
                             <div className="zone-page">
                                 <div>
-                                	Zone page
+                                	<h2>{ LocationName } DETAIL & 1 WEEK HISTORY</h2>
                                 	<div className="horizontal-line"></div>
+                                    <h3>Simply change the date for additional pictures</h3>
                                     {
                                         this.state.selectedItem
                                         && this.state.selectedItem.label
                                         && <DatePicker
                                             selected={ moment( this.state.selectedItem.label ) }
-                                            onChange={ this.handleChange }
+                                            onChange={ ( eventDate ) => { this.handleChange( eventDate ) } }
                                             minDate={ moment().subtract(6, "days") }
                                             maxDate={ moment() }
                                         />
@@ -128,19 +165,31 @@ class ZoneModule extends React.Component {
                                 </div>
                                 <div className="zone-hero-image-date-thumbnails">
                                     <div className="hero-container">
-                                        <ImageGallery lazyLoad="true" items={ this.state.selectedItem.items } />
+                                        {
+                                            this.state.selectedItem.items
+                                            && this.state.selectedItem.items.length
+                                            && this.state.selectedItem.items.length > 0
+                                            && <ImageGallery
+                                                lazyload="true"
+                                                items={ this.state.selectedItem.items }
+                                            />
+                                        }
                                     </div>
                                     <div className="date-container">
                                         {   
                                             zone.data
                                             && zone.data.oneWeekDay
                                             && zone.data.oneWeekDay.length > 0
-                                            && <ThumbnailsDates 
+                                            && <ThumbnailsDates
                                                 { ...zone.data }
+                                                { ...this.state.selectedItem }
                                                 datePreviewChange={ this.datePreviewChange }
                                             />
                                         }
                                     </div>
+                                </div>
+                                <div className="location-details">
+                                    { this.setLocationsTemplate() }
                                 </div>
                              </div>
                             </HomeCell>
@@ -177,27 +226,111 @@ export default connect(
 
 
 const ThumbnailsDates = ( { oneWeekDay, datePreviewChange } ) => {
-
-    return(
-        <div className="thumbnail-parent-wrapper">
-            {
-                oneWeekDay
-                && oneWeekDay.map(
-                    ( metric, i ) => 
-                    <div key={ i } className="metric" onClick={ ( ) => {
+    /* Render Images */
+    const imagePath = APP_PATH + "/assets/images/no-image-available.png";
+    const renderFullImages = [];
+    const renderImages = () => {
+        oneWeekDay
+        && oneWeekDay.length > 0
+        && oneWeekDay.map(
+            ( metric, i ) => {
+                metric.show
+                &&
+                renderFullImages.push(
+                    <div key={ i } className="metric" onClick={ ( event ) => {
                         datePreviewChange( metric );
                     } }>
-                        <div className="value"> {  moment(metric.label).format('YYY-MM-DD') } </div>
+                        <div className="value"> {  moment(metric.label).format('YYYY-MM-DD') } </div>
                         <div className="label">
                             {
                                 metric.items
                                 && metric.items.length > 0
+                                && metric.items[ 0 ]
+                                && metric.items[ 0 ].thumbnail
                                 && <img src={ metric.items[ 0 ].thumbnail }  width="200"/>
+                            }
+                            {
+                                metric.items
+                                && !metric.items.length
+                                && <img src={ imagePath } width="200"/>
                             }
                         </div>
                     </div>
-                )
+                );
             }
+        );
+        return renderFullImages;
+    };
+
+    return(
+        <div className="thumbnail-parent-wrapper">
+            { renderImages() }
+        </div>
+    );
+}
+
+/* 
+ * Location Toggle content 
+ *
+ */
+
+const LocationToggleContent = ( props ) => {
+
+    if( !props ) {
+        return <div />;
+    }
+
+    const combinedResults = [];
+    props.events
+    && props.events.length
+    && props.events.length > 0
+    && props.events.map(
+        ( prop, index ) => {
+            prop
+            && prop.event_value
+            && prop.event_value.length > 0
+            && prop.event_value.map(
+                ( item, idx ) => {
+                    combinedResults.push(
+                        <li key={ index +'-'+idx } className="list-group-item clearfix d-block">
+                            <i className="fa fa-industry fa-fw"></i>{ item.sensor_id }
+                                <span className={ classnames(
+                                    'float-right text-muted small',
+                                    {
+                                        'bg-red': item.event_level == 'alert',
+                                        'bg-warning': item.event_level == 'warning',
+                                        'bg-light-blue': item.event_level == 'message'
+                                    }
+                                ) }>
+                                    <em>{ item.event_value }</em>
+                                </span>
+                        </li>
+                    );
+                }
+            );
+        }
+    );
+
+    combinedResults.push(
+        <li key="unique-coordinates" className="list-group-item clearfix d-block">
+            <i className="fa fa-id-card-o fa-fw"></i> GEO Coordinates
+            <span className="float-right text-muted small">
+                <em>{ props.location_location }</em>
+            </span>
+        </li>);
+    combinedResults.push(<li key="unique-updated" className="list-group-item clearfix d-block">
+            <i className="fa fa-object-group fa-fw"></i> Last update
+            <span className="float-right text-muted small">
+                <em>{ moment(props.location_lastupdate).format('YYYY-MM-DD hh:mm') }</em>
+            </span>
+        </li>
+    );
+
+    return(
+         <div className="list-group  no-padding">
+            <ul>
+                 { combinedResults }
+            </ul>
         </div>
     );
 }

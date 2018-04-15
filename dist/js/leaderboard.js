@@ -78,7 +78,7 @@ webpackJsonp([2,13],{
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(62);
+	var content = __webpack_require__(63);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(6)(content, {});
@@ -231,7 +231,7 @@ webpackJsonp([2,13],{
 
 /***/ },
 
-/***/ 62:
+/***/ 63:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(5)();
@@ -8470,11 +8470,11 @@ webpackJsonp([2,13],{
 
 /***/ },
 
-/***/ 482:
+/***/ 478:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';Object.defineProperty(exports, "__esModule", { value: true });var _createClass = function () {function defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}return function (Constructor, protoProps, staticProps) {if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;};}();var _react = __webpack_require__(4);var _react2 = _interopRequireDefault(_react);
-	__webpack_require__(956);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self, call) {if (!self) {throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call && (typeof call === "object" || typeof call === "function") ? call : self;}function _inherits(subClass, superClass) {if (typeof superClass !== "function" && superClass !== null) {throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);}subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;}
+	__webpack_require__(955);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self, call) {if (!self) {throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call && (typeof call === "object" || typeof call === "function") ? call : self;}function _inherits(subClass, superClass) {if (typeof superClass !== "function" && superClass !== null) {throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);}subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;}
 
 	/*
 	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Simple Avatar component
@@ -8525,13 +8525,13 @@ webpackJsonp([2,13],{
 
 /***/ },
 
-/***/ 485:
+/***/ 481:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';Object.defineProperty(exports, "__esModule", { value: true });var _extends = Object.assign || function (target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i];for (var key in source) {if (Object.prototype.hasOwnProperty.call(source, key)) {target[key] = source[key];}}}return target;};var _createClass = function () {function defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}return function (Constructor, protoProps, staticProps) {if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;};}();
 	var _react = __webpack_require__(4);var _react2 = _interopRequireDefault(_react);
 	var _lodash = __webpack_require__(24);
-	var _classnames = __webpack_require__(65);var _classnames2 = _interopRequireDefault(_classnames);
+	var _classnames = __webpack_require__(60);var _classnames2 = _interopRequireDefault(_classnames);
 
 	var _utils = __webpack_require__(13);
 
@@ -8816,7 +8816,7 @@ webpackJsonp([2,13],{
 
 /***/ },
 
-/***/ 496:
+/***/ 492:
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -9048,28 +9048,237 @@ webpackJsonp([2,13],{
 
 /***/ },
 
-/***/ 504:
+/***/ 501:
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';Object.defineProperty(exports, "__esModule", { value: true });exports.TYPEs = exports.leaderboardState = undefined;var _extends = Object.assign || function (target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i];for (var key in source) {if (Object.prototype.hasOwnProperty.call(source, key)) {target[key] = source[key];}}}return target;};exports.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	getLeaderboardData = getLeaderboardData;exports.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	clearLeaderboardData = clearLeaderboardData;var _ajax = __webpack_require__(27);var ajax = _interopRequireWildcard(_ajax);var _endpoints = __webpack_require__(21);var _endpoints2 = _interopRequireDefault(_endpoints);var _appLang = __webpack_require__(19);var _utils = __webpack_require__(13);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _interopRequireWildcard(obj) {if (obj && obj.__esModule) {return obj;} else {var newObj = {};if (obj != null) {for (var key in obj) {if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key];}}newObj.default = obj;return newObj;}}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;} /*******************************************************************************
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 *
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 *   1. Default State
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 *   2. Action Types
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 *   3. ACtion Creators
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 *   4. Reducers
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 *
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 */ /*******************************************************************************
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     *  1. Default State
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     */var leaderboardState = exports.leaderboardState = { data: {}, originalHierarchy: {}, hierarchy: {}, drilldown: { channel: {}, region: {}, district: {}, area: {}, office: {} } }; /*******************************************************************************
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          *  2. Action Types
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          */var TYPEs = exports.TYPEs = { LEADERBOARD_FILTER_DATA: 'leaderboardViewFilterData', LEADERBOARD_ERROR_REPORT: 'leaderboardErrorReport', LOAD_LEADERBOARD_FILTER_DATA: 'loadLeaderboardViewFilterData', LEADERBOARD_DATA: 'leaderboardViewData', LOAD_LEADERBOARD_DATA: 'loadLeaderboardViewData', SET_HIERARCHY: 'setHierarchy', CHECK_SESSION: 'checkSession', CLEAR_LEADERBOARD_DRILLDOWN_FILTERS: 'clearLeaderboardDrilldownFilters', CLEAR_LEADERBOARD_DATA: 'clearLeaderboardData' }; /*******************************************************************************
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        *  3. Action Creators
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        */ /*
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            * getLeaderboardData is the main actionCreator for this sheet
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            */function getLeaderboardData(hierarchyIds) {var cleanedIds = (0, _utils.cleanHierarchyIds)(hierarchyIds);return function (dispatch) {var type = TYPEs.LEADERBOARD_DATA;dispatch(ajax.loading(type));(0, ajax.default)({ url: _endpoints2.default.LEADERBOARD, data: cleanedIds, success: function success(results) {if (!results.success) {dispatch(ajax.loadingError(type, results.errorMessage));} else {var leaderboardsResults = results.data.leaderboards;var leaderboards = [];if (leaderboardsResults.length > 100) {for (var i in leaderboardsResults) {if (i <= 99) {leaderboards.push(_extends({}, leaderboardsResults[i]));} else {break;}}} else {leaderboards = leaderboardsResults;}dispatch({ type: TYPEs.LOAD_LEADERBOARD_DATA, hierarchyIds: hierarchyIds, results: _extends({}, results.data, { leaderboards: leaderboards || [] }) });dispatch(ajax.loaded(type));var hasResults = results.data.leaderboards.length > 0;dispatch(ajax.handleResultsMessage(type, hasResults, (0, _appLang.ERRORs)().LEADERBOARD_VIEW_NO_RESULTS));}}, fail: function fail(error) {dispatch(ajax.loadingError(type, error.textStatus));} });};}function clearLeaderboardData() {return { type: TYPEs.CLEAR_LEADERBOARD_DATA };} /*******************************************************************************
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *  4. Reducers
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */exports.default = function () {var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : leaderboardState;var action = arguments[1];switch (action.type) {case TYPEs.LOAD_LEADERBOARD_DATA:return _extends({}, state, {
+	                data: action.results });
+
+
+	        case TYPEs.CHECK_SESSION:
+	        case TYPEs.SET_HIERARCHY:
+	            return _extends({},
+	            state, {
+	                hierarchy: action.hierarchy,
+	                originalHierarchy: action.hierarchy });
+
+
+	        case _appLang.FILTER_TYPEs.LOAD_LEADERBOARD_CHANNEL_FILTERS:
+	        case _appLang.FILTER_TYPEs.LOAD_LEADERBOARD_REGION_FILTERS:
+	        case _appLang.FILTER_TYPEs.LOAD_LEADERBOARD_DISTRICT_FILTERS:
+	        case _appLang.FILTER_TYPEs.LOAD_LEADERBOARD_AREA_FILTERS:
+	        case _appLang.FILTER_TYPEs.LOAD_LEADERBOARD_OFFICE_FILTERS:
+
+	            var returnObj = _extends({},
+	            state, {
+	                hierarchy: {
+	                    ids: _extends({},
+	                    action.hierarchyIds, _defineProperty({},
+	                    action.key, action.filters && action.filters.length > 0 ? action.filters[0].id : false)) },
+
+
+	                drilldown: _extends({},
+	                state.drilldown, _defineProperty({},
+	                action.key, {
+	                    filters: action.filters,
+	                    ddKey: action.ddKey,
+	                    hideSelectBox: false })) });
+
+
+
+
+	            /* Hide Area and Office, if selectedDropdown is District and the value is ALL */
+	            if (returnObj && returnObj.drilldown && action.hierarchyIds) {
+	                var district = action.hierarchyIds.district;
+	                if (district && district === 'ALL') {
+	                    if (returnObj.drilldown.area) {
+	                        returnObj.drilldown.area.hideSelectBox = true;
+	                    }
+	                    if (returnObj.drilldown.office) {
+	                        returnObj.drilldown.office.hideSelectBox = true;
+	                    }
+	                }
+	            }
+
+	            return returnObj;
+
+	        case _appLang.FILTER_TYPEs.CLEAR_LEADERBOARD_DRILLDOWN_FILTERS:
+	            return _extends({},
+	            state, {
+	                drilldown: _extends({},
+	                state.drilldown, _defineProperty({},
+	                action.key, {})) });
+
+
+
+	        case _appLang.FILTER_TYPEs.RESET_LEADERBOARD_HIERARCHY_AND_FILTERS:
+	            return _extends({},
+	            state, {
+	                drilldown: leaderboardState.drilldown,
+	                hierarchy: state.originalHierarchy });
+
+
+	        case TYPEs.CLEAR_LEADERBOARD_DATA:
+	            return _extends({},
+	            leaderboardState);
+
+
+	        default:
+	            return state;}
+
+
+	};
+
+/***/ },
+
+/***/ 502:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';Object.defineProperty(exports, "__esModule", { value: true });var _createClass = function () {function defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}return function (Constructor, protoProps, staticProps) {if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;};}();
 	var _react = __webpack_require__(4);var _react2 = _interopRequireDefault(_react);
 	var _lodash = __webpack_require__(24);
-	var _reactDimensions = __webpack_require__(496);var _reactDimensions2 = _interopRequireDefault(_reactDimensions);
+	var _reactDimensions = __webpack_require__(492);var _reactDimensions2 = _interopRequireDefault(_reactDimensions);
 	var _importsThisWindowFixModule = __webpack_require__(195);var _importsThisWindowFixModule2 = _interopRequireDefault(_importsThisWindowFixModule);
 	var _momentTimezone = __webpack_require__(30);var _momentTimezone2 = _interopRequireDefault(_momentTimezone);
 
 	var _utils = __webpack_require__(13);
 
-	var _leaderboardActionsReducers = __webpack_require__(231);
+	var _leaderboardActionsReducers = __webpack_require__(501);
 
-	var _avatar = __webpack_require__(482);var _avatar2 = _interopRequireDefault(_avatar);
+	var _avatar = __webpack_require__(478);var _avatar2 = _interopRequireDefault(_avatar);
 	var _icons = __webpack_require__(25);var _icons2 = _interopRequireDefault(_icons);
-	var _filters = __webpack_require__(485);var _filters2 = _interopRequireDefault(_filters);
+	var _filters = __webpack_require__(481);var _filters2 = _interopRequireDefault(_filters);
 	var _errorMessage = __webpack_require__(37);var _errorMessage2 = _interopRequireDefault(_errorMessage);
 
 	var _appLang = __webpack_require__(19);
 
-	__webpack_require__(967);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self, call) {if (!self) {throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call && (typeof call === "object" || typeof call === "function") ? call : self;}function _inherits(subClass, superClass) {if (typeof superClass !== "function" && superClass !== null) {throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);}subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;} //React
+	__webpack_require__(966);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self, call) {if (!self) {throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call && (typeof call === "object" || typeof call === "function") ? call : self;}function _inherits(subClass, superClass) {if (typeof superClass !== "function" && superClass !== null) {throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);}subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;} //React
 	//utils
 	//actions-creators
 	//Shared
@@ -9551,7 +9760,7 @@ webpackJsonp([2,13],{
 
 /***/ },
 
-/***/ 724:
+/***/ 723:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(5)();
@@ -9566,7 +9775,7 @@ webpackJsonp([2,13],{
 
 /***/ },
 
-/***/ 735:
+/***/ 734:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(5)();
@@ -9574,20 +9783,20 @@ webpackJsonp([2,13],{
 
 
 	// module
-	exports.push([module.id, "/*\n\tThis is a mixin which allows an element to have a fixed aspect ratio, but allows the element to NOT have to be floated/etc - the element can stay inside the normal document flow.  It's based on a common workaround which inserts an invisible padding \"before\" meta-element which gives it the desired size (and is floated), and then a subsequent 'clearfix' \"after\" element which makes sure that the bottom of this container stretches far enough to include the entirety of the floated element.\n\n\tTo use this, you'll need to have at least 3 nested divs; they don't need any special classes, but they do need to be the first elements inside their parents.  You apply the mixin to the topmost div, you leave the second div empty, and you put all of your content inside the third div.\n\n\tExpected usage:\n\n\t<div class=\"my-container\">  <-- mixin applied here, on this topmost div\n\t\t<div>\n\t\t\t<div class=\"interior\">\n\t\t\t\t<-- content goes in this div\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\n\tThen in your scss file:\n\t.my-container {\n\t\t@include aspect-ratio(4.0,3.0,100%);\n\n\t\t.interior {\n\t\t\t//whatever you want\n\t\t}\n\t}\n*/\n/**\n * This is heavily borrowed from how Twitter Bootstrap 4 handles breakpoints.\n *\n * https://github.com/twbs/bootstrap/blob/807a837afe1c5ee2ac5f962658a5741673c04231/scss/mixins/_breakpoints.scss\n */\n/**\n * Finds the next breakpoint up or returns null.\n * @param\t {string} $name\t\t\t\t\t\t\t\tCurrent breakpoint\n * @param\t {list} [$breakpointNames]\t\t\t\t\tAll breakpoints. Defaults to $appBreakpoints names.\n * @return {string|null}\t\t\t\t\t\t\t\tReturns name of next breakpoint or null.\n */\n/*\n   ____      _\n  / ___|___ | | ___  _ __ ___\n | |   / _ \\| |/ _ \\| '__/ __|\n | |__| (_) | | (_) | |  \\__   \\____\\___/|_|\\___/|_|  |___/\n\n */\n/*\n     _\n    / \\   _ __  _ __\n   / _ \\ | '_ \\| '_   / ___ \\| |_) | |_) |\n /_/   \\_\\ .__/| .__/\n         |_|   |_|\n\n */\n/*\n  _____                                        _\n |_   _|   _ _ __   ___   __ _ _ __ __ _ _ __ | |__  _   _\n   | || | | | '_ \\ / _ \\ / _` | '__/ _` | '_ \\| '_ \\| | | |\n   | || |_| | |_) | (_) | (_| | | | (_| | |_) | | | | |_| |\n   |_| \\__, | .__/ \\___/ \\__, |_|  \\__,_| .__/|_| |_|\\__, |\n       |___/|_|          |___/          |_|          |___/\n\n */\n/*\n  _     _       _\n | |   (_)_ __ | | _____\n | |   | | '_ \\| |/ / __|\n | |___| | | | |   <\\__  |_____|_|_| |_|_|\\_\\___/\n\n */\n/*\n  _____     _     _\n |_   _|_ _| |__ | | ___  ___\n   | |/ _` | '_ \\| |/ _ \\/ __|\n   | | (_| | |_) | |  __/\\__    |_|\\__,_|_.__/|_|\\___||___/\n\n */\n.leaderboard-wrapper {\n  margin: 0 3.125rem; }\n\n.leaderboard-container {\n  background-color: white;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n          flex-direction: column;\n  height: 37rem;\n  line-height: normal;\n  padding: 0 1.125rem;\n  -webkit-flex-flow: wrap;\n          flex-flow: wrap;\n  padding-top: 1.5rem;\n  /*Table*/\n  /*MastHead*/\n  /*Medallions*/ }\n  .leaderboard-container h1, .leaderboard-container h2, .leaderboard-container h3, .leaderboard-container h4, .leaderboard-container h5, .leaderboard-container h6 {\n    margin-bottom: 0; }\n  .leaderboard-container .leaderboard-left {\n    width: 65%; }\n  .leaderboard-container .leaderboard-right {\n    width: 35%; }\n  .leaderboard-container .leaderboard-table {\n    width: 100%;\n    font-weight: 700; }\n  .leaderboard-container .leaderboard-table-header {\n    display: -webkit-box;\n    display: -webkit-flex;\n    display: flex;\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: normal;\n    -webkit-flex-direction: row;\n            flex-direction: row;\n    -webkit-flex-flow: nowrap;\n            flex-flow: nowrap;\n    border-bottom: 0.375rem solid #d2d3d4;\n    width: 100%; }\n  .leaderboard-container .leaderboard-table-header-cell {\n    font-size: .8rem;\n    font-weight: 700;\n    padding-bottom: 0.625rem;\n    text-align: center; }\n    @media (max-width: 767px) {\n      .leaderboard-container .leaderboard-table-header-cell {\n        font-size: 0.875rem; } }\n  .leaderboard-container .leaderboard-table-rank {\n    width: 3.75rem;\n    -webkit-box-flex: 1;\n    -webkit-flex-grow: 1;\n            flex-grow: 1;\n    min-width: 11%; }\n  .leaderboard-container .leaderboard-table-change {\n    width: 2.25rem;\n    -webkit-box-flex: 1;\n    -webkit-flex-grow: 1;\n            flex-grow: 1;\n    min-width: 13%; }\n  .leaderboard-container .name-table-header {\n    padding-left: 2.75rem; }\n  .leaderboard-container .leaderboard-table-name {\n    text-align: left;\n    /*padding-left: 0.875rem;*/\n    -webkit-box-flex: 1;\n    -webkit-flex-grow: 1;\n            flex-grow: 1;\n    min-width: 56%; }\n    @media (max-width: 767px) {\n      .leaderboard-container .leaderboard-table-name {\n        padding-left: 0; } }\n    .leaderboard-container .leaderboard-table-name .avatar-initials {\n      margin-top: 0 !important; }\n  .leaderboard-container .leaderboard-table-total {\n    -webkit-box-flex: 1;\n    -webkit-flex-grow: 1;\n            flex-grow: 1;\n    min-width: 20%; }\n  .leaderboard-container .leaderboard-table-body {\n    /*\t\tdisplay:flex;\n\t\tflex-flow: column;*/\n    height: 33.5rem;\n    overflow-y: scroll; }\n  .leaderboard-container .leaderboard-row {\n    display: -webkit-box;\n    display: -webkit-flex;\n    display: flex;\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: normal;\n    -webkit-flex-direction: row;\n            flex-direction: row;\n    -webkit-flex-flow: nowrap;\n            flex-flow: nowrap;\n    width: 100%;\n    border-bottom: 0.1875rem solid #d2d3d4; }\n  .leaderboard-container .leaderboard-row-data {\n    display: -webkit-box;\n    display: -webkit-flex;\n    display: flex;\n    -webkit-box-align: center;\n    -webkit-align-items: center;\n            align-items: center;\n    height: 3.7rem;\n    vertical-align: middle; }\n    @media (max-width: 767px) {\n      .leaderboard-container .leaderboard-row-data {\n        height: 4.6875rem; } }\n  .leaderboard-container .total-row-data-value {\n    margin: 0 auto; }\n  .leaderboard-container .rank-row-data,\n  .leaderboard-container .total-row-data,\n  .leaderboard-container .comments-row-data,\n  .leaderboard-container .likes-row-data {\n    text-align: center; }\n  .leaderboard-container .rank-row-data {\n    font-size: 1.5rem; }\n    @media (max-width: 767px) {\n      .leaderboard-container .rank-row-data {\n        font-size: 1.125rem; } }\n  .leaderboard-container .change-row-data .icon {\n    height: 2.5rem;\n    width: 2.25rem;\n    position: relative;\n    margin: 0 auto;\n    display: block; }\n  .leaderboard-container .change-row-data .icon-static-arrow {\n    height: 2.25rem;\n    width: 2.25rem; }\n  .leaderboard-container .change-row-data .icon-static-arrow,\n  .leaderboard-container .top-rank-info .icon-static-arrow {\n    fill: #4b4b4b; }\n  .leaderboard-container .change-row-data .icon-positive-arrow,\n  .leaderboard-container .top-rank-info .icon-positive-arrow {\n    fill: #82ceaa; }\n  .leaderboard-container .change-row-data .icon-negative-arrow,\n  .leaderboard-container .top-rank-info .icon-negative-arrow {\n    fill: #cd040b; }\n  .leaderboard-container .name-row-data,\n  .leaderboard-container .total-row-data {\n    font-size: .9rem; }\n    @media (max-width: 767px) {\n      .leaderboard-container .name-row-data,\n      .leaderboard-container .total-row-data {\n        font-size: .9rem; } }\n  .leaderboard-container .name-row-data-name {\n    padding-left: 0.9375rem;\n    width: 10rem;\n    /*font-size: 1rem;*/ }\n  .leaderboard-container .rank-row-data-rank {\n    background-color: #e4e5e3;\n    height: 2.75rem;\n    width: 2.75rem;\n    line-height: 3rem;\n    border-radius: 50%;\n    text-align: center;\n    position: relative;\n    margin: 0 auto;\n    font-size: 1rem; }\n    @media (max-width: 767px) {\n      .leaderboard-container .rank-row-data-rank {\n        height: 2.5rem;\n        width: 2.5rem;\n        line-height: 2.5rem; } }\n  .leaderboard-container .leaderboard-avatar-initials {\n    font-size: 1rem;\n    line-height: 3rem;\n    padding-top: 0;\n    padding-left: 0;\n    text-align: center; }\n  .leaderboard-container .leaderboard-avatar-initials,\n  .leaderboard-container .leaderboard-avatar-image {\n    float: left;\n    height: 2.75rem;\n    width: 2.75rem;\n    margin-top: initial; }\n  .leaderboard-container .leaderboard-participant-first-name {\n    font-weight: 700;\n    font-size: 0.875rem; }\n    @media (max-width: 767px) {\n      .leaderboard-container .leaderboard-participant-first-name {\n        font-size: 1.25rem; } }\n  .leaderboard-container .leaderboard-participant-metric-name {\n    font-weight: 700;\n    font-size: 1.5625rem; }\n    @media (max-width: 767px) {\n      .leaderboard-container .leaderboard-participant-metric-name {\n        font-size: 1.875rem; } }\n  .leaderboard-container .leaderboard-participant-start-date {\n    font-weight: 700;\n    font-size: 0.75rem; }\n    @media (max-width: 767px) {\n      .leaderboard-container .leaderboard-participant-start-date {\n        font-size: 14px; } }\n  .leaderboard-container .leaderboard-participant-last-update {\n    font-size: 0.875rem;\n    margin-top: 1.25rem;\n    display: inline-block; }\n    @media (max-width: 767px) {\n      .leaderboard-container .leaderboard-participant-last-update {\n        font-size: 0.75rem;\n        margin-top: 5px; } }\n  .leaderboard-container .top-ranks {\n    position: relative;\n    margin-top: 3.5rem;\n    /*padding: remCalc(20px) remCalc(40px) remCalc(120px);*/ }\n    @media (max-width: 767px) {\n      .leaderboard-container .top-ranks {\n        padding-bottom: 5.625rem; } }\n    @media (max-width: 480px) {\n      .leaderboard-container .top-ranks {\n        padding-bottom: 1.25rem; } }\n  .leaderboard-container .medallion {\n    background-size: 105% 105%;\n    border-radius: 50%;\n    background-position: 25% 25%;\n    display: -webkit-box;\n    display: -webkit-flex;\n    display: flex;\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: normal;\n    -webkit-flex-direction: row;\n            flex-direction: row;\n    -webkit-box-align: center;\n    -webkit-align-items: center;\n            align-items: center;\n    -webkit-box-pack: center;\n    -webkit-justify-content: center;\n            justify-content: center; }\n  .leaderboard-container .top-rank {\n    -webkit-transition: all .25s ease-in-out;\n    transition: all .25s ease-in-out; }\n  .leaderboard-container .top-rank-1 {\n    width: 45%;\n    max-width: 18.75rem;\n    margin: 0 auto;\n    position: relative;\n    z-index: 2; }\n    @media (max-width: 767px) {\n      .leaderboard-container .top-rank-1 {\n        width: 60%; } }\n    .leaderboard-container .top-rank-1 .top-rank-info {\n      top: 19.4rem; }\n  .leaderboard-container .medallion-1 {\n    border: 1rem solid #abe0f9;\n    background-image: url(" + __webpack_require__(1010) + ");\n    position: relative; }\n    @media (max-width: 767px) {\n      .leaderboard-container .medallion-1 {\n        border-width: 0.625rem; } }\n  .leaderboard-container .top-rank-2,\n  .leaderboard-container .top-rank-3 {\n    width: 33%;\n    max-width: 14.0625rem;\n    position: absolute;\n    top: 2rem;\n    z-index: 1; }\n    .leaderboard-container .top-rank-2 .top-rank-info,\n    .leaderboard-container .top-rank-3 .top-rank-info {\n      top: 14.4rem; }\n  .leaderboard-container .top-rank-2 {\n    left: 6%; }\n  .leaderboard-container .top-rank-3 {\n    right: 7%; }\n  .leaderboard-container .medallion-2 {\n    border: 1rem solid #82ceaa;\n    background-image: url(" + __webpack_require__(1011) + "); }\n  .leaderboard-container .medallion-3 {\n    border: 1rem solid #fbd362;\n    background-image: url(" + __webpack_require__(1012) + "); }\n  .leaderboard-container .medallion-2,\n  .leaderboard-container .medallion-3 {\n    position: absolute; }\n    @media (max-width: 767px) {\n      .leaderboard-container .medallion-2,\n      .leaderboard-container .medallion-3 {\n        border-width: 0.625rem; } }\n  .leaderboard-container .top-rank-info-name {\n    font-size: 1.5rem; }\n  .leaderboard-container .top-rank-info-name,\n  .leaderboard-container .top-rank-info-total {\n    text-align: center;\n    font-weight: 700; }\n  .leaderboard-container .top-rank-info {\n    position: absolute;\n    width: 100%;\n    left: 0;\n    /*font-size: remCalc(47.3px);*/ }\n  .leaderboard-container .top-rank-info-total {\n    display: -webkit-box;\n    display: -webkit-flex;\n    display: flex;\n    -webkit-box-align: center;\n    -webkit-align-items: center;\n            align-items: center;\n    -webkit-box-pack: center;\n    -webkit-justify-content: center;\n            justify-content: center;\n    font-size: 1rem;\n    position: relative; }\n    @media (max-width: 767px) {\n      .leaderboard-container .top-rank-info-total {\n        margin-top: 0.3125rem; } }\n  .leaderboard-container .leaderboard-rank {\n    display: -webkit-box;\n    display: -webkit-flex;\n    display: flex;\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: normal;\n    -webkit-flex-direction: row;\n            flex-direction: row;\n    -webkit-box-align: center;\n    -webkit-align-items: center;\n            align-items: center;\n    -webkit-box-pack: center;\n    -webkit-justify-content: center;\n            justify-content: center; }\n  .leaderboard-container .top-ranks .leaderboard-rank {\n    font-family: 'Neue Haas Grotesk', 'Helvetica Neue', Arial, Helvetica, sans-serif;\n    font-weight: 700;\n    line-height: 350%;\n    /*position: absolute;*/\n    width: 100%;\n    color: #ffffff;\n    opacity: .75; }\n  .leaderboard-container .leaderboard-rank-number {\n    font-size: 5rem !important;\n    left: 0.35625rem !important;\n    line-height: 0 !important; }\n  .leaderboard-container .top-rank-1 .leaderboard-rank-number {\n    position: relative;\n    font-size: 7rem !important; }\n  .leaderboard-container .leaderboard-rank-ordinal {\n    display: inline-block;\n    position: relative;\n    font-size: 150%;\n    margin-top: -2rem; }\n  .leaderboard-container .top-rank-1 .leaderboard-rank-ordinal {\n    margin-top: -3rem;\n    font-size: 200%;\n    padding-left: 0.25rem; }\n  .leaderboard-container .shadow {\n    display: block;\n    left: 0;\n    position: absolute;\n    bottom: -4.25rem;\n    overflow: visible;\n    fill-opacity: .4;\n    z-index: -1; }\n    @media (max-width: 767px) {\n      .leaderboard-container .shadow {\n        bottom: -4.0625rem;\n        z-index: -10; } }\n", ""]);
+	exports.push([module.id, "/*\n\tThis is a mixin which allows an element to have a fixed aspect ratio, but allows the element to NOT have to be floated/etc - the element can stay inside the normal document flow.  It's based on a common workaround which inserts an invisible padding \"before\" meta-element which gives it the desired size (and is floated), and then a subsequent 'clearfix' \"after\" element which makes sure that the bottom of this container stretches far enough to include the entirety of the floated element.\n\n\tTo use this, you'll need to have at least 3 nested divs; they don't need any special classes, but they do need to be the first elements inside their parents.  You apply the mixin to the topmost div, you leave the second div empty, and you put all of your content inside the third div.\n\n\tExpected usage:\n\n\t<div class=\"my-container\">  <-- mixin applied here, on this topmost div\n\t\t<div>\n\t\t\t<div class=\"interior\">\n\t\t\t\t<-- content goes in this div\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\n\tThen in your scss file:\n\t.my-container {\n\t\t@include aspect-ratio(4.0,3.0,100%);\n\n\t\t.interior {\n\t\t\t//whatever you want\n\t\t}\n\t}\n*/\n/**\n * This is heavily borrowed from how Twitter Bootstrap 4 handles breakpoints.\n *\n * https://github.com/twbs/bootstrap/blob/807a837afe1c5ee2ac5f962658a5741673c04231/scss/mixins/_breakpoints.scss\n */\n/**\n * Finds the next breakpoint up or returns null.\n * @param\t {string} $name\t\t\t\t\t\t\t\tCurrent breakpoint\n * @param\t {list} [$breakpointNames]\t\t\t\t\tAll breakpoints. Defaults to $appBreakpoints names.\n * @return {string|null}\t\t\t\t\t\t\t\tReturns name of next breakpoint or null.\n */\n/*\n   ____      _\n  / ___|___ | | ___  _ __ ___\n | |   / _ \\| |/ _ \\| '__/ __|\n | |__| (_) | | (_) | |  \\__   \\____\\___/|_|\\___/|_|  |___/\n\n */\n/*\n     _\n    / \\   _ __  _ __\n   / _ \\ | '_ \\| '_   / ___ \\| |_) | |_) |\n /_/   \\_\\ .__/| .__/\n         |_|   |_|\n\n */\n/*\n  _____                                        _\n |_   _|   _ _ __   ___   __ _ _ __ __ _ _ __ | |__  _   _\n   | || | | | '_ \\ / _ \\ / _` | '__/ _` | '_ \\| '_ \\| | | |\n   | || |_| | |_) | (_) | (_| | | | (_| | |_) | | | | |_| |\n   |_| \\__, | .__/ \\___/ \\__, |_|  \\__,_| .__/|_| |_|\\__, |\n       |___/|_|          |___/          |_|          |___/\n\n */\n/*\n  _     _       _\n | |   (_)_ __ | | _____\n | |   | | '_ \\| |/ / __|\n | |___| | | | |   <\\__  |_____|_|_| |_|_|\\_\\___/\n\n */\n/*\n  _____     _     _\n |_   _|_ _| |__ | | ___  ___\n   | |/ _` | '_ \\| |/ _ \\/ __|\n   | | (_| | |_) | |  __/\\__    |_|\\__,_|_.__/|_|\\___||___/\n\n */\n.leaderboard-wrapper {\n  margin: 0 3.125rem; }\n\n.leaderboard-container {\n  background-color: white;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n          flex-direction: column;\n  height: 37rem;\n  line-height: normal;\n  padding: 0 1.125rem;\n  -webkit-flex-flow: wrap;\n          flex-flow: wrap;\n  padding-top: 1.5rem;\n  /*Table*/\n  /*MastHead*/\n  /*Medallions*/ }\n  .leaderboard-container h1, .leaderboard-container h2, .leaderboard-container h3, .leaderboard-container h4, .leaderboard-container h5, .leaderboard-container h6 {\n    margin-bottom: 0; }\n  .leaderboard-container .leaderboard-left {\n    width: 65%; }\n  .leaderboard-container .leaderboard-right {\n    width: 35%; }\n  .leaderboard-container .leaderboard-table {\n    width: 100%;\n    font-weight: 700; }\n  .leaderboard-container .leaderboard-table-header {\n    display: -webkit-box;\n    display: -webkit-flex;\n    display: flex;\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: normal;\n    -webkit-flex-direction: row;\n            flex-direction: row;\n    -webkit-flex-flow: nowrap;\n            flex-flow: nowrap;\n    border-bottom: 0.375rem solid #d2d3d4;\n    width: 100%; }\n  .leaderboard-container .leaderboard-table-header-cell {\n    font-size: .8rem;\n    font-weight: 700;\n    padding-bottom: 0.625rem;\n    text-align: center; }\n    @media (max-width: 767px) {\n      .leaderboard-container .leaderboard-table-header-cell {\n        font-size: 0.875rem; } }\n  .leaderboard-container .leaderboard-table-rank {\n    width: 3.75rem;\n    -webkit-box-flex: 1;\n    -webkit-flex-grow: 1;\n            flex-grow: 1;\n    min-width: 11%; }\n  .leaderboard-container .leaderboard-table-change {\n    width: 2.25rem;\n    -webkit-box-flex: 1;\n    -webkit-flex-grow: 1;\n            flex-grow: 1;\n    min-width: 13%; }\n  .leaderboard-container .name-table-header {\n    padding-left: 2.75rem; }\n  .leaderboard-container .leaderboard-table-name {\n    text-align: left;\n    /*padding-left: 0.875rem;*/\n    -webkit-box-flex: 1;\n    -webkit-flex-grow: 1;\n            flex-grow: 1;\n    min-width: 56%; }\n    @media (max-width: 767px) {\n      .leaderboard-container .leaderboard-table-name {\n        padding-left: 0; } }\n    .leaderboard-container .leaderboard-table-name .avatar-initials {\n      margin-top: 0 !important; }\n  .leaderboard-container .leaderboard-table-total {\n    -webkit-box-flex: 1;\n    -webkit-flex-grow: 1;\n            flex-grow: 1;\n    min-width: 20%; }\n  .leaderboard-container .leaderboard-table-body {\n    /*\t\tdisplay:flex;\n\t\tflex-flow: column;*/\n    height: 33.5rem;\n    overflow-y: scroll; }\n  .leaderboard-container .leaderboard-row {\n    display: -webkit-box;\n    display: -webkit-flex;\n    display: flex;\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: normal;\n    -webkit-flex-direction: row;\n            flex-direction: row;\n    -webkit-flex-flow: nowrap;\n            flex-flow: nowrap;\n    width: 100%;\n    border-bottom: 0.1875rem solid #d2d3d4; }\n  .leaderboard-container .leaderboard-row-data {\n    display: -webkit-box;\n    display: -webkit-flex;\n    display: flex;\n    -webkit-box-align: center;\n    -webkit-align-items: center;\n            align-items: center;\n    height: 3.7rem;\n    vertical-align: middle; }\n    @media (max-width: 767px) {\n      .leaderboard-container .leaderboard-row-data {\n        height: 4.6875rem; } }\n  .leaderboard-container .total-row-data-value {\n    margin: 0 auto; }\n  .leaderboard-container .rank-row-data,\n  .leaderboard-container .total-row-data,\n  .leaderboard-container .comments-row-data,\n  .leaderboard-container .likes-row-data {\n    text-align: center; }\n  .leaderboard-container .rank-row-data {\n    font-size: 1.5rem; }\n    @media (max-width: 767px) {\n      .leaderboard-container .rank-row-data {\n        font-size: 1.125rem; } }\n  .leaderboard-container .change-row-data .icon {\n    height: 2.5rem;\n    width: 2.25rem;\n    position: relative;\n    margin: 0 auto;\n    display: block; }\n  .leaderboard-container .change-row-data .icon-static-arrow {\n    height: 2.25rem;\n    width: 2.25rem; }\n  .leaderboard-container .change-row-data .icon-static-arrow,\n  .leaderboard-container .top-rank-info .icon-static-arrow {\n    fill: #4b4b4b; }\n  .leaderboard-container .change-row-data .icon-positive-arrow,\n  .leaderboard-container .top-rank-info .icon-positive-arrow {\n    fill: #82ceaa; }\n  .leaderboard-container .change-row-data .icon-negative-arrow,\n  .leaderboard-container .top-rank-info .icon-negative-arrow {\n    fill: #cd040b; }\n  .leaderboard-container .name-row-data,\n  .leaderboard-container .total-row-data {\n    font-size: .9rem; }\n    @media (max-width: 767px) {\n      .leaderboard-container .name-row-data,\n      .leaderboard-container .total-row-data {\n        font-size: .9rem; } }\n  .leaderboard-container .name-row-data-name {\n    padding-left: 0.9375rem;\n    width: 10rem;\n    /*font-size: 1rem;*/ }\n  .leaderboard-container .rank-row-data-rank {\n    background-color: #e4e5e3;\n    height: 2.75rem;\n    width: 2.75rem;\n    line-height: 3rem;\n    border-radius: 50%;\n    text-align: center;\n    position: relative;\n    margin: 0 auto;\n    font-size: 1rem; }\n    @media (max-width: 767px) {\n      .leaderboard-container .rank-row-data-rank {\n        height: 2.5rem;\n        width: 2.5rem;\n        line-height: 2.5rem; } }\n  .leaderboard-container .leaderboard-avatar-initials {\n    font-size: 1rem;\n    line-height: 3rem;\n    padding-top: 0;\n    padding-left: 0;\n    text-align: center; }\n  .leaderboard-container .leaderboard-avatar-initials,\n  .leaderboard-container .leaderboard-avatar-image {\n    float: left;\n    height: 2.75rem;\n    width: 2.75rem;\n    margin-top: initial; }\n  .leaderboard-container .leaderboard-participant-first-name {\n    font-weight: 700;\n    font-size: 0.875rem; }\n    @media (max-width: 767px) {\n      .leaderboard-container .leaderboard-participant-first-name {\n        font-size: 1.25rem; } }\n  .leaderboard-container .leaderboard-participant-metric-name {\n    font-weight: 700;\n    font-size: 1.5625rem; }\n    @media (max-width: 767px) {\n      .leaderboard-container .leaderboard-participant-metric-name {\n        font-size: 1.875rem; } }\n  .leaderboard-container .leaderboard-participant-start-date {\n    font-weight: 700;\n    font-size: 0.75rem; }\n    @media (max-width: 767px) {\n      .leaderboard-container .leaderboard-participant-start-date {\n        font-size: 14px; } }\n  .leaderboard-container .leaderboard-participant-last-update {\n    font-size: 0.875rem;\n    margin-top: 1.25rem;\n    display: inline-block; }\n    @media (max-width: 767px) {\n      .leaderboard-container .leaderboard-participant-last-update {\n        font-size: 0.75rem;\n        margin-top: 5px; } }\n  .leaderboard-container .top-ranks {\n    position: relative;\n    margin-top: 3.5rem;\n    /*padding: remCalc(20px) remCalc(40px) remCalc(120px);*/ }\n    @media (max-width: 767px) {\n      .leaderboard-container .top-ranks {\n        padding-bottom: 5.625rem; } }\n    @media (max-width: 480px) {\n      .leaderboard-container .top-ranks {\n        padding-bottom: 1.25rem; } }\n  .leaderboard-container .medallion {\n    background-size: 105% 105%;\n    border-radius: 50%;\n    background-position: 25% 25%;\n    display: -webkit-box;\n    display: -webkit-flex;\n    display: flex;\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: normal;\n    -webkit-flex-direction: row;\n            flex-direction: row;\n    -webkit-box-align: center;\n    -webkit-align-items: center;\n            align-items: center;\n    -webkit-box-pack: center;\n    -webkit-justify-content: center;\n            justify-content: center; }\n  .leaderboard-container .top-rank {\n    -webkit-transition: all .25s ease-in-out;\n    transition: all .25s ease-in-out; }\n  .leaderboard-container .top-rank-1 {\n    width: 45%;\n    max-width: 18.75rem;\n    margin: 0 auto;\n    position: relative;\n    z-index: 2; }\n    @media (max-width: 767px) {\n      .leaderboard-container .top-rank-1 {\n        width: 60%; } }\n    .leaderboard-container .top-rank-1 .top-rank-info {\n      top: 19.4rem; }\n  .leaderboard-container .medallion-1 {\n    border: 1rem solid #abe0f9;\n    background-image: url(" + __webpack_require__(1009) + ");\n    position: relative; }\n    @media (max-width: 767px) {\n      .leaderboard-container .medallion-1 {\n        border-width: 0.625rem; } }\n  .leaderboard-container .top-rank-2,\n  .leaderboard-container .top-rank-3 {\n    width: 33%;\n    max-width: 14.0625rem;\n    position: absolute;\n    top: 2rem;\n    z-index: 1; }\n    .leaderboard-container .top-rank-2 .top-rank-info,\n    .leaderboard-container .top-rank-3 .top-rank-info {\n      top: 14.4rem; }\n  .leaderboard-container .top-rank-2 {\n    left: 6%; }\n  .leaderboard-container .top-rank-3 {\n    right: 7%; }\n  .leaderboard-container .medallion-2 {\n    border: 1rem solid #82ceaa;\n    background-image: url(" + __webpack_require__(1010) + "); }\n  .leaderboard-container .medallion-3 {\n    border: 1rem solid #fbd362;\n    background-image: url(" + __webpack_require__(1011) + "); }\n  .leaderboard-container .medallion-2,\n  .leaderboard-container .medallion-3 {\n    position: absolute; }\n    @media (max-width: 767px) {\n      .leaderboard-container .medallion-2,\n      .leaderboard-container .medallion-3 {\n        border-width: 0.625rem; } }\n  .leaderboard-container .top-rank-info-name {\n    font-size: 1.5rem; }\n  .leaderboard-container .top-rank-info-name,\n  .leaderboard-container .top-rank-info-total {\n    text-align: center;\n    font-weight: 700; }\n  .leaderboard-container .top-rank-info {\n    position: absolute;\n    width: 100%;\n    left: 0;\n    /*font-size: remCalc(47.3px);*/ }\n  .leaderboard-container .top-rank-info-total {\n    display: -webkit-box;\n    display: -webkit-flex;\n    display: flex;\n    -webkit-box-align: center;\n    -webkit-align-items: center;\n            align-items: center;\n    -webkit-box-pack: center;\n    -webkit-justify-content: center;\n            justify-content: center;\n    font-size: 1rem;\n    position: relative; }\n    @media (max-width: 767px) {\n      .leaderboard-container .top-rank-info-total {\n        margin-top: 0.3125rem; } }\n  .leaderboard-container .leaderboard-rank {\n    display: -webkit-box;\n    display: -webkit-flex;\n    display: flex;\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: normal;\n    -webkit-flex-direction: row;\n            flex-direction: row;\n    -webkit-box-align: center;\n    -webkit-align-items: center;\n            align-items: center;\n    -webkit-box-pack: center;\n    -webkit-justify-content: center;\n            justify-content: center; }\n  .leaderboard-container .top-ranks .leaderboard-rank {\n    font-family: 'Neue Haas Grotesk', 'Helvetica Neue', Arial, Helvetica, sans-serif;\n    font-weight: 700;\n    line-height: 350%;\n    /*position: absolute;*/\n    width: 100%;\n    color: #ffffff;\n    opacity: .75; }\n  .leaderboard-container .leaderboard-rank-number {\n    font-size: 5rem !important;\n    left: 0.35625rem !important;\n    line-height: 0 !important; }\n  .leaderboard-container .top-rank-1 .leaderboard-rank-number {\n    position: relative;\n    font-size: 7rem !important; }\n  .leaderboard-container .leaderboard-rank-ordinal {\n    display: inline-block;\n    position: relative;\n    font-size: 150%;\n    margin-top: -2rem; }\n  .leaderboard-container .top-rank-1 .leaderboard-rank-ordinal {\n    margin-top: -3rem;\n    font-size: 200%;\n    padding-left: 0.25rem; }\n  .leaderboard-container .shadow {\n    display: block;\n    left: 0;\n    position: absolute;\n    bottom: -4.25rem;\n    overflow: visible;\n    fill-opacity: .4;\n    z-index: -1; }\n    @media (max-width: 767px) {\n      .leaderboard-container .shadow {\n        bottom: -4.0625rem;\n        z-index: -10; } }\n", ""]);
 
 	// exports
 
 
 /***/ },
 
-/***/ 956:
+/***/ 955:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(724);
+	var content = __webpack_require__(723);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(6)(content, {});
@@ -9608,13 +9817,13 @@ webpackJsonp([2,13],{
 
 /***/ },
 
-/***/ 967:
+/***/ 966:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(735);
+	var content = __webpack_require__(734);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(6)(content, {});
@@ -9635,21 +9844,21 @@ webpackJsonp([2,13],{
 
 /***/ },
 
-/***/ 1010:
+/***/ 1009:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "bcdef8e4ec2104e6ee35b23ff02c2f15.png"
 
 /***/ },
 
-/***/ 1011:
+/***/ 1010:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "488edf6b90fcd032fc3202dbc93562f5.png"
 
 /***/ },
 
-/***/ 1012:
+/***/ 1011:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "b0a3d4d079bd5ae55b3a498b59184d1d.png"

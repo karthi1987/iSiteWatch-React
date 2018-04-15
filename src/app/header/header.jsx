@@ -71,6 +71,9 @@ export default class Header extends React.Component {
                     </div>
                 </div>
                  <div className="current-time-block">
+                    <div className="customer-support">
+                        <a href="customer-support">Customer Support</a>
+                    </div>
                     <div className="user-profile">
                         <div className="user-name">
                             {
@@ -89,9 +92,6 @@ export default class Header extends React.Component {
                                  </ul>
                             </div>
                          }
-                    </div>
-                    <div>
-                        <a href="customer-support">Customer Support</a>
                     </div>
                 </div>
             </div>

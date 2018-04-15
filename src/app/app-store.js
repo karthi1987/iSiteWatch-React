@@ -11,7 +11,6 @@ import FEEDS from 'endpoints/endpoints';
 // actions-reducers
 import views from 'app/views/views-reducers';
 import overlay from 'app/shared/overlay/overlay-actions-reducers';
-import attractLoop from 'app/shared/attract-loop/attract-loop-actions-reducers';
 import nav from 'app/nav/nav-actions-reducers';
 //lang
 import { FILTER_TYPEs } from 'app/app-lang';
@@ -678,7 +677,6 @@ const reducers = combineReducers( {
     app,
     views,
     overlay,
-    attractLoop,
     nav
 } );
 

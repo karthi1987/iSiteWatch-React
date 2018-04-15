@@ -78,7 +78,7 @@ webpackJsonp([1,13],{
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(62);
+	var content = __webpack_require__(63);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(6)(content, {});
@@ -231,7 +231,7 @@ webpackJsonp([1,13],{
 
 /***/ },
 
-/***/ 62:
+/***/ 63:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(5)();
@@ -338,23 +338,23 @@ webpackJsonp([1,13],{
 
 /***/ },
 
-/***/ 471:
+/***/ 467:
 /***/ function(module, exports) {
 
 	module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NkE2QzVBNUMwQzNFMTFFNEE5QTJGN0UzNTRDQUY2MUYiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NkE2QzVBNUQwQzNFMTFFNEE5QTJGN0UzNTRDQUY2MUYiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo2QTZDNUE1QTBDM0UxMUU0QTlBMkY3RTM1NENBRjYxRiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo2QTZDNUE1QjBDM0UxMUU0QTlBMkY3RTM1NENBRjYxRiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PidhP10AAAHnSURBVHja7JlNKERRFMdnfIx8ZOOrUUqxYqyIQrJRLLCxYOVjQ8pGSkgshJWdlIXYURZCSRRhSLExM1spZBIrUkMa/1Nn6jXNzHs1i3tnnFu/7n33nqn3m3fPvff17MFg0JYMJcWWJEVEREREREREREREREREROT/iKTF82OP12clbAiUg7GwfjsYBHfgMtRZ5arU7onQjc6BFZAVYbyex45Bk65TKx2sgakYMTfgGmSCTZCnm0gO2AV9JnEB0AFegJOfnjYiReAEtEYZrwDroIGvX8E0twdAsSoR+hcXwTyoBW5QEyN+BPSCHVDCfST2ABygR5UI5cA4mABnoMwknpL7C+SDWe775alIpUWHqZVhIYaW2iVud/GiQOWUa1cibYgHXOcaptcz14WJvrM7EvGI0sb1B3jkttOwiikXCViIoRwY5fY2+OF2aDn2qhKh5fYWnINmcG8SP8zHlXcww32poJPbR0oOjSiNYdf0z+6D6ijxyyAbrBqmFe0rpeAbbOmSI35+ModRxn18426+LjAcTWhjfNIp2T9BO9iwsO/scaL7TQ6YylYtSuJ+sBAjhqZfHU+pbvCm7MXKpNAXpEnOhUhHlytOfg+4iPvlR75YiYiIiIiIiIiIiIiIiIiIiIii8ifAADStUzR+kRZUAAAAAElFTkSuQmCC"
 
 /***/ },
 
-/***/ 512:
+/***/ 510:
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';Object.defineProperty(exports, "__esModule", { value: true });var _extends = Object.assign || function (target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i];for (var key in source) {if (Object.prototype.hasOwnProperty.call(source, key)) {target[key] = source[key];}}}return target;};var _createClass = function () {function defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}return function (Constructor, protoProps, staticProps) {if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;};}();__webpack_require__(971);
+	'use strict';Object.defineProperty(exports, "__esModule", { value: true });var _extends = Object.assign || function (target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i];for (var key in source) {if (Object.prototype.hasOwnProperty.call(source, key)) {target[key] = source[key];}}}return target;};var _createClass = function () {function defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}return function (Constructor, protoProps, staticProps) {if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;};}();__webpack_require__(970);
 
 
 
 
 	var _webTrack = __webpack_require__(32);var _webTrack2 = _interopRequireDefault(_webTrack);
-	var _webTrackIds = __webpack_require__(117);var _webTrackIds2 = _interopRequireDefault(_webTrackIds);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self, call) {if (!self) {throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call && (typeof call === "object" || typeof call === "function") ? call : self;}function _inherits(subClass, superClass) {if (typeof superClass !== "function" && superClass !== null) {throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);}subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;}var React = __webpack_require__(4);var classNames = __webpack_require__(65);
+	var _webTrackIds = __webpack_require__(117);var _webTrackIds2 = _interopRequireDefault(_webTrackIds);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self, call) {if (!self) {throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call && (typeof call === "object" || typeof call === "function") ? call : self;}function _inherits(subClass, superClass) {if (typeof superClass !== "function" && superClass !== null) {throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);}subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;}var React = __webpack_require__(4);var classNames = __webpack_require__(60);
 
 
 	//------------------------------ Button Classes ------------------------------//
@@ -911,12 +911,161 @@ webpackJsonp([1,13],{
 
 /***/ },
 
-/***/ 513:
+/***/ 511:
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';Object.defineProperty(exports, "__esModule", { value: true });var _extends = Object.assign || function (target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i];for (var key in source) {if (Object.prototype.hasOwnProperty.call(source, key)) {target[key] = source[key];}}}return target;};exports.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	loadVideos = loadVideos;exports.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	setActiveVideo = setActiveVideo;exports.
+
+
+
+
+
+
+
+
+	setReplicationFiles = setReplicationFiles;exports.default =
+
+
+
+
+
+
+
+
+
+	videos;var _ajax = __webpack_require__(27);var ajax = _interopRequireWildcard(_ajax);var _endpoints = __webpack_require__(21);var _endpoints2 = _interopRequireDefault(_endpoints);var _utils = __webpack_require__(13);var _appStore = __webpack_require__(43);var _appLang = __webpack_require__(19);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _interopRequireWildcard(obj) {if (obj && obj.__esModule) {return obj;} else {var newObj = {};if (obj != null) {for (var key in obj) {if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key];}}newObj.default = obj;return newObj;}} /*******************************************************************************
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           *
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           *   1. Default State
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           *   2. Action Types
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           *   3. ACtion Creators
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           *   4. Reducers
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           *
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           */ /*******************************************************************************
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               *  1. Default State
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               */var videosState = { data: false, currentVideo: 0, replicationFiles: [] }; /*******************************************************************************
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            *  2. Action Types
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            */ //const VIDEOS_VIEW = 'videosView';
+	var LOAD_VIDEOS_VIEW = 'loadVideosView'; //const VIDEOS_MODULE = 'videosModule';
+	var LOAD_VIDEOS_MODULE = 'loadVideosModule'; //const LOAD_VIDEOS_MODULE = 'loadVideosModuleData';
+	var SET_ACTIVE_VIDEO = 'setActiveVideo';var SET_REPLICATION_FILES = 'setReplicationFiles';var VIDEOS_ERROR_REPORT = 'videosErrorReport';var LOG_RESPONSE = LOGSERVERRESPONSE; /*******************************************************************************
+	                                                                                                                                                                               *  3. Action Creators
+	                                                                                                                                                                               */function loadVideos(rvHost, type) {return function (dispatch) {var videosType = 'videos' + type;var loadVideosType = 'loadVideos' + type;dispatch(ajax.loading(videosType));return (0, ajax.default)({ url: _endpoints2.default.VIDEOS, success: function success(results, textStatus, jqXHR) {if (!results.success) {dispatch(ajax.loadingError(videosType, results.errorMessage));} else {LOG_RESPONSE && (0, _appStore.LogServerResponse)(results, textStatus, jqXHR, _endpoints2.default.VIDEOS);var _videos = results.data.videos;for (var video in _videos) {if (rvHost) {var RV = (0, _utils.rvCheck)();var replicationFiles = RV.replicationFiles;for (var file in replicationFiles) {if (_videos[video].videoUrl === replicationFiles[file].FileName) {_videos[video].videoUrl = replicationFiles[file].URL;}}} else {_videos[video].videoUrl = VIDEO_PATH + _videos[video].videoUrl;}}dispatch(ajax.loaded(videosType));dispatch({ type: loadVideosType, data: _extends({}, results.data, { videos: _videos }) });var hasResults = results.data.videos.length > 0;dispatch(ajax.handleResultsMessage('videos' + type, hasResults, (0, _appLang.ERRORs)().VIDEOS_VIEW_NO_RESULTS));}}, fail: function fail(error) {dispatch(ajax.loadingError(videosType, error.textStatus));} });};}function setActiveVideo(index) {return function (dispatch) {dispatch({ type: SET_ACTIVE_VIDEO, data: index });};}function setReplicationFiles(replicationFiles) {return { type: SET_REPLICATION_FILES, replicationFiles: replicationFiles };} /*******************************************************************************
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              *  4. Reducers
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              */function videos() {var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : videosState;var action = arguments[1];switch (action.type) {case LOAD_VIDEOS_MODULE:case LOAD_VIDEOS_VIEW:return _extends({}, state, { data: action.data, error: false, message: null });case VIDEOS_ERROR_REPORT:return _extends({}, state, { error: action.error, message: action.message });case SET_ACTIVE_VIDEO:return _extends({}, state, {
+	                currentVideo: action.data });
+
+	        default:
+	            return state;}
+
+	}
+
+/***/ },
+
+/***/ 512:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';Object.defineProperty(exports, "__esModule", { value: true });var _extends = Object.assign || function (target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i];for (var key in source) {if (Object.prototype.hasOwnProperty.call(source, key)) {target[key] = source[key];}}}return target;};var _createClass = function () {function defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}return function (Constructor, protoProps, staticProps) {if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;};}();
 	var _react = __webpack_require__(4);var _react2 = _interopRequireDefault(_react);
-	var _classnames = __webpack_require__(65);var _classnames2 = _interopRequireDefault(_classnames);
+	var _classnames = __webpack_require__(60);var _classnames2 = _interopRequireDefault(_classnames);
 	var _momentTimezone = __webpack_require__(30);var _momentTimezone2 = _interopRequireDefault(_momentTimezone);
 
 	var _utils = __webpack_require__(13);
@@ -924,14 +1073,14 @@ webpackJsonp([1,13],{
 	var _webTrackIds = __webpack_require__(117);var _webTrackIds2 = _interopRequireDefault(_webTrackIds);
 	var _endpoints = __webpack_require__(21);var _endpoints2 = _interopRequireDefault(_endpoints);
 
-	var _videosActionsReducers = __webpack_require__(235);
+	var _videosActionsReducers = __webpack_require__(511);
 
-	var _videoPlayer = __webpack_require__(512);var _videoPlayer2 = _interopRequireDefault(_videoPlayer);
+	var _videoPlayer = __webpack_require__(510);var _videoPlayer2 = _interopRequireDefault(_videoPlayer);
 	var _dropdown2 = __webpack_require__(59);
 	var _tabs2 = __webpack_require__(161);
 	var _errorMessage = __webpack_require__(37);var _errorMessage2 = _interopRequireDefault(_errorMessage);
 
-	__webpack_require__(972);
+	__webpack_require__(971);
 
 	var _appLang = __webpack_require__(19);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self, call) {if (!self) {throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call && (typeof call === "object" || typeof call === "function") ? call : self;}function _inherits(subClass, superClass) {if (typeof superClass !== "function" && superClass !== null) {throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);}subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;} //libs
 	//utils
@@ -1267,7 +1416,7 @@ webpackJsonp([1,13],{
 
 /***/ },
 
-/***/ 739:
+/***/ 738:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(5)();
@@ -1275,14 +1424,14 @@ webpackJsonp([1,13],{
 
 
 	// module
-	exports.push([module.id, "/*-----------------------------------------------------------------------------\r\n    Description area beneath video\r\n  ---------------------------------------------------------------------------*/\n#video-information-readout {\n  position: relative;\n  width: 1200px;\n  height: 70px;\n  color: #595a5d;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n          align-items: center;\n  font-weight: 600;\n  font-size: 22px;\n  font-height: 48px;\n  text-align: left; }\n  #video-information-readout .left-side span.new-tag {\n    color: #ed1c24; }\n  #video-information-readout .right-side {\n    position: absolute;\n    right: 0px;\n    top: 25%; }\n\n/*-----------------------------------------------------------------------------\r\n    Wrappers for major UI blocks\r\n  ---------------------------------------------------------------------------*/\n.video-primary-player-display {\n  -webkit-transition: opacity 0.4s ease-in-out;\n  transition: opacity 0.4s ease-in-out; }\n  .video-primary-player-display h1 {\n    margin: 20px;\n    font-weight: 600;\n    font-size: 24px;\n    font-height: 48px;\n    text-align: left;\n    width: 920px; }\n  .video-primary-player-display .video-and-controls-wrapper {\n    background-color: black;\n    position: absolute;\n    display: inline-block;\n    text-align: center;\n    width: 100%;\n    height: 100%;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n    cursor: pointer; }\n    .video-primary-player-display .video-and-controls-wrapper.is_full_screen {\n      position: absolute;\n      top: 0px;\n      width: 100%;\n      height: 100%; }\n    .video-primary-player-display .video-and-controls-wrapper video {\n      height: 100%;\n      width: 100%; }\n  .video-primary-player-display .video-player-icon-wrapper {\n    position: relative;\n    height: 100%;\n    width: 100%; }\n    .video-primary-player-display .video-player-icon-wrapper .video-player-icon {\n      position: absolute;\n      height: 100%;\n      width: 100%;\n      background-image: url(" + __webpack_require__(1008) + ");\n      background-position: center center;\n      background-repeat: no-repeat;\n      opacity: 0.8;\n      -webkit-transition: opacity 0.25s linear;\n      transition: opacity 0.25s linear; }\n      .video-primary-player-display .video-player-icon-wrapper .video-player-icon.active {\n        opacity: 0.0; }\n      .video-primary-player-display .video-player-icon-wrapper .video-player-icon.loading {\n        background-image: none; }\n\n/*-----------------------------------------------------------------------------\r\n    Custom HTML5 Video Player\r\n  ---------------------------------------------------------------------------*/\n#mediaControls {\n  background: rgba(51, 51, 51, 0.8);\n  height: 50px;\n  width: 100%;\n  position: absolute;\n  bottom: 0%; }\n  #mediaControls .progress-bar-wrapper {\n    width: -webkit-calc( 100% - 250px);\n    width: calc( 100% - 250px);\n    position: relative; }\n    #mediaControls .progress-bar-wrapper .video-progress-bar-back {\n      background: black;\n      height: 8px;\n      width: 100%;\n      top: 21px;\n      left: 53px;\n      border-radius: 4px;\n      position: relative; }\n    #mediaControls .progress-bar-wrapper .video-progress-bar-buffered {\n      background: #636364;\n      height: 8px;\n      width: 8px;\n      top: 0px;\n      border-radius: 4px;\n      position: relative; }\n    #mediaControls .progress-bar-wrapper .video-progress-bar-filled {\n      background: red;\n      height: 8px;\n      width: 8px;\n      top: 0px;\n      border-radius: 4px;\n      position: absolute; }\n    #mediaControls .progress-bar-wrapper .video-progress-bar-slider {\n      background: #d2d3d4;\n      height: 16px;\n      top: -4px;\n      width: 16px;\n      border-radius: 8px;\n      position: absolute; }\n  #mediaControls .play-pause-button {\n    height: 50px;\n    width: 50px;\n    position: absolute; }\n    #mediaControls .play-pause-button.play {\n      background-image: url(" + __webpack_require__(1007) + "); }\n    #mediaControls .play-pause-button.play:hover {\n      background-image: url(" + __webpack_require__(1006) + "); }\n    #mediaControls .play-pause-button.pause {\n      background-image: url(" + __webpack_require__(1005) + "); }\n    #mediaControls .play-pause-button.pause:hover {\n      background-image: url(" + __webpack_require__(1004) + "); }\n  #mediaControls .timeDisplay {\n    position: absolute;\n    width: 80px;\n    height: 50px;\n    vertical-align: middle;\n    top: 0px;\n    right: 100px; }\n    #mediaControls .timeDisplay p {\n      margin-top: 16px;\n      font-size: 14px;\n      font-family: Arial;\n      font-weight: bold;\n      color: white; }\n  #mediaControls .fullscreen-button {\n    background-image: url(" + __webpack_require__(1003) + ");\n    height: 50px;\n    width: 50px;\n    position: absolute;\n    top: 0px;\n    right: 0px; }\n    #mediaControls .fullscreen-button:hover {\n      background-image: url(" + __webpack_require__(1002) + "); }\n  #mediaControls .exit-fullscreen-button {\n    background-image: url(" + __webpack_require__(1001) + ");\n    height: 50px;\n    width: 50px;\n    position: absolute;\n    top: 0px;\n    right: 0px; }\n    #mediaControls .exit-fullscreen-button:hover {\n      background-image: url(" + __webpack_require__(1000) + "); }\n  #mediaControls .volume-button-wrapper {\n    height: 50px;\n    width: 50px;\n    position: absolute;\n    top: 0px;\n    right: 50px; }\n    #mediaControls .volume-button-wrapper .volume-button {\n      height: 50px;\n      width: 50px;\n      background-image: url(" + __webpack_require__(1009) + "); }\n      #mediaControls .volume-button-wrapper .volume-button:hover {\n        background-image: url(" + __webpack_require__(471) + "); }\n      #mediaControls .volume-button-wrapper .volume-button.active {\n        background-image: url(" + __webpack_require__(471) + ");\n        background-color: #515255; }\n    #mediaControls .volume-button-wrapper .volume-bar-container {\n      height: 135px;\n      width: 50px;\n      position: absolute;\n      bottom: 50px;\n      right: 0px;\n      background: rgba(51, 51, 51, 0.8);\n      display: none; }\n      #mediaControls .volume-button-wrapper .volume-bar-container.active {\n        display: block; }\n      #mediaControls .volume-button-wrapper .volume-bar-container div.volume-bar-back {\n        background: #636364;\n        height: 94px;\n        width: 8px;\n        top: 21px;\n        left: 21px;\n        border-radius: 4px;\n        position: absolute; }\n      #mediaControls .volume-button-wrapper .volume-bar-container div.volume-bar-filled {\n        background: red;\n        height: 94px;\n        width: 8px;\n        bottom: 0px;\n        border-radius: 4px;\n        position: absolute; }\n      #mediaControls .volume-button-wrapper .volume-bar-container div.volume-bar-slider {\n        background: white;\n        height: 16px;\n        width: 16px;\n        border-radius: 8px;\n        bottom: 84px;\n        left: -4px;\n        position: absolute; }\n", ""]);
+	exports.push([module.id, "/*-----------------------------------------------------------------------------\r\n    Description area beneath video\r\n  ---------------------------------------------------------------------------*/\n#video-information-readout {\n  position: relative;\n  width: 1200px;\n  height: 70px;\n  color: #595a5d;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n          align-items: center;\n  font-weight: 600;\n  font-size: 22px;\n  font-height: 48px;\n  text-align: left; }\n  #video-information-readout .left-side span.new-tag {\n    color: #ed1c24; }\n  #video-information-readout .right-side {\n    position: absolute;\n    right: 0px;\n    top: 25%; }\n\n/*-----------------------------------------------------------------------------\r\n    Wrappers for major UI blocks\r\n  ---------------------------------------------------------------------------*/\n.video-primary-player-display {\n  -webkit-transition: opacity 0.4s ease-in-out;\n  transition: opacity 0.4s ease-in-out; }\n  .video-primary-player-display h1 {\n    margin: 20px;\n    font-weight: 600;\n    font-size: 24px;\n    font-height: 48px;\n    text-align: left;\n    width: 920px; }\n  .video-primary-player-display .video-and-controls-wrapper {\n    background-color: black;\n    position: absolute;\n    display: inline-block;\n    text-align: center;\n    width: 100%;\n    height: 100%;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n    cursor: pointer; }\n    .video-primary-player-display .video-and-controls-wrapper.is_full_screen {\n      position: absolute;\n      top: 0px;\n      width: 100%;\n      height: 100%; }\n    .video-primary-player-display .video-and-controls-wrapper video {\n      height: 100%;\n      width: 100%; }\n  .video-primary-player-display .video-player-icon-wrapper {\n    position: relative;\n    height: 100%;\n    width: 100%; }\n    .video-primary-player-display .video-player-icon-wrapper .video-player-icon {\n      position: absolute;\n      height: 100%;\n      width: 100%;\n      background-image: url(" + __webpack_require__(1007) + ");\n      background-position: center center;\n      background-repeat: no-repeat;\n      opacity: 0.8;\n      -webkit-transition: opacity 0.25s linear;\n      transition: opacity 0.25s linear; }\n      .video-primary-player-display .video-player-icon-wrapper .video-player-icon.active {\n        opacity: 0.0; }\n      .video-primary-player-display .video-player-icon-wrapper .video-player-icon.loading {\n        background-image: none; }\n\n/*-----------------------------------------------------------------------------\r\n    Custom HTML5 Video Player\r\n  ---------------------------------------------------------------------------*/\n#mediaControls {\n  background: rgba(51, 51, 51, 0.8);\n  height: 50px;\n  width: 100%;\n  position: absolute;\n  bottom: 0%; }\n  #mediaControls .progress-bar-wrapper {\n    width: -webkit-calc( 100% - 250px);\n    width: calc( 100% - 250px);\n    position: relative; }\n    #mediaControls .progress-bar-wrapper .video-progress-bar-back {\n      background: black;\n      height: 8px;\n      width: 100%;\n      top: 21px;\n      left: 53px;\n      border-radius: 4px;\n      position: relative; }\n    #mediaControls .progress-bar-wrapper .video-progress-bar-buffered {\n      background: #636364;\n      height: 8px;\n      width: 8px;\n      top: 0px;\n      border-radius: 4px;\n      position: relative; }\n    #mediaControls .progress-bar-wrapper .video-progress-bar-filled {\n      background: red;\n      height: 8px;\n      width: 8px;\n      top: 0px;\n      border-radius: 4px;\n      position: absolute; }\n    #mediaControls .progress-bar-wrapper .video-progress-bar-slider {\n      background: #d2d3d4;\n      height: 16px;\n      top: -4px;\n      width: 16px;\n      border-radius: 8px;\n      position: absolute; }\n  #mediaControls .play-pause-button {\n    height: 50px;\n    width: 50px;\n    position: absolute; }\n    #mediaControls .play-pause-button.play {\n      background-image: url(" + __webpack_require__(1006) + "); }\n    #mediaControls .play-pause-button.play:hover {\n      background-image: url(" + __webpack_require__(1005) + "); }\n    #mediaControls .play-pause-button.pause {\n      background-image: url(" + __webpack_require__(1004) + "); }\n    #mediaControls .play-pause-button.pause:hover {\n      background-image: url(" + __webpack_require__(1003) + "); }\n  #mediaControls .timeDisplay {\n    position: absolute;\n    width: 80px;\n    height: 50px;\n    vertical-align: middle;\n    top: 0px;\n    right: 100px; }\n    #mediaControls .timeDisplay p {\n      margin-top: 16px;\n      font-size: 14px;\n      font-family: Arial;\n      font-weight: bold;\n      color: white; }\n  #mediaControls .fullscreen-button {\n    background-image: url(" + __webpack_require__(1002) + ");\n    height: 50px;\n    width: 50px;\n    position: absolute;\n    top: 0px;\n    right: 0px; }\n    #mediaControls .fullscreen-button:hover {\n      background-image: url(" + __webpack_require__(1001) + "); }\n  #mediaControls .exit-fullscreen-button {\n    background-image: url(" + __webpack_require__(1000) + ");\n    height: 50px;\n    width: 50px;\n    position: absolute;\n    top: 0px;\n    right: 0px; }\n    #mediaControls .exit-fullscreen-button:hover {\n      background-image: url(" + __webpack_require__(999) + "); }\n  #mediaControls .volume-button-wrapper {\n    height: 50px;\n    width: 50px;\n    position: absolute;\n    top: 0px;\n    right: 50px; }\n    #mediaControls .volume-button-wrapper .volume-button {\n      height: 50px;\n      width: 50px;\n      background-image: url(" + __webpack_require__(1008) + "); }\n      #mediaControls .volume-button-wrapper .volume-button:hover {\n        background-image: url(" + __webpack_require__(467) + "); }\n      #mediaControls .volume-button-wrapper .volume-button.active {\n        background-image: url(" + __webpack_require__(467) + ");\n        background-color: #515255; }\n    #mediaControls .volume-button-wrapper .volume-bar-container {\n      height: 135px;\n      width: 50px;\n      position: absolute;\n      bottom: 50px;\n      right: 0px;\n      background: rgba(51, 51, 51, 0.8);\n      display: none; }\n      #mediaControls .volume-button-wrapper .volume-bar-container.active {\n        display: block; }\n      #mediaControls .volume-button-wrapper .volume-bar-container div.volume-bar-back {\n        background: #636364;\n        height: 94px;\n        width: 8px;\n        top: 21px;\n        left: 21px;\n        border-radius: 4px;\n        position: absolute; }\n      #mediaControls .volume-button-wrapper .volume-bar-container div.volume-bar-filled {\n        background: red;\n        height: 94px;\n        width: 8px;\n        bottom: 0px;\n        border-radius: 4px;\n        position: absolute; }\n      #mediaControls .volume-button-wrapper .volume-bar-container div.volume-bar-slider {\n        background: white;\n        height: 16px;\n        width: 16px;\n        border-radius: 8px;\n        bottom: 84px;\n        left: -4px;\n        position: absolute; }\n", ""]);
 
 	// exports
 
 
 /***/ },
 
-/***/ 740:
+/***/ 739:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(5)();
@@ -1297,13 +1446,13 @@ webpackJsonp([1,13],{
 
 /***/ },
 
-/***/ 971:
+/***/ 970:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(739);
+	var content = __webpack_require__(738);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(6)(content, {});
@@ -1324,13 +1473,13 @@ webpackJsonp([1,13],{
 
 /***/ },
 
-/***/ 972:
+/***/ 971:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(740);
+	var content = __webpack_require__(739);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(6)(content, {});
@@ -1351,70 +1500,70 @@ webpackJsonp([1,13],{
 
 /***/ },
 
-/***/ 1000:
+/***/ 999:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "eec2f74b8f866b95af49f0f1c50eda9c.png"
 
 /***/ },
 
-/***/ 1001:
+/***/ 1000:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "027a93b8e083bdd01acfb6b4744b7b80.png"
 
 /***/ },
 
-/***/ 1002:
+/***/ 1001:
 /***/ function(module, exports) {
 
 	module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUU2Qzk0MEMwQzNFMTFFNEI3NjBBMEFGMTNGODQ3RjciIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUU2Qzk0MEQwQzNFMTFFNEI3NjBBMEFGMTNGODQ3RjciPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5RTZDOTQwQTBDM0UxMUU0Qjc2MEEwQUYxM0Y4NDdGNyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5RTZDOTQwQjBDM0UxMUU0Qjc2MEEwQUYxM0Y4NDdGNyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PjYWAd4AAAFcSURBVHja7JlNK0RhFMfnCsmCpYTyVhYzs/ay8Vq29spCygdQLGz5BHYWdj6APSmmfAAjNQtKkqVSQur63TqLabr3aUq5zvif+m2ec+/t+fW8nacbxXFcaIVoK7RISEQiEpGIRCQiEYlIRCL/R6T9px+4rt4089g2LMIQ9EEXdFvuDSrlUnE5V5EmYx0mMnKJ0KSXqbUEtUC+x4vII6xA1r068rTYtwIdfvUiMmvrJCs+vYjsp4xG3DD1XIiMNAgcQrFuA7j3IrIKz3AJc7AJtzAPVWvP90AkdmDDDrwHa1uAPRiGNTiF/pR3n6D8V0qUKRiHcyjBkXV82jp/7KJEqZv/o0nFkpKveSkaBwK5ZGHvehHpCOSS3enCi0hvYDQOPN1H3gP10wkMehH5COTG4MzLrlWBGei0u8ULfFnZcQdXvyES6Y+VRCQiEYlIRCISkYhEJCKRnOJbgAEAW503Y6nxBqEAAAAASUVORK5CYII="
 
 /***/ },
 
-/***/ 1003:
+/***/ 1002:
 /***/ function(module, exports) {
 
 	module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OEY5NjBFMkMwQzNFMTFFNDg3QzU4NkZFNUMzNjkwQTIiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OEY5NjBFMkQwQzNFMTFFNDg3QzU4NkZFNUMzNjkwQTIiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Rjk2MEUyQTBDM0UxMUU0ODdDNTg2RkU1QzM2OTBBMiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Rjk2MEUyQjBDM0UxMUU0ODdDNTg2RkU1QzM2OTBBMiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PgBSuFkAAAFcSURBVHja7JnNK0RRGIfnakizGEsJZYyywNrHBkPZ2isLKTuSYmHLWthZ2PkD7Ekx5Q+gpmZBSbJUSkhdz62zmKZ7T1PK9Y7fW8/mvPfeztP5ek83CMMw0wzRkmmSkIhEJCIRiUhEIhKRiET+j0j2px9YXVtv5LFNmIFe6IR2yLncG5QP9vfmUhVpMJZgMCEXCY1amVqzUPXk81ZEHmEeku7VgaXFvuHp8KsVkUm3TpLi04rIbsxohHVTz4RIoU7gCIZqNoB7KyIL8AxXMAUrUIFpuHXt6R6IxBYsuwPvwbWVYAf6YBHOoCvm3ScY+SslyhgMwAUMw7Hr+Ljr/ImJEqVm/vfDTUy+aqVo7PbkooW9bUWk1ZOLdqdLKyIdntE4tHQfeffUT6fQY0Xkw5MrwrmVXasME9Dm7hYv8OXKjju4/g2RQH+sJCIRiUhEIhKRiEQkIhGJpBTfAgwABq03Ywl7VTAAAAAASUVORK5CYII="
 
 /***/ },
 
-/***/ 1004:
+/***/ 1003:
 /***/ function(module, exports) {
 
 	module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MjFFNjJGMUMwQzMyMTFFNDg2OThFRDA4NjQ1MDU1REYiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MjFFNjJGMUQwQzMyMTFFNDg2OThFRDA4NjQ1MDU1REYiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDoyMUU2MkYxQTBDMzIxMUU0ODY5OEVEMDg2NDUwNTVERiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDoyMUU2MkYxQjBDMzIxMUU0ODY5OEVEMDg2NDUwNTVERiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PmXk/OwAAABxSURBVHja7NnBCYAwDAXQVtxG3UCn1w3UeWKPIh6FQn0fciiEwCOn0BwRqYV0qZGAgICAgICAgICA/AfSfzVoP863w2Yptd3ec6n12TSNQ7YREBAQEBAQEBAQEBCQysl+rEBAQEBAQEBAQEBAKuUSYADpGAxfbcXnmQAAAABJRU5ErkJggg=="
 
 /***/ },
 
-/***/ 1005:
+/***/ 1004:
 /***/ function(module, exports) {
 
 	module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MTBDMjVEREMwQzMyMTFFNDhBNTZCODVGMURBMDcwRTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MTBDMjVEREQwQzMyMTFFNDhBNTZCODVGMURBMDcwRTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDoxMEMyNUREQTBDMzIxMUU0OEE1NkI4NUYxREEwNzBFNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDoxMEMyNUREQjBDMzIxMUU0OEE1NkI4NUYxREEwNzBFNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PhkOR34AAABySURBVHja7NnBCYAwDAXQVhxLV1KcRHQl3Sv2KOJRKNT3IYdCCDxyCs0RkVpIlxoJCAgICAgICAgIyH8g/VeDpnl5O2zGUuftPZQ6nk37tmYbAQEBAQEBAQEBAQEBqZzsxwoEBAQEBAQEBAQEpFIuAQYAolAMX36mKKEAAAAASUVORK5CYII="
 
 /***/ },
 
-/***/ 1006:
+/***/ 1005:
 /***/ function(module, exports) {
 
 	module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NTE1RTIxOEMwQzMyMTFFNDgwODVBQkFCRDZERkY2QzgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NTE1RTIxOEQwQzMyMTFFNDgwODVBQkFCRDZERkY2QzgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo1MTVFMjE4QTBDMzIxMUU0ODA4NUFCQUJENkRGRjZDOCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo1MTVFMjE4QjBDMzIxMUU0ODA4NUFCQUJENkRGRjZDOCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PhpTvpkAAAEVSURBVHja7Nk9agJBAIbhXU0j2AnW2kZjpwcQEb2CEKyEgE0qIRdIJ15BUK8g6AWsxISoTSBaCqa3CazvwvZa7LrO5Bt4sFJ5d5wf0PU8z7FhJBxLhkIUohCFKEQhClGIQhTyf0Iewvqgr/Xmk5dfvOD72vc9FQt3NyMlVOEHvYX5kOL6aaXwjiXKNqwRf4YWGCBt+mJP4tVfQmjasGvlMMUEWRu23xa2aMM1/RzJYIg58jYciLUgxoqT3bMhZIa6ySFHPKOBvakhIzxifLeXxgtjF1wm51F9QdQz8oc+ilFGRD0jK3SCy6ORl8YTeqjcKiLsGfnAAV383HordPWPlUIUohCFKEQhClGIQhSikJjGWYABANfZKkGRhX4EAAAAAElFTkSuQmCC"
 
 /***/ },
 
-/***/ 1007:
+/***/ 1006:
 /***/ function(module, exports) {
 
 	module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NUFBQUNFQUMwQzMyMTFFNDkzODJFRDZBMDQ3ODExODQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NUFBQUNFQUQwQzMyMTFFNDkzODJFRDZBMDQ3ODExODQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo1QUFBQ0VBQTBDMzIxMUU0OTM4MkVENkEwNDc4MTE4NCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo1QUFBQ0VBQjBDMzIxMUU0OTM4MkVENkEwNDc4MTE4NCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PlzI22IAAAETSURBVHja7NnBikFRAIdxd9hMzU5Zs5XsxgNI4hVozEopGyvlBezkFYTrERQvYCU0ZaPGLKfY26jrU3dvFvfinPmf+mXl3r573HNOcTzPi9gwXiKWDIUoRCEKUYhCFKIQhSjk/4TEgrpQpVrb8HFEA7u/fm/iDp9uRrLI4xrUCfIhPeqn9Youlni34R25ztACfbyZ/rJH0cIXyjasWklM4SJhw/JbwRafcEzfR+IYYI6UDRtiwY+xYmf3bAiZoWhyyAEfKOHH1JAR0hg/7aHxxtj7h8l5WDcIe0bO6CETZkTYM7JC3T88GnloPKGN3L0igp6RNX7RxPe9l0JH/1gpRCEKUYhCFKIQhShEIQp50LgIMACI4SpBTA/25gAAAABJRU5ErkJggg=="
 
 /***/ },
 
-/***/ 1008:
+/***/ 1007:
 /***/ function(module, exports) {
 
 	module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGMAAABjCAYAAACPO76VAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MUFEMDg5Q0Y2NDZCMTFFNEE1NDNEMjQwNzFEQTZDMjAiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MUFEMDg5RDA2NDZCMTFFNEE1NDNEMjQwNzFEQTZDMjAiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDoxQUQwODlDRDY0NkIxMUU0QTU0M0QyNDA3MURBNkMyMCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDoxQUQwODlDRTY0NkIxMUU0QTU0M0QyNDA3MURBNkMyMCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PtUeMXEAAA3vSURBVHja7F0LUBRX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"
 
 /***/ },
 
-/***/ 1009:
+/***/ 1008:
 /***/ function(module, exports) {
 
 	module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NDk3QTBFQUMwQzNFMTFFNDgyOTQ4NDc2NzcwQTA2NTIiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NDk3QTBFQUQwQzNFMTFFNDgyOTQ4NDc2NzcwQTA2NTIiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo0OTdBMEVBQTBDM0UxMUU0ODI5NDg0NzY3NzBBMDY1MiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo0OTdBMEVBQjBDM0UxMUU0ODI5NDg0NzY3NzBBMDY1MiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PhgXCg0AAAHoSURBVHja7JlLKERRGMdnPEYe2Xg1SilWsiMKyUaxwMaClceGFCIlJBbCiigpC7GjLISSKMKQYuOxlUImsSI1pPH/6pu6TTNzb83inBnfqV/n3HO+qfube75zzu3avV6vLRpKjC1KioiIiIiIiIiIiIiIiIiIyP8RiQvnxz29fVbCOkE+GPDrt4MOcA3OfJ3zc7PaPRG60QmwCJICjJfx2AGo1HVqxYNlMBIi5hJcgESwBtJ0E0kBW6DVJM4D6sELcPLT00YkCxyCmiDjBWAFlPP1KxjldjvIViVC/+I0mAQlwAWKQ8R3gxawCXK4j8QegAM0qxKhHBgEQ+AY5JnEU3J/gXQwzn2/PBWpVOswtRIsxNBSO8PtRl4UqBxxXRhJG+Iu16mG6fXMdWak7+yOSDyi1HL9AR657TSsYspFPBZiKAf6ub0BfrjtW45vVYnQcnsFTkAVuDeJ7+LjyjsY475Y0MDtfSWHRpQKv2v6Z3dAUZD4BZAMlgzTivaVXPAN1nXJETc/mb0g43d84y6+zjAcTWhjfNIp2T9BHVi1sO9sc6K7TQ6YylYtSuI2MBUihqZfKU+pJvCm7MXKpNAXpGHOhUBHl3NO/htwGvbLj3yxEhERERERERERERERERERERFF5U+AAQDRhlM0hExahgAAAABJRU5ErkJggg=="

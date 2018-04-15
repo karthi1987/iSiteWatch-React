@@ -12,37 +12,26 @@ import isEqual from 'lodash/isEqual';
 import AppStore from './app-store';
 //actionCreatiors
 import {
-    emulatorSession,
-    rvHostSession,
     checkSession,
-    checkStaticToken,
-    triggerRefresh,
     getViewportSize,
     extendSession,
     getRoute,
-    setRvHostStatus,
-    LogServerResponse,
-    setRvInitialization
+    LogServerResponse
 } from './app-store';
 import { loadNav } from './nav/nav-actions-reducers';
 //utils
 import { setCoreREMSize, disableResize, msViewPortFix, getRandomIntInclusive } from './utils/utils';
 //shared
 import Header from './header/header';
-import TickerView from './shared/ticker/ticker-view';
-import { Nav, NavItem } from './nav/nav';
+import { Nav } from './nav/nav';
 import Overlay from 'app/shared/overlay/overlay';
 import { Loader } from 'app/shared/loader/loader';
-import AttractLoop from 'app/shared/attract-loop/attract-loop';
-import { resetAttractLoopTimeout } from 'app/shared/attract-loop/attract-loop-actions-reducers';
 //helpers
 import {
     Page404,
     PageNotAvailable,
     PageNotAuthorized,
-    RvError,
-    ScoreCardDrillDownReportTab,
-    RvInitializing
+    RvError
 } from './app-helpers';
 //scss
 import '../framework/scss/app.scss';
@@ -58,21 +47,13 @@ import '../framework/scss/app.scss';
  * 1. App (root level component)
  */
 const App = connectAndMap(
-    [ 'app', 'app.session', 'nav', 'attractLoop' ],
+    [ 'app', 'app.session', 'nav' ],
     {
-        emulatorSession,
-        rvHostSession,
         checkSession,
-        checkStaticToken,
-        extendSession,
-        triggerRefresh,
         getViewportSize,
         extendSession,
         getRoute,
-        loadNav,
-        resetAttractLoopTimeout,
-        setRvHostStatus,
-        setRvInitialization
+        loadNav
     }
 )(
     class extends React.Component {
@@ -417,15 +398,9 @@ const AppRouter = props => (
     <Router history={ browserHistory } onUpdate={ getRoute }>
         <Route path={ APP_PATH } component={ App }>
             <Route path="login/" getComponent={ requireLoginComponent } />
-            <Route path="login/backdoor" getComponent={ requireBackdoorLoginComponent } />
             <Route path="logout/" getComponent={ requireLogoutComponent } />
             <Route path="home" getComponent={ requireHomeComponent } />
             <Route path="customer-support" getComponent={ requireCustomerSupportComponent } />
-            <Route path="scorecard" getComponent={ requireScorecardComponent } onChange={ getRoute }>
-                <Route path="gauges/graph" getComponent={ requireScorecardGaugesComponent } />
-                <Route path="gauges/list" getComponent={ requireScorecardListViewComponent } />
-                <Route path="drilldown-report" getComponent={ requireScorecardDrillDownReportComponent } />
-            </Route>
             <Route path="zone/:id" getComponent={ requireZoneComponent } />
             <Route path="service-notavailable" component={ PageNotAvailable } />
             <Route path="non-authorized" component={ PageNotAuthorized } />
@@ -464,61 +439,10 @@ function requireLogoutComponent( location, callback ) {
     }, 'logout' );
 }
 
-function requireBackdoorLoginComponent( location, callback ) {
-    require.ensure( [], function ( require ) {
-        callback( null, require( './views/login/login.jsx' ).default );
-    }, 'backdoor' );
-}
-
 function requireHomeComponent( location, callback ) {
     require.ensure( [], function ( require ) {
         callback( null, require( './views/home/home.jsx' ).default );
     }, 'home' );
-}
-
-function requireScorecardComponent( location, callback ) {
-    require.ensure( [], function ( require ) {
-        callback( null, require( './views/scorecard/scorecard.jsx' ).default );
-    }, 'scorecard' );
-}
-function requireScorecardGaugesComponent( location, callback ) {
-    require.ensure( [], function ( require ) {
-        callback( null, require( './views/scorecard/scorecard-gauges.jsx' ).default );
-    }, 'scorecardGauges' );
-}
-function requireScorecardListViewComponent( location, callback ) {
-    require.ensure( [], function ( require ) {
-        callback( null, require( './views/scorecard/scorecard-list-view.jsx' ).default );
-    }, 'scorecardListView' );
-}
-function requireScorecardDrillDownReportComponent( location, callback ) {
-    require.ensure( [], function ( require ) {
-        callback( null, require( './views/scorecard/scorecard-drilldown-report.jsx' ).default );
-    }, 'ScorecardDrilldownReport' );
-}
-
-function requireLeaderboardComponent( location, callback ) {
-    require.ensure( [], function ( require ) {
-        callback( null, require( './views/leaderboard/leaderboard.jsx' ).default );
-    }, 'leaderboard' );
-}
-
-function requireQuickhitsComponent( location, callback ) {
-    require.ensure( [], function ( require ) {
-        callback( null, require( './views/quick-hits/quick-hits.jsx' ).default );
-    }, 'quickhits' );
-}
-
-function requireVideosComponent( location, callback ) {
-    require.ensure( [], function ( require ) {
-        callback( null, require( './views/videos/videos.jsx' ).default );
-    }, 'videos' );
-}
-
-function requireAgendaComponent( location, callback ) {
-    require.ensure( [], function ( require ) {
-        callback( null, require( './views/agenda/agenda.jsx' ).default );
-    }, 'agenda' );
 }
 
 function requireZoneComponent( location, callback ) {
@@ -531,5 +455,4 @@ function requireCustomerSupportComponent( location, callback ) {
     require.ensure( [], function ( require ) {
         callback( null, require( './views/customer-support/customer-support.jsx' ).default );
     }, 'CustomerSupport' );
-
 }

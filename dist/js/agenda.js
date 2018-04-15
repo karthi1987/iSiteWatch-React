@@ -78,7 +78,7 @@ webpackJsonp([8,13],{
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(62);
+	var content = __webpack_require__(63);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(6)(content, {});
@@ -231,7 +231,7 @@ webpackJsonp([8,13],{
 
 /***/ },
 
-/***/ 62:
+/***/ 63:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(5)();
@@ -288,13 +288,13 @@ webpackJsonp([8,13],{
 
 /***/ },
 
-/***/ 484:
+/***/ 480:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';Object.defineProperty(exports, "__esModule", { value: true });var _extends = Object.assign || function (target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i];for (var key in source) {if (Object.prototype.hasOwnProperty.call(source, key)) {target[key] = source[key];}}}return target;};var _createClass = function () {function defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}return function (Constructor, protoProps, staticProps) {if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;};}();
 	var _react = __webpack_require__(4);var _react2 = _interopRequireDefault(_react);
 	var _lodash = __webpack_require__(24);
-	var _classnames = __webpack_require__(65);var _classnames2 = _interopRequireDefault(_classnames);
+	var _classnames = __webpack_require__(60);var _classnames2 = _interopRequireDefault(_classnames);
 
 	var _utils = __webpack_require__(13);
 
@@ -578,7 +578,216 @@ webpackJsonp([8,13],{
 
 /***/ },
 
-/***/ 497:
+/***/ 493:
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';Object.defineProperty(exports, "__esModule", { value: true });var _extends = Object.assign || function (target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i];for (var key in source) {if (Object.prototype.hasOwnProperty.call(source, key)) {target[key] = source[key];}}}return target;};exports.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	getAgendaData = getAgendaData;exports.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	openAgendaSubSheet = openAgendaSubSheet;exports.
+
+
+
+
+
+
+
+	closeAgendaSubSheet = closeAgendaSubSheet;exports.default =
+
+
+
+
+
+
+
+
+
+
+	agenda;var _ajax = __webpack_require__(27);var ajax = _interopRequireWildcard(_ajax);var _endpoints = __webpack_require__(21);var _endpoints2 = _interopRequireDefault(_endpoints);var _appLang = __webpack_require__(19);var _utils = __webpack_require__(13);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _interopRequireWildcard(obj) {if (obj && obj.__esModule) {return obj;} else {var newObj = {};if (obj != null) {for (var key in obj) {if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key];}}newObj.default = obj;return newObj;}}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;} /*******************************************************************************
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            *
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            *   1. Default State
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            *   2. Action Types
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            *   3. ACtion Creators
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            *   4. Reducers
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            *
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            */ /*******************************************************************************
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *  1. Default State
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */var agendaState = { open: false, agendaSheetOpened: false, data: false, agendaSubsheetData: {}, originalHierarchy: {}, hierarchy: {}, drilldown: { channel: {}, region: {}, district: {}, area: {}, office: {} } }; /*******************************************************************************
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       *  2. Action Types
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       */var TYPEs = { AGENDA_DATA: 'agendaViewData', AGENDA_ERROR_REPORT: 'agendaErrorReport', LOAD_AGENDA_DATA: 'loadAgendaViewData', OPEN_AGENDA_SUB_SHEET: 'openAgendaViewSubSheet', CLOSE_AGENDA_SUB_SHEET: 'closeAgendaViewSubSheet', SET_HIERARCHY: 'setHierarchy', CHECK_SESSION: 'checkSession' }; /*******************************************************************************
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             *  3. Action Creators
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             */function getAgendaData(hierarchyIds) {var cleanedIds = (0, _utils.cleanHierarchyIds)(hierarchyIds);return function (dispatch) {var type = TYPEs.AGENDA_DATA;dispatch(ajax.loading(type));(0, ajax.default)({ url: _endpoints2.default.AGENDA, data: cleanedIds, success: function success(results) {if (!results.success) {dispatch(ajax.loadingError(type, results.errorMessage));} else {dispatch({ type: TYPEs.LOAD_AGENDA_DATA, data: results.data, hierarchyIds: hierarchyIds });dispatch(ajax.loaded(type));var hasResults = results.data.agendaByMonth.length > 0;dispatch(ajax.handleResultsMessage(type, hasResults, (0, _appLang.ERRORs)().AGENDA_VIEW_NO_RESULTS));}}, fail: function fail(error) {dispatch(ajax.loadingError(type, error.textStatus));} });};}function openAgendaSubSheet(data) {return { type: TYPEs.OPEN_AGENDA_SUB_SHEET, agendaSheetOpened: true, data: data };}function closeAgendaSubSheet() {return { type: TYPEs.CLOSE_AGENDA_SUB_SHEET, agendaSheetOpened: false };} /*******************************************************************************
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          *  4. Reducers
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          */function agenda() {var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : agendaState;var action = arguments[1];switch (action.type) {case TYPEs.LOAD_AGENDA_DATA:return _extends({}, state, { data: action.data, error: false, message: null });case TYPEs.AGENDA_ERROR_REPORT:return _extends({}, state, { error: action.error, message: action.message });
+	        case TYPEs.OPEN_AGENDA_SUB_SHEET:
+	            return _extends({},
+	            state, {
+	                agendaSheetOpened: action.agendaSheetOpened,
+	                agendaSubsheetData: action.data });
+
+	        case TYPEs.CLOSE_AGENDA_SUB_SHEET:
+	            return _extends({},
+	            state, {
+	                agendaSheetOpened: action.agendaSheetOpened });
+
+	        case TYPEs.CHECK_SESSION:
+	        case TYPEs.SET_HIERARCHY:
+	            return _extends({},
+	            state, {
+	                hierarchy: action.hierarchy,
+	                originalHierarchy: action.hierarchy });
+
+
+	        case _appLang.FILTER_TYPEs.LOAD_AGENDA_CHANNEL_FILTERS:
+	        case _appLang.FILTER_TYPEs.LOAD_AGENDA_REGION_FILTERS:
+	        case _appLang.FILTER_TYPEs.LOAD_AGENDA_DISTRICT_FILTERS:
+	        case _appLang.FILTER_TYPEs.LOAD_AGENDA_AREA_FILTERS:
+	        case _appLang.FILTER_TYPEs.LOAD_AGENDA_OFFICE_FILTERS:
+
+	            var returnObj = _extends({},
+	            state, {
+	                hierarchy: {
+	                    ids: _extends({},
+	                    action.hierarchyIds, _defineProperty({},
+	                    action.key, action.filters && action.filters.length > 0 ? action.filters[0].id : false)) },
+
+
+	                drilldown: _extends({},
+	                state.drilldown, _defineProperty({},
+	                action.key, {
+	                    filters: action.filters,
+	                    ddKey: action.ddKey,
+	                    hideSelectBox: false })) });
+
+
+
+
+	            /* Hide Area and Office, if selectedDropdown is District and the value is ALL */
+	            if (returnObj && returnObj.drilldown && action.hierarchyIds) {
+	                var district = action.hierarchyIds.district;
+	                if (district && district === 'ALL') {
+	                    if (returnObj.drilldown.area) {
+	                        returnObj.drilldown.area.hideSelectBox = true;
+	                    }
+	                    if (returnObj.drilldown.office) {
+	                        returnObj.drilldown.office.hideSelectBox = true;
+	                    }
+	                }
+	            }
+
+	            return returnObj;
+
+	        case _appLang.FILTER_TYPEs.CLEAR_AGENDA_DRILLDOWN_FILTERS:
+	            return _extends({},
+	            state, {
+	                drilldown: _extends({},
+	                state.drilldown, _defineProperty({},
+	                action.key, {})) });
+
+
+
+	        case _appLang.FILTER_TYPEs.RESET_AGENDA_HIERARCHY_AND_FILTERS:
+	            return _extends({},
+	            state, {
+	                drilldown: agendaState.drilldown,
+	                hierarchy: state.originalHierarchy });
+
+
+	        default:
+	            return state;}
+
+
+	}
+
+/***/ },
+
+/***/ 494:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';Object.defineProperty(exports, "__esModule", { value: true });var _createClass = function () {function defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}return function (Constructor, protoProps, staticProps) {if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;};}();
@@ -587,16 +796,16 @@ webpackJsonp([8,13],{
 	var _reactAddonsCssTransitionGroup = __webpack_require__(140);var _reactAddonsCssTransitionGroup2 = _interopRequireDefault(_reactAddonsCssTransitionGroup);
 	var _momentTimezone = __webpack_require__(30);var _momentTimezone2 = _interopRequireDefault(_momentTimezone);
 
-	var _agendaActionsReducers = __webpack_require__(229);
+	var _agendaActionsReducers = __webpack_require__(493);
 
 	var _utils = __webpack_require__(13);
 	var _webTrack = __webpack_require__(32);var _webTrack2 = _interopRequireDefault(_webTrack);
 
-	var _filtersAgenda = __webpack_require__(484);var _filtersAgenda2 = _interopRequireDefault(_filtersAgenda);
+	var _filtersAgenda = __webpack_require__(480);var _filtersAgenda2 = _interopRequireDefault(_filtersAgenda);
 	var _errorMessage = __webpack_require__(37);var _errorMessage2 = _interopRequireDefault(_errorMessage);
 	var _icons = __webpack_require__(25);var _icons2 = _interopRequireDefault(_icons);
 
-	__webpack_require__(964);
+	__webpack_require__(963);
 
 	var _appLang = __webpack_require__(19);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self, call) {if (!self) {throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call && (typeof call === "object" || typeof call === "function") ? call : self;}function _inherits(subClass, superClass) {if (typeof superClass !== "function" && superClass !== null) {throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);}subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;} //libs and utilities
 	//action-creators
@@ -906,7 +1115,7 @@ webpackJsonp([8,13],{
 
 /***/ },
 
-/***/ 732:
+/***/ 731:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(5)();
@@ -921,13 +1130,13 @@ webpackJsonp([8,13],{
 
 /***/ },
 
-/***/ 964:
+/***/ 963:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(732);
+	var content = __webpack_require__(731);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(6)(content, {});

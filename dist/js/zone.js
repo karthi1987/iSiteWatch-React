@@ -1,9 +1,9 @@
-webpackJsonp([3,13],{
+webpackJsonp([0,5],{
 
-/***/ 86:
+/***/ 70:
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(5)();
+	exports = module.exports = __webpack_require__(18)();
 	// imports
 
 
@@ -15,16 +15,16 @@ webpackJsonp([3,13],{
 
 /***/ },
 
-/***/ 92:
+/***/ 75:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(86);
+	var content = __webpack_require__(70);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(6)(content, {});
+	var update = __webpack_require__(21)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -42,37 +42,33 @@ webpackJsonp([3,13],{
 
 /***/ },
 
-/***/ 515:
+/***/ 446:
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';Object.defineProperty(exports, "__esModule", { value: true });var _extends = Object.assign || function (target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i];for (var key in source) {if (Object.prototype.hasOwnProperty.call(source, key)) {target[key] = source[key];}}}return target;};var _createClass = function () {function defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}return function (Constructor, protoProps, staticProps) {if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;};}();var _react = __webpack_require__(4);var _react2 = _interopRequireDefault(_react);
-	var _utils = __webpack_require__(13);
+	'use strict';Object.defineProperty(exports, "__esModule", { value: true });var _extends = Object.assign || function (target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i];for (var key in source) {if (Object.prototype.hasOwnProperty.call(source, key)) {target[key] = source[key];}}}return target;};var _createClass = function () {function defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}return function (Constructor, protoProps, staticProps) {if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;};}();var _react = __webpack_require__(5);var _react2 = _interopRequireDefault(_react);
+	var _utils = __webpack_require__(33);
+	var _redux = __webpack_require__(58);
+	var _reactRedux = __webpack_require__(122);
 
-	var _redux = __webpack_require__(72);
-	var _reactRedux = __webpack_require__(141);
+	var _reactImageGallery = __webpack_require__(756);var _reactImageGallery2 = _interopRequireDefault(_reactImageGallery);
+	var _reactDatepicker = __webpack_require__(754);var _reactDatepicker2 = _interopRequireDefault(_reactDatepicker);
+	var _moment = __webpack_require__(2);var _moment2 = _interopRequireDefault(_moment);
+	var _propTypes = __webpack_require__(85);var _propTypes2 = _interopRequireDefault(_propTypes);
+	var _classnames = __webpack_require__(97);var _classnames2 = _interopRequireDefault(_classnames);
 
-	var _reactImageGallery = __webpack_require__(839);var _reactImageGallery2 = _interopRequireDefault(_reactImageGallery);
-	var _reactDatepicker = __webpack_require__(837);var _reactDatepicker2 = _interopRequireDefault(_reactDatepicker);
-	var _moment = __webpack_require__(1);var _moment2 = _interopRequireDefault(_moment);
-
-	var _propTypes = __webpack_require__(99);var _propTypes2 = _interopRequireDefault(_propTypes);
-
-	var _zoneActionsReducers = __webpack_require__(162);
-
-	__webpack_require__(952);
-
-	__webpack_require__(951);
+	var _zoneActionsReducers = __webpack_require__(135);
+	__webpack_require__(860);
+	__webpack_require__(859);
 
 
-	__webpack_require__(92);
-	__webpack_require__(973);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self, call) {if (!self) {throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call && (typeof call === "object" || typeof call === "function") ? call : self;}function _inherits(subClass, superClass) {if (typeof superClass !== "function" && superClass !== null) {throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);}subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;} // ES6
+	__webpack_require__(75);
+	__webpack_require__(868);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self, call) {if (!self) {throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call && (typeof call === "object" || typeof call === "function") ? call : self;}function _inherits(subClass, superClass) {if (typeof superClass !== "function" && superClass !== null) {throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);}subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;} // ES6
 	//scss
 	var HomeCell = function HomeCell(props) {return (
 	        _react2.default.createElement('div', { className: 'Home_cell Home_cell--' + props.module },
 	            _react2.default.createElement('div', { className: 'Home_cellInner' },
 	                _react2.default.createElement('div', { className: 'Home_cellContent' },
 	                    props.children))));};
-
 
 
 
@@ -95,15 +91,25 @@ webpackJsonp([3,13],{
 
 
 	        _this.handleChange = _this.handleChange.bind(_this);
-	        _this.datePreviewChange = _this.datePreviewChange.bind(_this);return _this;
+	        _this.getLocationInfo = _this.getLocationInfo.bind(_this);
+	        _this.datePreviewChange = _this.datePreviewChange.bind(_this);
+	        _this.setLocationsTemplate = _this.setLocationsTemplate.bind(_this);return _this;
 	    }_createClass(ZoneModule, [{ key: 'componentWillMount', value: function componentWillMount()
 
-	        {
+	        {var _props =
+
+
+
+
+	            this.props,_props$app = _props.app,session = _props$app.session,user = _props$app.user,id = _props.params.id,data = _props.dashboard.data;
+
 	            this.props.actions.loadZoneData({
 	                session: this.props.app.session,
 	                user: this.props.app.user,
 	                startDate: this.state.startDate,
-	                endDate: this.state.endDate });
+	                endDate: this.state.endDate,
+	                locationId: this.props.params.id,
+	                dashboardInfo: data.locations || [] });
 
 	        } }, { key: 'componentWillReceiveProps', value: function componentWillReceiveProps(
 
@@ -130,14 +136,36 @@ webpackJsonp([3,13],{
 	        } }, { key: 'handleChange', value: function handleChange(
 
 	        selectedDate) {
-	            this.props.setSelectedDate(selectedDate);
+	            this.props.actions.setSelectedDate((0, _moment2.default)(selectedDate));
 	        } }, { key: 'datePreviewChange', value: function datePreviewChange(
 
 	        item) {
-	            this.props.setSelectedDate((0, _moment2.default)(item.label));
+	            this.props.actions.setSelectedDate((0, _moment2.default)(item.label));
+	        } }, { key: 'getLocationInfo', value: function getLocationInfo()
+
+	        {var
+
+	            data =
+	            this.props.dashboard.data;
+	            var location = [];
+	            if (data && data.locations && data.locations.length > 0) {
+	                var filteredLocation = _.filter(data.locations, { 'location_id': this.props.params.id });
+	                if (filteredLocation && filteredLocation.length > 0) {
+	                    location = filteredLocation[0];
+	                }
+	            }
+	            return location;
+	        } }, { key: 'setLocationsTemplate', value: function setLocationsTemplate()
+
+	        {
+	            var locationInfo = this.getLocationInfo();
+	            if (locationInfo) {
+	                return _react2.default.createElement(LocationToggleContent, locationInfo);
+	            }
+	            return _react2.default.createElement('div', null);
 	        } }, { key: 'render', value: function render()
 
-	        {var _props =
+	        {var _this2 = this;var _props2 =
 
 
 
@@ -145,7 +173,15 @@ webpackJsonp([3,13],{
 
 
 
-	            this.props,_props$app = _props.app,loading = _props$app.loading,loaded = _props$app.loaded,session = _props$app.session,user = _props$app.user,viewport = _props$app.viewport,data = _props.dashboard.data,zone = _props.zone;
+	            this.props,_props2$app = _props2.app,loading = _props2$app.loading,loaded = _props2$app.loaded,session = _props2$app.session,user = _props2$app.user,viewport = _props2$app.viewport,data = _props2.dashboard.data,zone = _props2.zone;
+
+	            var LocationName = 'Zone Name';
+	            if (data && data.locations.length > 0) {
+	                var filteredLocation = _.filter(data.locations, { 'location_id': this.props.params.id });
+	                if (filteredLocation && filteredLocation.length > 0) {
+	                    LocationName = filteredLocation[0].location_name;
+	                }
+	            }
 
 	            if (!this.state.selectedItem) {
 	                return false;
@@ -158,15 +194,16 @@ webpackJsonp([3,13],{
 	                            _react2.default.createElement('div', { className: 'module-grid single' },
 	                                _react2.default.createElement(HomeCell, { module: 'scorecardmodule' },
 	                                    _react2.default.createElement('div', { className: 'zone-page' },
-	                                        _react2.default.createElement('div', null, 'Zone page',
-
+	                                        _react2.default.createElement('div', null,
+	                                            _react2.default.createElement('h2', null, LocationName, ' DETAIL & 1 WEEK HISTORY'),
 	                                            _react2.default.createElement('div', { className: 'horizontal-line' }),
+	                                            _react2.default.createElement('h3', null, 'Simply change the date for additional pictures'),
 
 	                                            this.state.selectedItem &&
 	                                            this.state.selectedItem.label &&
 	                                            _react2.default.createElement(_reactDatepicker2.default, {
 	                                                selected: (0, _moment2.default)(this.state.selectedItem.label),
-	                                                onChange: this.handleChange,
+	                                                onChange: function onChange(eventDate) {_this2.handleChange(eventDate);},
 	                                                minDate: (0, _moment2.default)().subtract(6, "days"),
 	                                                maxDate: (0, _moment2.default)() }),
 
@@ -175,7 +212,15 @@ webpackJsonp([3,13],{
 
 	                                        _react2.default.createElement('div', { className: 'zone-hero-image-date-thumbnails' },
 	                                            _react2.default.createElement('div', { className: 'hero-container' },
-	                                                _react2.default.createElement(_reactImageGallery2.default, { lazyLoad: 'true', items: this.state.selectedItem.items })),
+
+	                                                this.state.selectedItem.items &&
+	                                                this.state.selectedItem.items.length &&
+	                                                this.state.selectedItem.items.length > 0 &&
+	                                                _react2.default.createElement(_reactImageGallery2.default, {
+	                                                    lazyload: 'true',
+	                                                    items: this.state.selectedItem.items })),
+
+
 
 	                                            _react2.default.createElement('div', { className: 'date-container' },
 
@@ -183,11 +228,15 @@ webpackJsonp([3,13],{
 	                                                zone.data.oneWeekDay &&
 	                                                zone.data.oneWeekDay.length > 0 &&
 	                                                _react2.default.createElement(ThumbnailsDates, _extends({},
-	                                                zone.data, {
-	                                                    datePreviewChange: this.datePreviewChange })))))))))));
+	                                                zone.data,
+	                                                this.state.selectedItem, {
+	                                                    datePreviewChange: this.datePreviewChange })))),
 
 
 
+
+	                                        _react2.default.createElement('div', { className: 'location-details' },
+	                                            this.setLocationsTemplate()))))))));
 
 
 
@@ -224,26 +273,110 @@ webpackJsonp([3,13],{
 
 
 	var ThumbnailsDates = function ThumbnailsDates(_ref) {var oneWeekDay = _ref.oneWeekDay,datePreviewChange = _ref.datePreviewChange;
+	    /* Render Images */
+	    var imagePath = APP_PATH + "/assets/images/no-image-available.png";
+	    var renderFullImages = [];
+	    var renderImages = function renderImages() {
+	        oneWeekDay &&
+	        oneWeekDay.length > 0 &&
+	        oneWeekDay.map(
+	        function (metric, i) {
+	            metric.show &&
+
+	            renderFullImages.push(
+	            _react2.default.createElement('div', { key: i, className: 'metric', onClick: function onClick(event) {
+	                        datePreviewChange(metric);
+	                    } },
+	                _react2.default.createElement('div', { className: 'value' }, ' ', (0, _moment2.default)(metric.label).format('YYYY-MM-DD'), ' '),
+	                _react2.default.createElement('div', { className: 'label' },
+
+	                    metric.items &&
+	                    metric.items.length > 0 &&
+	                    metric.items[0] &&
+	                    metric.items[0].thumbnail &&
+	                    _react2.default.createElement('img', { src: metric.items[0].thumbnail, width: '200' }),
+
+
+	                    metric.items &&
+	                    !metric.items.length &&
+	                    _react2.default.createElement('img', { src: imagePath, width: '200' }))));
+
+
+
+
+	        });
+
+	        return renderFullImages;
+	    };
 
 	    return (
 	        _react2.default.createElement('div', { className: 'thumbnail-parent-wrapper' },
-
-	            oneWeekDay &&
-	            oneWeekDay.map(
-	            function (metric, i) {return (
-	                    _react2.default.createElement('div', { key: i, className: 'metric', onClick: function onClick() {
-	                                datePreviewChange(metric);
-	                            } },
-	                        _react2.default.createElement('div', { className: 'value' }, ' ', (0, _moment2.default)(metric.label).format('YYY-MM-DD'), ' '),
-	                        _react2.default.createElement('div', { className: 'label' },
-
-	                            metric.items &&
-	                            metric.items.length > 0 &&
-	                            _react2.default.createElement('img', { src: metric.items[0].thumbnail, width: '200' }))));})));
+	            renderImages()));
 
 
+	};
+
+	/* 
+	    * Location Toggle content 
+	    *
+	    */
+
+	var LocationToggleContent = function LocationToggleContent(props) {
+
+	    if (!props) {
+	        return _react2.default.createElement('div', null);
+	    }
+
+	    var combinedResults = [];
+	    props.events &&
+	    props.events.length &&
+	    props.events.length > 0 &&
+	    props.events.map(
+	    function (prop, index) {
+	        prop &&
+	        prop.event_value &&
+	        prop.event_value.length > 0 &&
+	        prop.event_value.map(
+	        function (item, idx) {
+	            combinedResults.push(
+	            _react2.default.createElement('li', { key: index + '-' + idx, className: 'list-group-item clearfix d-block' },
+	                _react2.default.createElement('i', { className: 'fa fa-industry fa-fw' }), item.sensor_id,
+	                _react2.default.createElement('span', { className: (0, _classnames2.default)(
+	                        'float-right text-muted small',
+	                        {
+	                            'bg-red': item.event_level == 'alert',
+	                            'bg-warning': item.event_level == 'warning',
+	                            'bg-light-blue': item.event_level == 'message' }) },
 
 
+	                    _react2.default.createElement('em', null, item.event_value))));
+
+
+
+	        });
+
+	    });
+
+
+	    combinedResults.push(
+	    _react2.default.createElement('li', { key: 'unique-coordinates', className: 'list-group-item clearfix d-block' },
+	        _react2.default.createElement('i', { className: 'fa fa-id-card-o fa-fw' }), ' GEO Coordinates',
+	        _react2.default.createElement('span', { className: 'float-right text-muted small' },
+	            _react2.default.createElement('em', null, props.location_location))));
+
+
+	    combinedResults.push(_react2.default.createElement('li', { key: 'unique-updated', className: 'list-group-item clearfix d-block' },
+	        _react2.default.createElement('i', { className: 'fa fa-object-group fa-fw' }), ' Last update',
+	        _react2.default.createElement('span', { className: 'float-right text-muted small' },
+	            _react2.default.createElement('em', null, (0, _moment2.default)(props.location_lastupdate).format('YYYY-MM-DD hh:mm')))));
+
+
+
+
+	    return (
+	        _react2.default.createElement('div', { className: 'list-group  no-padding' },
+	            _react2.default.createElement('ul', null,
+	                combinedResults)));
 
 
 
@@ -251,10 +384,10 @@ webpackJsonp([3,13],{
 
 /***/ },
 
-/***/ 719:
+/***/ 649:
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(5)();
+	exports = module.exports = __webpack_require__(18)();
 	// imports
 
 
@@ -266,10 +399,10 @@ webpackJsonp([3,13],{
 
 /***/ },
 
-/***/ 720:
+/***/ 650:
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(5)();
+	exports = module.exports = __webpack_require__(18)();
 	// imports
 
 
@@ -281,22 +414,22 @@ webpackJsonp([3,13],{
 
 /***/ },
 
-/***/ 741:
+/***/ 659:
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(5)();
+	exports = module.exports = __webpack_require__(18)();
 	// imports
 
 
 	// module
-	exports.push([module.id, ".zone-page {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-flow: column wrap;\n          flex-flow: column wrap;\n  width: 100%; }\n  .zone-page .zone-hero-image-date-thumbnails {\n    display: -webkit-box;\n    display: -webkit-flex;\n    display: flex;\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: normal;\n    -webkit-flex-flow: row nowrap;\n            flex-flow: row nowrap;\n    width: 100%;\n    -webkit-box-pack: start;\n    -webkit-justify-content: flex-start;\n            justify-content: flex-start;\n    -webkit-box-align: start;\n    -webkit-align-items: flex-start;\n            align-items: flex-start; }\n  .zone-page .hero-container {\n    display: -webkit-box;\n    display: -webkit-flex;\n    display: flex;\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: normal;\n    -webkit-flex-flow: row nowrap;\n            flex-flow: row nowrap;\n    width: 70%; }\n  .zone-page .date-container {\n    display: -webkit-box;\n    display: -webkit-flex;\n    display: flex;\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: normal;\n    -webkit-flex-flow: row wrap;\n            flex-flow: row wrap;\n    width: 30%; }\n    .zone-page .date-container .thumbnail-parent-wrapper {\n      display: -webkit-box;\n      display: -webkit-flex;\n      display: flex;\n      -webkit-flex-wrap: wrap;\n              flex-wrap: wrap; }\n  .zone-page .metric {\n    display: -webkit-box;\n    display: -webkit-flex;\n    display: flex;\n    -webkit-box-flex: 1;\n    -webkit-flex-grow: 1;\n            flex-grow: 1;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n    -webkit-flex-flow: column nowrap;\n            flex-flow: column nowrap;\n    cursor: pointer; }\n\n.horizontal-line {\n  width: 100%;\n  margin-top: 1rem;\n  margin-bottom: 1rem;\n  border: 0;\n  border-top: 1px solid rgba(0, 0, 0, 0.1); }\n\n.react-datepicker__input-container input {\n  font-size: 1.1em;\n  font-weight: 700; }\n\n.image-gallery {\n  width: 95%;\n  -webkit-transition: all 1s ease;\n  transition: all 1s ease; }\n  .image-gallery .image-gallery-content {\n    position: relative;\n    line-height: 0;\n    top: 0; }\n    .image-gallery .image-gallery-content .image-gallery-slide-wrapper {\n      position: relative; }\n  .image-gallery .image-gallery-slides {\n    line-height: 0;\n    overflow: hidden;\n    position: relative;\n    white-space: nowrap; }\n    .image-gallery .image-gallery-slides .image-gallery-slide {\n      background: #fff;\n      left: 0;\n      top: 0;\n      width: 100%; }\n      .image-gallery .image-gallery-slides .image-gallery-slide .image-gallery-description {\n        background: rgba(0, 0, 0, 0.4);\n        bottom: 70px;\n        color: #fff;\n        left: 0;\n        line-height: 1;\n        padding: 10px 20px;\n        position: absolute;\n        white-space: normal; }\n      .image-gallery .image-gallery-slides .image-gallery-slide img {\n        width: 100%; }\n      .image-gallery .image-gallery-slides .image-gallery-slide .image-gallery-image {\n        line-height: 0;\n        overflow: hidden;\n        position: relative;\n        white-space: nowrap; }\n", ""]);
+	exports.push([module.id, ".zone-page {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-flow: column wrap;\n          flex-flow: column wrap;\n  width: 100%;\n  color: #868e96; }\n  .zone-page h2 {\n    color: #868e96;\n    padding: 1% 0 0 1%;\n    font-weight: 600;\n    text-transform: uppercase; }\n  .zone-page h3 {\n    color: #868e96;\n    padding: 0 0 0 1%;\n    font-weight: 500; }\n  .zone-page .react-datepicker-wrapper {\n    padding: 1% 0 0 1%; }\n  .zone-page .zone-hero-image-date-thumbnails {\n    display: -webkit-box;\n    display: -webkit-flex;\n    display: flex;\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: normal;\n    -webkit-flex-flow: row nowrap;\n            flex-flow: row nowrap;\n    width: 100%;\n    -webkit-box-pack: start;\n    -webkit-justify-content: flex-start;\n            justify-content: flex-start;\n    -webkit-box-align: start;\n    -webkit-align-items: flex-start;\n            align-items: flex-start; }\n  .zone-page .hero-container {\n    display: -webkit-box;\n    display: -webkit-flex;\n    display: flex;\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: normal;\n    -webkit-flex-flow: row nowrap;\n            flex-flow: row nowrap;\n    width: 70%; }\n  .zone-page .date-container {\n    display: -webkit-box;\n    display: -webkit-flex;\n    display: flex;\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: normal;\n    -webkit-flex-flow: row wrap;\n            flex-flow: row wrap;\n    width: 30%; }\n    .zone-page .date-container .thumbnail-parent-wrapper {\n      display: -webkit-box;\n      display: -webkit-flex;\n      display: flex;\n      -webkit-flex-wrap: wrap;\n              flex-wrap: wrap; }\n      .zone-page .date-container .thumbnail-parent-wrapper img {\n        width: 150px;\n        height: auto; }\n  .zone-page .metric {\n    display: -webkit-box;\n    display: -webkit-flex;\n    display: flex;\n    -webkit-box-flex: 1;\n    -webkit-flex-grow: 1;\n            flex-grow: 1;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n    -webkit-flex-flow: column nowrap;\n            flex-flow: column nowrap;\n    cursor: pointer;\n    margin-top: 2%; }\n    .zone-page .metric .value {\n      font-size: 1em;\n      font-weight: 600;\n      color: #555; }\n    .zone-page .metric .label {\n      margin-top: 1%; }\n\n.horizontal-line {\n  width: 100%;\n  margin-top: 1rem;\n  margin-bottom: 1rem;\n  border: 0;\n  border-top: 1px solid rgba(0, 0, 0, 0.1); }\n\n.react-datepicker__input-container input {\n  font-size: 1.1em;\n  font-weight: 700; }\n\n.image-gallery {\n  width: 95%;\n  -webkit-transition: all 1s ease;\n  transition: all 1s ease; }\n  .image-gallery .image-gallery-content {\n    position: relative;\n    line-height: 0;\n    top: 0; }\n    .image-gallery .image-gallery-content .image-gallery-slide-wrapper {\n      position: relative; }\n  .image-gallery .image-gallery-slides {\n    line-height: 0;\n    overflow: hidden;\n    position: relative;\n    white-space: nowrap; }\n    .image-gallery .image-gallery-slides .image-gallery-slide {\n      background: #fff;\n      left: 0;\n      top: 0;\n      width: 100%; }\n      .image-gallery .image-gallery-slides .image-gallery-slide .image-gallery-description {\n        background: rgba(0, 0, 0, 0.4);\n        bottom: 70px;\n        color: #fff;\n        left: 0;\n        line-height: 1;\n        padding: 10px 20px;\n        position: absolute;\n        white-space: normal; }\n      .image-gallery .image-gallery-slides .image-gallery-slide img {\n        width: 100%; }\n      .image-gallery .image-gallery-slides .image-gallery-slide .image-gallery-image {\n        line-height: 0;\n        overflow: hidden;\n        position: relative;\n        white-space: nowrap; }\n\n.image-gallery-slide.center {\n  height: 425px; }\n\n.calendar-icon:before {\n  content: \"\\F073\"; }\n", ""]);
 
 	// exports
 
 
 /***/ },
 
-/***/ 748:
+/***/ 666:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -331,7 +464,7 @@ webpackJsonp([3,13],{
 
 /***/ },
 
-/***/ 774:
+/***/ 688:
 /***/ function(module, exports) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {/**
@@ -716,7 +849,7 @@ webpackJsonp([3,13],{
 
 /***/ },
 
-/***/ 775:
+/***/ 689:
 /***/ function(module, exports) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {/**
@@ -1163,7 +1296,7 @@ webpackJsonp([3,13],{
 
 /***/ },
 
-/***/ 833:
+/***/ 750:
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {/**!
@@ -3699,19 +3832,19 @@ webpackJsonp([3,13],{
 
 /***/ },
 
-/***/ 837:
+/***/ 754:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
 
-	var React = _interopDefault(__webpack_require__(4));
-	var PropTypes = _interopDefault(__webpack_require__(99));
-	var classnames = _interopDefault(__webpack_require__(838));
-	var onClickOutside = _interopDefault(__webpack_require__(840));
-	var moment = _interopDefault(__webpack_require__(1));
-	var reactPopper = __webpack_require__(841);
+	var React = _interopDefault(__webpack_require__(5));
+	var PropTypes = _interopDefault(__webpack_require__(85));
+	var classnames = _interopDefault(__webpack_require__(755));
+	var onClickOutside = _interopDefault(__webpack_require__(757));
+	var moment = _interopDefault(__webpack_require__(2));
+	var reactPopper = __webpack_require__(758);
 
 	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) {
 	  return typeof obj;
@@ -6727,7 +6860,7 @@ webpackJsonp([3,13],{
 
 /***/ },
 
-/***/ 838:
+/***/ 755:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -6782,7 +6915,7 @@ webpackJsonp([3,13],{
 
 /***/ },
 
-/***/ 839:
+/***/ 756:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -6795,23 +6928,23 @@ webpackJsonp([3,13],{
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _react = __webpack_require__(4);
+	var _react = __webpack_require__(5);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactSwipeable = __webpack_require__(875);
+	var _reactSwipeable = __webpack_require__(784);
 
 	var _reactSwipeable2 = _interopRequireDefault(_reactSwipeable);
 
-	var _lodash = __webpack_require__(775);
+	var _lodash = __webpack_require__(689);
 
 	var _lodash2 = _interopRequireDefault(_lodash);
 
-	var _lodash3 = __webpack_require__(774);
+	var _lodash3 = __webpack_require__(688);
 
 	var _lodash4 = _interopRequireDefault(_lodash3);
 
-	var _propTypes = __webpack_require__(99);
+	var _propTypes = __webpack_require__(85);
 
 	var _propTypes2 = _interopRequireDefault(_propTypes);
 
@@ -8071,15 +8204,15 @@ webpackJsonp([3,13],{
 
 /***/ },
 
-/***/ 840:
+/***/ 757:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	Object.defineProperty(exports, '__esModule', { value: true });
 
-	var react = __webpack_require__(4);
-	var reactDom = __webpack_require__(112);
+	var react = __webpack_require__(5);
+	var reactDom = __webpack_require__(375);
 
 	function _inheritsLoose(subClass, superClass) {
 	  subClass.prototype = Object.create(superClass.prototype);
@@ -8429,7 +8562,7 @@ webpackJsonp([3,13],{
 
 /***/ },
 
-/***/ 841:
+/***/ 758:
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -8438,9 +8571,9 @@ webpackJsonp([3,13],{
 
 	function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
 
-	var react = __webpack_require__(4);
-	var PropTypes = _interopDefault(__webpack_require__(99));
-	var PopperJS = _interopDefault(__webpack_require__(833));
+	var react = __webpack_require__(5);
+	var PropTypes = _interopDefault(__webpack_require__(85));
+	var PopperJS = _interopDefault(__webpack_require__(750));
 
 	var classCallCheck = function (instance, Constructor) {
 	  if (!(instance instanceof Constructor)) {
@@ -8901,7 +9034,7 @@ webpackJsonp([3,13],{
 
 /***/ },
 
-/***/ 875:
+/***/ 784:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -8914,9 +9047,9 @@ webpackJsonp([3,13],{
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var React = __webpack_require__(4);
-	var PropTypes = __webpack_require__(99);
-	var DetectPassiveEvents = __webpack_require__(748).default;
+	var React = __webpack_require__(5);
+	var PropTypes = __webpack_require__(85);
+	var DetectPassiveEvents = __webpack_require__(666).default;
 
 	function getInitialState() {
 	  return {
@@ -9235,16 +9368,16 @@ webpackJsonp([3,13],{
 
 /***/ },
 
-/***/ 951:
+/***/ 859:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(719);
+	var content = __webpack_require__(649);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(6)(content, {});
+	var update = __webpack_require__(21)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -9262,16 +9395,16 @@ webpackJsonp([3,13],{
 
 /***/ },
 
-/***/ 952:
+/***/ 860:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(720);
+	var content = __webpack_require__(650);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(6)(content, {});
+	var update = __webpack_require__(21)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -9289,16 +9422,16 @@ webpackJsonp([3,13],{
 
 /***/ },
 
-/***/ 973:
+/***/ 868:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(741);
+	var content = __webpack_require__(659);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(6)(content, {});
+	var update = __webpack_require__(21)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {

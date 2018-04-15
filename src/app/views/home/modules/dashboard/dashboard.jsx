@@ -121,7 +121,7 @@ class DashboardModule extends React.Component {
         if( data.projects && data.projects.length > 0 && data.locations && data.locations.length > 0 ) {
             return(
                 <div className="page-dashboard">
-                    <h2>Dashboard!</h2>
+                    <h2>Dashboard</h2>
                     <div className="horizontal-line"></div>
                     <div className="projects">
                         <_selectBox
