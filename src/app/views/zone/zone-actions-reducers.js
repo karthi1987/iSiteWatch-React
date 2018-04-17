@@ -26,7 +26,7 @@ const currentDate = moment(new Date());
 const cDate = currentDate.clone();
 const cDateUTC = moment.utc(cDate).format();
 
-const firstDate = cDate.subtract(7, 'days');
+const firstDate = cDate.subtract(6, 'days');
 const firstDateClone = firstDate.clone();
 const firstDateUTC = moment.utc(firstDateClone).format();
 
@@ -52,7 +52,7 @@ const sixthDateUTC = moment.utc(sixthDateClone).format();
 
 
 const consolidatedWeekDates = []; //Array where rest of the dates will be stored
-var prevDate = moment().subtract(7, 'days');//7 days back date from today(This is the from date)
+var prevDate = moment().subtract(6, 'days');//7 days back date from today(This is the from date)
 var nextDate = moment();//Date after 7 days from today (This is the end date)
 
 //extracting date from objects in MM-DD-YYYY format
@@ -64,7 +64,7 @@ var start = new Date(prevDate);
 var end = new Date(nextDate);
 
 //Logic for getting rest of the dates between two dates("FromDate" to "EndDate")
-while( start < end ) {
+while( start <= end ) {
    consolidatedWeekDates.push(moment(start).format());
    var newDate = start.setDate(start.getDate() + 1);
    start = new Date(newDate);  

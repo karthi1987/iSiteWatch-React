@@ -141,7 +141,7 @@
 }
 
 .dropdown-container {
-	width: 50%;
+	width: 25%;
 	.dropdown-selected {
 		font-size: 1.2em;
 	}
@@ -152,6 +152,16 @@
 
 .dropdown-selected-active .dropdown-selected-active-label {
 	font-size: 1.2em;
+}
+
+.bg-warning {
+	background: #ffc107;
+}
+.bg-red {
+	background: #dc3545;
+}
+.bg-message {
+	background: #17a2b8;
 }
 
 .list-group {
@@ -167,6 +177,23 @@
 		background-color: #fff;
 		border: 1px solid rgba(0,0,0,.125);
 	    text-transform: capitalize;
+	    .event-message {
+			display: block;
+			font-size: 0.8em;
+			font-style: italic;
+			color: #555;
+	    }
+	    .bg-red {
+	    	color: #FFF;
+	    	em {
+	    		padding: 0 5px 0 5px
+	    	}
+	    }
+	    .bg-warning {
+	    	em {
+	    		padding: 0 5px 0 5px
+	    	}
+	    }
     }
 	.list-group-item:first-child {
 	    border-top-left-radius: .25rem;
@@ -187,16 +214,6 @@
 		margin: 0;
 		padding: 0;
 	}
-}
-
-.bg-warning {
-	background: #ffc107;
-}
-.bg-red {
-	background: #dc3545;
-}
-.bg-message {
-	background: #17a2b8;
 }
 
 .box-tools {

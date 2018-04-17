@@ -7,6 +7,9 @@ import './header.scss';
 //lang
 import { HEADER } from 'app/app-lang';
 import { closeSession } from 'app/app-store';
+import Avatar from 'app/shared/avatar/avatar';
+
+import $ from 'jquery';
 
 /*******************************************************************************
  *  1. Header
@@ -20,12 +23,41 @@ export default class Header extends React.Component {
     constructor( props ) {
         super( props );
         this.state = {
-            showProfile: false
+            showProfile: false,
+            profileStyle: null,
+            showStandardReports: false
         };
 
         this.userLogout = this.userLogout.bind( this );
         this.redirectTo = this.redirectTo.bind( this );
         this.showUserProfile = this.showUserProfile.bind( this );
+    }
+
+    componentDidMount() {
+
+        if( this.refs.userProfileElement ) {
+            const ProfilePosition = this.refs.userProfileElement.getBoundingClientRect();
+            /* Set profile top position */
+            const styles = { 'top': ProfilePosition.top + 5 +'px' };
+            this.setState( { profileStyle: styles } );
+
+            //Show Profile
+            this.refs.userProfileElement.addEventListener('mouseenter', ( event ) => {
+                this.showUserProfile()
+            });
+            this.refs.userProfileElement.addEventListener('mouseleave', ( event ) => {
+                this.showUserProfile()
+            });
+
+            //Standard Reports
+            this.refs.standardReports.addEventListener('mouseenter', ( event ) => {
+                this.setState({ showStandardReports: !this.state.showStandardReports })
+            });
+            this.refs.standardReports.addEventListener('mouseleave', ( event ) => {
+                this.setState({ showStandardReports: !this.state.showStandardReports })
+            });
+        }
+
     }
 
     showUserProfile() {
@@ -52,7 +84,9 @@ export default class Header extends React.Component {
     render() {
         const {
             state: {
-                showProfile
+                showProfile,
+                profileStyle,
+                showStandardReports
             },
             props: {
                 userLogin
@@ -71,24 +105,54 @@ export default class Header extends React.Component {
                     </div>
                 </div>
                  <div className="current-time-block">
+
                     <div className="customer-support">
                         <a href="customer-support">Customer Support</a>
                     </div>
-                    <div className="user-profile">
-                        <div className="user-name">
+
+                    <div className="standard-report" ref="standardReports">
+                        <div className="label">
+                            Standard Reports
+                            <div className="user-profile-arrow">
+                                <Icon name="right-arrow" />
+                            </div>
+                        </div>
+                        {
+                            showStandardReports && profileStyle
+                            && <div className="container" style={ profileStyle }>
+                                <ul className="list-group  no-padding">
+                                    <li className="list-group-item clearfix d-block">
+                                        <a href="#">Download as HTML</a>
+                                    </li>
+                                    <li className="list-group-item clearfix d-block">
+                                        <a href="#">Download as PDF</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        }
+                        
+                    </div>
+                   
+                    <div className="user-profile" ref="userProfileElement">
+                        <div className="user-name" onClick={ this.showUserProfile }>
                             {
                                 this.props.userLogin
-                                && <p>{ this.props.userLogin }&nbsp; </p>
+                                && <Avatar avatar="true" firstname={ this.props.userLogin } />
                             }
-                        </div>
-                        <div className="user-profile-arrow" onClick={ this.showUserProfile }>
-                            <Icon name="right-arrow" />
+                            <div className="user-profile-arrow">
+                                <Icon name="right-arrow" />
+                            </div>
                         </div>
                          {
-                            showProfile
-                            && <div className="user-profile-details">
+                            showProfile && profileStyle
+                            && <div className="user-profile-details" ref="userProfileDetails" style={ profileStyle }>
                                  <ul className="list-group  no-padding">
-                                     <li className="list-group-item clearfix d-block"><a href="#" onClick={ this.userLogout }> &nbsp; Logout </a></li>
+                                    <li className="list-group-item clearfix d-block">
+                                        <a href="#" > &nbsp; Profile </a>
+                                    </li>
+                                     <li className="list-group-item clearfix d-block">
+                                        <a href="#" onClick={ this.userLogout }> &nbsp; Logout </a>
+                                    </li>
                                  </ul>
                             </div>
                          }

@@ -129,18 +129,6 @@ class DashboardModule extends React.Component {
                             _state={ data.projects }
                             _callback={ this.onProjectSelection }
                         />
-                        <div className="projects-user-actions">
-                            <button className="button-create button button-primary">
-                            Create &nbsp;
-                            </button>
-                            <div className="delete-modify-project">
-                                <_dropdown
-                                    _label={ ProjectDeleteModify[ 0 ].label }
-                                    _state={ ProjectDeleteModify }
-                                    _callback={ this.onProjectActions }
-                                />
-                            </div>
-                        </div>
                     </div>
                     <div className="horizontal-line"></div>
                     <div className="page-memo">
@@ -321,6 +309,7 @@ const LocationToggleContent = ( props ) => {
                                 ) }>
                                     <em>{ item.event_value }</em>
                                 </span>
+                                <span className="event-message">{ item.event_message }</span>
                         </li>
                     );
                 }

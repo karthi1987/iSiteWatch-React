@@ -1,9 +1,9 @@
 webpackJsonp([2,5],{
 
-/***/ 70:
+/***/ 71:
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(18)();
+	exports = module.exports = __webpack_require__(17)();
 	// imports
 
 
@@ -15,13 +15,13 @@ webpackJsonp([2,5],{
 
 /***/ },
 
-/***/ 75:
+/***/ 76:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(70);
+	var content = __webpack_require__(71);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(21)(content, {});
@@ -42,7 +42,7 @@ webpackJsonp([2,5],{
 
 /***/ },
 
-/***/ 443:
+/***/ 444:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';Object.defineProperty(exports, "__esModule", { value: true });var _createClass = function () {function defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}return function (Constructor, protoProps, staticProps) {if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;};}();var _react = __webpack_require__(5);var _react2 = _interopRequireDefault(_react);
@@ -52,8 +52,8 @@ webpackJsonp([2,5],{
 
 	var _loginActionsReducers = __webpack_require__(198);
 
-	__webpack_require__(75);
-	__webpack_require__(867);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self, call) {if (!self) {throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call && (typeof call === "object" || typeof call === "function") ? call : self;}function _inherits(subClass, superClass) {if (typeof superClass !== "function" && superClass !== null) {throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);}subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;} //utils
+	__webpack_require__(76);
+	__webpack_require__(870);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self, call) {if (!self) {throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call && (typeof call === "object" || typeof call === "function") ? call : self;}function _inherits(subClass, superClass) {if (typeof superClass !== "function" && superClass !== null) {throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);}subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;} //utils
 	// action creators
 	// shared components
 	/*******************************************************************************
@@ -199,9 +199,8 @@ webpackJsonp([2,5],{
 
 	            _react2.default.createElement('div', { className: 'col-md-4' },
 	                _react2.default.createElement('div', { className: 'login' },
-	                    _react2.default.createElement('h1', null, 'Welcome to iSiteWatch',
+	                    _react2.default.createElement('h1', null, 'Eliminating Paperwork So You Can Get Back To Building'),
 
-	                        _react2.default.createElement('p', null, 'Let\'s get started!')),
 
 	                    _react2.default.createElement('div', null,
 	                        _react2.default.createElement('h2', null, 'Sign In')),
@@ -218,6 +217,9 @@ webpackJsonp([2,5],{
 	                        _react2.default.createElement('div', { className: 'form-group' },
 	                            _react2.default.createElement('button', { type: 'button', className: 'loginButton button button-primary', onClick: handle.login }, 'Login'))),
 
+
+	                    _react2.default.createElement('div', { className: 'forgot-password' },
+	                        _react2.default.createElement('a', { href: '#' }, 'Forgot Password')),
 
 
 	                    login.errorMessage &&
@@ -260,28 +262,28 @@ webpackJsonp([2,5],{
 
 /***/ },
 
-/***/ 658:
+/***/ 660:
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(18)();
+	exports = module.exports = __webpack_require__(17)();
 	// imports
 
 
 	// module
-	exports.push([module.id, "@charset \"UTF-8\";\n/*\n   ____      _\n  / ___|___ | | ___  _ __ ___\n | |   / _ \\| |/ _ \\| '__/ __|\n | |__| (_) | | (_) | |  \\__   \\____\\___/|_|\\___/|_|  |___/\n\n */\n/*\n     _\n    / \\   _ __  _ __\n   / _ \\ | '_ \\| '_   / ___ \\| |_) | |_) |\n /_/   \\_\\ .__/| .__/\n         |_|   |_|\n\n */\n/*\n  _____                                        _\n |_   _|   _ _ __   ___   __ _ _ __ __ _ _ __ | |__  _   _\n   | || | | | '_ \\ / _ \\ / _` | '__/ _` | '_ \\| '_ \\| | | |\n   | || |_| | |_) | (_) | (_| | | | (_| | |_) | | | | |_| |\n   |_| \\__, | .__/ \\___/ \\__, |_|  \\__,_| .__/|_| |_|\\__, |\n       |___/|_|          |___/          |_|          |___/\n\n */\n/*\n  _     _       _\n | |   (_)_ __ | | _____\n | |   | | '_ \\| |/ / __|\n | |___| | | | |   <\\__  |_____|_|_| |_|_|\\_\\___/\n\n */\n/*\n  _____     _     _\n |_   _|_ _| |__ | | ___  ___\n   | |/ _` | '_ \\| |/ _ \\/ __|\n   | | (_| | |_) | |  __/\\__    |_|\\__,_|_.__/|_|\\___||___/\n\n */\n.button {\n  cursor: pointer;\n  display: inline-block;\n  border: none;\n  background-color: transparent;\n  font-size: 1rem;\n  padding: 1rem 1.25rem;\n  font-weight: 700;\n  text-align: left; }\n  .button:after {\n    content: \"\\F108\";\n    font-family: VerizonIcons;\n    display: inline-block;\n    vertical-align: middle;\n    padding-left: 1rem;\n    float: right; }\n  .button.button-primary {\n    background-color: #CD040B;\n    color: #FFF; }\n    .button.button-primary:after {\n      color: #FFF; }\n  .button.button-secondary {\n    color: #000; }\n    .button.button-secondary:after {\n      color: #CD040B; }\n  .button.button-expand {\n    width: 100%; }\n\n.login-row {\n  width: 100%;\n  height: 100%;\n  padding: 1.2%;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n          align-items: center;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n          justify-content: center; }\n\n.login {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: flex;\n  -webkit-flex-wrap: wrap;\n          flex-wrap: wrap;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n          justify-content: center;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n          flex-direction: column;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n          align-items: center; }\n  .login h1 {\n    /*display: flex;\n    justify-content: center;\n    align-items: center;\n    width: 60%;*/ }\n  .login .loginForm {\n    display: -webkit-box;\n    display: -webkit-flex;\n    display: flex;\n    -webkit-box-pack: justify;\n    -webkit-justify-content: space-between;\n            justify-content: space-between;\n    -webkit-box-align: start;\n    -webkit-align-items: flex-start;\n            align-items: flex-start;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n    -webkit-flex-flow: column wrap;\n            flex-flow: column wrap;\n    width: 100%;\n    margin-top: 5%; }\n    .login .loginForm .form-group {\n      margin-top: 2%;\n      padding: 0;\n      display: -webkit-box;\n      display: -webkit-flex;\n      display: flex;\n      -webkit-box-orient: vertical;\n      -webkit-box-direction: normal;\n      -webkit-flex-flow: column wrap;\n              flex-flow: column wrap;\n      -webkit-box-pack: center;\n      -webkit-justify-content: center;\n              justify-content: center;\n      -webkit-box-align: center;\n      -webkit-align-items: center;\n              align-items: center;\n      width: 100%;\n      text-align: left; }\n      .login .loginForm .form-group label {\n        display: -webkit-inline-box;\n        display: -webkit-inline-flex;\n        display: inline-flex;\n        width: 82%;\n        -webkit-box-pack: start;\n        -webkit-justify-content: flex-start;\n                justify-content: flex-start;\n        self-aligned: flex-start; }\n    .login .loginForm .dropdown-container,\n    .login .loginForm input,\n    .login .loginForm .loginButton {\n      -webkit-box-flex: 1;\n      -webkit-flex-grow: 1;\n              flex-grow: 1;\n      margin-right: 1rem;\n      min-height: 50px;\n      max-height: 50px;\n      font-size: 0.875rem; }\n    .login .loginForm input {\n      border-top: 1px solid;\n      border-right: 1px solid;\n      border-bottom: 1px solid;\n      border-left: 1px solid;\n      padding-left: 10px;\n      width: 80%; }\n    .login .loginForm .dropdown-container {\n      min-width: 200px;\n      padding-top: 13px; }\n    .login .loginForm .loginButton {\n      padding-top: 14px;\n      margin-top: 5%; }\n    .login .loginForm .multiselect-wrapper {\n      width: 100%; }\n\n.login-error-message {\n  margin-top: 20px;\n  color: #CD040B;\n  font-weight: 700;\n  width: 60%; }\n\n.form-errors {\n  width: 100%;\n  padding: 2% 0 0 7%;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-flow: column wrap;\n          flex-flow: column wrap;\n  -webkit-box-pack: start;\n  -webkit-justify-content: flex-start;\n          justify-content: flex-start;\n  -webkit-box-align: start;\n  -webkit-align-items: flex-start;\n          align-items: flex-start;\n  color: #CD040B;\n  font-weight: 700; }\n  .form-errors .error-helpers {\n    display: -webkit-box;\n    display: -webkit-flex;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n    -webkit-flex-flow: column wrap;\n            flex-flow: column wrap;\n    font-size: 0.8em;\n    font-weight: 500; }\n", ""]);
+	exports.push([module.id, "@charset \"UTF-8\";\n/*\n   ____      _\n  / ___|___ | | ___  _ __ ___\n | |   / _ \\| |/ _ \\| '__/ __|\n | |__| (_) | | (_) | |  \\__   \\____\\___/|_|\\___/|_|  |___/\n\n */\n/*\n     _\n    / \\   _ __  _ __\n   / _ \\ | '_ \\| '_   / ___ \\| |_) | |_) |\n /_/   \\_\\ .__/| .__/\n         |_|   |_|\n\n */\n/*\n  _____                                        _\n |_   _|   _ _ __   ___   __ _ _ __ __ _ _ __ | |__  _   _\n   | || | | | '_ \\ / _ \\ / _` | '__/ _` | '_ \\| '_ \\| | | |\n   | || |_| | |_) | (_) | (_| | | | (_| | |_) | | | | |_| |\n   |_| \\__, | .__/ \\___/ \\__, |_|  \\__,_| .__/|_| |_|\\__, |\n       |___/|_|          |___/          |_|          |___/\n\n */\n/*\n  _     _       _\n | |   (_)_ __ | | _____\n | |   | | '_ \\| |/ / __|\n | |___| | | | |   <\\__  |_____|_|_| |_|_|\\_\\___/\n\n */\n/*\n  _____     _     _\n |_   _|_ _| |__ | | ___  ___\n   | |/ _` | '_ \\| |/ _ \\/ __|\n   | | (_| | |_) | |  __/\\__    |_|\\__,_|_.__/|_|\\___||___/\n\n */\n.button {\n  cursor: pointer;\n  display: inline-block;\n  border: none;\n  background-color: transparent;\n  font-size: 1rem;\n  padding: 1rem 1.25rem;\n  font-weight: 700;\n  text-align: left; }\n  .button:after {\n    content: \"\\F108\";\n    font-family: VerizonIcons;\n    display: inline-block;\n    vertical-align: middle;\n    padding-left: 1rem;\n    float: right; }\n  .button.button-primary {\n    background-color: #CD040B;\n    color: #FFF; }\n    .button.button-primary:after {\n      color: #FFF; }\n  .button.button-secondary {\n    color: #000; }\n    .button.button-secondary:after {\n      color: #CD040B; }\n  .button.button-expand {\n    width: 100%; }\n\n.login-row {\n  width: 100%;\n  height: 100%;\n  padding: 1.2%;\n  margin: 10% 0 0 0;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: flex;\n  -webkit-box-align: start;\n  -webkit-align-items: flex-start;\n          align-items: flex-start;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n          justify-content: center; }\n\n.login {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: flex;\n  -webkit-flex-wrap: wrap;\n          flex-wrap: wrap;\n  /*justify-content: center;*/\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n          flex-direction: column;\n  /*align-items: center;*/ }\n  .login h1 {\n    /*display: flex;\n    justify-content: center;\n    align-items: center;\n    width: 60%;*/ }\n  .login .loginForm {\n    display: -webkit-box;\n    display: -webkit-flex;\n    display: flex;\n    -webkit-box-pack: justify;\n    -webkit-justify-content: space-between;\n            justify-content: space-between;\n    -webkit-box-align: start;\n    -webkit-align-items: flex-start;\n            align-items: flex-start;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n    -webkit-flex-flow: column wrap;\n            flex-flow: column wrap;\n    width: 100%;\n    margin-top: 5%; }\n    .login .loginForm .form-group {\n      margin-top: 2%;\n      padding: 0;\n      display: -webkit-box;\n      display: -webkit-flex;\n      display: flex;\n      -webkit-box-orient: vertical;\n      -webkit-box-direction: normal;\n      -webkit-flex-flow: column wrap;\n              flex-flow: column wrap;\n      /*justify-content: center;\n      align-items: center;*/\n      width: 100%;\n      text-align: left; }\n      .login .loginForm .form-group label {\n        display: -webkit-inline-box;\n        display: -webkit-inline-flex;\n        display: inline-flex;\n        width: 82%;\n        -webkit-box-pack: start;\n        -webkit-justify-content: flex-start;\n                justify-content: flex-start;\n        self-aligned: flex-start; }\n    .login .loginForm .forgot-password {\n      display: -webkit-box;\n      display: -webkit-flex;\n      display: flex;\n      margin-top: 1%; }\n    .login .loginForm .dropdown-container,\n    .login .loginForm input,\n    .login .loginForm .loginButton {\n      -webkit-box-flex: 1;\n      -webkit-flex-grow: 1;\n              flex-grow: 1;\n      margin-right: 1rem;\n      min-height: 50px;\n      max-height: 50px;\n      font-size: 0.875rem;\n      width: 25%; }\n    .login .loginForm input {\n      border-top: 1px solid;\n      border-right: 1px solid;\n      border-bottom: 1px solid;\n      border-left: 1px solid;\n      padding-left: 10px;\n      width: 80%; }\n    .login .loginForm .dropdown-container {\n      min-width: 200px;\n      padding-top: 13px; }\n    .login .loginForm .loginButton {\n      padding-top: 2%;\n      margin-top: 5%; }\n    .login .loginForm .multiselect-wrapper {\n      width: 100%; }\n\n.login-error-message {\n  margin-top: 20px;\n  color: #CD040B;\n  font-weight: 700;\n  width: 60%; }\n\n.form-errors {\n  width: 100%;\n  padding: 2% 0 0 0;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-flow: column wrap;\n          flex-flow: column wrap;\n  -webkit-box-pack: start;\n  -webkit-justify-content: flex-start;\n          justify-content: flex-start;\n  -webkit-box-align: start;\n  -webkit-align-items: flex-start;\n          align-items: flex-start;\n  color: #CD040B;\n  font-weight: 700; }\n  .form-errors .error-helpers {\n    display: -webkit-box;\n    display: -webkit-flex;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n    -webkit-flex-flow: column wrap;\n            flex-flow: column wrap;\n    font-size: 0.8em;\n    font-weight: 500; }\n\n.button.button-primary:after {\n  padding-left: 0; }\n", ""]);
 
 	// exports
 
 
 /***/ },
 
-/***/ 867:
+/***/ 870:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(658);
+	var content = __webpack_require__(660);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(21)(content, {});

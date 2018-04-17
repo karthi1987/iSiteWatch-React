@@ -103,6 +103,7 @@ class Icon extends React.Component {
             case 'mail': Vector = <Mail />; break;
             case 'customer-support': Vector = <CustomerSupport />; break;
             case 'calling': Vector = <Calling />; break;
+            case 'profile-icon': Vector = <ProfileIcon />; break;
         }
 
         return Vector;
@@ -645,6 +646,16 @@ const Calling = () => (
                 c0.2,0,0.4,0,0.5-0.1c4.2-0.6,7.5-1.1,10.7-1.2l-1.5,7.3L-200.5,208z"/>
             <path d="M-178.9,253.2c-2.2-0.9-4.7,0.1-5.6,2.3c-1.5,3.6-3.3,7.1-5.5,10.3l-5.2-5.5l-6.8,23l23.3-5.6l-5.3-5.6
                 c3-4.1,5.5-8.5,7.4-13.3C-175.7,256.7-176.7,254.1-178.9,253.2z"/>
+        </g>
+    </g>
+);
+
+
+const ProfileIcon = () => (
+    <g id="icons">
+        <g id="user">
+            <ellipse cx="12" cy="8" rx="5" ry="6"/>
+            <path d="M21.8,19.1c-0.9-1.8-2.6-3.3-4.8-4.2c-0.6-0.2-1.3-0.2-1.8,0.1c-1,0.6-2,0.9-3.2,0.9s-2.2-0.3-3.2-0.9    C8.3,14.8,7.6,14.7,7,15c-2.2,0.9-3.9,2.4-4.8,4.2C1.5,20.5,2.6,22,4.1,22h15.8C21.4,22,22.5,20.5,21.8,19.1z"/>
         </g>
     </g>
 );

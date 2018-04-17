@@ -52,7 +52,7 @@
   flex: 0 0 70%;
   display: flex;
   justify-content: flex-end;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
   align-self: center;
   text-align: right;
   align-items: center;
@@ -62,8 +62,21 @@
     border-right: 1px solid #ccc;
   }
   .user-name {
+    box-shadow: 0 12px 18px rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid #e6e6e6;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75px;
+    padding: 2%;
     p {
       margin: 0;
+    }
+    .icon-profile-icon {
+      width: 40px;
+      height: 40px;
+      fill: #c00;
     }
   }
 }
@@ -85,29 +98,26 @@
   position: relative;
   display: flex;
   justify-content: flex-end;
+  background: #f6f6f6;
+  height: 50px;
+  &:hover {
+    background: #FFF;
+  }
   .user-name {
     color: #333;
     font-size: 1em;
     font-weight: 500;
   }
-  .user-profile-arrow {
-    cursor: pointer;
-    .icon-right-arrow {
-      width: 10px;
-      height: 10px;
-      fill: #c00;
-      transform: rotate(90deg);
-      transform-origin: 40% 40%;
-    }
-  }
   .user-profile-details {
     display: flex;
     position: absolute;
-    top: 80%;
+    bottom: -34px;
     right: 0;
     width: 100%;
     justify-content: flex-end;
     z-index: 2;
+    box-shadow: 0 12px 18px rgba(0, 0, 0, 0.2);
+    background: #fff;
   }
   .list-group {
     display: flex;
@@ -117,21 +127,29 @@
     .list-group-item {
       position: relative;
       display: block;
-      padding: 0 5% 0 4% !important;
-      width: 100px;
-      height: 35px;
+      padding: 0;
+      width: 200px;
+      height: 40px;
       background: #fff;
-      border: 1px solid rgba(0,0,0,.125);
+      border: 0;
       text-transform: capitalize;
+      a {
+        display: block;
+        font-weight: 500;
+      }
     }
   .list-group-item:first-child {
-      border-top-left-radius: .25rem;
-      border-top-right-radius: .25rem;
+      border-top: 0;
+      border-bottom: 2px solid #eee;
+      border-radius: 0;
+      padding: 2% 8% 2% 0;
   }
   .list-group-item:last-child {
-      margin-bottom: 0;
-      border-bottom-right-radius: .25rem;
-      border-bottom-left-radius: .25rem;
+    margin-bottom: 0;
+    border-top: 0;
+    border-bottom: 2px solid #eee;
+    border-radius: 0;
+    padding: 2% 8% 2% 0;
   }
   .float-right {
     float: right;
@@ -144,4 +162,76 @@
     padding: 0;
   }
 }
+}
+
+.user-profile-arrow {
+  cursor: pointer;
+  display: flex;
+  .icon-right-arrow {
+    width: 20px;
+    height: 10px;
+    fill: #c00;
+    transform: rotate(90deg);
+    transform-origin: 40% 40%;
+  }
+}
+
+
+.standard-report {
+  display: flex;
+  flex-flow: column wrap;
+  position: relative;
+  width: 21.2%;
+  margin-right: 10px;
+  .label {
+    display: flex;
+    width: 100%;
+    height: 50px;
+    box-shadow: 0 12px 18px rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid #e6e6e6;
+    justify-content: center;
+    align-items: center;
+  }
+  .container {
+    display: flex;
+    position: absolute;
+    top: 0;
+    width: 200px;
+    z-index: 13;
+
+    ul {
+      margin: 0;
+      padding: 0;
+      li.list-group-item {
+        position: relative;
+        display: block;
+        text-align: left;
+        padding: 0 0 0 5px;
+        margin: 0;
+        width: 200px;
+        height: 40px;
+        background: #fff;
+        border: 0;
+        text-transform: none;
+        text-align: left;
+        a {
+          display: block;
+          font-weight: 500;
+        }
+         &:first-child {
+              border-top: 0;
+              border-bottom: 2px solid #eee;
+              border-radius: 0;
+              padding: 2% 0 2% 6%;
+          }
+          &:last-child {
+            margin-bottom: 0;
+            border-top: 0;
+            border-bottom: 2px solid #eee;
+            border-radius: 0;
+            padding: 2% 0 2% 6%;
+          }
+      }
+    }
+  }
 }

@@ -1,9 +1,9 @@
 webpackJsonp([1,5],{
 
-/***/ 70:
+/***/ 71:
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(18)();
+	exports = module.exports = __webpack_require__(17)();
 	// imports
 
 
@@ -15,13 +15,13 @@ webpackJsonp([1,5],{
 
 /***/ },
 
-/***/ 75:
+/***/ 76:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(70);
+	var content = __webpack_require__(71);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(21)(content, {});
@@ -48,7 +48,7 @@ webpackJsonp([1,5],{
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(653);
+	var content = __webpack_require__(655);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(21)(content, {});
@@ -69,13 +69,13 @@ webpackJsonp([1,5],{
 
 /***/ },
 
-/***/ 433:
+/***/ 434:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';Object.defineProperty(exports, "__esModule", { value: true });exports._dropdown = undefined;var _extends = Object.assign || function (target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i];for (var key in source) {if (Object.prototype.hasOwnProperty.call(source, key)) {target[key] = source[key];}}}return target;};var _createClass = function () {function defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}return function (Constructor, protoProps, staticProps) {if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;};}();var _react = __webpack_require__(5);var _react2 = _interopRequireDefault(_react);
 	__webpack_require__(420);
-	var _icons = __webpack_require__(89);var _icons2 = _interopRequireDefault(_icons);
-	var _webTrack = __webpack_require__(134);var _webTrack2 = _interopRequireDefault(_webTrack);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self, call) {if (!self) {throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call && (typeof call === "object" || typeof call === "function") ? call : self;}function _inherits(subClass, superClass) {if (typeof superClass !== "function" && superClass !== null) {throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);}subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;}var
+	var _icons = __webpack_require__(59);var _icons2 = _interopRequireDefault(_icons);
+	var _webTrack = __webpack_require__(135);var _webTrack2 = _interopRequireDefault(_webTrack);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self, call) {if (!self) {throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call && (typeof call === "object" || typeof call === "function") ? call : self;}function _inherits(subClass, superClass) {if (typeof superClass !== "function" && superClass !== null) {throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);}subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;}var
 
 	_dropdown = exports._dropdown = function (_React$Component) {_inherits(_dropdown, _React$Component);
 
@@ -201,13 +201,13 @@ webpackJsonp([1,5],{
 
 /***/ },
 
-/***/ 434:
+/***/ 435:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';Object.defineProperty(exports, "__esModule", { value: true });exports._selectBox = undefined;var _extends = Object.assign || function (target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i];for (var key in source) {if (Object.prototype.hasOwnProperty.call(source, key)) {target[key] = source[key];}}}return target;};var _createClass = function () {function defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}return function (Constructor, protoProps, staticProps) {if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;};}();var _react = __webpack_require__(5);var _react2 = _interopRequireDefault(_react);
 	__webpack_require__(420);
-	var _icons = __webpack_require__(89);var _icons2 = _interopRequireDefault(_icons);
-	var _webTrack = __webpack_require__(134);var _webTrack2 = _interopRequireDefault(_webTrack);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self, call) {if (!self) {throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call && (typeof call === "object" || typeof call === "function") ? call : self;}function _inherits(subClass, superClass) {if (typeof superClass !== "function" && superClass !== null) {throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);}subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;}var
+	var _icons = __webpack_require__(59);var _icons2 = _interopRequireDefault(_icons);
+	var _webTrack = __webpack_require__(135);var _webTrack2 = _interopRequireDefault(_webTrack);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self, call) {if (!self) {throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call && (typeof call === "object" || typeof call === "function") ? call : self;}function _inherits(subClass, superClass) {if (typeof superClass !== "function" && superClass !== null) {throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);}subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;}var
 
 	_selectBox = exports._selectBox = function (_React$Component) {_inherits(_selectBox, _React$Component);
 
@@ -330,17 +330,17 @@ webpackJsonp([1,5],{
 
 /***/ },
 
-/***/ 440:
+/***/ 441:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';Object.defineProperty(exports, "__esModule", { value: true });var _createClass = function () {function defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}return function (Constructor, protoProps, staticProps) {if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;};}();var _react = __webpack_require__(5);var _react2 = _interopRequireDefault(_react);
 
-	var _dashboard = __webpack_require__(441);var _dashboard2 = _interopRequireDefault(_dashboard);
+	var _dashboard = __webpack_require__(442);var _dashboard2 = _interopRequireDefault(_dashboard);
 
 
 	var _utils = __webpack_require__(33);
 
-	__webpack_require__(75);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self, call) {if (!self) {throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call && (typeof call === "object" || typeof call === "function") ? call : self;}function _inherits(subClass, superClass) {if (typeof superClass !== "function" && superClass !== null) {throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);}subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;} // module imports
+	__webpack_require__(76);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self, call) {if (!self) {throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call && (typeof call === "object" || typeof call === "function") ? call : self;}function _inherits(subClass, superClass) {if (typeof superClass !== "function" && superClass !== null) {throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);}subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;} // module imports
 	//utils
 	//scss
 	/*******************************************************************************
@@ -393,24 +393,24 @@ webpackJsonp([1,5],{
 
 /***/ },
 
-/***/ 441:
+/***/ 442:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';Object.defineProperty(exports, "__esModule", { value: true });var _createClass = function () {function defineProperties(target, props) {for (var i = 0; i < props.length; i++) {var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);}}return function (Constructor, protoProps, staticProps) {if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;};}();var _react = __webpack_require__(5);var _react2 = _interopRequireDefault(_react);
 	var _reactRouter = __webpack_require__(48);
 	var _redux = __webpack_require__(58);
-	var _reactRedux = __webpack_require__(122);
+	var _reactRedux = __webpack_require__(123);
 	var _dashboardActionsReducers = __webpack_require__(197);
-	var _selectbox = __webpack_require__(434);
-	var _dropdown2 = __webpack_require__(433);
+	var _selectbox = __webpack_require__(435);
+	var _dropdown2 = __webpack_require__(434);
 
-	var _icons = __webpack_require__(89);var _icons2 = _interopRequireDefault(_icons);
-	var _classnames = __webpack_require__(97);var _classnames2 = _interopRequireDefault(_classnames);
+	var _icons = __webpack_require__(59);var _icons2 = _interopRequireDefault(_icons);
+	var _classnames = __webpack_require__(98);var _classnames2 = _interopRequireDefault(_classnames);
 	var _moment = __webpack_require__(2);var _moment2 = _interopRequireDefault(_moment);
-	var _reactAddonsCssTransitionGroup = __webpack_require__(172);var _reactAddonsCssTransitionGroup2 = _interopRequireDefault(_reactAddonsCssTransitionGroup);
+	var _reactAddonsCssTransitionGroup = __webpack_require__(122);var _reactAddonsCssTransitionGroup2 = _interopRequireDefault(_reactAddonsCssTransitionGroup);
 
 
-	__webpack_require__(866);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self, call) {if (!self) {throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call && (typeof call === "object" || typeof call === "function") ? call : self;}function _inherits(subClass, superClass) {if (typeof superClass !== "function" && superClass !== null) {throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);}subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;} //scss
+	__webpack_require__(869);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _classCallCheck(instance, Constructor) {if (!(instance instanceof Constructor)) {throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self, call) {if (!self) {throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call && (typeof call === "object" || typeof call === "function") ? call : self;}function _inherits(subClass, superClass) {if (typeof superClass !== "function" && superClass !== null) {throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);}subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;} //scss
 
 	var ProjectDeleteModify = [
 	{
@@ -525,19 +525,7 @@ webpackJsonp([1,5],{
 	                            _react2.default.createElement(_selectbox._selectBox, {
 	                                _label: data.projects[0].site_name + ' ' + data.projects[0].site_city,
 	                                _state: data.projects,
-	                                _callback: this.onProjectSelection }),
-
-	                            _react2.default.createElement('div', { className: 'projects-user-actions' },
-	                                _react2.default.createElement('button', { className: 'button-create button button-primary' }, 'Create \xA0'),
-
-
-	                                _react2.default.createElement('div', { className: 'delete-modify-project' },
-	                                    _react2.default.createElement(_dropdown2._dropdown, {
-	                                        _label: ProjectDeleteModify[0].label,
-	                                        _state: ProjectDeleteModify,
-	                                        _callback: this.onProjectActions })))),
-
-
+	                                _callback: this.onProjectSelection })),
 
 
 	                        _react2.default.createElement('div', { className: 'horizontal-line' }),
@@ -717,8 +705,9 @@ webpackJsonp([1,5],{
 	                            'bg-light-blue': item.event_level == 'message' }) },
 
 
-	                    _react2.default.createElement('em', null, item.event_value))));
+	                    _react2.default.createElement('em', null, item.event_value)),
 
+	                _react2.default.createElement('span', { className: 'event-message' }, item.event_message)));
 
 
 	        });
@@ -752,10 +741,10 @@ webpackJsonp([1,5],{
 
 /***/ },
 
-/***/ 653:
+/***/ 655:
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(18)();
+	exports = module.exports = __webpack_require__(17)();
 	// imports
 
 
@@ -767,28 +756,28 @@ webpackJsonp([1,5],{
 
 /***/ },
 
-/***/ 657:
+/***/ 659:
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(18)();
+	exports = module.exports = __webpack_require__(17)();
 	// imports
 
 
 	// module
-	exports.push([module.id, ".card {\n  width: 100%;\n  height: 200px; }\n\n.horizontal-line {\n  width: 100%;\n  margin-top: 1rem;\n  margin-bottom: 1rem;\n  border: 0;\n  border-top: 1px solid rgba(0, 0, 0, 0.1); }\n\n.page-dashboard {\n  width: 100%;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-flow: column wrap;\n          flex-flow: column wrap;\n  padding: 2%; }\n  .page-dashboard h2 {\n    color: #868e96;\n    font-size: 2.2em;\n    font-weight: 700;\n    margin: 0; }\n  .page-dashboard .projects {\n    display: -webkit-box;\n    display: -webkit-flex;\n    display: flex;\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: normal;\n    -webkit-flex-flow: row nowrap;\n            flex-flow: row nowrap;\n    -webkit-box-pack: start;\n    -webkit-justify-content: flex-start;\n            justify-content: flex-start;\n    -webkit-box-align: center;\n    -webkit-align-items: center;\n            align-items: center;\n    width: 100%; }\n    .page-dashboard .projects .projects-user-actions {\n      display: -webkit-box;\n      display: -webkit-flex;\n      display: flex;\n      -webkit-box-orient: horizontal;\n      -webkit-box-direction: normal;\n      -webkit-flex-flow: row nowrap;\n              flex-flow: row nowrap;\n      margin-left: 2%; }\n      .page-dashboard .projects .projects-user-actions .button-create {\n        display: -webkit-box;\n        display: -webkit-flex;\n        display: flex;\n        -webkit-box-flex: 1;\n        -webkit-flex-grow: 1;\n                flex-grow: 1;\n        margin-right: 1rem;\n        min-height: 50px;\n        font-size: 0.875rem;\n        font-weight: 700;\n        background: #CD040B;\n        color: #FFF;\n        cursor: pointer; }\n      .page-dashboard .projects .projects-user-actions .delete-modify-project {\n        display: -webkit-box;\n        display: -webkit-flex;\n        display: flex;\n        width: 150px;\n        -webkit-box-pack: center;\n        -webkit-justify-content: center;\n                justify-content: center;\n        -webkit-box-align: center;\n        -webkit-align-items: center;\n                align-items: center; }\n      .page-dashboard .projects .projects-user-actions .icon-right-arrow {\n        width: 20px;\n        height: 25px;\n        fill: #FFF; }\n  .page-dashboard .locations {\n    display: -webkit-box;\n    display: -webkit-flex;\n    display: flex;\n    padding-top: 2%; }\n    .page-dashboard .locations .outer-locations {\n      display: -webkit-box;\n      display: -webkit-flex;\n      display: flex;\n      width: 100%; }\n\n.box {\n  position: relative;\n  border-radius: 3px;\n  background: #ffffff;\n  border-top: 3px solid #d2d6de;\n  margin-bottom: 20px;\n  width: 100%;\n  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);\n          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); }\n  .box .box-primary {\n    border-top-color: #3c8dbc; }\n\n.box-widget {\n  border: none; }\n\n.widget-user .widget-user-header {\n  height: 200px;\n  border-top-right-radius: 3px;\n  border-top-left-radius: 3px;\n  cursor: pointer; }\n\n.box-header {\n  color: #444;\n  display: block;\n  padding: 10px;\n  position: relative; }\n\n.box-header > .box-tools {\n  position: absolute;\n  right: 10px;\n  top: 0;\n  width: 20%;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n  -webkit-flex-flow: row nowrap;\n          flex-flow: row nowrap;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n          align-items: center;\n  -webkit-box-pack: justify;\n  -webkit-justify-content: space-between;\n          justify-content: space-between;\n  height: 100%; }\n\n.box-footer {\n  border-top-left-radius: 0;\n  border-top-right-radius: 0;\n  border-bottom-right-radius: 3px;\n  border-bottom-left-radius: 3px;\n  border-top: 1px solid #f4f4f4;\n  padding: 10px;\n  background-color: #ffffff; }\n\n.box-title {\n  display: inline-block;\n  font-size: 18px;\n  margin: 0;\n  line-height: 1; }\n\n.btn-box-tool {\n  padding: 5px;\n  font-size: 12px;\n  background: transparent;\n  color: #97a0b3;\n  border: none; }\n  .btn-box-tool .icon-plus {\n    width: 15px;\n    height: 15px;\n    fill: #333;\n    border-radius: 50%; }\n\n.dropdown-container {\n  width: 50%; }\n  .dropdown-container .dropdown-selected {\n    font-size: 1.2em; }\n  .dropdown-container .dropdown-list {\n    font-size: 1.2em; }\n\n.dropdown-selected-active .dropdown-selected-active-label {\n  font-size: 1.2em; }\n\n.list-group {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n          flex-direction: column;\n  padding-left: 0;\n  margin-bottom: 0; }\n  .list-group .list-group-item {\n    position: relative;\n    display: block;\n    padding: .75rem 1.25rem;\n    margin-bottom: -1px;\n    background-color: #fff;\n    border: 1px solid rgba(0, 0, 0, 0.125);\n    text-transform: capitalize; }\n  .list-group .list-group-item:first-child {\n    border-top-left-radius: .25rem;\n    border-top-right-radius: .25rem; }\n  .list-group .list-group-item:last-child {\n    margin-bottom: 0;\n    border-bottom-right-radius: .25rem;\n    border-bottom-left-radius: .25rem; }\n  .list-group .float-right {\n    float: right; }\n  .list-group .text-muted {\n    color: #6c757d; }\n  .list-group ul {\n    margin: 0;\n    padding: 0; }\n\n.bg-warning {\n  background: #ffc107; }\n\n.bg-red {\n  background: #dc3545; }\n\n.bg-message {\n  background: #17a2b8; }\n\n.box-tools .box-tools-wrapper {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: flex;\n  -webkit-box-pack: space-evenly;\n  -webkit-justify-content: space-evenly;\n          justify-content: space-evenly;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n          align-items: center;\n  text-align: center;\n  -webkit-box-flex: 1;\n  -webkit-flex-grow: 1;\n          flex-grow: 1; }\n\n.box-tools .badge {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: flex;\n  width: 20px;\n  border-radius: 50%;\n  font-size: 0.8em;\n  text-align: center; }\n\n.box-tools strong {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: flex;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n          justify-content: center;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n          align-items: center;\n  width: 100%; }\n\n.page-memo h3 {\n  font-weight: 500;\n  margin: 0;\n  color: #868e96; }\n\n/* Toggle Animation */\n.toggle-fade-in-enter {\n  opacity: 0.01; }\n\n.toggle-fade-in-enter.toggle-fade-in-enter-active {\n  opacity: 1;\n  -webkit-transition: opacity 500ms ease-in;\n  transition: opacity 500ms ease-in; }\n\n.toggle-fade-in-leave {\n  opacity: 1; }\n\n.toggle-fade-in-leave.toggle-fade-in-leave-active {\n  opacity: 0.01;\n  -webkit-transition: opacity 300ms ease-in;\n  transition: opacity 300ms ease-in; }\n", ""]);
+	exports.push([module.id, ".card {\n  width: 100%;\n  height: 200px; }\n\n.horizontal-line {\n  width: 100%;\n  margin-top: 1rem;\n  margin-bottom: 1rem;\n  border: 0;\n  border-top: 1px solid rgba(0, 0, 0, 0.1); }\n\n.page-dashboard {\n  width: 100%;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-flow: column wrap;\n          flex-flow: column wrap;\n  padding: 2%; }\n  .page-dashboard h2 {\n    color: #868e96;\n    font-size: 2.2em;\n    font-weight: 700;\n    margin: 0; }\n  .page-dashboard .projects {\n    display: -webkit-box;\n    display: -webkit-flex;\n    display: flex;\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: normal;\n    -webkit-flex-flow: row nowrap;\n            flex-flow: row nowrap;\n    -webkit-box-pack: start;\n    -webkit-justify-content: flex-start;\n            justify-content: flex-start;\n    -webkit-box-align: center;\n    -webkit-align-items: center;\n            align-items: center;\n    width: 100%; }\n    .page-dashboard .projects .projects-user-actions {\n      display: -webkit-box;\n      display: -webkit-flex;\n      display: flex;\n      -webkit-box-orient: horizontal;\n      -webkit-box-direction: normal;\n      -webkit-flex-flow: row nowrap;\n              flex-flow: row nowrap;\n      margin-left: 2%; }\n      .page-dashboard .projects .projects-user-actions .button-create {\n        display: -webkit-box;\n        display: -webkit-flex;\n        display: flex;\n        -webkit-box-flex: 1;\n        -webkit-flex-grow: 1;\n                flex-grow: 1;\n        margin-right: 1rem;\n        min-height: 50px;\n        font-size: 0.875rem;\n        font-weight: 700;\n        background: #CD040B;\n        color: #FFF;\n        cursor: pointer; }\n      .page-dashboard .projects .projects-user-actions .delete-modify-project {\n        display: -webkit-box;\n        display: -webkit-flex;\n        display: flex;\n        width: 150px;\n        -webkit-box-pack: center;\n        -webkit-justify-content: center;\n                justify-content: center;\n        -webkit-box-align: center;\n        -webkit-align-items: center;\n                align-items: center; }\n      .page-dashboard .projects .projects-user-actions .icon-right-arrow {\n        width: 20px;\n        height: 25px;\n        fill: #FFF; }\n  .page-dashboard .locations {\n    display: -webkit-box;\n    display: -webkit-flex;\n    display: flex;\n    padding-top: 2%; }\n    .page-dashboard .locations .outer-locations {\n      display: -webkit-box;\n      display: -webkit-flex;\n      display: flex;\n      width: 100%; }\n\n.box {\n  position: relative;\n  border-radius: 3px;\n  background: #ffffff;\n  border-top: 3px solid #d2d6de;\n  margin-bottom: 20px;\n  width: 100%;\n  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);\n          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); }\n  .box .box-primary {\n    border-top-color: #3c8dbc; }\n\n.box-widget {\n  border: none; }\n\n.widget-user .widget-user-header {\n  height: 200px;\n  border-top-right-radius: 3px;\n  border-top-left-radius: 3px;\n  cursor: pointer; }\n\n.box-header {\n  color: #444;\n  display: block;\n  padding: 10px;\n  position: relative; }\n\n.box-header > .box-tools {\n  position: absolute;\n  right: 10px;\n  top: 0;\n  width: 20%;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n  -webkit-flex-flow: row nowrap;\n          flex-flow: row nowrap;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n          align-items: center;\n  -webkit-box-pack: justify;\n  -webkit-justify-content: space-between;\n          justify-content: space-between;\n  height: 100%; }\n\n.box-footer {\n  border-top-left-radius: 0;\n  border-top-right-radius: 0;\n  border-bottom-right-radius: 3px;\n  border-bottom-left-radius: 3px;\n  border-top: 1px solid #f4f4f4;\n  padding: 10px;\n  background-color: #ffffff; }\n\n.box-title {\n  display: inline-block;\n  font-size: 18px;\n  margin: 0;\n  line-height: 1; }\n\n.btn-box-tool {\n  padding: 5px;\n  font-size: 12px;\n  background: transparent;\n  color: #97a0b3;\n  border: none; }\n  .btn-box-tool .icon-plus {\n    width: 15px;\n    height: 15px;\n    fill: #333;\n    border-radius: 50%; }\n\n.dropdown-container {\n  width: 25%; }\n  .dropdown-container .dropdown-selected {\n    font-size: 1.2em; }\n  .dropdown-container .dropdown-list {\n    font-size: 1.2em; }\n\n.dropdown-selected-active .dropdown-selected-active-label {\n  font-size: 1.2em; }\n\n.bg-warning {\n  background: #ffc107; }\n\n.bg-red {\n  background: #dc3545; }\n\n.bg-message {\n  background: #17a2b8; }\n\n.list-group {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n          flex-direction: column;\n  padding-left: 0;\n  margin-bottom: 0; }\n  .list-group .list-group-item {\n    position: relative;\n    display: block;\n    padding: .75rem 1.25rem;\n    margin-bottom: -1px;\n    background-color: #fff;\n    border: 1px solid rgba(0, 0, 0, 0.125);\n    text-transform: capitalize; }\n    .list-group .list-group-item .event-message {\n      display: block;\n      font-size: 0.8em;\n      font-style: italic;\n      color: #555; }\n    .list-group .list-group-item .bg-red {\n      color: #FFF; }\n      .list-group .list-group-item .bg-red em {\n        padding: 0 5px 0 5px; }\n    .list-group .list-group-item .bg-warning em {\n      padding: 0 5px 0 5px; }\n  .list-group .list-group-item:first-child {\n    border-top-left-radius: .25rem;\n    border-top-right-radius: .25rem; }\n  .list-group .list-group-item:last-child {\n    margin-bottom: 0;\n    border-bottom-right-radius: .25rem;\n    border-bottom-left-radius: .25rem; }\n  .list-group .float-right {\n    float: right; }\n  .list-group .text-muted {\n    color: #6c757d; }\n  .list-group ul {\n    margin: 0;\n    padding: 0; }\n\n.box-tools .box-tools-wrapper {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: flex;\n  -webkit-box-pack: space-evenly;\n  -webkit-justify-content: space-evenly;\n          justify-content: space-evenly;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n          align-items: center;\n  text-align: center;\n  -webkit-box-flex: 1;\n  -webkit-flex-grow: 1;\n          flex-grow: 1; }\n\n.box-tools .badge {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: flex;\n  width: 20px;\n  border-radius: 50%;\n  font-size: 0.8em;\n  text-align: center; }\n\n.box-tools strong {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: flex;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n          justify-content: center;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n          align-items: center;\n  width: 100%; }\n\n.page-memo h3 {\n  font-weight: 500;\n  margin: 0;\n  color: #868e96; }\n\n/* Toggle Animation */\n.toggle-fade-in-enter {\n  opacity: 0.01; }\n\n.toggle-fade-in-enter.toggle-fade-in-enter-active {\n  opacity: 1;\n  -webkit-transition: opacity 500ms ease-in;\n  transition: opacity 500ms ease-in; }\n\n.toggle-fade-in-leave {\n  opacity: 1; }\n\n.toggle-fade-in-leave.toggle-fade-in-leave-active {\n  opacity: 0.01;\n  -webkit-transition: opacity 300ms ease-in;\n  transition: opacity 300ms ease-in; }\n", ""]);
 
 	// exports
 
 
 /***/ },
 
-/***/ 866:
+/***/ 869:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(657);
+	var content = __webpack_require__(659);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(21)(content, {});

@@ -9,6 +9,10 @@ import moment from 'moment';
 import PropTypes from 'prop-types'; // ES6
 import classnames from 'classnames';
 
+import Icon from 'app/shared/icons/icons';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+
+
 import { loadZoneData, setSelectedDate } from './zone-actions-reducers';
 import "node_modules/react-image-gallery/styles/scss/image-gallery.scss";
 import 'react-datepicker/dist/react-datepicker.css';
@@ -37,16 +41,20 @@ class ZoneModule extends React.Component {
         super( props );
 
         this.state = {
-        	startDate: moment().subtract(7, "days"),
+        	startDate: moment().subtract(6, "days"),
         	endDate: moment(),
         	optedDate: moment().subtract(1, "days"),
-        	selectedItem: null
+        	selectedItem: null,
+            show: false,
+            locationName: 'Zone name'
         }
 
         this.handleChange = this.handleChange.bind(this);
         this.getLocationInfo = this.getLocationInfo.bind(this);
         this.datePreviewChange = this.datePreviewChange.bind(this);
         this.setLocationsTemplate = this.setLocationsTemplate.bind(this);
+        this.setZoneLocationEvents = this.setZoneLocationEvents.bind(this);
+        this.showLocationsZoneEvents = this.showLocationsZoneEvents.bind(this);
     }
 
     componentWillMount() {
@@ -55,6 +63,11 @@ class ZoneModule extends React.Component {
             params: { id },
             dashboard: { data }
         } = this.props;
+
+        const locationInfo = this.getLocationInfo();
+        if( locationInfo && locationInfo.location_name ) {
+            this.setState({ LocationName: locationInfo.location_name});
+        }
 
     	this.props.actions.loadZoneData({ 
             session: this.props.app.session,
@@ -111,9 +124,21 @@ class ZoneModule extends React.Component {
     }
 
     setLocationsTemplate() {
+        const locationInfos = this.getLocationInfo();
+        if( locationInfos ) {
+            return <LocationToggleContent { ...locationInfos }/>;
+        }
+        return <div />;
+    }
+
+    showLocationsZoneEvents() {
+        this.setState( { show: !this.state.show } );
+    }
+
+    setZoneLocationEvents() {
         const locationInfo = this.getLocationInfo();
-        if( locationInfo ) {
-            return <LocationToggleContent { ...locationInfo }/>;
+        if( locationInfo && locationInfo.events && locationInfo.events.length ) {
+            return <LocationsEventsComponent { ...locationInfo } />
         }
         return <div />;
     }
@@ -128,14 +153,6 @@ class ZoneModule extends React.Component {
             zone
         } = this.props;
 
-        let LocationName = 'Zone Name';
-        if ( data && data.locations.length > 0 ) {
-          const filteredLocation = _.filter( data.locations, { 'location_id': this.props.params.id } );
-          if( filteredLocation && filteredLocation.length > 0 ) {
-            LocationName = filteredLocation[ 0 ].location_name;
-          }
-        }
-
         if( !this.state.selectedItem ) {
         	return false;
         }
@@ -148,7 +165,7 @@ class ZoneModule extends React.Component {
                             <HomeCell module="scorecardmodule">
                             <div className="zone-page">
                                 <div>
-                                	<h2>{ LocationName } DETAIL & 1 WEEK HISTORY</h2>
+                                	<h2>{ this.state.LocationName } DETAIL & 1 WEEK HISTORY</h2>
                                 	<div className="horizontal-line"></div>
                                     <h3>Simply change the date for additional pictures</h3>
                                     {
@@ -189,7 +206,39 @@ class ZoneModule extends React.Component {
                                     </div>
                                 </div>
                                 <div className="location-details">
-                                    { this.setLocationsTemplate() }
+
+                                    <div className="box-footer">
+                                        <div className="box box-primary direct-chat direct-chat-primary collapsed-box">
+                                            <div className="box-header with-border">
+                                                <h3 className="box-title">{ this.state.LocationName }</h3>
+                                                <div className="box-tools pull-right">
+                                                    {
+                                                        this.setZoneLocationEvents()
+                                                    }
+                                                    <button className="btn btn-box-tool" data-widget="collapse" type="button" onClick={
+                                                        ( event ) => {
+                                                            this.showLocationsZoneEvents();
+                                                        }
+                                                    }>
+                                                        <Icon name="plus" />
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div className="box-body">
+                                                {
+                                                    this.state.show
+                                                    &&
+                                                    <ReactCSSTransitionGroup
+                                                      transitionName="toggle-fade-in"
+                                                      transitionEnterTimeout={500}
+                                                      transitionLeaveTimeout={300}>
+                                                       { this.setLocationsTemplate() }
+                                                    </ReactCSSTransitionGroup>
+                                                 }
+                                            </div>
+                                        </div>
+                                    </div>
+
                                 </div>
                              </div>
                             </HomeCell>
@@ -269,6 +318,41 @@ const ThumbnailsDates = ( { oneWeekDay, datePreviewChange } ) => {
     );
 }
 
+/*
+ *  LocationsEventsComponent
+ */
+
+ const LocationsEventsComponent = ( props ) => {
+
+    if( !props.events ) {
+        return <div />;
+    }
+
+    return(
+        <div className="box-tools-wrapper">
+        {
+            props.events
+            && props.events.map(
+                ( event, index ) => 
+                 <span key={ index } className={ classnames(
+                            'badge',
+                            {
+                                'bg-red': event.event_message == 'alert',
+                                'bg-warning': event.event_message == 'warning',
+                                'bg-light-blue': event.event_message == 'message'
+                            }
+                        ) }
+                      data-toggle="tooltip"
+                    title={ event.event_value && event.event_value.length }>
+                    <strong>{ event.event_value && event.event_value.length }</strong>
+                </span>
+            )
+        }
+        </div>
+    );
+}
+
+
 /* 
  * Location Toggle content 
  *
@@ -304,6 +388,7 @@ const LocationToggleContent = ( props ) => {
                                 ) }>
                                     <em>{ item.event_value }</em>
                                 </span>
+                                <span className="event-message">{ item.event_message }</span>
                         </li>
                     );
                 }

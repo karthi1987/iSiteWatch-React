@@ -153,8 +153,7 @@ const LoginForm = ( { login, _state, handle } ) => {
             <div className="col-md-4">
                 <div className="login">
                     <h1>
-                       Welcome to iSiteWatch
-                       <p>Let's get started!</p>
+                       Eliminating Paperwork So You Can Get Back To Building
                     </h1>
                     <div>
                         <h2>Sign In</h2>
@@ -171,6 +170,9 @@ const LoginForm = ( { login, _state, handle } ) => {
                         <div className="form-group">
                             <button type="button" className="loginButton button button-primary" onClick={ handle.login }>Login</button>
                         </div>
+                    </div>
+                    <div className="forgot-password">
+                        <a href="#">Forgot Password</a>
                     </div>
                     {
                         login.errorMessage

@@ -1,6 +1,8 @@
 import React from 'react';
 import './avatar.scss';
 
+import Icon from 'app/shared/icons/icons';
+
 /*
  * Simple Avatar component
  * TODO: improve css
@@ -22,7 +24,7 @@ class Avatar extends React.Component {
 		} = this.props;
 
 		if( avatar ) {
-			return <img className={ 'avatar-image ' + className + '-avatar-image' } src={ avatar } />;
+			return <Icon name="profile-icon" viewBox="0 0 24 24" />;
 		}else if( firstName && lastName ) {
 			return(
 				<span className={ 'avatar-initials ' + className + '-avatar-initials' }>
