@@ -287,6 +287,9 @@ const ThumbnailsDates = ( { oneWeekDay, datePreviewChange } ) => {
                 &&
                 renderFullImages.push(
                     <div key={ i } className="metric" onClick={ ( event ) => {
+                        if(  metric.items && !metric.items.length ) {
+                            return false;
+                        }
                         datePreviewChange( metric );
                     } }>
                         <div className="value"> {  moment(metric.label).format('YYYY-MM-DD') } </div>

@@ -176,7 +176,7 @@ export function loadZoneData ( info ) {
         );
 
         Ajax( {
-            url: 'https://wejllcr10k.execute-api.us-east-1.amazonaws.com/BETA/thumbs-history',
+            url: 'https://wejllcr10k.execute-api.us-east-1.amazonaws.com/BETA/image-history',
             type: 'POST',
             data: ZonePayLoad,
             success: ( results ) => {
