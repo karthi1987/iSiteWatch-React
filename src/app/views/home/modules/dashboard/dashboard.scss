@@ -133,7 +133,7 @@
 	background: transparent;
 	color: #97a0b3;
 	border: none;
-	.icon-plus {
+	.icon-plus, .icon-minus {
 		width: 15px;
 		height: 15px;
 		fill: #333;
@@ -255,17 +255,19 @@
 }
 
 .toggle-fade-in-enter.toggle-fade-in-enter-active {
-  opacity: 1;
-  transition: opacity 500ms ease-in;
+	opacity: 1;
+	/*transition: opacity 500ms ease-in;*/
+	transition: all 2.5s ease-in;
 }
 
 .toggle-fade-in-leave {
-  opacity: 1;
+	opacity: 1;
 }
 
 .toggle-fade-in-leave.toggle-fade-in-leave-active {
-  opacity: 0.01;
-  transition: opacity 300ms ease-in;
+	opacity: 0.01;
+	/*transition: opacity 300ms ease-in;*/
+	transition: all 2.5s ease-in;
 }
 
 .Home .module-container .module-wrapper {

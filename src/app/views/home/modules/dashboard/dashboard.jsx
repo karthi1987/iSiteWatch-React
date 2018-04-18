@@ -213,7 +213,16 @@ const LocationsTemplate = ( props, _callback, _actionCallback ) => {
                                             _actionCallback( item );
                                         }
                                     }>
-                                        <Icon name="plus" />
+                                        {
+                                            item.show
+                                            &&
+                                            <Icon name="minus" />
+                                        }
+                                        {
+                                            !item.show
+                                            &&
+                                            <Icon name="plus" />
+                                        }
                                     </button>
                                 </div>
                             </div>
@@ -224,7 +233,7 @@ const LocationsTemplate = ( props, _callback, _actionCallback ) => {
                                     <ReactCSSTransitionGroup
                                       transitionName="toggle-fade-in"
                                       transitionEnterTimeout={500}
-                                      transitionLeaveTimeout={300}>
+                                      transitionLeaveTimeout={500}>
                                        <LocationToggleContent { ...item }/>
                                     </ReactCSSTransitionGroup>
                                  }
