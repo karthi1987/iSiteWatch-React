@@ -13,6 +13,7 @@
 		color: #868e96;
 		padding: 0 0 0 1%;
 		font-weight: 500;
+		text-transform: capitalize;
 	}
 	.react-datepicker-wrapper {
 	    padding: 1% 0 0 1%;
@@ -139,4 +140,8 @@
 	&:before {
 	    content: "\F073";
 	}
+}
+
+.Home .module-container .module-wrapper {
+	height: 130%;
 }

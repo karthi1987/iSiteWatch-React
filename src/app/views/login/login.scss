@@ -49,11 +49,6 @@
       }
     }
 
-    .forgot-password {
-      display: flex;
-      margin-top: 1%;
-    }
-
       .dropdown-container,
       input,
       .loginButton {
@@ -72,6 +67,15 @@
         border-left: 1px solid;
         padding-left: 10px;
         width: 80%;
+      }
+
+      .keep-me {
+        width: 20px;
+        border: 0;
+        padding: 0;
+        margin: 0;
+        appearance: checkbox;
+        margin-top: 6px;
       }
 
       .dropdown-container {
@@ -119,4 +123,28 @@
 
 .button.button-primary:after {
   padding-left: 0;
+}
+
+.forgot-password {
+  display: flex;
+  margin-top: 3%;
+}
+
+.remember-me {
+  display: flex;
+  flex-flow: row nowrap !important;
+  justify-content: flex-start;
+  align-items: flex-start;
+  label {
+    display: flex;
+    width: 35% !important;
+  }
+  input {
+    display: flex;
+    width: 20%;
+  }
+}
+
+.Home .module-container .module-wrapper {
+  height: 120%;
 }

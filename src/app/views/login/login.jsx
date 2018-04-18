@@ -153,7 +153,7 @@ const LoginForm = ( { login, _state, handle } ) => {
             <div className="col-md-4">
                 <div className="login">
                     <h1>
-                       Eliminating Paperwork So You Can Get Back To Building
+                       Eliminating Paperwork <span style={{'display': 'block'}}>So You Can Get Back</span> To Building
                     </h1>
                     <div>
                         <h2>Sign In</h2>
@@ -166,6 +166,10 @@ const LoginForm = ( { login, _state, handle } ) => {
                         <div className="form-group">
                             <label>Password</label>
                             <input name="password" type="password" placeholder="Password" defaultValue={ _state.password } onKeyPress={ handle.keyDown } onBlur={ handle.input } />
+                        </div>
+                        <div className="form-group remember-me">
+                            <label htmlFor="keep-me-signedin">Keep me signed-in</label>
+                            <input type="checkbox" id="keep-me-signedin" className="keep-me" name="keep-me" value="keep me" />
                         </div>
                         <div className="form-group">
                             <button type="button" className="loginButton button button-primary" onClick={ handle.login }>Login</button>

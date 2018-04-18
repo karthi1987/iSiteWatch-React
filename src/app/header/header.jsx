@@ -38,7 +38,7 @@ export default class Header extends React.Component {
         if( this.refs.userProfileElement ) {
             const ProfilePosition = this.refs.userProfileElement.getBoundingClientRect();
             /* Set profile top position */
-            const styles = { 'top': ProfilePosition.top + 5 +'px' };
+            const styles = { 'top': ProfilePosition.top + 10 +'px' };
             this.setState( { profileStyle: styles } );
 
             //Show Profile
@@ -99,7 +99,7 @@ export default class Header extends React.Component {
                     <div className="project-name">
                         <h2>
                             <a href="#" onClick={ this.redirectTo }>
-                                <span>{ HEADER.BRAND_NAME_ONE }</span><span className="stageTitle"></span>
+                                <span>{ HEADER.BRAND_NAME_ONE }</span><span className="stageTitle">{ HEADER.BRAND_NAME_TWO }</span>
                             </a>
                         </h2>
                     </div>
@@ -149,6 +149,9 @@ export default class Header extends React.Component {
                                  <ul className="list-group  no-padding">
                                     <li className="list-group-item clearfix d-block">
                                         <a href="#" > &nbsp; Profile </a>
+                                    </li>
+                                     <li className="list-group-item clearfix d-block">
+                                        <a href="#" > &nbsp; Settings </a>
                                     </li>
                                      <li className="list-group-item clearfix d-block">
                                         <a href="#" onClick={ this.userLogout }> &nbsp; Logout </a>

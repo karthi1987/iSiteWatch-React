@@ -23,7 +23,7 @@
   color: $red;
   height: 2.75rem;
   .stageTitle {
-    color: #333333;
+    /*color: #333333;*/
     margin-left:10px;
   }
 }
@@ -127,11 +127,12 @@
     .list-group-item {
       position: relative;
       display: block;
-      padding: 0;
-      width: 200px;
+      padding: 2% 8% 2% 0;
+      width: 150px;
       height: 40px;
       background: #fff;
       border: 0;
+      border-bottom: 2px solid #eee;
       text-transform: capitalize;
       a {
         display: block;
@@ -181,7 +182,7 @@
   display: flex;
   flex-flow: column wrap;
   position: relative;
-  width: 21.2%;
+  width: 200px;
   margin-right: 10px;
   .label {
     display: flex;

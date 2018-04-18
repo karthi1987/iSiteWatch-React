@@ -9,8 +9,8 @@ export const LOGIN = {
 };
 
 export const HEADER = {
-	BRAND_NAME_ONE: 'iSiteWatch',
-	BRAND_NAME_TWO: 'Dashboard'
+	BRAND_NAME_ONE: 'SiteSupt',
+	BRAND_NAME_TWO: 'OnDemand'
 };
 
 export const FILTER = {

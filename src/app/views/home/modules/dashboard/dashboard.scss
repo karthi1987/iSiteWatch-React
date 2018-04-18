@@ -21,6 +21,7 @@
 		font-size: 2.2em;
 		font-weight: 700;
 		margin: 0;
+		text-transform: uppercase;
 	}
 	.projects {
 		display: flex;
@@ -265,4 +266,8 @@
 .toggle-fade-in-leave.toggle-fade-in-leave-active {
   opacity: 0.01;
   transition: opacity 300ms ease-in;
+}
+
+.Home .module-container .module-wrapper {
+	height: 130% !important;
 }
