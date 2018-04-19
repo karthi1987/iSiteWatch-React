@@ -95,7 +95,7 @@ export default class Header extends React.Component {
 
         return (
             <div className="header-container">
-                <div className="logo-block">
+                <div className="project-name">
                     <div className="project-name">
                         <h2>
                             <a href="#" onClick={ this.redirectTo }>
@@ -104,63 +104,63 @@ export default class Header extends React.Component {
                         </h2>
                     </div>
                 </div>
-                 <div className="current-time-block">
+                <div className="current-time-block">
 
-                    <div className="customer-support">
-                        <a href="customer-support">Customer Support</a>
-                    </div>
+                   <div className="customer-support">
+                       <a href="customer-support">Customer Support</a>
+                   </div>
 
-                    <div className="standard-report" ref="standardReports">
-                        <div className="label">
-                            Standard Reports
-                            <div className="user-profile-arrow">
-                                <Icon name="right-arrow" />
-                            </div>
-                        </div>
+                   <div className="standard-report" ref="standardReports">
+                       <div className="label">
+                           Standard Reports
+                           <div className="user-profile-arrow">
+                               <Icon name="right-arrow" />
+                           </div>
+                       </div>
+                       {
+                           showStandardReports && profileStyle
+                           && <div className="container" style={ profileStyle }>
+                               <ul className="list-group  no-padding">
+                                   <li className="list-group-item clearfix d-block">
+                                       <a href="#">Download as HTML</a>
+                                   </li>
+                                   <li className="list-group-item clearfix d-block">
+                                       <a href="#">Download as PDF</a>
+                                   </li>
+                               </ul>
+                           </div>
+                       }
+
+                   </div>
+
+                   <div className="user-profile" ref="userProfileElement">
+                       <div className="user-name" onClick={ this.showUserProfile }>
+                           {
+                               this.props.userLogin
+                               && <Avatar avatar="true" firstname={ this.props.userLogin } />
+                           }
+                           <div className="user-profile-arrow">
+                               <Icon name="right-arrow" />
+                           </div>
+                       </div>
                         {
-                            showStandardReports && profileStyle
-                            && <div className="container" style={ profileStyle }>
+                           showProfile && profileStyle
+                           && <div className="user-profile-details" ref="userProfileDetails" style={ profileStyle }>
                                 <ul className="list-group  no-padding">
+                                   <li className="list-group-item clearfix d-block">
+                                       <a href="#" > &nbsp; Profile </a>
+                                   </li>
                                     <li className="list-group-item clearfix d-block">
-                                        <a href="#">Download as HTML</a>
-                                    </li>
+                                       <a href="#" > &nbsp; Settings </a>
+                                   </li>
                                     <li className="list-group-item clearfix d-block">
-                                        <a href="#">Download as PDF</a>
-                                    </li>
+                                       <a href="#" onClick={ this.userLogout }> &nbsp; Logout </a>
+                                   </li>
                                 </ul>
-                            </div>
+                           </div>
                         }
-                        
-                    </div>
-                   
-                    <div className="user-profile" ref="userProfileElement">
-                        <div className="user-name" onClick={ this.showUserProfile }>
-                            {
-                                this.props.userLogin
-                                && <Avatar avatar="true" firstname={ this.props.userLogin } />
-                            }
-                            <div className="user-profile-arrow">
-                                <Icon name="right-arrow" />
-                            </div>
-                        </div>
-                         {
-                            showProfile && profileStyle
-                            && <div className="user-profile-details" ref="userProfileDetails" style={ profileStyle }>
-                                 <ul className="list-group  no-padding">
-                                    <li className="list-group-item clearfix d-block">
-                                        <a href="#" > &nbsp; Profile </a>
-                                    </li>
-                                     <li className="list-group-item clearfix d-block">
-                                        <a href="#" > &nbsp; Settings </a>
-                                    </li>
-                                     <li className="list-group-item clearfix d-block">
-                                        <a href="#" onClick={ this.userLogout }> &nbsp; Logout </a>
-                                    </li>
-                                 </ul>
-                            </div>
-                         }
-                    </div>
-                </div>
+                   </div>
+               </div>
             </div>
         );
     }

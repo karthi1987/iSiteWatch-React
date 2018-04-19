@@ -2,11 +2,20 @@
 @import '../../framework/scss/partials/mixins';
 
 .header-container{
-  display: flex;
-  align-items : baseline;
-  padding: 1.0em 3.125rem 0;
-  height: 12%;
-  padding-right: 10.5rem; // padding to deal with nav
+  // display: flex;
+  // align-items : baseline;
+  // padding: 1.0em 3.125rem 0;
+  // height: 12%;
+  // background: #444;
+  // padding-right: 10.5rem; // padding to deal with nav
+  padding-left: 10px;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  height: 64px;
+  background: #373b50;
+  color: #ffffff;
 }
 
 .header-container .logo-block{
@@ -18,9 +27,9 @@
   width: auto;
   height: 2.75rem;
 }
-.header-container .logo-block .project-name h2{
+.header-container .project-name h2{
   font-size: remCalc(45px);
-  color: $red;
+  color: $white;
   height: 2.75rem;
   .stageTitle {
     /*color: #333333;*/
@@ -30,7 +39,7 @@
 
 .project-name a, .project-name a:hover {
   display: block;
-  color: $red;
+  color: $white;
 }
 
 .header-container .logo-block .company-logo,
@@ -48,9 +57,19 @@
    padding-left: 1rem;
 }
 
+@media only screen and (max-width: 900px) {
+    .header-container{
+      height: 113px;
+    }
+    .header-container .current-time-block {
+        padding-top: 50px;
+    }
+}
+
 .header-container .current-time-block {
   flex: 0 0 70%;
   display: flex;
+  margin-top: -47px;
   justify-content: flex-end;
   flex-flow: row nowrap;
   align-self: center;
@@ -198,7 +217,7 @@
     position: absolute;
     top: 0;
     width: 200px;
-    z-index: 13;
+    z-index: 9999;
 
     ul {
       margin: 0;
